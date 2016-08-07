@@ -43,7 +43,8 @@ See [Posting an Issue](#posting-an-issue) for guidelines to follow when posting 
 
 # Coding Standards
 
-TBD
+* [Java](https://oss-generic.github.io/process/codingstandards/coding-standards-java.html)
+* [HTML](https://oss-generic.github.io/process/codingstandards/coding-standards-html.html)
 
 # Naming Conventions
 

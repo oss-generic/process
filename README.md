@@ -30,7 +30,7 @@ See [Posting an Issue](#posting-an-issue) for guidelines to follow when posting 
    1. Push the code to your fork.
    2. Create a PR. 
    
-   > You may create a PR even before you are done with the fix, if you want to seek some early feedback from the dev team.
+     > You may create a PR even before you are done with the fix, if you want to seek some early feedback from the dev team.
 8. After creating the PR, post a comment to inform the dev team that it is ready for review. <br>
    If you do not get any response from the dev team within 1-2 days, keep posting reminders in the PR thread.
    
@@ -39,7 +39,7 @@ See [Posting an Issue](#posting-an-issue) for guidelines to follow when posting 
 * After you have managed to successfully merge one PR, you can gradually move to harder issues. 
 * As harder issues take longer to finish, it is prudent to post a message in the issue to let others know that you are 
   working on an issue.
-* Try to adopt [Git best practices](#git-best-practice).
+* Try to adopt [Git Usage Guidelines](#git-usage-guidelines).
 
 # Coding Standards
 
@@ -61,6 +61,16 @@ format: **`IssueTitle #IssueNumber`**
 
 e.g. `Error alert email has very long subject #5958`
 
-# Git Best Practices
+# Git Usage Guidelines
 
-TBD
+* Commit each distinct change as a separate commit. You may have to `squash` trivial commits.
+* Write short descriptive commit message 
+  
+  > It's common practice to use the imperative mood when writing commit messages <br>
+  e.g. `Add README.md` rather than `Added README.md` or `Adding README.md`
+* Rebase your branch if the master branch has progressed since you started your branch. <br>
+  Alternatively (less preferred), you can merge the master branch to your branch.
+
+**Resources**
+
+1. [Web article] [How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)

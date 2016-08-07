@@ -1,3 +1,15 @@
+# A Reference Process for OSS Projects on GitHub
+
+This is an attempt to document similarities in in a number of our OSS projects hosted on GitHub. 
+
+**Contents**
+
+* [Guidelines for New Contributors](#guidelines-for-new-contributors)
+* [Coding Standards](#coding-standards)
+* [Naming Conventions](#naming-conventions)
+* [Git Usage Guidelines](#git-usage-guidelines)
+* [Contributing to this Repo](#contributing-to-this-repo)
+
 # Guidelines for New Contributors
 
 ## Asking a Question
@@ -74,3 +86,7 @@ e.g. `Error alert email has very long subject #5958`
 **Resources**
 
 1. [Web article] [How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)
+
+# Contributing to this Repo
+
+We welcome contributions. Just follow the process described above to submit your contributions as a PR.

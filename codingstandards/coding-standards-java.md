@@ -875,7 +875,7 @@ In an international environment English is the preferred language.
 
 ```java
 /**
- * Return lateral location of the specified position.
+ * Returns lateral location of the specified position.
  * If the position is unset, NaN is returned.
  *
  * @param x    X coordinate of position.

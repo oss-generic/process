@@ -944,21 +944,18 @@ while (true) {
 
 This is to avoid the comments from breaking the logical structure of the program.
 
-## **References**
+## References
 
->[1] - http://geosoft.no/development/javastyle.html
->
->[2] - http://www.oracle.com/technetwork/java/codeconventions-150003.pdf
->
->[3] - http://developers.sun.com/sunstudio/products/archive/whitepapers/java-style.pdf
->
->[4] - Effective Java, 2nd Edition by Joshua Bloch
->
->[5] - http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html 
+1. http://geosoft.no/development/javastyle.html
+2. http://www.oracle.com/technetwork/java/codeconventions-150003.pdf
+3. http://developers.sun.com/sunstudio/products/archive/whitepapers/java-style.pdf
+4. Effective Java, 2nd Edition by Joshua Bloch
+5. http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html 
 
-**Prepared by**: Nimantha Baranasuriya
+## Contributors
 
-**Contributions**: Dai Thanh, Tong Chun Kit
-
-**Converted from Google Docs to Markdown Document by**: Barnabas Tan
+* Nimantha Baranasuriya - Initial draft
+* Dai Thanh - Further tweaks
+* Tong Chun Kit - Further tweaks
+* Barnabas Tan - Converted from Google Docs to Markdown Document 
 

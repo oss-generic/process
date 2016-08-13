@@ -26,6 +26,8 @@ See [Posting an Issue](#posting-an-issue) for guidelines to follow when posting 
 ## Submitting Your First PR
 
 1. Select an open issue from the issue tracker that you want to work on. 
+   
+   >If the issue list does not contain what you want to work on, post an issue (as described [above](#posting-an-issue)).
 2. You are recommended to start with an issue specifically marked for new contributors. 
    e.g. issues with the `d.firstTimers` label 
    1. It is not required to ask for permission to work on an issue. 

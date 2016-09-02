@@ -58,21 +58,17 @@ However, for your projects, the root name of the package should be your group na
 Line, AudioSystem
 ```
  
-Common practice in the Java development community and also the class naming convention used by Sun for the Java core packages.
-
 **3. Variable names must be in mixed case starting with lower case.**
 
 ```java
 line, audioSystem
 ```
-Common practice in the Java development community and also the naming convention for variables used by Sun for the Java core packages. Makes variables easy to distinguish from types, and effectively resolves potential naming collision as in the declaration `Line line`;
 
 **4. Names representing constants (final variables) or enum constants must be all uppercase using underscore to separate words.**
 
 ```java
 MAX_ITERATIONS, COLOR_RED
 ```
-Common practice in the Java development community and also the naming convention used by Sun for the Java core packages. You can do this easily in Eclipse by right clicking on the value you want to make a constant and selecting `Refactor->Extract Constant` .
 
 **5. Names representing methods must be verbs and written in mixed case starting with lower case.**
 
@@ -80,10 +76,11 @@ Common practice in the Java development community and also the naming convention
 getName(), computeTotalWidth()
 ```
 
-Common practice in the Java development community and also the naming convention used by Sun for the Java core packages. This is identical to variable names, but methods in Java are already distinguishable from variables by their specific form.
-Underscores may be used in test method names if your test method names are long and very descriptive. However, if this style is adopted for test methods, the whole team should follow it consistently. 
+Underscores may be used in test method names if your test method names are long and very descriptive
+using the following three part format **`featureUnderTest_testScenario_expectedBehavior()`** 
 
-`e.g. testLogic_addTask_nullParameters_errorMessageExpected()`
+e.g. `sortList_emptyList_exceptionThrown()` `getMember_memberNotFount_nullReturned`
+
 
 **6. Abbreviations and acronyms should not be uppercase when used as a (OR part of a) name.**
 

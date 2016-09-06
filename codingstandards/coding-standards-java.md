@@ -81,6 +81,9 @@ using the following three part format **`featureUnderTest_testScenario_expectedB
 
 e.g. `sortList_emptyList_exceptionThrown()` `getMember_memberNotFount_nullReturned`
 
+Third part or both second and third parts can be omitted depending on what's covered in the test.  
+For example, the test method `sortList_emptyList()` will test `sortList()` method for all variations of the 'empty list' 
+scenario and the test method `sortList()` will test the `sortList()` method for all scenarios.
 
 **6. Abbreviations and acronyms should not be uppercase when used as a (OR part of a) name.**
 

@@ -8,7 +8,7 @@
 - <a href="#indentation">Indentation</a>
 - <a href="#miscellaneous">Miscellaneous</a>
 
-## Document Properties
+## {#document-properties} Document Properties
 - __We will use the HTML5 Doctype and HTML5 features__
   ```html
   <!DOCTYPE html>
@@ -73,11 +73,11 @@
   </html>
   ```
 
-## External Files
+## {#external-files} External Files
 - Each webpage should include it's own css file if there is any, as well as the general css file.
 - Each webpage should include it's own javascript file(if necessary), as well as the respective common.js and all the 3rd party js files.
 
-## Tags
+## {#tags} Tags
 - All HTML tags are to be closed properly.
 
   <table>
@@ -140,7 +140,7 @@
     </tr>
   </table>
 
-## Attributes
+## {#attributes} Attributes
 - Use [attr="value"] for attribute values.
 
   <table>
@@ -171,7 +171,7 @@
     </tr>
   </table>
 
-## Naming convention
+## {#naming-convention} Naming convention
 - Class
   See Css style guide for this section.
 
@@ -182,11 +182,11 @@
   header-content-week3
   ```
 
-## Indentation<a name="indentation"></a>
+## {#indentation} Indentation<a name="indentation"></a>
 - Indentation should be 2 spaces for html files.
 - Spaces should be used instead of `tab`.
 
-## Miscellaneous
+## {#miscellaneous} Miscellaneous
 - Take note of script tags.
 
   <table>

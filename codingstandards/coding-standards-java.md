@@ -1,44 +1,26 @@
 # Java Coding Standard (Beginner/Intermediate Level)
-<table id="borderless">
-  <tr>
-    <td width="70%" >
-      <ul>
-        <li><a href="#naming-conventions">Naming Conventions</a></li>
-        <ul>
-          <li><a href="#general-naming-conventions">General Naming Conventions</a></li>
-          <li><a href="#specific-naming-conventions">Specific Naming Coonvetions</a></li>
-        </ul>
-        <li><a href="#files">Files</a>
-        <li><a href="#statements">Statements</a>
-        <ul>
-          <li><a href="#package-and-import-statements">Package and Import Statements</a></li>
-          <li><a href="#classes-and-interfaces">Classes and Interfaces</a></li>
-          <li><a href="#methods">Methods</a></li>
-          <li><a href="#types">Types</a></li>
-          <li><a href="#variables">Variables</a></li>
-          <li><a href="#loops">Loops</a></li>
-          <li><a href="#conditionals">Conditionals</a></li>
-        </ul>
-        <li><a href="#layout-and-comments">Layout and Comments</a></li>
-        <ul>
-          <li><a href="#layout">Layout</a></li>
-          <li><a href="#white-space">White Space</a></li>
-          <li><a href="#comments">Comments</a></li>
-        </ul>
-        <li><a href="#references">References</a></li>
-        </ul>
-    </td>
-    <td width="20%">
-      <img src='../images/ada_lovelace.png' style='width: 140px'>
-      <br>
-      <a href="http://en.wikipedia.org/wiki/Ada_Lovelace">Ada Lovlace, the first computer programmer</a>
-    </td>
-  </tr>
-</table>
 
-## {#naming-conventions} **Naming Conventions**
+- [Naming Conventions](#naming-conventions)
+  - [General Naming Conventions](#general-naming-conventions)
+  - [Specific Naming Coonvetions](#specific-naming-conventions)
+- [Files](#files)
+- [Statements](#statements)
+  - [Package and Import Statements](#package-and-import-statements)
+  - [Classes and Interfaces](#classes-and-interfaces)
+  - [Methods](#methods)
+  - [Types](#types)
+  - [Variables](#variables)
+  - [Loops](#loops)
+  - [Conditionals](#conditionals)
+- [Layout and Comments](#layout-and-comments)
+  - [Layout](#layout)
+  - [White Space](#white-space)
+  - [Comments](#comments)
+- [References](#references)
 
-### {#general-naming-conventions} **General Naming Conventions**
+## **Naming Conventions**
+
+### **General Naming Conventions**
 
 **1. Names representing packages should be in all lower case.**
 
@@ -141,7 +123,7 @@ English is the preferred language for international development.
 
 Scratch variables used for temporary storage or indices are best kept short. A programmer reading such variables should be able to assume that its value is not used outside a few lines of code. Common scratch variables for integers are `i, j, k, m, n` and for characters `c` and `d`.
 
-### {#specific-naming-conventions} **Specific Naming Conventions**
+### **Specific Naming Conventions**
 
 **10. Boolean variables should be prefixed with ‘is’**
 
@@ -202,7 +184,7 @@ final int COLOR_BLUE  = 3;
 
 This indicates that the constants belong together, and what concept the constants represents.
 
-## {#files} **Files**
+## **Files**
 
 **1. Java source files should have the extension .java.**
 
@@ -390,9 +372,9 @@ void someMethodWithVeryVeryVeryVeryVeryVeryLongName(int arg,
   </tr>
 </table>
 
-## {#statements} **Statements**
+## **Statements**
 
-### {#package-and-import-statements} **Package and Import Statements**
+### **Package and Import Statements**
 
 **1. The package statement must be the first statement of the file. All files should belong to a specific package.**
 
@@ -439,7 +421,7 @@ import java.util.*;</pre>
 
 Importing classes explicitly gives an excellent documentation value for the class at hand and makes the class easier to comprehend and maintain. Appropriate tools should be used in order to always keep the import list minimal and up to date. For example, Eclipse IDE can do this easily.
 
-### {#classes-and-interfaces} **Classes and Interfaces**
+### **Classes and Interfaces**
 
 **4. Class and Interface declarations should be organized in the following manner:**
 
@@ -483,7 +465,7 @@ static public double square(double a);</pre>
 
 The most important lesson here is to keep the *access* modifier as the first modifier. Of the possible modifiers, this is by far the most important, and it must stand out in the method declaration. For the other modifiers, the order is less important, but it make sense to have a fixed convention.
 
-### {#types} **Types**
+### **Types**
 
 **6. Array specifiers must be attached to the type not the variable.**
 
@@ -506,7 +488,7 @@ int a[] = new int[20];</pre>
 
 The *arrayness* is a feature of the base type, not the variable. Sun allows both forms however.
 
-### {#variables} **Variables**
+### **Variables**
 
 **7. Variables should be initialized where they are declared and they should be declared in the smallest scope possible.**
 
@@ -544,7 +526,7 @@ This ensures that variables are valid at any time. Sometimes it is impossible to
 
 The concept of Java information hiding and encapsulation is violated by public variables. Use private variables and access functions instead. One exception to this rule is when the class is essentially a data structure, with no behavior (*equivalent to a C++ struct*). In this case it is appropriate to make the class' instance variables public.
 
-### {#loops} **Loops**
+### **Loops**
 
 **9. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body**
 
@@ -571,7 +553,7 @@ for (i = 0, sum = 0; i < 100; i++)
 
 When there is only one statement in the loop body it can be written without wrapping it between `{ }`, however that is error prone and *very* strongly discouraged from using.
 
-### {#conditionals} **Conditionals**
+### **Conditionals**
 
 **10. The conditional should be put on a separate line.**
 
@@ -622,12 +604,12 @@ if (stream != null))
 
 The body of the conditional should be wrapped by curly brackets irrespective of how many statements are in it to avoid error prone code.
 
-## {#layout-and-comments} **Layout and Comments**
+## **Layout and Comments**
 >Note: Many of the layout rules mentioned below can be applied in Eclipse by simply pressing *CTRL+SHIFT+F* (F for Format). If you want to format only a specific part of the code instead of the whole class, highlight the lines you want to format and then press *CTRL+SHIFT+F*. The Eclipse formatter will **not** work properly if you have intentionally pressed *enter/tab/space* keys in unwanted places. Therefore, even if you do use the Eclipse formatter, we highly recommend that you **double check** whether your code is in accordance with the rules mentioned below.
 
 >Note: Another option is to use the Correct Indentation function found in Eclipse. This can be accessed by clicking `Source -> Correct Indentation (Ctrl-I)` . This function will merely indent the code instead of formatting it as compared with the Format function above.
 
-### {#layout} **Layout**
+### **Layout**
 
 **1. Basic indentation should be 4 spaces.**
 
@@ -769,7 +751,7 @@ try {
 ```
 This follows partly from the general block rule above. This form differs from the Sun recommendation in the same way as the `if-else` statement described above.
 
-### {#white-space} **White Space**
+### **White Space**
 
 **10. Take note of the following:**
 >- **Operators should be surrounded by a space character.**
@@ -858,7 +840,7 @@ transformation.multiply(matrix);
 ```
 Enhances readability by introducing white space between logical units. Each block is often introduced by a comment as indicated in the example above.
 
-### {#comments} **Comments**
+### **Comments**
 
 
 **12. Write minimal but sufficient comments.**
@@ -944,7 +926,7 @@ while (true) {
 
 This is to avoid the comments from breaking the logical structure of the program.
 
-## {#references} References
+## References
 
 1. http://geosoft.no/development/javastyle.html
 2. http://www.oracle.com/technetwork/java/codeconventions-150003.pdf

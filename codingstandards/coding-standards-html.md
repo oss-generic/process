@@ -1,12 +1,12 @@
 # HTML Style Guide
 
-- <a href="#document-properties">Document Properties</a>
-- <a href="#external-files">External Files</a>
-- <a href="#tags">Tags</a>
-- <a href="#attributes">Attributes</a>
-- <a href="#naming-convention">Naming Convention</a>
-- <a href="#indentation">Indentation</a>
-- <a href="#miscellaneous">Miscellaneous</a>
+- [Document Properties](#document-properties)
+- [External Files](#external-files)
+- [Tags](#tags)
+- [Attributes](#attributes)
+- [Naming Convention](#naming-convention)
+- [Indentation](#indentation)
+- [Miscellaneous](#miscellaneous)
 
 ## Document Properties
 - __We will use the HTML5 Doctype and HTML5 features__

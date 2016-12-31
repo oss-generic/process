@@ -1,8 +1,8 @@
-# A Reference Process for OSS Projects on GitHub
+# The _OSS-Generic_ Reference Process 
 
-This is an attempt to document practices common to a number of OSS projects we have on GitHub. 
-e.g. [TEAMMATES](https://github.com/teammates/teammates), [SE-EDU projects](https://github.com/se-edu/main), 
-[PowerPointLabs](https://github.com/powerpointlabs/powerpointlabs).
+The _OSS-Generic Reference Process_ described in this repo documents common practices among several OSS projects 
+on GitHub, notably, [TEAMMATES](https://github.com/teammates/teammates), 
+[SE-EDU projects](https://github.com/se-edu/main), [PowerPointLabs](https://github.com/powerpointlabs/powerpointlabs).
 
 Other projects are welcome to adopt/adapt these practices if they wish to.
 

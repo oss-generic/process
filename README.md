@@ -20,7 +20,7 @@ Other projects are welcome to adopt/adapt these practices if they wish to.
 * [**Coding Standards**](docs/CodingStandards.md)
 * [**'How to' Guides**](docs/HowToGuides.md): Detailed help on how to perform some common tasks such as 
   editing a commit message.
-* [**Formats and Conventions**](docs/FormatsAndConventions.md): Fromats and conventions for PRs, Issues, Files, etc.
+* [**Formats and Conventions**](docs/FormatsAndConventions.md): Formats and conventions for PRs, Issues, Files, etc.
 * [**Community Structure**](docs/CommunityStructure.md): Levels, roles, and responsibilities of dev community members.
 
 **For core members**:

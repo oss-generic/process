@@ -39,7 +39,3 @@ Other projects are welcome to adopt/adapt these practices if they wish to.
 ### Contributing to this repo 
 
 We welcome contributions. Just follow the instructions in the above links to submit your contributions as a PR.
-
-
-
-[gh]: https://github.com/

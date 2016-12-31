@@ -1,20 +1,30 @@
 # Advice for OSS Beginners
 
-//TODO: flesh out these points
-
-
 ## Pay attention to instructions
 
 Take your time to learn and follow the workflow to the letter. 
-Do not skip any steps because you think that step is "not important". 
 
-## Stick to given versions
+* If the setup instructions mention a specific version of a software to use, **use that exact version** 
+  instead of the latest version.
+* Do not skip any steps because you think that step is "not important". 
+* Do not assume current project does things the same way things were one in that _other_ project you are familiar with.
 
 ## Follow others
+
+> OSS projects involve many persons contributing in small measures. If each person did things their own way, the project
+> will deteriorate into a mess very quickly. That is why being consistent is very important in OSS projects.
+
+In the absence of specific instructions, follow what others are doing so that your work is consistent with the rest
+of the project. For example, if you are not sure how detailed you should make commit messages, you can look at commit
+messages done by a senior member of the team and follow the same.
 
 ## Do your homework
 
 Use Google, read trouble shooting guides, search issue tracker (including closed issues)
+Contributing to an OSS project requires you to figure out things on your own when you can, and seek help from the 
+right resource (Google, StackOverflow, troubleshooting guides, issue tracker, etc.) when you cannot. 
+While the dev team members will be glad to answer your questions, you will not make a good impression if you 
+ask questions which are already answered in the mentioned resources.
 
 ## Quality > Speed
 

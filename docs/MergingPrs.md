@@ -11,7 +11,7 @@ Merging to `master` or `release` branches requires approval from the Project Man
   There are a few scenarios where GitHub can prevent merging from proceeding:
   * **Merge conflict**: The PR is conflicting with the current `master` branch; the author will
     need to resolve the conflicts before proceeding. 
-  * **Check failure** : E.g. CI is failing.
+  * **Check failure**: E.g. CI is failing.
   * **Outdated branch**: The PR is not in sync with the current `master` branch; the author will
     need to sync it before proceeding. This can be done via GitHub with the "Update branch" button.
     

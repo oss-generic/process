@@ -9,12 +9,12 @@ i.e. labels having the same prefix are considered part of a label group.
 
 There are two types of label groups: 
  
-* Exclusive groups : No more than one label from the group can be applied to an issue
+* Exclusive groups: No more than one label from the group can be applied to an issue
 * Non-exclusive groups:  Multiple labels from a group can be applied to an issue
 
 **Common label groups**:
 
-* exclusive : `s.` status, `p.` priority, `c.` category, `d.` difficulty, `e.` effort, 
+* exclusive: `s.` status, `p.` priority, `c.` category, `d.` difficulty, `e.` effort, 
 * non-exclusive:  `a-` aspect, `f-` feature, `t-` tech, 
  
 # Common Labels
@@ -23,7 +23,7 @@ There are two types of label groups:
 
 Status labels can be applied to PRs as well.
 
-* `s.OnHold` : The work on the PR has been put on hold pending some other event.
+* `s.OnHold`: The work on the PR has been put on hold pending some other event.
 
 **Priority**
 
@@ -44,7 +44,7 @@ Status labels can be applied to PRs as well.
 * Other work
   * `c.Bug`
   * `c.Task`: Other work items such as updating documentation.
-  * `c.Message` : Issue used as a means of discussing something with the dev team.
+  * `c.Message`: Issue used as a means of discussing something with the dev team.
      e.g. a request for help on setting up dev environment.
 
 **Difficulty**

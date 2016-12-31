@@ -5,7 +5,7 @@
 
 ### [Level 1] `Contributor`
  
-* Criteria : 1 merged PR.
+* Criteria: 1 merged PR.
 
 ### [Level 2] `Committer`
 
@@ -74,11 +74,11 @@ In charge of the entire project.
 
 ## Other Classifications
 
-* **`Active members`** : Someone who contributes code/reivews to almost every release cycle, 
+* **`Active members`**: Someone who contributes code/reivews to almost every release cycle, 
   thereby helping to maintain the project velocity.  
-* **`Core members`** : Those who are at level 2 (i.e. `Committer`)or above and are 'active members'. 
-* **`Lead members`** : Core members who are at level 4 or above.
-* **`Past members`** : Past core members who are no longer active.
+* **`Core members`**: Those who are at level 2 (i.e. `Committer`)or above and are 'active members'. 
+* **`Lead members`**: Core members who are at level 4 or above.
+* **`Past members`**: Past core members who are no longer active.
 
 ## GitHub Permissions
 

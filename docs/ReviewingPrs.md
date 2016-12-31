@@ -51,4 +51,4 @@ A reviewer must do the following steps.
 
 ## Canned comments
 
-// TODO : add common comments that can be used when reviewing
+// TODO: add common comments that can be used when reviewing

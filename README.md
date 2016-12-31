@@ -12,35 +12,35 @@ Other projects are welcome to adopt/adapt these practices if they wish to.
 * [**Asking a Question**](docs/QuestionsIssuesPrs.md#asking-a-question)
 * [**Posting an Issue**](docs/QuestionsIssuesPrs.md#posting-an-issue)
 * [**Submitting a PR**](docs/QuestionsIssuesPrs.md#submitting-a-pr) 
-* [**Advanced Contributor Guidelines**](docs/AdvancedContributorGuidelines.md) : Additional guidelines more 
+* [**Advanced Contributor Guidelines**](docs/AdvancedContributorGuidelines.md): Additional guidelines more 
   experienced contributors are expected to follow.
 
 **General references**:
 
 * [**Coding Standards**](docs/CodingStandards.md)
-* [**'How to' Guides**](docs/HowToGuides.md) : Detailed help on how to perform some common tasks such as 
+* [**'How to' Guides**](docs/HowToGuides.md): Detailed help on how to perform some common tasks such as 
   editing a commit message.
-* [**Formats and Conventions**](docs/FormatsAndConventions.md) : Fromats and conventions for PRs, Issues, Files, etc.
-* [**Community Structure**](docs/CommunityStructure.md) : Levels, roles, and responsibilities of dev community members.
+* [**Formats and Conventions**](docs/FormatsAndConventions.md): Fromats and conventions for PRs, Issues, Files, etc.
+* [**Community Structure**](docs/CommunityStructure.md): Levels, roles, and responsibilities of dev community members.
 
 **For core members**:
 
-* [**Reviewing PRs**](docs/ReviewingPrs.md) : Instructions for PR reviewers
-* [**Merging PRs**](docs/MergingPrs.md) : Instructions for merging a PR
+* [**Reviewing PRs**](docs/ReviewingPrs.md): Instructions for PR reviewers
+* [**Merging PRs**](docs/MergingPrs.md): Instructions for merging a PR
 
 **For lead members**:
 
-* [**Overseeing Issue/PR Life Cycle**](docs/OverseeingIssuePrLifeCycle.md) : Instructions for team/area leads 
+* [**Overseeing Issue/PR Life Cycle**](docs/OverseeingIssuePrLifeCycle.md): Instructions for team/area leads 
   on overseeing issue/PR life cycles.
-* [**Managing Releases**](docs/ManagingReleases.md) : Instructions for managing releases, milestones, 
+* [**Managing Releases**](docs/ManagingReleases.md): Instructions for managing releases, milestones, 
   and project schedule.
-* [**Defining Labels**](docs/DefiningLabels.md) : Instructions for merging a PR.
+* [**Defining Labels**](docs/DefiningLabels.md): Instructions for merging a PR.
 
 <br>
 
 **Contributing to this repo**: We welcome contributions. Just follow the instructions in the above links to submit 
 your contributions as a PR.
 
-**License** : MIT
+**License**: MIT
 
 [gh]: https://github.com/

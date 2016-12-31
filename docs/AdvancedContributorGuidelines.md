@@ -26,7 +26,7 @@ Big PRs are hard to review. More systematic committing (as explained below) can 
   [4/4] testutil: remove TaskBookBuilder
   ```
   
-  > TODO : add a link to the page for generating PR summary
+  > TODO: add a link to the page for generating PR summary
   
 ## Updating a PR in response to a review
   

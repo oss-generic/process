@@ -18,7 +18,7 @@ When an issue comes in,
 
 * A PR should have,
   * **1 or more `reviewers`** (See [Reviewing PRs](ReviewingPrs.md) for more info)
-  * **no more than one `assignee`** : The `assignee` field can be used to indicate the main reviewer when there are 
+  * **no more than one `assignee`**: The `assignee` field can be used to indicate the main reviewer when there are 
     multiple reviewers and it is not clear who is the main reviewer. Otherwise it can be left empty.
   
 * PRs created by core members:

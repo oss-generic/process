@@ -26,7 +26,8 @@ Big PRs are hard to review. More systematic committing (as explained below) can 
   [4/4] testutil: remove TaskBookBuilder
   ```
   
-  > TODO: add a link to the page for generating PR summary
+  > You can use [this page](https://pyokagan.github.io/prsummary-generator/) ()created by @pyokagan)
+  > to generate a summary of a PR.
   
 ## Updating a PR in response to a review
   

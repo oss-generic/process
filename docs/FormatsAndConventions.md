@@ -60,3 +60,7 @@ e.g. `[#5958] Error alert email has very long subject (#6580)`
 format: **`IssueTitle #IssueNumber`**
 
 e.g. `Error alert email has very long subject #5958`
+
+> Duplicating issue title in PR title is for easy tracing between PRs and issues, to compensate for GitHub's lack of strong
+> linking between the two.
+> Assume there is an invisible prefix in front of the PR title `Fixes issue : ...`

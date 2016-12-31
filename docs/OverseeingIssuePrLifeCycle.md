@@ -18,18 +18,21 @@ When an issue comes in,
 
 * A PR should have,
   * **1 or more `reviewers`** (See [Reviewing PRs](ReviewingPrs.md) for more info)
-  * **no more than one `assignee`**: The `assignee` field can be used to indicate the main reviewer when there are 
-    multiple reviewers and it is not clear who is the main reviewer. Otherwise it can be left empty.
+  * **all reviewers should be selected as `assignees`**
+  
+  > Duplicating `reviewers` as `assignees` is needed because GitHub filter syntax cannot filter by reviewers yet.
   
 * PRs created by core members:
-  * No need for an `assignee` (because the author can merge the PR). The `author` is assumed as the `assignee`.
   * If you can, assign at least one `reviewer`. If you don't, team lead will assign reviewers for the PR.
+  
+  > To find suitable reviewers, you can use GitHub's _blame_ feature. 
+  > **Currently active** Developers who have touched the same code before are potential reviewers.
   
 * PRs created by non-core members:
   * Team lead should assign reviewers based on the member's expertise area. 
-  * Core members can volunteer as reviewers by assigning self as a reviewer.
+  * Core members can volunteer as reviewers by assigning self as a `reviewer` (and `assignee`).
 
-* After a PR has been approved by all reviewers, `assignee` should apply the `s.ToMerge` label and request a 
+* After a PR has been approved by all reviewers, the last reviewer to approve should request a 
   review from the PM.
   
 * After the PM has approved the PR, it can be merged. See [Merging PRs](MergingPrs.md).

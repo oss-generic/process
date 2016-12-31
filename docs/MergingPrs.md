@@ -2,7 +2,10 @@
 
 **Who can merge?** 
 A PR is to be merged by the author of the PR if the author has commit privileges. 
-Else it should be merged by the main reviewer.  
+Else it should be merged by the main reviewer.
+  
+  > PRs that can be merged online without any further testing and post-merge clean up can be merged by the PM
+  > immediately after PM's approval.
 
 **When to merge?** 
 Merging to `master` or `release` branches requires approval from the Project Manager (PM). 

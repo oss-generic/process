@@ -57,7 +57,7 @@ Release day:
 1. If PM (Project Manager) needs to do extra steps to 'deploy' the new version, 
    create an issue on issue tracker and assign to PM.
 1. Ensure all issues and PRs included in the release are tagged with the 
-   correct milestone and the correct assignee.
+   correct milestone and the correct assignees.
 1. Extend the milestone of issues that slipped the current milestone and post
    a comment asking to finish by next milestone. If an issue is not making
    progress, close the PR and un-assign the issue.

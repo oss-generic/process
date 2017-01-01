@@ -4,7 +4,6 @@ The _OSS-Generic Reference Process_ described in this repo documents common prac
 on GitHub, notably, [TEAMMATES](https://github.com/teammates/teammates), 
 [SE-EDU projects](https://github.com/se-edu/main), [PowerPointLabs](https://github.com/powerpointlabs/powerpointlabs).
 
-Other projects are welcome to adopt/adapt these practices if they wish to.
 
 ### For new contributors
 

@@ -2,13 +2,13 @@
 
 ## Triaging Issues
 
-Our issue tracker doubles as the message board. Therefore, it can have two types of issues:
-* Support Requests: (i.e. announcements, questions, support requests, self-intros etc.) 
-* Change Requests: Issues requiring changes (i.e. all other issues).
+Issue tracker doubles as the message board. Therefore, it can have two types of issues:
+* _Support Requests_: (i.e. announcements, questions, support requests, self-intros etc.) 
+* _Change Requests_: Issues requiring changes (i.e. all other issues).
  
 When an issue comes in, 
 
-* any one can respond to it. The faster we can respond to issues, the better it is.
+* any one can respond to it. Faster responses are an indicator of project health.
 * any one with sufficient privileges can add labels based on the [project's definition of each label](DefiningLabels.md).
   * However, Project Manager (PM) should be the one applying the priority (i.e. `p.`) label 
     for change requests (support requests do not need priority labels). This is to ensure that all issues get

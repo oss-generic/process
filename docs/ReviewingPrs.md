@@ -1,13 +1,14 @@
 # Reviewing PRs
 
-A typical PR must be reviewed by,
- - [x] one lead member (i.e. the main reviewer)
- - [x] PM
+A typical PR is reviewed by,
+ - [x] one _**main reviewer**_: Usually, a lead member. Reviews _all_ aspects of the PR, including code quality. 
+ - [x] one _**code quality reviewer**_: Usually, the Project Manager. Can be delegated to a Project Mentor. 
+       Performs a final check on the quality of the PR. 
+ - [ ] [Optional] _**supplementary reviewers**_: Core members can be used as additional reviewers if the PR involves
+       multiple areas. 
 
-Additional reviewers may be used if the PR involves multiple areas.
-
-> Junior members can get their PRs _peer reviewed_ by another junior member before submitting to the project's formal 
-review process.
+> Junior members can get another junior member to act as a _**peer reviewer**_ for their PRs before submitting 
+> to the project's formal review process.
 
 ## Review procedure
 

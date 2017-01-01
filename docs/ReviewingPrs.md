@@ -23,7 +23,7 @@ A reviewer must do the following steps.
     > 'Incorrect branch name' can be forgiven for those doing their first issue, 
     >  but remind the dev to follow the convention in future PRs.
   
-1. Ensure the following:
+1. As you review the code, ensure the following:
   - [x] The solution is the best possible solution to the problem under the circumstances.
   * **All five aspects** of a code change are done:
     - [x] **Code**
@@ -43,12 +43,11 @@ A reviewer must do the following steps.
 
 ## Tips for reviewers
 
-* **To hide white space changes from being shown in the diff**, 
-  append `?w=1` to url of the `/files` page of the pull request (the "Files changed" tab)
-
-* **If the PR is too big**, explore the possibility of breaking the PR into multiple self-contained steps
-  as explained in [Creating commits in big PRs](AdvancedContributorGuidelines.md#creating-commits-in-big-prs)here. 
-  If the intermediate steps are not releasable, 
+### If the PR is too big 
+  
+  * Explore the possibility of breaking the PR into multiple self-contained steps
+  as explained in [creating commits in big PRs](AdvancedContributorGuidelines.md#creating-commits-in-big-prs). 
+  * If the intermediate steps are not releasable, 
   [long-lived feature branches](HowToGuides.md#implement-big-features-using-long-lived-feature-branches)
   should be used instead.
 

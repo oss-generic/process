@@ -1,5 +1,9 @@
 # How To ...
 
+### Hide white space changes from being shown in the GitHub diff 
+  
+Append `?w=1` to url of the `/files` page of the pull request (the "Files changed" tab)
+
 ### Remove unwanted modifications from a branch
 
 // TODO

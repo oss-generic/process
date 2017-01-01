@@ -1,11 +1,12 @@
 # Reviewing PRs
 
 A typical PR must be reviewed by,
- * one lead member (i.e. the main reviewer)
- * PM
+ - [x] one lead member (i.e. the main reviewer)
+ - [x] PM
 
 Additional reviewers may be used if the PR involves multiple areas.
-Junior members can get their PRs peer reviewed by another junior member before submitting to the project's formal 
+
+> Junior members can get their PRs _peer reviewed_ by another junior member before submitting to the project's formal 
 review process.
 
 ## Review procedure
@@ -13,25 +14,25 @@ review process.
 A reviewer must do the following steps.
 
 1. Ensure the following at the start of the review. If any of them are missing, ask the dev to fix.
-  * PR name follows the [PR title convention](FormatsAndConventions.md#pr). 
-  * PR description has the correct `Fixes #...` reference.
-  * The CI build is successful or any failures are justifiable (e.g. false positives from static analysis tools).
-  * Ensure the branch is up to date with the `master` branch.
-  * PR branch name follows the [branch naming convention](FormatsAndConventions.md#branch). 
+  - [x] PR name follows the [PR title convention](FormatsAndConventions.md#pr). 
+  - [x] PR description has the correct `Fixes #...` reference.
+  - [x] The CI build is successful or any failures are justifiable (e.g. false positives from static analysis tools).
+  - [x] The branch is up to date with the `master` branch.
+  - [x] PR branch name follows the [branch naming convention](FormatsAndConventions.md#branch). 
   
     > 'Incorrect branch name' can be forgiven for those doing their first issue, 
     >  but remind the dev to follow the convention in future PRs.
   
 1. Ensure the following:
-  * The solution is the best possible solution to the problem under the circumstances.
+  - [x] The solution is the best possible solution to the problem under the circumstances.
   * **All five aspects** of a code change are done:
-    1. **Code**
-    1. **Comments** e.g. header comments
-    1. **Tests**:  Almost all code changes to functional code should have changes to test code
-    1. **User docs** e.g. help pages
-    1. **Dev docs** e.g. design diagrams
-  * Coding style and best practices are followed (some of these are not detected by static analysis tools).
-  * The PR does not contain unrelated changes. 
+    - [x] **Code**
+    - [x] **Comments** e.g. header comments
+    - [x] **Tests**:  Almost all code changes to functional code should have changes to test code
+    - [x] **User docs** e.g. help pages
+    - [x] **Dev docs** e.g. design diagrams
+  - [x] Coding style and best practices are followed (some of these are not detected by static analysis tools).
+  - [x] The PR does not contain unrelated changes. 
       e.g. unnecessary formatting changes or commits from other branches.
 
 1. Use GitHub's review feature to add comments.

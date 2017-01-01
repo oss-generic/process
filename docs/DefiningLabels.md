@@ -19,13 +19,13 @@ There are two types of label groups:
  
 # Common Labels
 
-**Status (`s.`)**
+### Status (`s.`)
 
 Status labels can be applied to PRs as well.
 
 * `s.OnHold`: The work on the PR has been put on hold pending some other event.
 
-**Priority**
+### Priority (`p.`)
 
 * `p.Critical`: Would like to fix it ASAP and release as a hot patch.
 * `p.Urgent`: Would like to handle in the very next release.
@@ -34,7 +34,7 @@ Status labels can be applied to PRs as well.
 * `p.Low`: Very little impact, unlikely to do in the near future.
 * `p.Zero`: Unlikely to do, ever.
 
-**Category**
+### Category (`c.`)
 
 * Changes to _functionality_, categorized based on size
   * `c.Enhancement`: An enhancement to an existing functionality (not big enough 
@@ -47,7 +47,7 @@ Status labels can be applied to PRs as well.
   * `c.Message`: Issue used as a means of discussing something with the dev team.
      e.g. a request for help on setting up dev environment.
 
-**Difficulty**
+### Difficulty (`d.`)
 
 * `d.FirstTimers`: Easy. To do as the first issue for new developers. One developer
   should not do more than one of these. Not to be applied for issues with a priority `p.high` or above.
@@ -55,7 +55,7 @@ Status labels can be applied to PRs as well.
   Not to be applied for issues with a priority `p.high` or above.
 * `d.Committers`: More difficult issues that are better left for committers or more senior developers.
 
-**Effort**
+### Effort (`e.`)
 
 This label is used to indicate how much effort is expected for (or was spent on)
 an issue.
@@ -66,7 +66,7 @@ Recommended values: 1,2,4,8,16,32
 Effort labels applied to PRs indicate effort for reviewing (by the main reviewer). Those applied for issues indicate
 the effort for fixing the issue.
 
-**Aspect**
+### Aspect (`a-`)
 
 Classifies the issues based on the non-functional aspect it tackles. 
 
@@ -85,13 +85,15 @@ Classifies the issues based on the non-functional aspect it tackles.
 |`a-Testing`        |Testing efficiency and robustness (as opposed to testing a specific feature)
 |`a-UIX`            |User interface, User experience, Responsiveness
 
-**Feature**
+### Feature (`f-`)
 
 Classifies the issue based on the feature it involves. These labels depend on the project.
+e.g. `f-Admin`, `f-Sessions`
 
 
-**Tech**
-classifies the issue based on the tool/technology it involves. Some examples given below.
+### Tech (`t-`)
+
+Classifies the issue based on the tool/technology it involves. Some examples given below.
 
 |Label     | Description                                
 |----------|---------------------------------

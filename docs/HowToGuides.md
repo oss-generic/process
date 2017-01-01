@@ -13,7 +13,7 @@
 1. Update the `master` branch of your local clone. 
 [Here](https://help.github.com/articles/syncing-a-fork/) are the instructions.
 
-1. Push your master branch to your fork (if you are creating PRs using a fork)
+1. Push your master branch to your fork (if you are creating PRs using a fork).
 
 1. Sync your branch with the `master` branch. This can be done in two ways:
    1. Merge `master` to your branch (this option is recommended for new contributors).

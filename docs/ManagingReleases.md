@@ -2,7 +2,7 @@
 
 * **Who does it?** Releases can be managed by the _Release Lead_ of the project (if there is one) or the project lead.
 
-* **How often?** Weekly time-boxed release cycles are encouraged. Note that projects that has no end-user facing 
+* **How often?** Weekly time-boxed release cycles are encouraged. Note that projects that have no end-user facing 
   product may not have releases.
 
 * **What to include in a release?** Planning a release in advance is not practical because our code contributions

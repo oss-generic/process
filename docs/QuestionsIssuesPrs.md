@@ -33,12 +33,12 @@ additional details provided by the specific project.
    1. Fork the repo to your GitHub account. 
    2. Clone the code to your computer.
    3. Follow the 'Set up guide' provided by the project to set up the project in your computer. 
-   4. Ensure the set up correct by getting all the tests to pass.
+   4. Ensure the set up is correct by getting all the tests to pass.
 
 3. Select an open issue from the issue tracker that you want to work on. 
    
    > If the issue list does not contain what you want to work on, post an issue (as described [above](#posting-an-issue))
-   > and wait for it to get acknowledged. Otherwise you could end of fixing something that does not need fixing.
+   > and wait for it to get acknowledged. Otherwise you could end up fixing something that does not need fixing.
 
 4. You are recommended to start with an issue specifically marked for first time contributors (i.e. issues with the 
    `d.firstTimers` label). Note that you **should not do more than one `d.firstTimers` label**.
@@ -59,7 +59,7 @@ additional details provided by the specific project.
    * Commit code at suitable points. Follow the [conventions for commit messages](FormatsAndConventions.md#commit).
 
 7. When you think you are done with fix, create a new PR. Here are the steps: 
-   1. **Update a PR with upstream changes**: There is a chance that While you were write code for the PR, 
+   1. **Update a PR with upstream changes**: There is a chance that while you were write code for the PR, 
       the master branch of the _upstream repo_ (i.e. the original repo you forked from) has been updated with new code. 
       In that case you need to update your fork and your clone with that new code so that the only difference between 
       the code in your branch and the upstream master branch is the code you wrote.  <br>
@@ -105,5 +105,5 @@ additional details provided by the specific project.
     with the `d.Contributors` label.
   * As harder issues take longer to finish, it is prudent to post a message in the issue to let others know that you are 
     working on an issue.
-  * As you submit more (and bigger)PRs, incrementally adopt 
+  * As you submit more (and bigger) PRs, incrementally adopt 
     [additional guidelines meant for experienced contributors](AddionalContributorGuidelines.md).

@@ -20,7 +20,7 @@ messages done by a senior member of the team and follow the same.
 
 ## Do your homework
 
-Use Google, read trouble shooting guides, search issue tracker (including closed issues)
+Use Google, read trouble shooting guides, search issue tracker (including closed issues).
 Contributing to an OSS project requires you to figure out things on your own when you can, and seek help from the 
 right resource (Google, StackOverflow, troubleshooting guides, issue tracker, etc.) when you cannot. 
 While the dev team members will be glad to answer your questions, you will not make a good impression if you 

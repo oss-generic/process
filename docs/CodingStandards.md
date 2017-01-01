@@ -1,6 +1,6 @@
 # Coding Standards
 
-Note that some projects might have addition guidelines for the languages they use.
+Note that some projects might have additional guidelines for the languages they use.
 
 * C#
 * CSS

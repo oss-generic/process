@@ -14,7 +14,7 @@ Use the imperative mood when writing commit messages <br>
 e.g. `Add README.md` rather than `Added README.md` or `Adding README.md`
 
 Optionally, add a detailed description of the changes in the commit below the title, separated by a blank line.
-Here is an example (adapted from [this commit](https://github.com/CS2103AUG2016-T11-C4/main/pull/2/commits/5c5b12d1a75c4a73a8330bfd05e406233694ffa3))
+Here is an example (adapted from [this commit](https://github.com/CS2103AUG2016-T11-C4/main/pull/2/commits/5c5b12d1a75c4a73a8330bfd05e406233694ffa3)):
  
  ```
  Group overloaded methods together
@@ -52,13 +52,12 @@ Use lowerCamelCase (similar to java methods) whenever possible. e.g. `testData`
 
 This format is only for commits merging a PR branch to master.
 
-format `[#IssueNumber] Issue Title (#PrNumber)` <br>
+format: **`[#IssueNumber] Issue Title (#PrNumber)`** <br>
 e.g. `[#5958] Error alert email has very long subject (#6580)`
 
 ## PR
 
-format: **`IssueTitle #IssueNumber`**
-
+format: **`IssueTitle #IssueNumber`** <br>
 e.g. `Error alert email has very long subject #5958`
 
 > Duplicating issue title in PR title is for easy tracing between PRs and issues, to compensate for GitHub's lack of strong

@@ -39,8 +39,14 @@ A reviewer must do the following steps.
 1. Use GitHub's review feature to add comments.
    * Use `start a review` option when adding comments on the latest version of a PR diff. 
      Use the `add single comment` when responding to an existing thread of discussion in a PR diff.
-   * Do not use `Approve` unless you are fully satisfied with the current state of the PR. <br>
-   i.e. NOT allowed: `Let me approve this first while you fix the remaining minor problems`.
+   
+1. Approve or request changes at the end of the review.
+   * If changes are needed, choose `Request changes`.
+     Also change the status label to `s.Ongoing`.
+   * Else, choose `Approve`. If you are the main reviewer, change status to `s.ToMerge`. 
+   
+   > Do not use `Approve` unless you are fully satisfied with the current state of the PR. <br>
+       i.e. NOT allowed: `Let me approve this first while you fix the remaining minor problems`.
 
 ## Tips for reviewers
 

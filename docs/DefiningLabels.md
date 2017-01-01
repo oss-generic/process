@@ -19,12 +19,6 @@ There are two types of label groups:
  
 # Common Labels
 
-### Status (`s.`)
-
-Status labels can be applied to PRs as well.
-
-* `s.OnHold`: The work on the PR has been put on hold pending some other event.
-
 ### Priority (`p.`)
 
 * `p.Critical`: Would like to fix it ASAP and release as a hot patch.
@@ -33,6 +27,22 @@ Status labels can be applied to PRs as well.
 * `p.Medium`: Marginal impact on user experience.
 * `p.Low`: Very little impact, unlikely to do in the near future.
 * `p.Zero`: Unlikely to do, ever.
+
+> An issue is considered as _accepted_ when a priority label has been assigned.
+
+### Status (`s.`)
+
+* Open issues
+    * No status: New issue yet to be triaged. 
+    * `s.Ongoing` : The issue is being worked on.
+* Open PR  
+    * `s.ToReview`: Waiting for the review.
+    * `s.Ongoing` : The PR is being worked on.
+    * `s.ToMerge`: Main reviewer approved the changes. 
+    * `s.MergeApproved` : Both main reviewer and the code quality reviewer has approved the merge. PR can be merged.
+    * `s.OnHold` : The work on the PR has been put on hold pending some other event.
+* Closed issue/PR
+    * `s.Discarded` : The PR was abandoned. 
 
 ### Category (`c.`)
 

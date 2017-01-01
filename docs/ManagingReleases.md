@@ -2,17 +2,17 @@
 
 * **Who does it?** Releases can be managed by the _Release Lead_ of the project (if there is one) or the project lead.
 
-* **How often?** Weekly time-boxed release cycles are encouraged. Note that projects that have no end-user facing 
+* **How often?** Weekly time-boxed release cycles are encouraged. Projects that have no end-user facing 
   product may not have releases.
 
-* **What to include in a release?** Planning a release in advance is not practical because our code contributions
+* **What to include in a release?** Planning a release in advance is not practical if code contributions
   are intermittent and the available manpower for a given release cycle is not always predictable. 
-  Instead, the release contains whatever new code that has been added since the previous release. 
+  In those cases the release can contains whatever new code that has been added since the previous release. 
   However, major releases which are not backward compatible may need planning in advance.
 
 * **Maintaining project velocity**: 
   It is important to keep resolving issues at regular intervals if the project were to keep moving 
-  forward at a reasonable pace. Here are some things we can do: 
+  forward at a reasonable pace. Recommendations: 
   * Shorten the lifecycle of ongoing PRs by aggressively reminding dev/reviewers to resume work when the PR progress 
     becomes stagnant. 
     * Project lead needs to periodically check the issue tracker for inactive PRs and remind the relevant 
@@ -44,13 +44,6 @@
 
 ## Making a release
 
-Release day - 3: 
-  
-* [Optional] Post a comment on ongoing PRs of the current milestone to remind the dev/reviewer to 
-  finish by the release date.
-
-Release day:
-
 1. Ensure the target commit on `master` is not broken.
 1. Merge to `release` branch. 
 1. Create a release.
@@ -62,7 +55,7 @@ Release day:
    a comment asking to finish by next milestone. If an issue is not making
    progress, close the PR and un-assign the issue.
 1. If applicable, add/revise `e.` labels for the issues/PRs in the release. 
-   This may be required for contributors who are working in the project for module credit.
+   This may be required for contributors who need to track their effort (e.g. for payments or school credits).
    If the you are not sure of the effort, post a comment for the reviewer to add the labels.
 1. Ensure all branches merged in the milestone have been deleted on GitHub.
 1. Update (or create an issue for updating) contributor list in the project website.

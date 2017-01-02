@@ -20,8 +20,8 @@ Append `?w=1` to url of the `/files` page of the pull request (the "Files change
 1. Push your master branch to your fork (if you are creating PRs using a fork).
 
 1. Sync your branch with the `master` branch. This can be done in two ways:
-   1. Merge `master` to your branch (this option is recommended for new contributors).
-   2. Rebase the PR branch on the `master` branch (this option is recommended for experienced contributors). 
+   1. Merge `master` to your branch (recommended option for new contributors).
+   1. Rebase the PR branch on the `master` branch (recommended option for experienced contributors). 
 
 ### Implement big features using long-lived feature branches
 

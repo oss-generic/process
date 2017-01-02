@@ -5,7 +5,13 @@
 format: **`issueNumber-some-keywords-from-issue-title`**
 
 e.g. if the issue title is `Error alert email has very long subject #5958`, <br>
-your branch name can be `5958-error-alert-long-subject`
+the branch name can be `5958-error-alert-long-subject`
+
+Note: Use only _some_ (not _all_) keywords from the issue title (e.g. 3-5 keywords). Very long branch names 
+are not desirable.
+
+> Rationale: This format allows easy traceability between a branch and the issue it fixes. 
+> It is particularly suitable for projects following a branch-per-issue workflow.
 
 ## Commit
 
@@ -55,11 +61,14 @@ This format is only for commits merging a PR branch to master.
 format: **`[#IssueNumber] Issue Title (#PrNumber)`** <br>
 e.g. `[#5958] Error alert email has very long subject (#6580)`
 
+> Rationale: This format allows easily traceability between a merge commit, the issue it fixes, and the PR that fixed it. 
+> Having the issue name tells us what the commit is about without having to look it up in GitHub issue tracker.
+
 ## PR
 
 format: **`IssueTitle #IssueNumber`** <br>
 e.g. `Error alert email has very long subject #5958`
 
-> Duplicating issue title in PR title is for easy tracing between PRs and issues, to compensate for GitHub's lack of strong
-> linking between the two.
+> Rationale: Duplicating issue title in PR title is for easy tracing between PRs and issues, 
+> to compensate for GitHub's lack of strong linking between the two.
 > Assume there is an invisible prefix in front of the PR title `Fixes issue : ...`

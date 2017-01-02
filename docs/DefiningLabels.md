@@ -34,15 +34,13 @@ There are two types of label groups:
 
 * Open issues
     * No status: New issue yet to be triaged. 
-    * `s.Ongoing` : The issue is being worked on.
+    * `s.OnHold`: The work on the issue has been put on hold pending some other event.
 * Open PR  
     * `s.ToReview`: Waiting for the review.
-    * `s.Ongoing` : The PR is being worked on.
+    * `s.Ongoing`: The PR is being worked on.
     * `s.ToMerge`: Main reviewer approved the changes. 
-    * `s.MergeApproved` : Both main reviewer and the code quality reviewer has approved the merge. PR can be merged.
-    * `s.OnHold` : The work on the PR has been put on hold pending some other event.
-* Closed issue/PR
-    * `s.Discarded` : The PR was abandoned. 
+    * `s.MergeApproved`: Both main reviewer and the code quality reviewer has approved the merge. PR can be merged.
+    * `s.OnHold`: The work on the PR has been put on hold pending some other event.
 
 ### Category (`c.`)
 
@@ -78,7 +76,7 @@ the effort for fixing the issue.
 
 ### Aspect (`a-`)
 
-Classifies the issues based on the non-functional aspect it tackles. 
+Classifies the issues based on the non-functional aspect it tackles. Some examples:
 
 |Label              | Description
 |-------------------|------------------------------------
@@ -86,10 +84,10 @@ Classifies the issues based on the non-functional aspect it tackles.
 |`a-CodeQuality`    |Refactorings that are mainly to improve code/design quality
 |`a-Concurrency`    |Things related to concurrent access, session control
 |`a-DevOps`         |CI, release management, version control, dev docs
-|`a-Docs`           |Website, user docs
+|`a-Docs`           |User docs, product website
 |`a-FaultTolerance` |Resilience to user errors, environmental problems
 |`a-Performance`    |Speed of operation
-|`a-Persistence`    |Database layer, GAE datastore
+|`a-Persistence`    |Saving data permanently
 |`a-Scalability`    |Related to behavior at increasing loads
 |`a-Security`       |Protection from security threats
 |`a-Testing`        |Testing efficiency and robustness (as opposed to testing a specific feature)

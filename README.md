@@ -33,7 +33,7 @@ on GitHub, notably, [TEAMMATES](https://github.com/teammates/teammates),
   on overseeing issue/PR life cycles.
 * [**Managing Releases**](docs/ManagingReleases.md): Instructions for managing releases, milestones, 
   and project schedule.
-* [**Defining Labels**](docs/DefiningLabels.md): Instructions for merging a PR.
+* [**Defining Labels**](docs/DefiningLabels.md): Instructions for creating labels for the issue tracker.
 
 ### Contributing to this repo 
 

@@ -25,7 +25,7 @@ When an issue comes in,
 * PRs created by core members:
   * If you can, assign at least one `reviewer`. If you don't, team lead will assign reviewers for the PR.
   
-  > GitHub's _blame_ feature (or use a third party service such as _mentionbot_)can help to find suitable reviewers. 
+  > GitHub's _blame_ feature (or a third-party service such as _mentionbot_) can help to find suitable reviewers. 
   > **Currently active** Developers who have touched the same code before and leads of the areas touched by the PR 
   > are potential reviewers.
   

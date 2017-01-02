@@ -2,7 +2,7 @@
 
 ## Branch
 
-format: **`issueNumber-some-keywords-from-issue-title`**
+Format: **`issueNumber-some-keywords-from-issue-title`**
 
 e.g. if the issue title is `Error alert email has very long subject #5958`, <br>
 the branch name can be `5958-error-alert-long-subject`
@@ -58,7 +58,7 @@ Use lowerCamelCase (similar to java methods) whenever possible. e.g. `testData`
 
 This format is only for commits merging a PR branch to master.
 
-format: **`[#IssueNumber] Issue Title (#PrNumber)`** <br>
+Format: **`[#IssueNumber] Issue Title (#PrNumber)`** <br>
 e.g. `[#5958] Error alert email has very long subject (#6580)`
 
 > Rationale: This format allows easily traceability between a merge commit, the issue it fixes, and the PR that fixed it. 
@@ -66,7 +66,7 @@ e.g. `[#5958] Error alert email has very long subject (#6580)`
 
 ## PR
 
-format: **`IssueTitle #IssueNumber`** <br>
+Format: **`IssueTitle #IssueNumber`** <br>
 e.g. `Error alert email has very long subject #5958`
 
 > Rationale: Duplicating issue title in PR title is for easy tracing between PRs and issues, 

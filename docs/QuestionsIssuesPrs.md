@@ -25,9 +25,8 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 Note that each project might specify additional things to do. i.e. follow these steps in conjunction with 
 additional details provided by the specific project.
 
-1. Read any instructions the project has for new contributors. Some projects require you to read some documents
-   and/or do some orientation activities before you start contributing. 
-   For example, [TEAMMATES](../../../teammates/teammates) has a 'Contributor Orientation Guide'.
+1. Read any instructions the project has for new contributors. 
+   Ensure you have completed orientation activities (if any) prescribed by the project. 
 
 1. Set up the project. These are the typical steps.
    1. Fork the repo to your GitHub account. 

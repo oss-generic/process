@@ -18,7 +18,6 @@
     * Project lead needs to periodically check the issue tracker for inactive PRs and remind the relevant 
       persons to resume work.
     * If a PR is inactive even after a reminder, it can be closed (and the issue unassigned). 
-    * TODO: automate the reminders.
   * Make issues smaller so that each can be resolved in a shorter time.
   * Actively seek volunteers to do higher priority issues.
 

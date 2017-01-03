@@ -7,7 +7,7 @@ Take your time to learn and follow the workflow to the letter.
 * If the setup instructions mention a specific version of a software to use, **use that exact version** 
   instead of the latest version.
 * Do not skip any steps because you think that step is "not important". 
-* Do not assume current project does things the same way things were one in that _other_ project you are familiar with.
+* Do not assume the current project does things the same way things were done in other projects you are familiar with.
 
 ## Follow others
 

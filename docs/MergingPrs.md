@@ -34,7 +34,7 @@ Merging to `master` or `release` branches requires approval from both _main revi
   1. If the commit history is clean (this should be the case for PRs done by experienced contributors who follow 
      the [advanced contributor guidelines](docs/AdvancedContributorGuidelines.md)), <br>
      Merge using the `Create a merge commit` option.
-  2. Else, merge using the `Squash and merge` option.
+  1. Else, merge using the `Squash and merge` option.
   
 1. Optionally, apply an `e.*` label to the issue (not the PR) to indicate 
   the estimated effort required to fix the issue, and another `e.*` label to the PR

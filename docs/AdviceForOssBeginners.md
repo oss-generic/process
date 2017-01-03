@@ -11,8 +11,8 @@ Take your time to learn and follow the workflow to the letter.
 
 ## Follow others
 
-> OSS projects involve many persons contributing in small measures. If each person did things their own way, the project
-> will deteriorate into a mess very quickly. That is why being consistent is very important in OSS projects.
+OSS projects involve many persons contributing in small measures. If each person did things their own way, the project
+will deteriorate into a mess very quickly. That is why being consistent is very important in OSS projects.
 
 In the absence of specific instructions, follow what others are doing so that your work is consistent with the rest
 of the project. For example, if you are not sure how detailed you should make commit messages, you can look at commit

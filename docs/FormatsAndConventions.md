@@ -56,7 +56,7 @@ Use lowerCamelCase (similar to java methods) whenever possible. e.g. `testData`
 
 ## Merge commit
 
-This format is only for commits merging a PR branch to master.
+This format is only for commits merging a PR branch to `master` branch.
 
 Format: **`[#IssueNumber] Issue Title (#PrNumber)`** <br>
 e.g. `[#5958] Error alert email has very long subject (#6580)`

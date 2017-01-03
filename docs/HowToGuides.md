@@ -17,7 +17,7 @@ Append `?w=1` to url of the `/files` page of the pull request (the "Files change
 1. Update the `master` branch of your local clone. 
 [Here](https://help.github.com/articles/syncing-a-fork/) are the instructions.
 
-1. Push your master branch to your fork (if you are creating PRs using a fork).
+1. Push your `master` branch to your fork (if you are creating PRs using a fork).
 
 1. Sync your branch with the `master` branch. This can be done in two ways:
    1. Merge `master` to your branch (recommended option for new contributors).

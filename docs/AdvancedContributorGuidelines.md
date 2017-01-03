@@ -32,7 +32,7 @@ Big PRs are hard to review. More systematic committing (as explained below) can 
 ## Updating a PR in response to a review
   
 * If the `master` has progressed beyond the root of the PR branch, rebase the PR branch 
-  (instead of merging master to PR branch). This will keep the PR branch free of merge commits.
+  (instead of merging `master` to PR branch). This will keep the PR branch free of merge commits.
 * Commits done to fix problems mentioned in the review should be squashed onto the relevant existing commits in the 
   branch (if applicable).
 * Post a new commit summary (if applicable) when the PR is ready for another review. Here is an example.

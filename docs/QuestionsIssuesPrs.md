@@ -59,9 +59,9 @@ additional details provided by the specific project.
 
 1. When you think you are done with fix, create a new PR. Here are the steps: 
    1. **Update a PR with upstream changes**: There is a chance that while you were write code for the PR, 
-      the master branch of the _upstream repo_ (i.e. the original repo you forked from) has been updated with new code. 
+      the `master` branch of the _upstream repo_ (i.e. the original repo you forked from) has been updated with new code. 
       In that case you need to update your fork and your clone with that new code so that the only difference between 
-      the code in your branch and the upstream master branch is the code you wrote.  <br>
+      the code in your branch and the upstream `master` branch is the code you wrote.  <br>
       
       > See: [How to update a PR with upstream changes](HowToGuides.md#update-a-pr-with-upstream-changes)
    

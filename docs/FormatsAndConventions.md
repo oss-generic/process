@@ -61,7 +61,7 @@ This format is only for commits merging a PR branch to master.
 Format: **`[#IssueNumber] Issue Title (#PrNumber)`** <br>
 e.g. `[#5958] Error alert email has very long subject (#6580)`
 
-> Rationale: This format allows easily traceability between a merge commit, the issue it fixes, and the PR that fixed it. 
+> Rationale: This format allows easy traceability among a merge commit, the issue it fixes, and the PR that fixed it. 
 > Having the issue name tells us what the commit is about without having to look it up in GitHub issue tracker.
 
 ## PR

@@ -1,0 +1,11 @@
+# Coding Standards
+
+Note that some projects might have additional guidelines for the languages they use.
+
+* C#
+* CSS
+* **Java**: [Style guide](https://oss-generic.github.io/process/codingstandards/coding-standards-java.html)
+* JavaScript
+* JSP
+* JSTL
+* **HTML**: [Style guide](https://oss-generic.github.io/process/codingstandards/coding-standards-html.html)

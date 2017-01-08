@@ -9,3 +9,4 @@ Note that some projects might have additional guidelines for the languages they 
 * JSP
 * JSTL
 * **HTML**: [Style guide](https://oss-generic.github.io/process/codingStandards/CodingStandard-Html.html)
+* **GFMD** (GitHub Flavored Markdown): [Style guide](../codingStandards/CodingStandard-Gfmd.md)

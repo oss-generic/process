@@ -70,3 +70,22 @@ Blockquotes are usually used for additional info the reader can skip over.
 ```markdown
 > Some additional info.
 ```
+
+#### Use generic numbering for ordered list
+
+Using `1.` for every item in an ordered list can make it easy to insert more items later. 
+
+> Generic numbers are converted to the correct numbers by GitHub markdown renderer.
+
+  :heavy_check_mark: :heavy_check_mark: :heavy_check_mark: :arrow_heading_down:
+  ```markdown
+  1. item 1
+  1. item 2
+  1. item 3
+  ```
+  :heavy_multiplication_x: :heavy_multiplication_x: :heavy_multiplication_x: :arrow_heading_down:
+  ```markdown
+  1. item 1
+  2. item 2
+  3. item 3
+  ```

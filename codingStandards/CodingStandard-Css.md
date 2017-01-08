@@ -1,21 +1,5 @@
 # CSS Coding Standard
 
-## Contents
- - [General](#general)
- - [CSS Files](#css-files)
- - [Selectors](#selectors)
-   - [Selector Formatting](#selector-formatting)
-   - [Use of Efficient Selectors](#use-of-efficient-selectors)
- - [Classes](#classes)
-   - [Naming Standards](#naming-standards)
- - [Attributes](#attributes)
-   - [Order of Attributes](#order-of-attributes)
-   - [Attribute Formatting](#attribute-formatting)
-   - [General Details](#general-details)
- - [Resources](#resources)
-   - [Highly Recommended](#highly-recommended)
-   - [Other Readings](#other-readings)
-
 ## General
 
 * Use the [Google CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml)
@@ -37,11 +21,13 @@
   > magically comes to life. As of now we are using css files as styles of HTML pages and thus the dependency 
   > must be clearly visible in the HTML page.
 
-  :heavy_check_mark: :heavy_check_mark: :heavy_check_mark: :arrow_heading_down:
+  ![](Good.png)
+  
   ```html
      <link rel="stylesheets" href="../common.css" type="text/css">
   ```
-  :heavy_multiplication_x: :heavy_multiplication_x: :heavy_multiplication_x: :arrow_heading_down:
+  ![](Bad.png)
+  
   ```css
      @import "common.css";
   ```
@@ -52,7 +38,8 @@
   > in the future will be a hassle and redundant overriding of css rules may occur. If all are in one place
   > management is also easier.
 
-  :heavy_check_mark: :heavy_check_mark: :heavy_check_mark: :arrow_heading_down:
+  ![](Good.png)
+  
   ```css
   #mainDiv {
      border: thin solid black;
@@ -60,7 +47,8 @@
      margin: auto;
   }
   ```
-  :heavy_multiplication_x: :heavy_multiplication_x: :heavy_multiplication_x: :arrow_heading_down:
+  ![](Bad.png)
+  
   ```html
   <style>
   #mainDiv {
@@ -69,7 +57,8 @@
   </style>
   ```
   
-  :heavy_multiplication_x: :heavy_multiplication_x: :heavy_multiplication_x: :arrow_heading_down:
+  ![](Bad.png)
+  
   ```html
   <div id="mainDiv" style="border: thin solid black; margin: auto">
   ```
@@ -90,14 +79,16 @@
   
   > This eases reading as well as helps in revision control as conflicts reduce.
 
-  :heavy_check_mark: :heavy_check_mark: :heavy_check_mark: :arrow_heading_down:
+  ![](Good.png)
+  
   ```css
   .button-sort-ascending:hover,
   .button-sort-none:hover {
      cursor: pointer;
   }
   ```
-  :heavy_multiplication_x: :heavy_multiplication_x: :heavy_multiplication_x: :arrow_heading_down:
+  ![](Bad.png)
+  
   ```css
   .button-sort-ascending:hover, .button-sort-none:hover {
      cursor: pointer;
@@ -146,7 +137,8 @@
   > pages. To name these classes, describe the function of the element rather than its location.
   > (eg: .panel-details rather than .top-details-box)
 
-  :heavy_check_mark: :heavy_check_mark: :heavy_check_mark: :arrow_heading_down:
+  ![](Good.png)
+  
   ```css
   /* Component Class */
   .comment-list
@@ -155,7 +147,8 @@
   .align-center
   .border-gray
   ```
-  :heavy_multiplication_x: :heavy_multiplication_x: :heavy_multiplication_x: :arrow_heading_down:
+  ![](Bad.png)
+  
   ```css
   .commentList
   .sort_icon
@@ -177,7 +170,8 @@
   
   > Rationale: It makes it easier to locate attributes in a css file.
 
-  :heavy_check_mark: :heavy_check_mark: :heavy_check_mark: :arrow_heading_down:
+  ![](Good.png)
+  
   ```css
   .sort-icon {
      display: block;
@@ -188,7 +182,8 @@
   }
   ```
   
-  :heavy_multiplication_x: :heavy_multiplication_x: :heavy_multiplication_x: :arrow_heading_down:
+  ![](Bad.png)
+  
   ```css
   .sort-icon {
      width: 12px;
@@ -221,7 +216,8 @@
   > Unless absolutely necessary do not use it. If there is such a situation clearly state the reason 
   > with comments (/*  */).
   
-  :heavy_multiplication_x: :heavy_multiplication_x: :heavy_multiplication_x: :arrow_heading_down:
+  ![](Bad.png)
+  
   ```css
    margin: 10px 0 !important;
   ```

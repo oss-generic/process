@@ -61,7 +61,9 @@
 
 ### [Level 6] `Project Adviser`
 
-* Criteria: Was an active developer for several years. No longer contributing code.
+* Criteria: Can advice devs based on,
+   * extensive past experience with the project (e.g. someone who was an active developer for several years in the past)
+   * deep expertise in some area relevant to the project (e.g. a domain expert)
  
 * Responsibilities:  
     * Contributes to the project as a reviewer and an area expert

@@ -1,6 +1,6 @@
-# CSS Coding Standard
+<h1> CSS Coding Standard </h1>
 
-## General
+# General
 
 * Use the [Google CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml)
   for any topics not covered in this document.
@@ -13,7 +13,7 @@
  > being added is not already present.
 
 
-## CSS Files
+# CSS Files
 
 * CSS file includes must be done using `<link>` tags in the HTML/JSP files and NOT using `@import` in other css files.
   
@@ -63,7 +63,7 @@
   <div id="mainDiv" style="border: thin solid black; margin: auto">
   ```
 
-## Selectors
+# Selectors
 
 * Do not use CSS3 selectors.
 
@@ -73,7 +73,7 @@
   > Also, we can stick to more functional names for the css and use classes to achieve our needs 
   > → more readable and easier to manage.
 
-### Selector Formatting
+## Selector Formatting
 
 * The selector(s) must be specified in separate lines.
   
@@ -103,9 +103,9 @@
   > In addition this gives an immediate idea as to how certain classes are being used in the HTML files
   > (from the hierarchy) without actually reading HTML files.
 
-### Use of Efficient Selectors
+## Use of Efficient Selectors
 
-* Do not qualify class/ID selectors using tag names (do not use: div.mainContent, simply use .mainContent).
+* Do not qualify class/ID selectors using tag names (do not use: `div.mainContent`, simply use `.mainContent`).
   Refer to [Writing efficient CSS][efficient-css]
   for examples.
 
@@ -114,19 +114,19 @@
   > if this kind of qualification is needed, then probably the class has not been named well enough
   > (see naming standards for classes).
 
-* Use child selector rather than descendant selector (use '#container > span' rather than '#container span').
+* Use child selector rather than descendant selector (use `#container > span` rather than `#container span`).
   Refer to [Writing efficient CSS][efficient-css]
   for examples.
 
   > This is a strong recommendation as descendant selector is extremely expensive, especially when the
   > specified ancestor has a lot of descendants.
 
-## Classes
+# Classes
 
-### Naming Standards
+## Naming Standards
 
 * Use all lowercase letters.<br>
-  Separate words with hyphens ('-') and no other separator.<br>
+  Separate words with hyphens (`-`) and no other separator.<br>
   We use 2 kinds of classes: Atomic and Component.
   
   > Atomic Classes describe atomic attributes like border-gray, align-center that can be used on any element.
@@ -161,9 +161,9 @@
   * If the component does not have any recurring function, utilise the generic classes to achieve the styling.<br>
   * **Exception:** If a particular element requires too many generic classes ( > 5) create a functional class name for it.
 
-## Attributes
+# Attributes
 
-### Order of Attributes
+## Order of Attributes
 
 * Alphabetize the attributes, disregarding any browser prefix.<br>
   All browser-prefixed versions of an attribute must be written together.
@@ -195,7 +195,7 @@
   ```
 
 
-### Attribute Formatting
+## Attribute Formatting
 
 * Semicolon after every attribute specification.
 * Space after colon.
@@ -206,7 +206,7 @@
   Refer to [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices) 
   for examples.
 
-### General Details
+## General Details
 
 * Use shorthands as much as possible (eg `border: 2px 0 1px 4px`).
 
@@ -223,7 +223,7 @@
   ```
 
 
-## Resources
+# Resources
 
 ### Highly Recommended
 

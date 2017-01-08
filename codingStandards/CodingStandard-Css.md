@@ -2,7 +2,7 @@
 
 # General
 
-* Use the [Google CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml)
+* Use the [Google CSS Style Guide][google-css]
   for any topics not covered in this document.
 
 * If the project is using a framework (e.g. Bootstrap/jQuery UI), use classes from the framework as much as possible.
@@ -227,7 +227,7 @@
 
 ### Highly Recommended
 
-* [Google CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
+* [Google CSS Style Guide][google-css]
 * [Writing Your Best Code - CSS Coding Practices](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices)
 
 ### Other Readings
@@ -238,3 +238,4 @@
 * [Writing efficient CSS (MDN article)](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
 
 [efficient-css]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS
+[google-css]: https://google.github.io/styleguide/htmlcssguide.xml

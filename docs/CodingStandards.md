@@ -4,8 +4,8 @@ Note that some projects might have additional guidelines for the languages they 
 
 * C#
 * CSS
-* **Java**: [Style guide](https://oss-generic.github.io/process/codingstandards/coding-standards-java.html)
+* **Java**: [Style guide](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html)
 * JavaScript
 * JSP
 * JSTL
-* **HTML**: [Style guide](https://oss-generic.github.io/process/codingstandards/coding-standards-html.html)
+* **HTML**: [Style guide](https://oss-generic.github.io/process/codingStandards/CodingStandard-Html.html)

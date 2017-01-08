@@ -37,11 +37,18 @@ Here is an example (adapted from [this commit](https://github.com/CS2103AUG2016-
   
 ## Directory
 
-Use lowerCamelCase (similar to java methods) whenever possible. e.g. `testData`
+* If the project uses a framework that has a specific folder naming convention, follow that instead.
+* Use lowerCamelCase (similar to java methods) whenever possible. e.g. `testData`
+* Prefer plurals if the folder contains multiple items of same type e.g. `docs` instead of `doc`
 
 ## File
 
+* If the project uses a framework that has a specific file naming convention, follow that instead.
 * Use UpperCamelCase (similar to java class names) whenever possible. e.g. `FormatsAndConventions.md`
+* If the file name has multiple phrases, use `-` to separate phrases. e.g. `CodingStyle-JavaBasic.html`
+* Try to user common prefixes so that similar files appear together when sorted by name. 
+  e.g. prefer `CodingStyle-JavaBasics.html` and `CodingStyle-HtmlBasics.html` to 
+  `JavaCodingStyleBasics.html` and `HtmlCodingStyleBasics.html`
 * For documents, try to make the file name match the document title as much as possible.
 
 ## Issue

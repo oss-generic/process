@@ -112,7 +112,7 @@
   > This speeds up the css match lookup. If such a qualification is actually required, either use another
   > class on top of this to change the style or use a completely different class to start with. In any case,
   > if this kind of qualification is needed, then probably the class has not been named well enough
-  > (see naming standards for classes).
+  > (see [naming standards for classes](#naming-classes)).
 
 * Use child selector rather than descendant selector (use `#container > span` rather than `#container span`).
   Refer to [Writing efficient CSS][efficient-css]
@@ -123,7 +123,7 @@
 
 # Classes
 
-## Naming Standards
+## Naming Classes
 
 * Use all lowercase letters.<br>
   Separate words with hyphens (`-`) and no other separator.<br>

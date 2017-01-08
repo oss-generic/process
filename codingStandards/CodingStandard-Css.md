@@ -42,7 +42,7 @@
      <link rel="stylesheets" href="../common.css" type="text/css">
   ```
   :heavy_multiplication_x: :heavy_multiplication_x: :heavy_multiplication_x: :arrow_heading_down:
-  ```html
+  ```css
      @import "common.css";
   ```
 

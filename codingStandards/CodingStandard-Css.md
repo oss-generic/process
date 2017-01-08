@@ -1,4 +1,20 @@
-<h1> CSS Coding Standard </h1>
+# CSS Coding Standard 
+
+**Contents**:
+
+  * [General](#general)
+  * [CSS Files](#css-files)
+  * [Selectors](#selectors)
+    * [Selector Formatting](#selector-formatting)
+    * [Use of Efficient Selectors](#use-of-efficient-selectors)
+  * [Classes](#classes)
+    * [Naming Classes](#naming-classes)
+  * [Attributes](#attributes)
+    * [Order of Attributes](#order-of-attributes)
+    * [Attribute Formatting](#attribute-formatting)
+    * [General Details](#general-details)
+  * [Resources](#resources)
+
 
 # General
 

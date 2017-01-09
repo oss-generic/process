@@ -91,7 +91,10 @@ license as that used by the project.
 1. After creating the PR, 
    1. Wait for CI (i.e. Travis, AppVeyor) to run tests/checks against your PR and report status. 
       If any errors are reported, fix those problems and push the fixes to the same branch.
-   1. When there are no more CI errors, post a comment to inform the dev team that the PR is ready for review. 
+   1. If the PR is big (e.g. affecting more than 100 lines), refactor the commits in the 
+      [multi-step PR format](HowToGuides.md#create-a-multi-step-pr).
+   1. If the multi-step PR format is not used, and there are no more CI errors, post a comment to inform the 
+      dev team that the PR is ready for review.
 
 1. If you do not get any response from the dev team within 1-2 days, keep posting reminders in the PR thread.
 

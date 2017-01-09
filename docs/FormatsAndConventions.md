@@ -13,13 +13,22 @@ are not desirable.
 > Rationale: This format allows easy traceability between a branch and the issue it fixes. 
 > It is particularly suitable for projects following a branch-per-issue workflow.
 
-## Commit
+## Commit message
 
-Write a short descriptive (less than 40 chars) title for the commit message.
-Use the imperative mood when writing commit messages <br>
-e.g. `Add README.md` rather than `Added README.md` or `Adding README.md`
+Every commit must have a well written commit message _**subject line**_.
+ 
+1. Limit the subject line to 50 characters
+1. Capitalize the subject line
+1. Do not end the subject line with a period
+1. Use the imperative mood in the subject line
+   e.g. `Add README.md` rather than `Added README.md` or `Adding README.md`
 
-Optionally, add a detailed description of the changes in the commit below the title, separated by a blank line.
+Commit messages for non-trivial commits should have a _**body**_ giving details of the commit.
+ 
+1. Separate subject from body with a blank line
+1. Wrap the body at 72 characters
+1. Use the body to explain what and why vs. how
+
 Here is an example (adapted from [this commit](https://github.com/CS2103AUG2016-T11-C4/main/pull/2/commits/5c5b12d1a75c4a73a8330bfd05e406233694ffa3)):
  
  ```
@@ -31,9 +40,7 @@ Here is an example (adapted from [this commit](https://github.com/CS2103AUG2016-
  Note that this is not required strictly by the coding standard.
  ```
   
-**Resources**
-
-1. [Web article] [How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)
+Refer to the article _[How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)_ for a more detailed explanation.
   
 ## Directory
 

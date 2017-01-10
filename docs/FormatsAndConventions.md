@@ -79,3 +79,9 @@ e.g. `Error alert email has very long subject #5958`
 > Rationale: Duplicating issue title in PR title is for easy tracing between PRs and issues, 
 > to compensate for GitHub's lack of strong linking between the two.
 > Assume there is an invisible prefix in front of the PR title `Fixes issue : ...`
+
+## Spelling
+
+Use American English spelling.
+
+> Rationale: Consistent spelling improves discoverability of API methods.

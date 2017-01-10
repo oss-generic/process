@@ -25,6 +25,9 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 Note that each project might specify additional things to do. i.e. follow these steps in conjunction with 
 additional details provided by the specific project.
 
+IMPORTANT: By submitting a PR, you agree to allow the project owner to license your work under the same 
+license as that used by the project.
+
 1. Read any instructions the project has for new contributors. 
    Ensure you have completed orientation activities (if any) prescribed by the project. 
 

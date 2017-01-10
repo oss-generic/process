@@ -1,5 +1,8 @@
 # Java Coding Standard (Beginner/Intermediate Level)
 
+**Important**: Use the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) for any topics 
+not covered in this document.
+
 - [Naming Conventions](#naming-conventions)
   - [General Naming Conventions](#general-naming-conventions)
   - [Specific Naming Conventions](#specific-naming-conventions)

@@ -754,11 +754,12 @@ This follows partly from the general block rule above. This form differs from th
 ### **White Space**
 
 **10. Take note of the following:**
->- **Operators should be surrounded by a space character.**
->- **Java reserved words should be followed by a white space.**
->- **Commas should be followed by a white space.**
->- **Colons should be surrounded by white space.**
->- **Semicolons in for statements should be followed by a space character.**
+
+> * Operators should be surrounded by a space character.
+> * Java reserved words should be followed by a white space.
+> * Commas should be followed by a white space.
+> * Colons should be surrounded by white space when used as a binary/ternary operator. Does not apply to `switch x:`.
+> * Semicolons in for statements should be followed by a space character.
 
 <table>
   <tr>
@@ -793,16 +794,6 @@ doSomething(a, b, c, d);</pre>
     <td>
       <pre lang="java">
 doSomething(a,b,c,d);</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <pre lang="java">
-case 100 :</pre>
-    </td>
-    <td>
-      <pre lang="java">
-case 100:</pre>
     </td>
   </tr>
   <tr>

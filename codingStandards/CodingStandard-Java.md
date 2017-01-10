@@ -2,7 +2,7 @@
 
 - [Naming Conventions](#naming-conventions)
   - [General Naming Conventions](#general-naming-conventions)
-  - [Specific Naming Coonvetions](#specific-naming-conventions)
+  - [Specific Naming Conventions](#specific-naming-conventions)
 - [Files](#files)
 - [Statements](#statements)
   - [Package and Import Statements](#package-and-import-statements)

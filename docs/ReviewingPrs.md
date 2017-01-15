@@ -50,14 +50,6 @@ A reviewer must do the following steps.
 
 ## Tips for reviewers
 
-### If the PR is too big 
-  
-  * Explore the possibility of breaking the PR into multiple self-contained steps
-  as explained in [creating commits in big PRs](AdvancedContributorGuidelines.md#creating-commits-in-big-prs). 
-  * If the intermediate steps are not releasable, 
-  [long-lived feature branches](HowToGuides.md#implement-big-features-using-long-lived-feature-branches)
-  should be used instead.
-
 ## Canned comments
 
 // TODO: add common comments that can be used when reviewing

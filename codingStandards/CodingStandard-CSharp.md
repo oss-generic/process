@@ -14,7 +14,7 @@
 
 ## File Organization
 **1. Source file name and class name should always match.**<br>
-MyClass.cs --> `public class MyClass { ... }`
+MyClass.cs → `public class MyClass { ... }`
 
 **2. Directory names should follow namespace for the class.**<br>
 `System.Windows.Forms.Control` should use the path System\Windows\Forms\Control.cs
@@ -23,9 +23,9 @@ MyClass.cs --> `public class MyClass { ... }`
 ## Formatting
 ### Layout
 **1. Avoid putting multiple namespaces or classes per file.**<br>
-This will make your codes more readable and also make it easier to find the .cs file for a particular class.
+This will make your code more readable and also make it easier to find the .cs file for a particular class.
 
-**2. Place *using* directives at the top of the file; grouped and ordered alphabetically.**<br>
+**2. Place *using* directives at the top of the file, grouped and ordered alphabetically.**<br>
 
 ```cs
 // .NET namespaces first
@@ -46,7 +46,7 @@ ii. Constructors and Finalizer<br>
 iii. Nested Enums, Structs and Classes<br>
 iv. Properties<br>
 v. Methods<br>
-> Sequence declaration within type groups are based on visibility in this order: `public, protected, internal, private`
+> Sequence declaration within type groups are based on visibility in this order: `public, protected, internal, private`.
 
 ### Indentation
 **1. Basic indentation should be 4 spaces.**<br>
@@ -141,7 +141,7 @@ if (x > y)
 - Add a white space around operators like `+`, `-`, `==` etc.
 - Do not add white space after `(` and before `)`.
 
-Some examples:
+Examples:
 
 ![](Good.png)
 
@@ -183,7 +183,7 @@ for(i=0;i<10;i++){
 **1. All names should be written in English.**<br>
 English is the preferred language for international development.
 
-**2.Use proper casing for language elements.**<br>
+**2. Use proper casing for language elements.**<br>
 
 > Pascal casing: the first letter of every word is capitalized.<br>
 > Camel casing: the first letter of every word, except for the first word, is capitalized.
@@ -207,13 +207,12 @@ Parameter | Camel | `typeName`
 Type parameter | Pascal | `TView`
 Property | Pascal | `BackColor`
 
-
 **3. Avoid using abbreviations.**<br>
 Unless the full name is excessive:
 
 - Avoid abbreviations longer than 5 characters.<br>
 - Abbreviations must be widely known and accepted.<br>
-- Use upper case for 2 characters abbreviations, and Pascal Case for longer abbreviations.<br>
+- Use upper case for 2-character abbreviations, and Pascal Case for longer abbreviations.<br>
 
 ![](Good.png)
 
@@ -230,9 +229,9 @@ HTMLSource
 ```
 
 **4. Prefix boolean variables with `Can`, `Is`, or `Has`.**<br>
-Example: `CanEvaluate`, `IsVisible`, `HasLicense`.<br>
+Examples: `CanEvaluate`, `IsVisible`, `HasLicense`.<br>
 
-> Avoid boolean variables that represent the negation of a things. e.g., use `IsInitialized` instead of `IsNotInitialized`.
+> Avoid boolean variables that represent the negation of things. e.g., use `IsInitialized` instead of `IsNotInitialized`.
  
 **5. Do not include the parent class name within a property name.**<br>
 
@@ -265,7 +264,7 @@ strName
 ColorsEnum
 ```
 
-> **Exception**: All fields and varible names that contains GUI elements like button should be postfixed with their type name without abbreviations. e.g., `cancelButton`, `nameTextBox`.
+> **Exception**: All fields and variable names that contain GUI elements like button should be postfixed with their type name without abbreviations. e.g., `cancelButton`, `nameTextBox`.
 
 
 ## Commenting Conventions
@@ -274,7 +273,7 @@ ColorsEnum
 - Place the comment on a separate line, not at the end of a line of code.
 - Begin comment text with an upper case letter.
 - Insert one space between comment delimiter (`//`) and comment text.
-- Use `//` or `///` but never `/* ... */`
+- Use `//` or `///` but never `/* ... */`.
 - The length of comment should not exceed the length of code.
 
 **2. Document all public, protected and internal types and members.**<br>
@@ -306,7 +305,7 @@ private void WriteEvent(string message)
 void WriteEvent(string message)
 ```
 
-**2. Always use the built in C# data type aliases, instead of the .NET common type system.**<br>
+**2. Always use the built-in C# data type aliases, instead of the .NET common type system.**<br>
 
 ![](Good.png)
 
@@ -351,7 +350,6 @@ var startInfo = new ProcessStartInfo("myapp.exe");
 	StandardOutput = Console.Output,
 	UseShellExecute = true
 };
-
 ```
 
 ![](Bad.png)
@@ -363,7 +361,7 @@ startInfo.UseShellExecute = true;
 ```
 
 ## References
-1.[https://msdn.microsoft.com/en-us/library/ff926074.aspx](https://msdn.microsoft.com/en-us/library/ff926074.aspx)<br>
-2.[http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf)<br>
-3.[https://github.com/dennisdoomen/CSharpGuidelines](https://github.com/dennisdoomen/CSharpGuidelines)<br>
-4.[http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf](http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf)<br>
+1. [C# Coding Coventions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ff926074.aspx)<br>
+2. [C# Coding Standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf)<br>
+3. [CSharpGuidelines](https://github.com/dennisdoomen/CSharpGuidelines)<br>
+4. [C# Coding Style Guide](http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf)

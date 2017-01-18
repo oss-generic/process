@@ -13,19 +13,19 @@
 - [References](#references)
 
 ## File Organization
-**1. Source file name and class name should always match.**<br>
+####1. Source file name and class name should always match.
 MyClass.cs → `public class MyClass { ... }`
 
-**2. Directory names should follow namespace for the class.**<br>
+####2. Directory names should follow namespace for the class.
 `System.Windows.Forms.Control` should use the path System\Windows\Forms\Control.cs
 > Do not use namespace name with dots. This will make it easier to map namespaces to the directory layout.
 
 ## Formatting
 ### Layout
-**1. Avoid putting multiple namespaces or classes per file.**<br>
+####1. Avoid putting multiple namespaces or classes per file.
 This will make your code more readable and also make it easier to find the .cs file for a particular class.
 
-**2. Place *using* directives at the top of the file, grouped and ordered alphabetically.**<br>
+####2. Place *using* directives at the top of the file, grouped and ordered alphabetically.
 
 ```cs
 // .NET namespaces first
@@ -40,7 +40,7 @@ using Telerik.Ajax;
 using Telerik.WebControls;
 ```
 
-**3. Maintain a common order for each file.**<br>
+####3. Maintain a common order for each file.
 i. Member variable<br>
 ii. Constructors and Finalizer<br>
 iii. Nested Enums, Structs and Classes<br>
@@ -49,7 +49,7 @@ v. Methods<br>
 > Sequence declaration within type groups are based on visibility in this order: `public, protected, internal, private`.
 
 ### Indentation
-**1. Basic indentation should be 4 spaces.**<br>
+####1. Basic indentation should be 4 spaces(not tabs).
 
 ```cs
 // A Hello World! program in C#.
@@ -67,7 +67,7 @@ namespace HelloWorld
 }
 ```
 
-**2. Maximum line length is 130 characters.**<br>
+####2. Maximum line length is 130 characters.
 When an expression does not fit, follow the general guidelines:
 
 - Break after a comma
@@ -109,7 +109,7 @@ var result = a * b / (c - g +
 
 The top one is preferred, since the break occurs outside the parenthesized expression, which is higher-level.
 
-**3. Always place curly braces on a new line.**<br>
+####3. Always place curly braces on a new line.
 This is known as the [Allman style](https://en.wikipedia.org/wiki/Indent_style#Allman_style).
 
 ```cs
@@ -122,7 +122,7 @@ while (x == y)
 lastMethod();
 ```
 
-**4. Always put curly braces even if it might not be required.**<br>
+####4. Always put curly braces even if it might not be required.
 Such as having only one statement in the `if` clause. This is to enforce consistency.
 
 ```cs
@@ -133,7 +133,7 @@ if (x > y)
 ```
 
 ### White Space
-**1. General guidelines.**<br>
+####1. General guidelines.
 
 - Keywords like `if`, `while` should be followed by a white space.
 - Semicolons in `for` statements should be followed by a white space.
@@ -180,10 +180,10 @@ for(i=0;i<10;i++){
 ```
 
 ## Naming Conventions
-**1. All names should be written in English.**<br>
+####1. All names should be written in English.
 English is the preferred language for international development.
 
-**2. Use proper casing for language elements.**<br>
+####2. Use proper casing for language elements.
 
 > Pascal casing: the first letter of every word is capitalized.<br>
 > Camel casing: the first letter of every word, except for the first word, is capitalized.
@@ -207,7 +207,7 @@ Parameter | Camel | `typeName`
 Type parameter | Pascal | `TView`
 Property | Pascal | `BackColor`
 
-**3. Avoid using abbreviations.**<br>
+####3. Avoid using abbreviations.
 Unless the full name is excessive:
 
 - Avoid abbreviations longer than 5 characters.<br>
@@ -228,12 +228,12 @@ UiControl
 HTMLSource
 ```
 
-**4. Prefix boolean variables with `Can`, `Is`, or `Has`.**<br>
+####4. Prefix boolean variables with `Can`, `Is`, or `Has`.
 Examples: `CanEvaluate`, `IsVisible`, `HasLicense`.<br>
 
 > Avoid boolean variables that represent the negation of things. e.g., use `IsInitialized` instead of `IsNotInitialized`.
  
-**5. Do not include the parent class name within a property name.**<br>
+####5. Do not include the parent class name within a property name.
 
 ![](Good.png)
 
@@ -247,7 +247,7 @@ Customer.Name
 Customer.CustomerName
 ```
 
-**6. Do not use Hungarian Notation.**<br>
+####6. Do not use Hungarian Notation.
 Hungarian notation is a defined set of pre and postfixes which are applied to names to reflect the type of the variable. This style was used in early Windows programming, but is now obsolete.
 
 ![](Good.png)
@@ -268,7 +268,7 @@ ColorsEnum
 
 
 ## Commenting Conventions
-**1. General guidelines.**<br>
+####1. General guidelines.
 
 - Place the comment on a separate line, not at the end of a line of code.
 - Begin comment text with an upper case letter.
@@ -276,7 +276,7 @@ ColorsEnum
 - Use `//` or `///` but never `/* ... */`.
 - The length of comment should not exceed the length of code.
 
-**2. Document all public, protected and internal types and members.**<br>
+####2. Document all public, protected and internal types and members.
 Documenting your code allows Visual Studio to pop-up the documentation when your class is used somewhere else. You can form your documentation using [XML tags](https://msdn.microsoft.com/en-us/library/5ast78ax.aspx).
 
 ```cs
@@ -290,7 +290,7 @@ public bool HasLicense() { ... }
 ```
 
 ## Language Conventions
-**1. Do not omit access modifiers.**<br>
+####1. Do not omit access modifiers.
 Explicitly declare all identifiers with the appropriate access modifiers instead of allowing the default.
 
 ![](Good.png)
@@ -305,7 +305,7 @@ private void WriteEvent(string message)
 void WriteEvent(string message)
 ```
 
-**2. Always use the built-in C# data type aliases, instead of the .NET common type system.**<br>
+####2. Always use the built-in C# data type aliases, instead of the .NET common type system.
 
 ![](Good.png)
 
@@ -325,7 +325,7 @@ Int64
 String
 ```
 
-**3. Only use var when the type is very obvious.**<br>
+####3. Only use var when the type is very obvious.
 When the type of a variable is clear from the context, use var in the declaration.
 
 ```cs
@@ -340,7 +340,7 @@ int result = ExampleClass.ResultSoFar();
 ```
 > To know more about when to use/not to use implicit typing read [Uses and misuses of implicit typing](https://blogs.msdn.microsoft.com/ericlippert/2011/04/20/uses-and-misuses-of-implicit-typing/).
 
-**4. Favor Object and Collection initializers over separate statements.**<br>
+####4. Favor Object and Collection initializers over separate statements.
 
 ![](Good.png)
 
@@ -362,6 +362,6 @@ startInfo.UseShellExecute = true;
 
 ## References
 1. [C# Coding Coventions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ff926074.aspx)<br>
-2. [C# Coding Standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf)<br>
-3. [CSharpGuidelines](https://github.com/dennisdoomen/CSharpGuidelines)<br>
-4. [C# Coding Style Guide](http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf)
+1. [C# Coding Standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf)<br>
+1. [C# Coding Style Guide](http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf)<br>
+1. [CSharpGuidelines](https://github.com/dennisdoomen/CSharpGuidelines)

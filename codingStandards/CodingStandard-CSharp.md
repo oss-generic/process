@@ -365,7 +365,8 @@ startInfo.UseShellExecute = true;
 ```
 
 ## References
-1. [C# Coding Coventions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ff926074.aspx) -- From Microsoft<br>
-1. [C# Coding Standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf) -- By Lance Hunt<br>
-1. [C# Coding Style Guide](http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf) -- By Mike Krüger<br>
+
+1. [C# Coding Coventions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ff926074.aspx) -- From Microsoft
+1. [C# Coding Standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf) -- By Lance Hunt
+1. [C# Coding Style Guide](http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf) -- By Mike Krüger
 1. [CSharpGuidelines](https://github.com/dennisdoomen/CSharpGuidelines) -- From Aviva Solutions

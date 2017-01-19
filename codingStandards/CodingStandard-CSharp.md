@@ -2,6 +2,10 @@
 
 **Important:** Use [CSharpGuidelines](https://github.com/dennisdoomen/CSharpGuidelines) for any topics not covered in this document.
 
+> The coding standard is primarily based on [CSharpGuidelines](https://github.com/dennisdoomen/CSharpGuidelines) (by Aviva Solutions) but differs from it in these ways:
+> - Structure of the document is adapted from [C# Coding Standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf) and [C# Coding Style Guide](http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf).
+> - Some examples were taken from other sources listed under [References](#references).
+
 - [File Organization](#file-organization)
 - [Formatting](#formatting)
  - [Layout](#layout)
@@ -361,7 +365,7 @@ startInfo.UseShellExecute = true;
 ```
 
 ## References
-1. [C# Coding Coventions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ff926074.aspx)<br>
-1. [C# Coding Standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf)<br>
-1. [C# Coding Style Guide](http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf)<br>
-1. [CSharpGuidelines](https://github.com/dennisdoomen/CSharpGuidelines)
+1. [C# Coding Coventions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ff926074.aspx) -- From Microsoft<br>
+1. [C# Coding Standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf) -- By Lance Hunt<br>
+1. [C# Coding Style Guide](http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf) -- By Mike Krüger<br>
+1. [CSharpGuidelines](https://github.com/dennisdoomen/CSharpGuidelines) -- From Aviva Solutions

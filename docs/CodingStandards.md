@@ -2,7 +2,7 @@
 
 Note that some projects might have additional guidelines for the languages they use.
 
-* C#
+* **C#**: [Coding Standard](../codingStandards/CodingStandard-CSharp.md)
 * **CSS**: [Coding Standard](https://oss-generic.github.io/process/codingStandards/CodingStandard-Css.html)
 * **GFMD** (GitHub Flavored Markdown): [Coding Standard](https://oss-generic.github.io/process/codingStandards/CodingStandard-Gfmd.html)
 * **HTML**: [Coding Standard](https://oss-generic.github.io/process/codingStandards/CodingStandard-Html.html)

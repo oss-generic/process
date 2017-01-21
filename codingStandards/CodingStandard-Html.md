@@ -239,7 +239,7 @@
   </table>
 
 - Always remember to include `rel="noopener noreferrer"` when using `target="_blank"` in links. 
-> Leaving this out would enable attackers to get hold of `window.opener` object, which, for example, can used to redirect to a malicious link. [\[Source\]](https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c#.jlkn46vtk)
+> Leaving this out would enable attackers to get hold of `window.opener` object, which can be used to redirect to a malicious link. [Source](https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c)
 
   <table>
     <tr>

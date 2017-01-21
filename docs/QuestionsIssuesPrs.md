@@ -42,8 +42,8 @@ license as that used by the project.
    > If the issue list does not contain what you want to work on, post an issue (as described [above](#posting-an-issue))
    > and wait for it to get acknowledged. Otherwise you could end up fixing something that does not need fixing.
 
-1. You are recommended to start with an issue specifically marked for first time contributors (i.e. issues with the 
-   `d.firstTimers` label). Note that you **should not do more than one `d.firstTimers` label**.
+1. Start with an issue specifically marked for first time contributors (i.e. issues with the 
+   `d.FirstTimers` label), if any. Note that you **should not do more than one `d.FirstTimers` issues**.
    
    * It is not required to (but OK to) ask for permission to work on an issue. 
    But do check the issue discussion thread to see if there are _active_ PRs for that issue. 

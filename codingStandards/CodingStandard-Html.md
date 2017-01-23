@@ -237,3 +237,34 @@
       </td>
     </tr>
   </table>
+
+- Always remember to include `rel="noopener noreferrer"` when using `target="_blank"` in links. 
+> Leaving this out would enable attackers to get hold of `window.opener` object, which can be used to redirect to a malicious link. [[Source](https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c)]
+
+  <table>
+    <tr>
+      <th align="center">Good</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;a target="_blank" rel="noopener noreferrer" href="https://example.com"&gt;
+    Example.com
+  &lt;/a&gt;</pre>
+      </td>
+    </tr>
+  </table>
+  
+  <table>
+    <tr>
+      <th align="center">Bad</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;a target="_blank" href="https://example.com"&gt;
+    Example.com
+  &lt;/a&gt;</pre>
+      </td>
+    </tr>
+  </table>

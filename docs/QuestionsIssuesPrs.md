@@ -62,8 +62,8 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
    Create a branch off the `master` branch. 
    Follow [our naming conventions for branch names](FormatsAndConventions.md#branch).
    
-   > Common mistake: Branch off from the currently active branch instead of the `master` branch.
-   > Doing so will result in your PR containing commits of multiple branches.
+   > WARNING: Make sure you branch off `master` rather than the currently active branch.
+   > Otherwise, you may get commits from other branches inside your PR.
    
 1. **Fix the issue in the new branch**
    

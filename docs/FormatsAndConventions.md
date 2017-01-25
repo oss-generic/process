@@ -63,12 +63,13 @@ Commits of a PR should be organized to match the following requirements:
   
   > Rationale: Bigger commits make reviewing harder.
 
-  Commits containing _**automated changes**_ (e.g. changes resulting from automated refactorings),
-    
-    * should include only one _automated change_  per commit.
-    * should not contain other manual changes, unless unavoidable.
+  Commits containing _**mechanical changes**_ (e.g. automated refactorings, cut-paste type code movements, 
+  file renames, etc.),
+
+    * should include only one _mechanical change_  per commit.
+    * should not contain other non-mechanical changes, unless unavoidable.
     * can exceed 100 LoC.
-    * should have the description of the automated change in the commit message (so that the results can be reproduced). 
+    * should have the description of the change in the commit message (so that the results can be reproduced). 
   
 - [x] The build passes at each commit of the PR.
 

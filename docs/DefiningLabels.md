@@ -57,8 +57,8 @@ There are two types of label groups:
 
 ### Difficulty (`d.`)
 
-* `d.FirstTimers`: Easy. To do as the first issue for new developers. One developer
-  should not do more than one of these. Not to be applied for issues with a priority `p.high` or above.
+* `d.FirstTimers`: For new contributors to do as their first PR. MUST be simple enough to be contained in one commit. 
+  One developer should not do more than one of these. Not to be applied for issues with a priority `p.high` or above.
 * `d.Contributors`: Moderate difficulty. Small localized change. Can be done by contributors.
   Not to be applied for issues with a priority `p.high` or above.
 * `d.Committers`: More difficult issues that are better left for committers or more senior developers.

@@ -12,33 +12,43 @@ A typical PR is reviewed by,
 
 ## Review procedure
 
-A reviewer must do the following steps.
-
 1. Ensure the following at the start of the review. If any of them are missing, ask the dev to fix.
   - [x] PR name follows the [PR title convention](FormatsAndConventions.md#pr). 
   - [x] PR description has the correct `Fixes #...` reference.
   - [x] The CI build is successful or any failures are justifiable (e.g. false positives from static analysis tools).
   - [x] The branch is up to date with the `master` branch.
   - [x] PR branch name follows the [branch naming convention](FormatsAndConventions.md#branch). 
+  - [x] Meets our [requirements for commit organization](FormatsAndConventions.md#commit-organization). 
   
-    > 'Incorrect branch name' can be forgiven for those doing their first issue, 
-    >  but remind the dev to follow the convention in future PRs.
-  
-1. As you review the code, ensure the following:
-  - [x] The solution is the best possible solution to the problem under the circumstances.
-  * **All five aspects** of a code change are done:
-    - [x] **Code**
-    - [x] **Comments** e.g. header comments
-    - [x] **Tests**:  Almost all code changes to functional code should have changes to test code
-    - [x] **User docs** e.g. help pages
-    - [x] **Dev docs** e.g. design diagrams
-  - [x] Coding style and best practices are followed (some of these are not detected by static analysis tools).
-  - [x] The PR does not contain unrelated changes. 
-      e.g. unnecessary formatting changes or commits from other branches.
+    > The last two items can be forgiven for `d.FirstTimers` issues but remind the dev to follow the convention 
+    > in future PRs.
 
-1. Use GitHub's review feature to add comments.
-   * Use `start a review` option when adding comments on the latest version of a PR diff. 
-     Use the `add single comment` when responding to an existing thread of discussion in a PR diff.
+1. Review the PR and add comments.
+    
+   * Use GitHub's review feature to add comments.
+     * Use `start a review` option when adding comments on the latest version of a PR diff. 
+     * Use the `add single comment` when responding to an existing thread of discussion in a PR diff.
+     
+  * Review big PRs incrementally (i.e. one commit at a time), starting with the earliest commit. 
+    [Here](https://github.com/se-edu/addressbook-level4/pull/209#pullrequestreview-15603608) is an example.
+  
+    > Rationale: If the early commits require lot of changes, there's no need to review later commits until the 
+    > early commits are updated as per review.
+
+  * As you review the code, ensure the following:
+    - [x] The solution is the best possible solution to the problem under the circumstances.
+    * **All five aspects** of a code change are done:
+      - [x] **Code**
+      - [x] **Comments** e.g. header comments
+      - [x] **Tests**:  Almost all code changes to functional code should have changes to test code
+      - [x] **User docs** e.g. help pages
+      - [x] **Dev docs** e.g. design diagrams
+    - [x] Coding style and best practices are followed (some of these are not detected by static analysis tools).
+    - [x] The PR does not contain unrelated changes. 
+        e.g. unnecessary formatting changes or commits from other branches.
+    - [x] All your previous review comments have been addressed.
+    - [x] Commit messages follow [our requirements](FormatsAndConventions.md#commit-messages) .
+
    
 1. Approve or request changes at the end of the review.
    * If changes are needed, choose `Request changes`.

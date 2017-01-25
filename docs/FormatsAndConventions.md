@@ -41,6 +41,56 @@ Here is an example (adapted from [this commit](https://github.com/CS2103AUG2016-
  ```
   
 Refer to the article _[How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)_ for a more detailed explanation.
+
+## Commit organization
+
+> _Ask a programmer to review 10 lines of code, he'll find 10 issues. Ask him to do 500 lines and he'll say it 
+> looks good. [[source](https://twitter.com/girayozil/status/306836785739210752)]_
+
+Commits of a PR should be organized to match the following requirements:
+
+- [x] Each commit contains a single logical change, and this change must stand on its own. 
+  i.e. each commit has a single responsibility, and that responsibility must be fully carried out.<br>
+  For example, if the commit message says `Move delete() from Person class to Address class`, the commit cannot 
+  contain the addition of `delete()` to `Address` class only; it should also contain the deletion of `delete()` from
+  the `Person` class for it to be a _complete_ implementation what is stated in the commit message. <br>
+  Furthermore, the series of commits in the PR are ordered in a bottom-up fashion, each commit building 
+  on top of each other towards the end goal of the PR.
+  
+  > Rationale: Reviewers should be able to review one commit at a time.
+  
+- [x] A commit should not modify more than 100 lines of code. 
+  
+  > Rationale: Bigger commits make reviewing harder.
+
+  Commits containing _**automated changes**_ (e.g. changes resulting from automated refactorings),
+    
+    * should include only one _automated change_  per commit.
+    * should not contain other manual changes, unless unavoidable.
+    * can exceed 100 LoC.
+    * should have the description of the automated change in the commit message (so that the results can be reproduced). 
+  
+- [x] The build passes at each commit of the PR.
+
+  > Rationale: Build-breaking commits in the version history hinder the ability to use `git bisect` for locating bugs.
+
+- [x] Each commit has a detailed commit message which explains the context and rationale behind the commit. 
+  
+  > More info: 
+  > 
+  > * [Our conventions for commit messages](#commit-message)
+  > * [Web article] _[How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)_ 
+
+<p>
+
+> [Here](https://github.com/se-edu/addressbook-level4/pull/237) is an example of a PR that is organized 
+> as described above.
+
+<p>
+
+> **Note for first time contributors**:
+> 
+> * PRs for `d.FirstTimers` issues are usually simple enough to be contained in one commit. 
   
 ## Directory
 

@@ -66,11 +66,16 @@ A typical PR is reviewed by,
    
 1. Approve or request changes at the end of the review.
    * If changes are needed, choose `Request changes`.
-     Also change the status label to `s.Ongoing`.
-   * Else, choose `Approve`. If you are the main reviewer, change status to `s.ToMerge`. 
+   * Else, choose `Approve`. 
    
    > Do not use `Approve` unless you are fully satisfied with the current state of the PR. <br>
        i.e. NOT allowed: `Let me approve this first while you fix the remaining minor problems`.
+
+1. If you are the last reviewer to review the current iteration (i.e. no more pending reviews for the 
+   current iteration), change the status label as follows:
+   
+   * If any of the reviewers have requested changes, change the status label to `s.Ongoing`.
+   * Else, change status to `s.ToMerge`. 
 
 ## Tips for reviewers
 

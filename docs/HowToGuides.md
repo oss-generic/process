@@ -85,7 +85,7 @@ Append `?w=1` to url of the `/files` page of the pull request (the "Files change
 
 // TODO Reordering, squashing, editing commit message
 
-### Update a PR with upstream changes
+### Sync a fork with upstream changes
 
 1. Update the `master` branch of your local clone. 
 [Here](https://help.github.com/articles/syncing-a-fork/) are the instructions.

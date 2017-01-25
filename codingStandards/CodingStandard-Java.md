@@ -385,23 +385,48 @@ The package statement location is enforced by the Java language. A Java package 
 
 The rule of thumb is to package the classes that are related. For example in Java, the classes related to file writing is grouped in the package `java.io` and the classes which handle lists, maps etc are grouped in `java.util` package.
 
-**2. The import statements must follow the package statement. import statements should be sorted with the most fundamental packages first, and grouped with associated packages together and one blank line between groups.**
+**2. Import statements must follow the package statement.**
+
+The location of import statements is enforced by the Java language.
+
+**3. The ordering of import statements must be consistent.**
+
+A consistent ordering of import statements makes it easier to browse the list and determine the dependencies when there are many imports.
+
+Major IDEs (e.g. Eclipse and IntelliJ IDEA) have built-in formatters to order the imports. For example, Eclipse uses this default ordering:
+
+- group of static imports is on the top
+- groups of non-static imports: "java" and "javax" packages first, then "org" and "com", then all other imports as one group
+- imports are sorted alphabetically in the groups
+- groups are separated by one blank line
+
+Below is an example of imports organised in Eclipse:
 
 ```java
-import java.io.IOException;
-import java.net.URL;
-import java.rmi.RmiServer;
-import java.rmi.server.Server;
-import javax.swing.JPanel;
-import javax.swing.event.ActionEvent;
-import org.linux.apache.server.SoapServer;
-```
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-The import statement location is enforced by the Java language. The sorting makes it simple to browse the list when there are many imports, and it makes it easy to determine the dependencies of the present package. The grouping reduce complexity by collapsing related information into a common unit. 
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+
+import org.loadui.testfx.GuiTest;
+import org.testfx.api.FxToolkit;
+
+import com.google.common.io.Files;
+
+import javafx.geometry.Bounds;
+import javafx.geometry.Point2D;
+import junit.framework.AssertionFailedError;
+```
 
 >*Hint: You can organise the imports automatically by simply pressing CTRL+SHIFT+O in Eclipse.*
 
-**3. Imported classes should always be listed explicitly.**
+However, note that the default orderings of different IDEs are not always the same. It is recommended that you and your team use the same IDE and stick to a consistent ordering.
+
+**4. Imported classes should always be listed explicitly.**
 
 <table>
   <tr>
@@ -426,7 +451,7 @@ Importing classes explicitly gives an excellent documentation value for the clas
 
 ### **Classes and Interfaces**
 
-**4. Class and Interface declarations should be organized in the following manner:**
+**5. Class and Interface declarations should be organized in the following manner:**
 
 >1. Class/Interface documentation (Comments)
 >2. **class** or **interface** statement
@@ -438,7 +463,7 @@ Importing classes explicitly gives an excellent documentation value for the clas
 Make code easy to navigate by making the location of each class element predictable.
 Methods
 
-**5. Method modifiers should be given in the following order:** 
+**6. Method modifiers should be given in the following order:** 
 
 `<access> static abstract synchronized <unusual> final native`
 
@@ -470,7 +495,7 @@ The most important lesson here is to keep the *access* modifier as the first mod
 
 ### **Types**
 
-**6. Array specifiers must be attached to the type not the variable.**
+**7. Array specifiers must be attached to the type not the variable.**
 
 <table>
   <tr>
@@ -493,7 +518,7 @@ The *arrayness* is a feature of the base type, not the variable. Sun allows both
 
 ### **Variables**
 
-**7. Variables should be initialized where they are declared and they should be declared in the smallest scope possible.**
+**8. Variables should be initialized where they are declared and they should be declared in the smallest scope possible.**
 
 <table>
   <tr>
@@ -525,13 +550,13 @@ for (i = 0; i < 10; i++) {
 
 This ensures that variables are valid at any time. Sometimes it is impossible to initialize a variable to a valid value where it is declared. In these cases it should be left uninitialized rather than initialized to some phony value.
 
-**8. Class variables should never be declared public.**
+**9. Class variables should never be declared public.**
 
 The concept of Java information hiding and encapsulation is violated by public variables. Use private variables and access functions instead. One exception to this rule is when the class is essentially a data structure, with no behavior (*equivalent to a C++ struct*). In this case it is appropriate to make the class' instance variables public.
 
 ### **Loops**
 
-**9. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body**
+**10. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body**
 
 <table>
   <tr>
@@ -558,7 +583,7 @@ When there is only one statement in the loop body it can be written without wrap
 
 ### **Conditionals**
 
-**10. The conditional should be put on a separate line.**
+**11. The conditional should be put on a separate line.**
 
 <table>
   <tr>
@@ -581,7 +606,7 @@ if (isDone) doCleanup();</pre>
 
 This is for debugging purposes. When writing on a single line, it is not apparent whether the test is really true or not.
 
-**11. Single statement conditionals should still be wrapped by curly brackets**
+**12. Single statement conditionals should still be wrapped by curly brackets**
 
 <table>
   <tr>

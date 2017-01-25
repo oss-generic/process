@@ -400,6 +400,28 @@ Major IDEs (e.g. Eclipse and IntelliJ IDEA) have built-in formatters to order th
 - imports are sorted alphabetically in the groups
 - groups are separated by one blank line
 
+Below is an example of imports organised in Eclipse:
+
+```java
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+
+import org.loadui.testfx.GuiTest;
+import org.testfx.api.FxToolkit;
+
+import com.google.common.io.Files;
+
+import javafx.geometry.Bounds;
+import javafx.geometry.Point2D;
+import junit.framework.AssertionFailedError;
+```
+
 >*Hint: You can organise the imports automatically by simply pressing CTRL+SHIFT+O in Eclipse.*
 
 However, note that the default orderings of different IDEs are not always the same. It is recommended that you and your team use the same IDE and stick to a consistent ordering.

@@ -47,8 +47,6 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
      > * You should wait till the first PR is merged before starting on more PRs. 
      >   After you have one merged PR, you can work on multiple PRs in parallel.
      >   This restriction aims to save you from making the same mistake in multiple PRs.
-     > * Requirements given below that are marked as _Additional requirements_ are not compulsory 
-     >   for `d.FirstTimers` issues, but it's still strongly recommended that you follow them.
      
    * If the issue list does not contain what you want to work on, post an issue first (as described [above](#posting-an-issue))
      and wait for it to be acknowledged. Otherwise you could end up fixing something that does not need fixing.
@@ -82,9 +80,8 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
    - [x] Sync your fork with upstream changes 
    
      > More info: [How to Guides :: Sync a fork with upstream changes](HowToGuides.md#sync-a-fork-with-upstream-changes).
-     
-   <details>
-   <summary>Additional requirements</summary>
+   
+   Following these tips will help you in subsequent steps of the workflow: 
    
    * Commit often. 
    
@@ -103,22 +100,13 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
    * If the project uses any other static analysis tools (e.g. checkstyle), use them to detect any potential problems
      in the new code.
      
-   </details>
-      
 1. **Prepare the commits for publishing**
 
    * Go through the commit diffs and revert any changes unrelated to the PR. e.g. auto-updates done by the IDE. 
-   * Refactor the commits to achieve a well-organized commit sequence.
+   * Refactor the commits to meet [our requirements for commit organization](FormatsAndConventions.md#commit-organization).
    
      > More info: [How to Guides :: Refactor Commits](HowToGuides.md#refactor-commits)
 
-   <details>
-   <summary>Additional requirements</summary>
-   
-   Ensure the commits meet our [requirements for commit organization](FormatsAndConventions.md#commit-organization).
-  
-   </details>
-   
 1. **Create a PR** 
       
    1. Push the branch to your fork.
@@ -162,9 +150,6 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
        
     1. Update the commits as suggested by the reviewers.
     
-       <details>
-       <summary>Additional requirements</summary>
-       
        * Updates to existing logical changes should be done by modifying their corresponding commits.
        
          > More info: [How to Guides :: Refactor Commits](HowToGuides.md#refactor-commits)
@@ -178,18 +163,11 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
        * Commit messages should be updated with new findings from review discussions. 
          For example, if the reviewer mentioned a possible new approach that was subsequently rejected 
          due to a non-obvious reason, then the commit should be updated with this information.<br>   
-       
-       </details>
     
     1. Sync your fork with upstream repo.
     
-       <details>
-       <summary>Additional requirements</summary>
-       
        * Rebase your branch instead of merging `master` branch to your branch.   
        
-       </details>
-           
     1. Update the branch in your fork. 
     1. Use the same CanIHasReview tool used earlier to post a new commit summary and alert the reviewers.
 
@@ -202,8 +180,6 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 
   * After you have managed to get one PR merged, you can gradually move to harder issues, 
     starting with issues labelled `d.Contributors`. 
-  * Note that it is compulsory to follow 'Additional requirements' given in the [PR workflow](#pr-workflow)
-    for subsequent PRs.
   * As harder issues take longer to finish, it is prudent to post a message in the issue to let others know that 
     you are working on an issue.
 

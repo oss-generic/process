@@ -13,15 +13,29 @@ A typical PR is reviewed by,
 ## Review procedure
 
 1. Ensure the following at the start of the review. If any of them are missing, ask the dev to fix.
-  - [x] PR name follows the [PR title convention](FormatsAndConventions.md#pr). 
-  - [x] PR description has the correct `Fixes #...` reference.
-  - [x] The CI build is successful or any failures are justifiable (e.g. false positives from static analysis tools).
-  - [x] The branch is up to date with the `master` branch.
-  - [x] PR branch name follows the [branch naming convention](FormatsAndConventions.md#branch). 
-  - [x] Meets our [requirements for commit organization](FormatsAndConventions.md#commit-organization). 
-  
-    > The last two items can be forgiven for `d.FirstTimers` issues but remind the dev to follow the convention 
-    > in future PRs.
+   
+   - [x] PR name follows the [PR title convention](FormatsAndConventions.md#pr). 
+   - [x] PR description has the correct `Fixes #...` reference.
+   - [x] The CI build is successful or any failures are justifiable (e.g. false positives from static analysis tools).
+   - [x] PR branch name follows the [branch naming convention](FormatsAndConventions.md#branch).
+         * This is a soft requirement. Encourage the dev to follow the convention in future PRs.
+   - [x] Meets our [requirements for commit organization](FormatsAndConventions.md#commit-organization). 
+   - [x] Commit summary has been generated using CanIHasReview. 
+
+   <p>
+
+   > These two requirements are automatically guaranteed by CanIHasReview:
+   > 
+   > - [x] The branch is up to date with the `master` branch at the time of the review request.
+   > - [x] The branch does not contain merge commits.
+ 
+   Additional guidelines for `d.FirstTimers` issues:
+
+   * Ensure the dev has not done any other `d.FirstTimers` issues. If he has, inform the dev and close the PR.
+   * If the branch contains multiple commits, ask the dev to squash into one commit (unless the commits are 
+     'well-organized' already).
+   * If the commit message is far from our quality expectations even after 1-2 attempts to improve it by the dev, 
+     you can propose a revised commit message for the dev to use. 
 
 1. Review the PR and add comments.
     
@@ -37,7 +51,7 @@ A typical PR is reviewed by,
 
   * As you review the code, ensure the following:
     - [x] The solution is the best possible solution to the problem under the circumstances.
-    * **All five aspects** of a code change are done:
+    - [x] **All five aspects** of a code change are done:
       - [x] **Code**
       - [x] **Comments** e.g. header comments
       - [x] **Tests**:  Almost all code changes to functional code should have changes to test code

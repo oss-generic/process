@@ -81,8 +81,16 @@ Commits of a PR should be organized to match the following requirements:
   > * [Our conventions for commit messages](#commit-message)
   > * [Web article] _[How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)_ 
 
+<p>
+
 > [Here](https://github.com/se-edu/addressbook-level4/pull/237) is an example of a PR that is organized 
 > as described above.
+
+<p>
+
+> **Note for first time contributors**:
+> 
+> * PRs for `d.FirstTimers` issues are usually simple enough to be contained in one commit. 
   
 ## Directory
 

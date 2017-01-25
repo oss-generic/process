@@ -83,7 +83,7 @@ Append `?w=1` to url of the `/files` page of the pull request (the "Files change
 
 ### Refactor commits
 
-// TODO Reordering, squashing, editing commit message
+Refer to [this S/O post](http://stackoverflow.com/a/1186549) for more help on editing commits.
 
 ### Sync a fork with upstream changes
 

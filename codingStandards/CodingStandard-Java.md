@@ -385,23 +385,26 @@ The package statement location is enforced by the Java language. A Java package 
 
 The rule of thumb is to package the classes that are related. For example in Java, the classes related to file writing is grouped in the package `java.io` and the classes which handle lists, maps etc are grouped in `java.util` package.
 
-**2. The import statements must follow the package statement. import statements should be sorted with the most fundamental packages first, and grouped with associated packages together and one blank line between groups.**
+**2. Import statements must follow the package statement.**
 
-```java
-import java.io.IOException;
-import java.net.URL;
-import java.rmi.RmiServer;
-import java.rmi.server.Server;
-import javax.swing.JPanel;
-import javax.swing.event.ActionEvent;
-import org.linux.apache.server.SoapServer;
-```
+The location of import statements is enforced by the Java language.
 
-The import statement location is enforced by the Java language. The sorting makes it simple to browse the list when there are many imports, and it makes it easy to determine the dependencies of the present package. The grouping reduce complexity by collapsing related information into a common unit. 
+**3. The ordering of import statements must be consistent.**
+
+A consistent ordering of import statements makes it easier to browse the list and determine the dependencies when there are many imports.
+
+Major IDEs (e.g. Eclipse and IntelliJ IDEA) have built-in formatters to order the imports. For example, Eclipse uses this default ordering:
+
+- group of static imports is on the top
+- groups of non-static imports: "java" and "javax" packages first, then "org" and "com", then all other imports as one group
+- imports are sorted alphabetically in the groups
+- groups are separated by one blank line
 
 >*Hint: You can organise the imports automatically by simply pressing CTRL+SHIFT+O in Eclipse.*
 
-**3. Imported classes should always be listed explicitly.**
+However, note that the default orderings of different IDEs are not always the same. It is recommended that you and your team use the same IDE and stick to a consistent ordering.
+
+**4. Imported classes should always be listed explicitly.**
 
 <table>
   <tr>

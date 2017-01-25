@@ -7,7 +7,7 @@ A typical PR is reviewed by,
  - [ ] [Optional] _**supplementary reviewers**_: Core members can be used as additional reviewers if the PR involves
        multiple areas. 
 
-> Junior members can get another junior member to act as a _**peer reviewer**_ for their PRs before submitting 
+> Junior members can get other junior members to act as _**peer reviewers**_ for their PRs before submitting 
 > to the project's formal review process.
 
 ## Review procedure

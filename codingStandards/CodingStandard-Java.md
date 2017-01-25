@@ -385,11 +385,7 @@ The package statement location is enforced by the Java language. A Java package 
 
 The rule of thumb is to package the classes that are related. For example in Java, the classes related to file writing is grouped in the package `java.io` and the classes which handle lists, maps etc are grouped in `java.util` package.
 
-**2. Import statements must follow the package statement.**
-
-The location of import statements is enforced by the Java language.
-
-**3. The ordering of import statements must be consistent.**
+**2. The ordering of import statements must be consistent.**
 
 A consistent ordering of import statements makes it easier to browse the list and determine the dependencies when there are many imports.
 
@@ -426,7 +422,7 @@ import junit.framework.AssertionFailedError;
 
 However, note that the default orderings of different IDEs are not always the same. It is recommended that you and your team use the same IDE and stick to a consistent ordering.
 
-**4. Imported classes should always be listed explicitly.**
+**3. Imported classes should always be listed explicitly.**
 
 <table>
   <tr>
@@ -451,7 +447,7 @@ Importing classes explicitly gives an excellent documentation value for the clas
 
 ### **Classes and Interfaces**
 
-**5. Class and Interface declarations should be organized in the following manner:**
+**4. Class and Interface declarations should be organized in the following manner:**
 
 >1. Class/Interface documentation (Comments)
 >2. **class** or **interface** statement
@@ -463,7 +459,7 @@ Importing classes explicitly gives an excellent documentation value for the clas
 Make code easy to navigate by making the location of each class element predictable.
 Methods
 
-**6. Method modifiers should be given in the following order:** 
+**5. Method modifiers should be given in the following order:** 
 
 `<access> static abstract synchronized <unusual> final native`
 
@@ -495,7 +491,7 @@ The most important lesson here is to keep the *access* modifier as the first mod
 
 ### **Types**
 
-**7. Array specifiers must be attached to the type not the variable.**
+**6. Array specifiers must be attached to the type not the variable.**
 
 <table>
   <tr>
@@ -518,7 +514,7 @@ The *arrayness* is a feature of the base type, not the variable. Sun allows both
 
 ### **Variables**
 
-**8. Variables should be initialized where they are declared and they should be declared in the smallest scope possible.**
+**7. Variables should be initialized where they are declared and they should be declared in the smallest scope possible.**
 
 <table>
   <tr>
@@ -550,13 +546,13 @@ for (i = 0; i < 10; i++) {
 
 This ensures that variables are valid at any time. Sometimes it is impossible to initialize a variable to a valid value where it is declared. In these cases it should be left uninitialized rather than initialized to some phony value.
 
-**9. Class variables should never be declared public.**
+**8. Class variables should never be declared public.**
 
 The concept of Java information hiding and encapsulation is violated by public variables. Use private variables and access functions instead. One exception to this rule is when the class is essentially a data structure, with no behavior (*equivalent to a C++ struct*). In this case it is appropriate to make the class' instance variables public.
 
 ### **Loops**
 
-**10. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body**
+**9. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body**
 
 <table>
   <tr>
@@ -583,7 +579,7 @@ When there is only one statement in the loop body it can be written without wrap
 
 ### **Conditionals**
 
-**11. The conditional should be put on a separate line.**
+**10. The conditional should be put on a separate line.**
 
 <table>
   <tr>
@@ -606,7 +602,7 @@ if (isDone) doCleanup();</pre>
 
 This is for debugging purposes. When writing on a single line, it is not apparent whether the test is really true or not.
 
-**12. Single statement conditionals should still be wrapped by curly brackets**
+**11. Single statement conditionals should still be wrapped by curly brackets**
 
 <table>
   <tr>

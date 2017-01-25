@@ -59,9 +59,16 @@ Commits of a PR should be organized to match the following requirements:
   
   > Rationale: Reviewers should be able to review one commit at a time.
   
-- [x] A commit should not modify more than 100 lines of code.
+- [x] A commit should not modify more than 100 lines of code. 
   
   > Rationale: Bigger commits make reviewing harder.
+
+  Commits containing _**automated changes**_ (e.g. changes resulting from automated refactorings),
+    
+    * should include only one _automated change_  per commit.
+    * should not contain other manual changes, unless unavoidable.
+    * can exceed 100 LoC.
+    * should have the description of the automated change in the commit message (so that the results can be reproduced). 
   
 - [x] The build passes at each commit of the PR.
 

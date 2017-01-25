@@ -47,8 +47,8 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
      > * You should wait till the first PR is merged before starting on more PRs. 
      >   After you have one merged PR, you can work on multiple PRs in parallel.
      >   This restriction aims to save you from making the same mistake in multiple PRs.
-     > * Requirements given below that are marked as _Additional requirements_ are not 
-     >   compulsory for `d.FirstTimers` issues. 
+     > * Requirements given below that are marked as _Additional requirements_ are not compulsory 
+     >   for `d.FirstTimers` issues, but it's still strongly recommended that you follow them.
      
    * If the issue list does not contain what you want to work on, post an issue first (as described [above](#posting-an-issue))
      and wait for it to be acknowledged. Otherwise you could end up fixing something that does not need fixing.
@@ -61,10 +61,12 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 
 1. **Create a new branch** 
 
-   The branch name should follow the [naming conventions for branch names](FormatsAndConventions.md#branch).
+   Create a branch off the `master` branch. 
+   Follow [our naming conventions for branch names](FormatsAndConventions.md#branch).
    
-   > Tip: Remember to switch to the `master` branch before creating the new branch.
-
+   > Common mistake: Branch off from the currently active branch instead of the `master` branch.
+   > Doing so will result in your PR containing commits of multiple branches.
+   
 1. **Fix the issue in the new branch**
    
    - [x] Adhere to coding style and testing requirements of the project.
@@ -72,7 +74,7 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
      Resist the urge to do unrelated 'minor cleanups' in the same PR. If you notice such potential clean ups, 
      create an issue for it (those can be a good source of `d.FirstTimers` issues).
    
-     > Rationale: We should be abel to undo any fix by reverting a single commit. Fixing multiple issues in the same
+     > Rationale: We should be able to undo any fix by reverting a single commit. Fixing multiple issues in the same
      > PR gets in the way of that ability.
      
    - [x] In addition to updating functional code, update relevant code comments, tests, user docs, and developer docs.
@@ -86,8 +88,8 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
    
    * Commit often. 
    
-     > Rationale: The smaller the commits, the easier it is to reorganize them later to form a more meaningful 
-     > commit sequence.
+     > Rationale: The smaller the size of each commit, the easier it is to reorganize them later to form a 
+     > more meaningful commit sequence.
      
    * Keep the PR branch free of merge commits (i.e. `rebase` instead of `merge` when syncing with upstream repo). 
         
@@ -153,6 +155,11 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 
 1. **Revise the PR as per reviewer comments** 
 
+    1. Wait until all assigned reviewers have signified that they have finished reviewing the PR (e.g. by applying the 
+       `s.Ongoing` label). If you are not sure, post a comment requesting a confirmation.
+    
+       > Rationale: Updating the PR while a review is in progress can confuse reviewers.
+       
     1. Update the commits as suggested by the reviewers.
     
        <details>

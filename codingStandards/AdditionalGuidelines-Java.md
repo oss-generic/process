@@ -12,7 +12,7 @@ Following guidelines try to reduce the argument validation cost without losing i
    the system from that point onwards without indicating that something went wrong.
    
    ```java
-   void setName(String name){
+   void setName(String name) {
        this.name = Objects.requireNonNull(name, "name cannot be null");
    }
    ```
@@ -23,7 +23,7 @@ Following guidelines try to reduce the argument validation cost without losing i
    However, `name` in the example below need not be validated because it is not being used _directly_ in the method.
    
    ```java
-   void setName(String name){
+   void setName(String name) {
        saveName(name);
    }
    ```
@@ -32,7 +32,7 @@ Following guidelines try to reduce the argument validation cost without losing i
    detectable failure (i.e. a `NullPointerException`) anyway.
    
    ```java
-   boolean isPersonKey(String key){
+   boolean isPersonKey(String key) {
        return key.contains("P");
    }
    ```
@@ -42,11 +42,11 @@ Following guidelines try to reduce the argument validation cost without losing i
    
    
    ```java
-   boolean updateEmail(Person p, String email){
+   boolean updateEmail(Person p, String email) {
        
        //some code
        
-       if(!isValidEmail(email)){
+       if (!isValidEmail(email)) {
            throw new IllegalArgumentException("Invalid email " + email);
        }
        p.email = email;
@@ -88,7 +88,7 @@ In addition,
   ![](Bad.png)
   ```java
    ...
-   } catch (Exception e){
+   } catch (Exception e) {
        assert false : "This exception should not happen";
    }
    ```
@@ -96,7 +96,7 @@ In addition,
   ![](Good.png)
   ```java
    ...
-   } catch (Exception e){
+   } catch (Exception e) {
        throw new AssertionError("This exception should not happen");
    }
    ```

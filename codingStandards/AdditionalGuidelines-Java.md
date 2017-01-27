@@ -3,7 +3,7 @@
 ## Using assertions
 
 Refer the article 
-_[Programming With Assertions](http://docs.oracle.com/javase/7/docs/technotes/guides/language/assert.html)_ 
+_[Programming With Assertions](http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html)_ 
 (from Oracle) for more details on the three general guidelines below.
 
 1. **Do not use assertions to do any work that your application requires for correct operation.**<br> 

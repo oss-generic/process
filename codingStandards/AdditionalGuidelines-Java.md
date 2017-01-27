@@ -2,7 +2,7 @@
 
 ## Using assertions
 
-Refer the article 
+Refer to the article 
 _[Programming With Assertions](http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html)_ 
 (from Oracle) for more details on the three general guidelines below.
 

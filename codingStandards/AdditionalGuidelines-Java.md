@@ -13,15 +13,18 @@ Following guidelines try to reduce the argument validation cost without losing i
    
    ```java
    void setName(String name){
-       this.name = name;
+       this.name = Objects.requireNonNull(name, "name cannot be null");
    }
    ```
+   > Tip: You can use 
+   > [Objects#requireNonNull()](https://docs.oracle.com/javase/7/docs/api/java/util/Objects.html#requireNonNull(T))
+   > to ensure a value is not null.
    
    However, `name` in the example below need not be validated because it is not being used _directly_ in the method.
    
    ```java
    void setName(String name){
-       this.saveName(name);
+       saveName(name);
    }
    ```
    
@@ -49,10 +52,14 @@ Following guidelines try to reduce the argument validation cost without losing i
        p.email = email;
    }
    ```
+   
+   While the guidelines above delay parameter validation until the value is about to be used in a damage-causing manner,
+   that should not be confused with _user input_ validation, which should be validated as early as possible.
+   
 1. **Validate arguments at boundaries of major components.**
  
    Detecting invalid arguments at boundaries of major component (e.g. between front-end and back-end) before they 
-   propagate from one component to another spares the 'victim' component from unnecessary debugging efforts.
+   propagate from one component to another spares the latter component from unnecessary debugging efforts.
 
 ## Using assertions
 
@@ -66,7 +73,7 @@ _[Programming With Assertions](http://docs.oracle.com/javase/7/docs/technotes/gu
    
 1. **Do not use assertions for checking _preconditions_/parameters in public methods.**<br> 
    Those should be enforced by explicit checks that throw particular, 
-   specified exceptions. e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, or `NullPointerException`
+   specified exceptions. e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, or `NullPointerException`.
    
    
 1. **Assertions may be used to check _postconditions_ and class/method _invariants_ in both public 

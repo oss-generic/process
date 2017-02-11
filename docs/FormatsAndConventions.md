@@ -146,7 +146,7 @@ those details are not pertinent to the context.
 
 ### Java
 
-* Variables: `package.class#variable` (optional: `package`, `paramTypes`)
+* Variables: `package.class#variable` (optional: `package`)
 * Methods: `package.class#method(paramTypes):returnType` (optional: `package`, `paramTypes`, `:returnType`)
 
 e.g.

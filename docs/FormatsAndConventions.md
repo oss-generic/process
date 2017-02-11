@@ -138,6 +138,25 @@ e.g. `Error alert email has very long subject #5958`
 > to compensate for GitHub's lack of strong linking between the two.
 > Assume there is an invisible prefix in front of the PR title `Fixes issue : ...`
 
+## References to code elements
+
+Follow these conventions when referring to code elements e.g. when referring to a function name from a commit message.
+The objective is to be as concise as possible without causing ambiguities. Therefore, omit optional details when
+those details are not pertinent to the context.
+
+### Java
+
+* Variables: `package.class#variable` (optional: `package`, `paramTypes`)
+* Methods: `package.class#method(paramTypes):returnType` (optional: `package`, `paramTypes`, `:returnType`)
+
+e.g.
+* `Person#name`
+* `Person#getName()` 
+* `Person#getName():String` 
+* `Person#setName()` -- parameters omitted because only one `setName(String)` in the `Person` class
+* `Person#getName(String, int)` -- parameter types specified to disambiguate from other overloaded methods
+* `seedu.address.data.Person#toString()`
+
 ## Spelling
 
 Use American English spelling.

@@ -140,22 +140,45 @@ e.g. `Error alert email has very long subject #5958`
 
 ## References to code elements
 
-Follow these conventions when referring to code elements e.g. when referring to a function name from a commit message.
-The objective is to be as concise as possible without causing ambiguities. Therefore, omit optional details when
-those details are not pertinent to the context.
+Follow these conventions when referring to code elements **from a non-code context** e.g. when referring to a function 
+name from a commit message.
+
+> The objective is to be as concise as possible without causing ambiguities. Therefore, omit optional details when
+> those details are not pertinent to the context.
+
+<p>
+
+> Refer to the respective coding standards for conventions on how to refer to code elements _from code contexts_ 
+> e.g. when referring to a function from a code comment. 
 
 ### Java
 
 * Variables: `package.class#variable` (optional: `package`)
-* Methods: `package.class#method(paramTypes):returnType` (optional: `package`, `paramTypes`, `:returnType`)
 
-e.g.
-* `Person#name`
-* `Person#getName()` 
-* `Person#getName():String` 
-* `Person#setName()` -- parameters omitted because only one `setName(String)` in the `Person` class
-* `Person#getName(String, int)` -- parameter types specified to disambiguate from other overloaded methods
-* `seedu.address.data.Person#toString()`
+  > Examples:
+  > 
+  > * `seedu.address.data.Person#name`
+  > * `Person#name`  -- optional parts omitted
+
+* Methods: `package.class#method(paramTypes):returnType` (optional: `package`, `:returnType`)
+
+  > Examples:
+  >
+  > * `seedu.address.data.Person#getName(boolean):String`
+  > * `Person#getName(boolean)` -- optional parts omitted
+
+* If including `paramTypes` pushes against a severe length constraint (e.g. in the commit message title),
+  it can be replaced with `...` as long as it does not cause ambiguities. 
+
+  > For example, <br>
+  > `Person#add(...)` is acceptable in a commit message title (which is limited to 40 chars) in place of<br>
+  > `Person#add(String, boolean)`
+
+* The `class` part can be omitted if it is clear from the context. 
+
+  > For example, the commit message title<br> 
+  > `Person class: remove add(int) method` is acceptable in place of <br>
+  > `Person class: remove Person#add(int) method`.
 
 ## Spelling
 

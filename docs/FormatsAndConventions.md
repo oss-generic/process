@@ -158,13 +158,13 @@ e.g. `Error alert email has very long subject #5958`
 Follow these conventions when referring to code elements **from a non-code context** e.g. when referring to a function 
 name from a commit message.
 
-> The objective is to be as concise as possible without causing ambiguities. Therefore, omit optional details when
+> The objective is to be as concise as possible without being ambiguous. Therefore, omit optional details when
 > those details are not pertinent to the context.
 
 <p>
 
-> Refer to the respective coding standards for conventions on how to refer to code elements _from code contexts_ 
-> e.g. when referring to a function from a code comment. 
+> Refer to the [respective coding standards](CodingStandards.md) for conventions on how to refer to code elements
+> **from code contexts** e.g. when referring to a function from a code comment.
 
 ### Java
 
@@ -175,7 +175,7 @@ name from a commit message.
   > * `seedu.address.data.Person#name`
   > * `Person#name`  -- optional parts omitted
 
-* Methods: `package.class#method(paramTypes):returnType` (optional: `package`, `:returnType`)
+* Methods: `package.class#method(paramTypes):returnType` (optional: `package`, `returnType`)
 
   > Examples:
   >
@@ -183,20 +183,14 @@ name from a commit message.
   > * `Person#getName(boolean)` -- optional parts omitted
 
 * If including `paramTypes` pushes against a severe length constraint (e.g. in the commit message title),
-  it can be replaced with `...` as long as it does not cause ambiguities. 
+  it can be replaced with `...` as long as it is not ambiguous. 
 
-  > For example, <br>
-  > `Person#add(...)` is acceptable in a commit message title (which is limited to 40 chars) in place of<br>
+  > For example,<br>
+  > `Person#add(...)` is acceptable in a commit message title (which is limited to 50 chars) in place of<br>
   > `Person#add(String, boolean)`
 
 * The `class` part can be omitted if it is clear from the context. 
 
   > For example, the commit message title<br> 
-  > `Person class: remove add(int) method` is acceptable in place of <br>
-  > `Person class: remove Person#add(int) method`.
-
-## Spelling
-
-Use American English spelling.
-
-> Rationale: Consistent spelling improves discoverability of API methods.
+  > `AbstractPerson: remove add(int) method` is acceptable in place of<br>
+  > `AbstractPerson: remove AbstractPerson#add(int) method`.

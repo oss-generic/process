@@ -187,7 +187,7 @@ name from a commit message.
 
   > For example,<br>
   > `Person#add(...)` is acceptable in a commit message title (which is limited to 50 chars) in place of<br>
-  > `Person#add(String, boolean)`
+  > `Person#add(String, boolean)`.
 
 * The `class` part can be omitted if it is clear from the context. 
 

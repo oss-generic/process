@@ -27,20 +27,89 @@ Commit messages for non-trivial commits should have a _**body**_ giving details 
  
 1. Separate subject from body with a blank line
 1. Wrap the body at 72 characters
-1. Use the body to explain what and why vs. how
+1. Use the body to explain WHAT the commit is about and WHY it was done that way. The reader can refer to the diff to 
+   understand HOW the change was done.
 
-Here is an example (adapted from [this commit](https://github.com/CS2103AUG2016-T11-C4/main/pull/2/commits/5c5b12d1a75c4a73a8330bfd05e406233694ffa3)):
- 
- ```
- Group overloaded methods together
- 
- To make it easier to see the different ways a method can be called, 
- we should group them together.
- 
- Note that this is not required strictly by the coding standard.
- ```
-  
-Refer to the article _[How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)_ for a more detailed explanation.
+Stylistic recommendations:
+
+* Follow this flow:
+
+   ```
+   {current situation} -- use present tense
+   
+   {why it needs to change}
+   
+   {what is being done about it} -- use imperative mood
+   
+   {why it is done that way}
+   
+   {any other relevant info}
+   ```
+   
+* Use blank lines to separate paragraphs. 
+* Avoid terms such as 'currently', 'originally' when describing the current situation. They are implied.
+* The word `Let's` can be used to indicated the beginning of the section that describes the change done in the commit.
+
+Here is an example commit message for a code quality refactoring:
+
+```
+Person attributes classes: extract parent class
+
+Person attribute classes (e.g. Name, Address, Age etc.) has
+some common behaviors (e.g. isValid()).
+
+The common behavior across person attribute classes causes
+code duplication.
+
+Extracting the common behavior into a super class allows
+us to use polymorphism when dealing with person attributes.
+For example, validity checking can be done for all attributes
+of a person in one loop.
+
+Let's define a PersonAttribute class and make it the parent
+class of person attribute classes. Pull up behaviors common
+to all person attributes into the new parent class.
+
+Using inhertance is preferrable over composition in this
+situation because the common behaviors are not composable.
+
+Refer this S/O discussion on dealing with attributes
+http:stackoverflow.com/some/question
+```
+
+An example commit message for a bug fix:
+
+```
+Find command: make matching case insenstive 
+
+Find command is case sensitive.
+
+A case insesitive find is more user friendly because users
+cannot be expected to remember exact case of the key words.
+
+Let's update the matching alorithm to use a case-insensitive
+matching.
+
+```
+An example commit message for a commit that is part of a multi-commit PR:
+```
+Unify variations of toSet() methods
+
+There are several method that convert a collection to
+a set. In some cases the conversion is inlined as a 
+code block in another method.
+
+Unifying all those duplicated code improves the code
+quality.
+
+As a step toward such unification, let's extract
+inlined code blocks that converts collections to sets
+into separate methods in the respective classes.
+Doing so will make the subsequent unification easier.
+```
+
+Refer to the article _[How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)_ for a more 
+advice on writing good commit messages.
 
 ## Commit organization
 

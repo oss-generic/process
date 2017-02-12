@@ -24,8 +24,8 @@ Merging to `master` or `release` branches requires approval from both _main revi
     Do not use GitHub's 'Update branch' button because it will create a merge commit instead of rebasing.
     
     > Alternatively, the person merging can trigger the CI checks to run again if he has access to the CI server. 
-    > If CI checks pass, the branch can be merged without rebasing (because CI typically merge the master branch to
-    > the PR before running checks).
+    > If CI checks pass, the branch can be merged without rebasing (because CI tools typically merge the master branch
+    > to the PR before running checks).
     
 1. If the project does not have CI set up to run all tests, 
   1. Checkout the branch PR to your Computer

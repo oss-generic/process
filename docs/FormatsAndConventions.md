@@ -101,13 +101,13 @@ Commits of a PR should be organized to match the following requirements:
 
 ## English
 
-Follow [Docker's documentation style and grammar conventions](https://docs.docker.com/opensource/doc-style/)
-if the same is not covered by our own conventions (for example, we have our own PR title convention
-that should take precedence over that of Docker's).
+* Follow [Docker's documentation style and grammar conventions](https://docs.docker.com/opensource/doc-style/)
+  if the same is not covered by our own conventions (for example, we have our own PR title convention
+  that should take precedence over that of Docker's).
 
-Use American English spelling.
+* Use American English spelling.
 
-> Rationale: Consistent spelling improves discoverability of API methods.
+  > Rationale: Consistent spelling improves discoverability of API methods.
 
 ## File
 

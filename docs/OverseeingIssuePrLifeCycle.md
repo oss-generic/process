@@ -16,22 +16,19 @@ When an issue comes in,
 
 # Assigning reviewers for PRs
 
-* A PR should have,
-  * **1 or more `reviewers`** (See [Reviewing PRs](ReviewingPrs.md) for more info)
-  * **all reviewers should be selected as `assignees`**
-  
-  > Duplicating `reviewers` as `assignees` is needed because GitHub filter syntax cannot filter by reviewers yet.
+* A PR should have **1 or more `reviewers`** (See [Reviewing PRs](ReviewingPrs.md) for more info)<br>
+  The `assignees` field can be left empty.
   
 * PRs created by core members:
-  * If you can, assign at least one `reviewer`. If you don't, team lead will assign reviewers for the PR.
+  * Author may request reviews from at least one core member. Else, team lead will assign reviewers for the PR.
   
-  > GitHub's _blame_ feature (or a third-party service such as _mentionbot_) can help to find suitable reviewers. 
-  > **Currently active** Developers who have touched the same code before and leads of the areas touched by the PR 
-  > are potential reviewers.
+    > GitHub's _blame_ feature (or a third-party service such as _mentionbot_) can help to find suitable reviewers. 
+    > **Currently active** Developers who have touched the same code before and leads of the areas touched by the PR 
+    > are potential reviewers.
   
 * PRs created by non-core members:
-  * Team lead should assign reviewers based on the member's expertise area. 
-  * Core members can volunteer as reviewers by assigning self as a `reviewer` (and `assignee`).
+  * Team lead should request reviews based on the members' expertise areas. 
+  * Core members can volunteer as reviewers by requesting a review from self.
 
 * After a PR has been approved by all reviewers, the last reviewer to approve should request a 
   review from the PM.

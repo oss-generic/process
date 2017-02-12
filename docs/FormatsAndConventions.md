@@ -67,23 +67,22 @@ Here is an example commit message for a code quality refactoring:
 ```
 Person attributes classes: extract a parent class PersonAttribute
 
-Person attribute classes (e.g. Name, Address, Age etc.) has some common 
+Person attribute classes (e.g. Name, Address, Age etc.) have some common 
 behaviors (e.g. isValid()).
 
-The common behavior across person attribute classes causes code duplication.
+The common behaviors across person attribute classes cause code duplication.
 
 Extracting the common behavior into a super class allows us to use
 polymorphism when dealing with person attributes. For example, validity
 checking can be done for all attributes of a person in one loop.
 
-Let's define a PersonAttribute class and make it the parent class of
-person attribute classes. Pull up behaviors common to all person
-attributes into the new parent class.
+Let's pull up behaviors common to all person attribute classes into a new
+parent class named PersonAttribute.
 
 Using inheritance is preferable over composition in this situation
 because the common behaviors are not composable.
 
-Refer this S/O discussion on dealing with attributes
+Refer to this S/O discussion on dealing with attributes
 http:stackoverflow.com/some/question
 ```
 
@@ -94,10 +93,12 @@ Find command: make matching case insensitive
 
 Find command is case sensitive.
 
-A case insesitive find is more user friendly because users cannot be
-expected to remember exact case of the key words.
+A case insensitive find is more user-friendly because users cannot be
+expected to remember the exact case of the keywords.
 
-Let's update the matching algorithm to use a case-insensitive matching.
+Let's,
+* update the search algorithm to use case-insensitive matching
+* add a script to migrate stress tests to the new format
 
 ```
 An example commit message for a commit that is part of a multi-commit PR:
@@ -109,9 +110,9 @@ cases the conversion is inlined as a code block in another method.
 
 Unifying all those duplicated code improves the code quality.
 
-As a step toward such unification, let's extract inlined code blocks
-that converts collections to sets into separate methods in the
-respective classes. Doing so will make the subsequent unification easier.
+As a step toward such unification, let's extract those duplicated code
+blocks into separate methods in the respective classes. Doing so will
+make the subsequent unification easier.
 ```
 
 Refer to the article _[How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)_ for more 

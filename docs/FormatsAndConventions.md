@@ -26,7 +26,7 @@ Every commit must have a well written commit message _**subject line**_.
 1. Use the imperative mood in the subject line
    e.g. `Add README.md` rather than `Added README.md` or `Adding README.md`
 1. Use `scope: change` format when applicable. 
-   e.g. `Person class: remove static imports` `Unit tests: remove blank lines`
+   e.g. `Person class: remove static imports`, `Unit tests: remove blank lines`
 
 Commit messages for non-trivial commits should have a _**body**_ giving details of the commit.
  

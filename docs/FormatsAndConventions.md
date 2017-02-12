@@ -65,7 +65,7 @@ Stylistic recommendations:
 Here is an example commit message for a code quality refactoring:
 
 ```
-Person attributes classes: extract parent class
+Person attributes classes: extract a parent class PersonAttribute
 
 Person attribute classes (e.g. Name, Address, Age etc.) has
 some common behaviors (e.g. isValid()).
@@ -228,11 +228,5 @@ e.g. `Error alert email has very long subject #5958`
 > Rationale: Duplicating issue title in PR title is for easy tracing between PRs and issues, 
 > to compensate for GitHub's lack of strong linking between the two.
 > Assume there is an invisible prefix in front of the PR title `Fixes issue : ...`
-
-## Spelling
-
-Use American English spelling.
-
-> Rationale: Consistent spelling improves discoverability of API methods.
 
 [git-commit-guide]: https://github.com/git/git/blob/e05806da9ec4aff8adfed142ab2a2b3b02e33c8c/Documentation/SubmittingPatches#L37-L132

@@ -14,17 +14,19 @@ Merging to `master` or `release` branches requires approval from both _main revi
 
 ### How to merge
 
-1. Make sure that GitHub gives the green light for merging.
-  There are a few scenarios where GitHub can prevent merging from proceeding:
-  * **Merge conflict**: The PR is conflicting with the current `master` branch; the author will
-    need to resolve the conflicts before proceeding. 
-  * **Check failure**: E.g. CI is failing.
-  * **Outdated branch**: The PR is not in sync with the current `master` branch; the author will
-    need to sync it before proceeding. This can be done via GitHub with the "Update branch" button.
+1. Make sure that GitHub gives the green light for merging. In the cases given below, the author should resolve 
+   the problem as described and submit a new iteration.
+  1. **Merge conflict**: The PR is conflicting with the current `master` branch. The author should rebase the branch
+    and resolve conflicts.
+  1. **Check failure**: E.g. CI is failing. The author should fix the causes of the failures or give an acceptable 
+     justifications for the failures.
+  1. **Outdated branch**: The PR is not in sync with the current `master` branch. The author should rebase the branch.
+    Do not use GitHub's 'Update branch' button because it will create a merge commit instead of rebasing.
     
-  The dev will need to resolve them before merging can proceed. 
-  Changes done while resolving the above should be reviewed too.
-
+    > Alternatively, the person merging can trigger the CI checks to run again if he has access to the CI server. 
+    > If CI checks pass, the branch can be merged without rebasing (because CI typically merge the master branch to
+    > the PR before running checks).
+    
 1. If the project does not have CI set up to run all tests, 
   1. Checkout the branch PR to your Computer
   1. Run the tests and any other checks applicable (e.g. linters). 

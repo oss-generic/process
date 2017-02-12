@@ -14,20 +14,20 @@ When an issue comes in,
     for change requests (_misc. posts_ do not need priority labels). This is to ensure that all issues get
     prioritized using a uniform scale.
 
-# Assigning reviewers for PRs
+# Requesting reviews for PRs
 
-* A PR should have **1 or more `reviewers`** (See [Reviewing PRs](ReviewingPrs.md) for more info)<br>
+* A PR should have **1 or more `reviewers`**. See [Reviewing PRs](ReviewingPrs.md).<br>
   The `assignees` field can be left empty.
   
 * PRs created by core members:
-  * Author may request reviews from at least one core member. Else, team lead will assign reviewers for the PR.
+  * Author may request a review from a core member. Else, team lead will assign reviewers for the PR.
   
     > GitHub's _blame_ feature (or a third-party service such as _mentionbot_) can help to find suitable reviewers. 
-    > **Currently active** Developers who have touched the same code before and leads of the areas touched by the PR 
+    > **Currently active** developers who have touched the same code before and leads of the areas touched by the PR 
     > are potential reviewers.
   
 * PRs created by non-core members:
-  * Team lead should request reviews based on the members' expertise areas. 
+  * Team lead should request reviews based on the members' areas of expertise. 
   * Core members can volunteer as reviewers by requesting a review from self.
 
 * After a PR has been approved by all reviewers, the last reviewer to approve should request a 

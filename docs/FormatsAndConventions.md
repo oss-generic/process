@@ -29,6 +29,13 @@ Commit messages for non-trivial commits should have a _**body**_ giving details 
 1. Wrap the body at 72 characters
 1. Use the body to explain WHAT the commit is about and WHY it was done that way. The reader can refer to the diff to 
    understand HOW the change was done.
+  
+   * Give an explanation for the change(s) that is detailed enough so that the reader can judge if it is a
+     good thing to do, without reading the actual diff to determine how well the code does what the explanation 
+     promises to do.<br>
+     If your description starts to get too long, that's a sign that you probably need to split up 
+     your commit to finer grained pieces. [adapted from: [git project][git-commit-guide]]
+   * Minimize in the commit message information that can be included in the code as comments. 
 
 Stylistic recommendations:
 
@@ -48,7 +55,7 @@ Stylistic recommendations:
    
 * Use blank lines to separate paragraphs. 
 * Avoid terms such as 'currently', 'originally' when describing the current situation. They are implied.
-* The word `Let's` can be used to indicated the beginning of the section that describes the change done in the commit.
+* The word `Let's` can be used to indicate the beginning of the section that describes the change done in the commit.
 
 Here is an example commit message for a code quality refactoring:
 
@@ -70,7 +77,7 @@ Let's define a PersonAttribute class and make it the parent
 class of person attribute classes. Pull up behaviors common
 to all person attributes into the new parent class.
 
-Using inhertance is preferrable over composition in this
+Using inheritance is preferable over composition in this
 situation because the common behaviors are not composable.
 
 Refer this S/O discussion on dealing with attributes
@@ -80,14 +87,14 @@ http:stackoverflow.com/some/question
 An example commit message for a bug fix:
 
 ```
-Find command: make matching case insenstive 
+Find command: make matching case insensitive 
 
 Find command is case sensitive.
 
 A case insesitive find is more user friendly because users
 cannot be expected to remember exact case of the key words.
 
-Let's update the matching alorithm to use a case-insensitive
+Let's update the matching algorithm to use a case-insensitive
 matching.
 
 ```
@@ -95,7 +102,7 @@ An example commit message for a commit that is part of a multi-commit PR:
 ```
 Unify variations of toSet() methods
 
-There are several method that convert a collection to
+There are several methods that convert a collection to
 a set. In some cases the conversion is inlined as a 
 code block in another method.
 
@@ -108,7 +115,7 @@ into separate methods in the respective classes.
 Doing so will make the subsequent unification easier.
 ```
 
-Refer to the article _[How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)_ for a more 
+Refer to the article _[How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)_ for more 
 advice on writing good commit messages.
 
 ## Commit organization
@@ -212,3 +219,5 @@ e.g. `Error alert email has very long subject #5958`
 Use American English spelling.
 
 > Rationale: Consistent spelling improves discoverability of API methods.
+
+[git-commit-guide]: https://github.com/git/git/blob/e05806da9ec4aff8adfed142ab2a2b3b02e33c8c/Documentation/SubmittingPatches#L37-L132

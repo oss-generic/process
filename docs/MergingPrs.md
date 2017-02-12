@@ -18,7 +18,7 @@ Merging to `master` or `release` branches requires approval from both _main revi
    the problem as described and submit a new iteration.
   1. **Merge conflict**: The PR is conflicting with the current `master` branch. The author should rebase the branch
     and resolve conflicts.
-  1. **Check failure**: E.g. CI is failing. The author should fix the causes of the failures or give an acceptable 
+  1. **Check failure**: E.g. CI is failing. The author should fix the causes of the failures or give acceptable 
      justifications for the failures.
   1. **Outdated branch**: The PR is not in sync with the current `master` branch. The author should rebase the branch.
     Do not use GitHub's 'Update branch' button because it will create a merge commit instead of rebasing.

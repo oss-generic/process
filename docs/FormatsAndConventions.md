@@ -99,6 +99,16 @@ Commits of a PR should be organized to match the following requirements:
 * Use lowerCamelCase (similar to java methods) whenever possible. e.g. `testData`
 * Prefer plurals if the folder contains multiple items of same type e.g. `docs` instead of `doc`
 
+## English
+
+* Follow [Docker's documentation style and grammar conventions](https://docs.docker.com/opensource/doc-style/)
+  if the same is not covered by our own conventions (for example, we have our own PR title convention
+  that should take precedence over that of Docker's).
+
+* Use American English spelling.
+
+  > Rationale: Consistent spelling improves discoverability of API methods.
+
 ## File
 
 * If the project uses a framework that has a specific file naming convention, follow that instead.
@@ -137,9 +147,3 @@ e.g. `Error alert email has very long subject #5958`
 > Rationale: Duplicating issue title in PR title is for easy tracing between PRs and issues, 
 > to compensate for GitHub's lack of strong linking between the two.
 > Assume there is an invisible prefix in front of the PR title `Fixes issue : ...`
-
-## Spelling
-
-Use American English spelling.
-
-> Rationale: Consistent spelling improves discoverability of API methods.

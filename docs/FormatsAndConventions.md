@@ -65,7 +65,7 @@ Stylistic recommendations:
 * Instead of relying entirely on paragraphs of text, use other constructs such as bullet lists (as done in
   Example 2 below) when it helps.
 
-Example 1. a commit message for a code quality refactoring:
+Example 1 - A commit message for a code quality refactoring:
 
 ```
 Person attributes classes: extract a parent class PersonAttribute
@@ -89,7 +89,7 @@ Refer to this S/O discussion on dealing with attributes
 http://stackoverflow.com/some/question
 ```
 
-Example 2. a commit message for a bug fix:
+Example 2 - A commit message for a bug fix:
 
 ```
 Find command: make matching case insensitive 
@@ -104,7 +104,7 @@ Let's,
 * add a script to migrate stress tests to the new format
 
 ```
-Example 3. a commit message for a commit that is part of a multi-commit PR:
+Example 3 - A commit message for a commit that is part of a multi-commit PR:
 ```
 Unify variations of toSet() methods
 

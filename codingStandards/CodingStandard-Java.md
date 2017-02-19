@@ -552,7 +552,7 @@ The concept of Java information hiding and encapsulation is violated by public v
 
 **9. Avoid unnecessary use of `this` with fields.**
 
-Java allows referring of any member of the current object from within an instance method or a constructor by using `this`.
+Java provides a reference to any member of the current object from within an instance method or a constructor by using `this`.
 
 Use the `this` keyword only when a field is shadowed by a method or constructor parameter.
 
@@ -584,7 +584,7 @@ public User(String name) {
 
 ### **Loops**
 
-**10. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body**
+**10. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body.**
 
 <table>
   <tr>
@@ -634,7 +634,7 @@ if (isDone) doCleanup();</pre>
 
 This is for debugging purposes. When writing on a single line, it is not apparent whether the test is really true or not.
 
-**12. Single statement conditionals should still be wrapped by curly brackets**
+**12. Single statement conditionals should still be wrapped by curly brackets.**
 
 <table>
   <tr>

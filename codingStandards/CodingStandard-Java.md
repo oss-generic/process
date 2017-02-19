@@ -550,9 +550,9 @@ This ensures that variables are valid at any time. Sometimes it is impossible to
 
 The concept of Java information hiding and encapsulation is violated by public variables. Use private variables and access functions instead. One exception to this rule is when the class is essentially a data structure, with no behavior (*equivalent to a C++ struct*). In this case it is appropriate to make the class' instance variables public.
 
-**9. `this.` keyword should not be used unless necessary.**
+**9. `this` keyword should not be used unless necessary.**
 
-Use the `this.` keyword only if the name of the class field is the same as the name of the method parameters (i.e. the class field is overshadowed by a method parameter).
+Use the `this` keyword when a field is shadowed by a method or constructor parameter.
 
 <table>
   <tr>

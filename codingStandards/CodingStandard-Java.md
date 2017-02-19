@@ -550,9 +550,39 @@ This ensures that variables are valid at any time. Sometimes it is impossible to
 
 The concept of Java information hiding and encapsulation is violated by public variables. Use private variables and access functions instead. One exception to this rule is when the class is essentially a data structure, with no behavior (*equivalent to a C++ struct*). In this case it is appropriate to make the class' instance variables public.
 
+**9. `this` keyword should not be used unless necessary.**
+
+Use the `this` keyword when a field is shadowed by a method or constructor parameter.
+
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+public User(String name) {
+    this.name = name;
+    ...
+}
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+public User(String name) {
+    // 'id' is not overshadowed by any method parameters
+    this.id = User.getNewId();
+    ...
+}
+      </pre>
+    </td>
+  </tr>
+</table>
+
 ### **Loops**
 
-**9. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body**
+**10. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body**
 
 <table>
   <tr>
@@ -579,7 +609,7 @@ When there is only one statement in the loop body it can be written without wrap
 
 ### **Conditionals**
 
-**10. The conditional should be put on a separate line.**
+**11. The conditional should be put on a separate line.**
 
 <table>
   <tr>
@@ -602,7 +632,7 @@ if (isDone) doCleanup();</pre>
 
 This is for debugging purposes. When writing on a single line, it is not apparent whether the test is really true or not.
 
-**11. Single statement conditionals should still be wrapped by curly brackets**
+**12. Single statement conditionals should still be wrapped by curly brackets**
 
 <table>
   <tr>

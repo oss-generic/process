@@ -14,7 +14,9 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 
 ## Posting an Issue
 
-1. Do a search in the issue tracker to ensure the same issue has not been posted before.
+1. Do a search in the issue tracker to ensure the same issue has not been posted before. <br>
+   **IMPORTANT**: If reporting a security vulnerability, send your bug report directly to the contact email of 
+   the project instead of posting it in the issue tracker.
 1. Follow the [naming convention](FormatsAndConventions.md#issue) for the issue title. 
 
 

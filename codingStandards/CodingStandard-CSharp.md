@@ -50,7 +50,7 @@ ii. Constructors and Finalizer<br>
 iii. Nested Enums, Structs and Classes<br>
 iv. Properties<br>
 v. Methods<br>
-> Sequence declaration within type groups are based on visibility in this order: `public, protected, internal, private`.
+> Sequence declaration within type groups are based on StyleCop's SA1202 ordering: `public, internal, protected internal, protected, private`.
 
 ### Indentation
 ####1. Basic indentation should be 4 spaces(not tabs).

@@ -17,11 +17,16 @@ are not desirable.
 
 Every commit must have a well written commit message _**subject line**_.
  
-1. Limit the subject line to 50 characters
-1. Capitalize the subject line
+1. Try to limit the subject line to 50 characters (hard limit: 72 chars)
+
+   > Rationale: Some tools show only a limited number of characters from the commit message.
+
+1. Capitalize the subject line e.g. `Move index.html file to root`
 1. Do not end the subject line with a period
 1. Use the imperative mood in the subject line
    e.g. `Add README.md` rather than `Added README.md` or `Adding README.md`
+1. Use `scope: change` format when applicable 
+   e.g. `Person class: remove static imports`, `Unit tests: remove blank lines`
 
 Commit messages for non-trivial commits should have a _**body**_ giving details of the commit.
  

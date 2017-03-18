@@ -21,12 +21,11 @@ Merging to `master` or `release` branches requires approval from both _main revi
   1. **Check failure**: E.g. CI is failing. The author should fix the causes of the failures or give acceptable 
      justifications for the failures.
   1. **Outdated branch**: The PR is not in sync with the current `master` branch. The author should rebase the branch.
-    Do not use GitHub's 'Update branch' button because it will create a merge commit instead of rebasing.
-    
-    > Alternatively, the person merging can trigger the CI checks to run again if he has access to the CI server. 
-    > If CI checks pass, the branch can be merged without rebasing (because CI tools typically merge the master branch
-    > to the PR before running checks).
-    
+    Do not use GitHub's 'Update branch' button because it will create a merge commit instead of rebasing.<br>
+    Alternatively, the person merging can trigger the CI checks to run again if he has access to the CI server. 
+    If CI checks pass, the branch can be merged without rebasing (because CI tools typically merge the master branch
+    to the PR before running checks).
+
 1. If the project does not have CI set up to run all tests, 
   1. Checkout the branch PR to your Computer
   1. Run the tests and any other checks applicable (e.g. linters). 

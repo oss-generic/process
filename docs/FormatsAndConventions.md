@@ -152,3 +152,45 @@ e.g. `Error alert email has very long subject #5958`
 > Rationale: Duplicating issue title in PR title is for easy tracing between PRs and issues, 
 > to compensate for GitHub's lack of strong linking between the two.
 > Assume there is an invisible prefix in front of the PR title `Fixes issue : ...`
+
+## References to code elements
+
+Follow these conventions when referring to code elements **from a non-code context** e.g. when referring to a function 
+name from a commit message.
+
+> The objective is to be as concise as possible without being ambiguous. Therefore, omit optional details when
+> those details are not pertinent to the context.
+
+<p>
+
+> Refer to the [respective coding standards](CodingStandards.md) for conventions on how to refer to code elements
+> **from code contexts** e.g. when referring to a function from a code comment.
+
+### Java
+
+* Variables: `package.class#variable` (optional: `package`)
+
+  > Examples:
+  > 
+  > * `seedu.address.data.Person#name`
+  > * `Person#name`  -- optional parts omitted
+
+* Methods: `package.class#method(paramTypes):returnType` (optional: `package`, `returnType`)
+
+  > Examples:
+  >
+  > * `seedu.address.data.Person#getName(boolean):String`
+  > * `Person#getName(boolean)` -- optional parts omitted
+
+* If including `paramTypes` pushes against a severe length constraint (e.g. in the commit message title),
+  it can be replaced with `...` as long as it is not ambiguous. 
+
+  > For example,<br>
+  > `Person#add(...)` is acceptable in a commit message title (which is limited to 50 chars) in place of<br>
+  > `Person#add(String, boolean)`.
+
+* The `class` part can be omitted if it is clear from the context. 
+
+  > For example, the commit message title<br> 
+  > `AbstractPerson: remove add(int) method` is acceptable in place of<br>
+  > `AbstractPerson: remove AbstractPerson#add(int) method`.

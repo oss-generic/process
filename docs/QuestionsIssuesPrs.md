@@ -38,7 +38,7 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 
 ### PR workflow
 
-1. **Select an issue to fix** 
+1. #### **Select an issue to fix** 
    
    * Select an open issue from the issue tracker that you are interested to work on.
    
@@ -59,7 +59,7 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
    * If it seems the existing PRs for that issue are no longer active (e.g. no activity in the past seven days), 
      you can always post a message to check if anybody is still working on that issue.
 
-1. **Create a new branch** 
+1. #### **Create a new branch** 
 
    Create a branch off the `master` branch. 
    Follow [our naming conventions for branch names](FormatsAndConventions.md#branch).
@@ -67,7 +67,7 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
    > WARNING: Make sure you branch off `master` rather than the currently active branch.
    > Otherwise, you may get commits from other branches inside your PR.
    
-1. **Fix the issue in the new branch**
+1. #### **Fix the issue in the new branch**
    
    - [x] Adhere to coding style and testing requirements of the project.
    - [x] Limit the changes to the scope of the issue you are fixing. Do not fix multiple issues in the same PR. 
@@ -102,14 +102,14 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
    * If the project uses any other static analysis tools (e.g. checkstyle), use them to detect any potential problems
      in the new code.
      
-1. **Prepare the commits for publishing**
+1. #### **Prepare the commits for publishing**
 
    * Go through the commit diffs and revert any changes unrelated to the PR. e.g. auto-updates done by the IDE. 
    * Refactor the commits to meet [our requirements for commit organization](FormatsAndConventions.md#commit-organization).
    
      > More info: [How to Guides :: Refactor Commits](HowToGuides.md#refactor-commits)
 
-1. **Create a PR** 
+1. #### **Create a PR** 
       
    1. Push the branch to your fork.
    1. Create a PR.
@@ -122,7 +122,7 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
    > You may create a PR even before you are done with the fix, if you want to seek some early feedback from 
    > the dev team.
       
-1. **Request a review**
+1. #### **Request a review**
 
    1. Wait for CI (i.e. Travis, AppVeyor) to run tests/checks against your PR and report status. 
       If any errors are reported, fix those problems and push the fixes to the same branch.
@@ -143,7 +143,7 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
     
    * If you do not get any response from the dev team within 1-2 days, keep posting reminders in the PR thread.
 
-1. **Revise the PR as per reviewer comments** 
+1. #### **Revise the PR as per reviewer comments** 
 
     1. Wait until all assigned reviewers have signified that they have finished reviewing the PR (e.g. by applying the 
        `s.Ongoing` label). If you are not sure, post a comment requesting a confirmation.
@@ -173,7 +173,7 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
     1. Update the branch in your fork. 
     1. Use the same CanIHasReview tool used earlier to post a new commit summary and alert the reviewers.
 
-1. **Refine the fix iteratively** 
+1. #### **Refine the fix iteratively** 
 
    Repeat the review-refine cycle (explained above) until the PR is merged (usually done by a senior member of 
    the project team).

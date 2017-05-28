@@ -134,8 +134,8 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
       <summary>How to use CanIHasReview</summary>
       
       1. Navigate to your PR. e.g. `https://github.com/se-edu/addressbook-level4/pull/237`.
-      1. Replace `github.com` in the PR URL with `canihasreview.herokuapp.com`. The resulting URL should be 
-         something like `https://canihasreview.herokuapp.com/se-edu/addressbook-level4/pull/237`.
+      1. Replace `github.com` in the PR URL with `canihasreview.pyokagan.com`. The resulting URL should be 
+         something like `https://canihasreview.pyokagan.com/se-edu/addressbook-level4/pull/237`.
       1. Click `Submit new iteration` button. It will post a summary of the PR similar to 
          [this example](https://github.com/se-edu/addressbook-level4/pull/209#issuecomment-270905049).
       

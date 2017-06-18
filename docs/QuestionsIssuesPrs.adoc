@@ -1,9 +1,8 @@
 [[workflow-for-submitting-questions-issues-and-prs]]
 = Workflow for submitting Questions, Issues and PRs
-
-* link:#asking-a-question[Asking a Question]
-* link:#posting-an-issue[Posting an Issue]
-* link:#submitting-a-pr[Submitting a PR]
+:toc:
+:toclevels: 1
+:toc-title:
 
 [[asking-a-question]]
 == Asking a Question

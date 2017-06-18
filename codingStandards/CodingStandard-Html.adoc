@@ -1,13 +1,7 @@
 [[html-style-guide]]
 = HTML Style Guide
-
-* link:#document-properties[Document Properties]
-* link:#external-files[External Files]
-* link:#tags[Tags]
-* link:#attributes[Attributes]
-* link:#naming-convention[Naming Convention]
-* link:#indentation[Indentation]
-* link:#miscellaneous[Miscellaneous]
+:toc:
+:toc-title:
 
 [[document-properties]]
 == Document Properties

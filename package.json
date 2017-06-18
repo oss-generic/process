@@ -1,0 +1,16 @@
+{
+  "name": "oss-generic-process",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "asciidoctor.js": "1.5.6-preview.3",
+    "fs-extra": "^4.0.1",
+    "glob": "^7.1.2"
+  }
+}

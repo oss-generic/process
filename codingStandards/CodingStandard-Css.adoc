@@ -103,7 +103,7 @@ ________________________________________________________________________________
 This speeds up the css match lookup. If such a qualification is actually required, either use another
 class on top of this to change the style or use a completely different class to start with. In any case,
 if this kind of qualification is needed, then probably the class has not been named well enough
-(see link:#naming-classes[naming standards for classes]).
+(see <<naming-classes,naming standards for classes>>).
 ________________________________________________________________________________________________________
 
 * Use child selector rather than descendant selector (use `#container > span` rather than `#container span`).

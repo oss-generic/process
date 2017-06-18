@@ -8,7 +8,7 @@
 == Asking a Question
 
 Post your question in the issue tracker.
-See link:#posting-an-issue[Posting an Issue] for guidelines to follow when posting an issue.
+See <<Posting an Issue>> for guidelines to follow when posting an issue.
 
 If you don't get an answer within 1-2 days, feel free to post another comment in the issue thread as a reminder.
 
@@ -18,7 +18,7 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 1.  Do a search in the issue tracker to ensure the same issue has not been posted before.
 *IMPORTANT*: If reporting a security vulnerability, send your bug report directly to the contact email of
 the project instead of posting it in the issue tracker.
-2.  Follow the link:FormatsAndConventions.md#issue[naming convention] for the issue title.
+2.  Follow the <<FormatsAndConventions.adoc#issue,naming convention>> for the issue title.
 
 [[submitting-a-pr]]
 == Submitting a PR
@@ -56,7 +56,7 @@ ________________________________________________________________________________
 After you have one merged PR, you can work on multiple PRs in parallel.
 This restriction aims to save you from making the same mistake in multiple PRs.
 _______________________________________________________________________________________
-* If the issue list does not contain what you want to work on, post an issue first (as described link:#posting-an-issue[above])
+* If the issue list does not contain what you want to work on, post an issue first (as described <<Posting an Issue,above>>)
 and wait for it to be acknowledged. Otherwise you could end up fixing something that does not need fixing.
 * It is not required to (but OK to) ask for permission to work on an issue.
 But do check the issue discussion thread to see if there are _active_ PRs for that issue.
@@ -69,7 +69,7 @@ you can always post a message to check if anybody is still working on that issue
 ==== Create a new branch
 
 Create a branch off the `master` branch.
-Follow link:FormatsAndConventions.md#branch[our naming conventions for branch names].
+Follow <<FormatsAndConventions.adoc#branch,our naming conventions for branch names>>.
 
 ___________________________________________________________________________________
 WARNING: Make sure you branch off `master` rather than the currently active branch.
@@ -93,7 +93,7 @@ ________________________________________________________________________________
 * [x] Sync your fork with upstream changes
 +
 _____________________________________________________________________________________________________________________
-More info: link:HowToGuides.md#sync-a-fork-with-upstream-changes[How to Guides :: Sync a fork with upstream changes].
+More info: <<HowToGuides.adoc#sync-a-fork-with-upstream-changes,How to Guides +++::+++ Sync a fork with upstream changes>>.
 _____________________________________________________________________________________________________________________
 
 Following these tips will help you in subsequent steps of the workflow:
@@ -122,17 +122,17 @@ in the new code.
 ==== Prepare the commits for publishing
 
 * Go through the commit diffs and revert any changes unrelated to the PR. e.g. auto-updates done by the IDE.
-* Refactor the commits to meet link:FormatsAndConventions.md#commit-organization[our requirements for commit organization].
+* Refactor the commits to meet <<FormatsAndConventions.adoc#commit-organization,our requirements for commit organization>>.
 +
 __________________________________________________________________________________
-More info: link:HowToGuides.md#refactor-commits[How to Guides :: Refactor Commits]
+More info: <<HowToGuides.adoc#refactor-commits,How to Guides +++::+++ Refactor Commits>>
 __________________________________________________________________________________
 
 1.  [[create-a-pr]]
 ==== Create a PR
 2.  Push the branch to your fork.
 3.  Create a PR.
-* [x] Follow the link:FormatsAndConventions.md#pr[naming conventions for PRs].
+* [x] Follow the <<FormatsAndConventions.adoc#pr,naming conventions for PRs>>.
 * [x] Include `Fixes #IssueNumber` (e.g. `Fixes #1234`) in the PR description so that GitHub can auto-link the
 relevant issue and
 https://help.github.com/articles/closing-issues-via-commit-messages/[auto-close the issue when the PR is merged].
@@ -172,7 +172,7 @@ _______________________________________________________________________________
 * Updates to existing logical changes should be done by modifying their corresponding commits.
 +
 __________________________________________________________________________________
-More info: link:HowToGuides.md#refactor-commits[How to Guides :: Refactor Commits]
+More info: <<HowToGuides.adoc#refactor-commits,How to Guides +++::+++ Refactor Commits>>
 __________________________________________________________________________________
 * New logical changes should be introduced as new commits.
 * Sometimes, reviewers may recommend

@@ -3,12 +3,12 @@
 
 Note that some projects might have additional guidelines for the languages they use.
 
-* *C#*: link:../codingStandards/CodingStandard-CSharp.md[Coding Standard]
-* *CSS*: https://oss-generic.github.io/process/codingStandards/CodingStandard-Css.html[Coding Standard]
-* *GFMD* (GitHub Flavored Markdown): https://oss-generic.github.io/process/codingStandards/CodingStandard-Gfmd.html[Coding Standard]
-* *HTML*: https://oss-generic.github.io/process/codingStandards/CodingStandard-Html.html[Coding Standard]
-* *Java*: https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html[Coding Standard]
-| link:../codingStandards/AdditionalGuidelines-Java.md[Additional Guidelines]
-* *JavaScript*: https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true[Coding Standard]
-* *JSP*: https://docs.google.com/document/d/14bXfdveXvoIaPBYpL19m4PK6oPabSnnoawj6OGjOzD4/pub?embedded=true[Coding Standard]
+* **C#**: <<../codingStandards/CodingStandard-CSharp.adoc#,Coding Standard>>
+* **CSS**: <<../codingStandards/CodingStandard-Css.adoc#,Coding Standard>>
+* *GFMD* (GitHub Flavored Markdown): <<../codingStandards/CodingStandard-Gfmd.adoc#,Coding Standard>>
+* **HTML**: <<../codingStandards/CodingStandard-Html.adoc#,Coding Standard>>
+* **Java**: <<../codingStandards/CodingStandard-Java.adoc#,Coding Standard>>
+| <<../codingStandards/AdditionalGuidelines-Java.adoc#,Additional Guidelines>>
+* **JavaScript**: https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true[Coding Standard]
+* **JSP**: https://docs.google.com/document/d/14bXfdveXvoIaPBYpL19m4PK6oPabSnnoawj6OGjOzD4/pub?embedded=true[Coding Standard]
 * JSTL

@@ -37,7 +37,7 @@
 [[release-lead]]
 ==== Release Lead
 
-* Make releases as described in link:ManagingReleases.md[here]
+* Make releases as described in <<ManagingReleases.adoc#,here>>
 * Activity level: Once per release cycle
 
 [[community-lead]]

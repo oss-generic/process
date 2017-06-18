@@ -1,26 +1,12 @@
 [[java-coding-standard-beginnerintermediate-level]]
 = Java Coding Standard (Beginner/Intermediate Level)
+:toc: macro
+:toc-title:
 
 **Important**: Use the https://google.github.io/styleguide/javaguide.html[Google Java Style Guide] for any topics
 not covered in this document.
 
-* link:#naming-conventions[Naming Conventions]
-* link:#general-naming-conventions[General Naming Conventions]
-* link:#specific-naming-conventions[Specific Naming Conventions]
-* link:#files[Files]
-* link:#statements[Statements]
-* link:#package-and-import-statements[Package and Import Statements]
-* link:#classes-and-interfaces[Classes and Interfaces]
-* link:#methods[Methods]
-* link:#types[Types]
-* link:#variables[Variables]
-* link:#loops[Loops]
-* link:#conditionals[Conditionals]
-* link:#layout-and-comments[Layout and Comments]
-* link:#layout[Layout]
-* link:#white-space[White Space]
-* link:#comments[Comments]
-* link:#references[References]
+toc::[]
 
 [[naming-conventions]]
 == *Naming Conventions*

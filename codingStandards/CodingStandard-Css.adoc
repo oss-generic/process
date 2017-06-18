@@ -1,20 +1,7 @@
 [[css-coding-standard]]
 = CSS Coding Standard
-
-*Contents*:
-
-* link:#general[General]
-* link:#css-files[CSS Files]
-* link:#selectors[Selectors]
-** link:#selector-formatting[Selector Formatting]
-** link:#use-of-efficient-selectors[Use of Efficient Selectors]
-* link:#classes[Classes]
-** link:#naming-classes[Naming Classes]
-* link:#attributes[Attributes]
-** link:#order-of-attributes[Order of Attributes]
-** link:#attribute-formatting[Attribute Formatting]
-** link:#general-details[General Details]
-* link:#resources[Resources]
+:toc:
+:toclevels: 2
 
 [[general]]
 = General

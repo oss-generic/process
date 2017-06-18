@@ -1,5 +1,8 @@
 [[c-coding-standard]]
 = C# Coding Standard
+:toc: macro
+:toc-title:
+:toclevels: 1
 
 *Important:* Use https://github.com/dennisdoomen/CSharpGuidelines[CSharpGuidelines] for any topics not covered in this document.
 
@@ -10,15 +13,7 @@ The coding standard is primarily based on https://github.com/dennisdoomen/CSharp
 * Some examples were taken from other sources listed under link:#references[References].
 ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-* link:#file-organization[File Organization]
-* link:#formatting[Formatting]
-* link:#layout[Layout]
-* link:#indentation[Indentation]
-* link:#white-space[White Space]
-* link:#naming-conventions[Naming Conventions]
-* link:#commenting-conventions[Commenting Conventions]
-* link:#language-conventions[Language Conventions]
-* link:#references[References]
+toc::[]
 
 [[file-organization]]
 == File Organization

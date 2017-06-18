@@ -10,7 +10,7 @@
 [[updating-a-pr-in-response-to-a-review]]
 == Updating a PR in response to a review
 
-* Favor the link:HowToGuides.md#create-a-multi-step-pr[multi-step PR approach] even for smaller PRs which has only one
+* Favor the <<HowToGuides.adoc#create-a-multi-step-pr,multi-step PR approach>> even for smaller PRs which has only one
 logical step.
 * If the `master` has progressed beyond the root of the PR branch, rebase the PR branch
 (instead of merging `master` to PR branch). This will keep the PR branch free of merge commits.

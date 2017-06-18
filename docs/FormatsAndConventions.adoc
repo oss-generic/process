@@ -178,7 +178,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________
 More info:
 
-* link:#commit-message[Our conventions for commit messages]
+* <<commit-message,Our conventions for commit messages>>
 * [Web article] _http://chris.beams.io/posts/git-commit/[How to Write a Git Commit Message]_
 ____________________________________________________________________________________________
 
@@ -270,7 +270,7 @@ those details are not pertinent to the context.
 ____________________________________________________________________________________________________________
 
 __________________________________________________________________________________________________________________
-Refer to the link:CodingStandards.md[respective coding standards] for conventions on how to refer to code elements
+Refer to the <<CodingStandards.adoc#,respective coding standards>> for conventions on how to refer to code elements
 *from code contexts* e.g. when referring to a function from a code comment.
 __________________________________________________________________________________________________________________
 

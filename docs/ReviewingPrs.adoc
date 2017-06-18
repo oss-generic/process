@@ -19,12 +19,12 @@ ________________________________________________________________________________
 
 1.  Ensure the following at the start of the review. If any of them are missing, ask the dev to fix.
 
-* [x] PR name follows the link:FormatsAndConventions.md#pr[PR title convention].
+* [x] PR name follows the <<FormatsAndConventions.adoc#pr,PR title convention>>.
 * [x] PR description has the correct `Fixes #...` reference.
 * [x] The CI build is successful or any failures are justifiable (e.g. false positives from static analysis tools).
-* [x] PR branch name follows the link:FormatsAndConventions.md#branch[branch naming convention].
+* [x] PR branch name follows the <<FormatsAndConventions.adoc#branch,branch naming convention>>.
 * This is a soft requirement. Encourage the dev to follow the convention in future PRs.
-* [x] Meets our link:FormatsAndConventions.md#commit-organization[requirements for commit organization].
+* [x] Meets our <<FormatsAndConventions.adoc#commit-organization,requirements for commit organization>>.
 * [x] Commit summary has been generated using CanIHasReview.
 
 __________________________________________________________________________________________
@@ -66,7 +66,7 @@ ________________________________________________________________________________
 ** [x] The PR does not contain unrelated changes.
 e.g. unnecessary formatting changes or commits from other branches.
 ** [x] All your previous review comments have been addressed.
-** [x] Commit messages follow link:FormatsAndConventions.md#commit-messages[our requirements] .
+** [x] Commit messages follow <<FormatsAndConventions.adoc#commit-messages,our requirements>>.
 
 1.  Approve or request changes at the end of the review.
 

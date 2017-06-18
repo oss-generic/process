@@ -10,7 +10,7 @@ ________________________________________________________________________________
 The coding standard is primarily based on https://github.com/dennisdoomen/CSharpGuidelines[CSharpGuidelines] (by Aviva Solutions) but differs from it in these ways:
 
 * Structure of the document is adapted from http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf[C# Coding Standards for .NET] and http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf[C# Coding Style Guide].
-* Some examples were taken from other sources listed under link:#references[References].
+* Some examples were taken from other sources listed under <<References>>.
 ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 toc::[]

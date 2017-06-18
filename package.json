@@ -1,0 +1,21 @@
+{
+  "name": "oss-generic-process",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.js build",
+    "clean": "node build.js clean",
+    "rebuild": "node build.js rebuild"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "asciidoctor.js": "1.5.5-5",
+    "glob": "^7.1.2",
+    "mkdirp": "^0.5.1",
+    "mz": "^2.6.0",
+    "rimraf": "^2.6.1",
+    "thenify": "^3.3.0"
+  }
+}

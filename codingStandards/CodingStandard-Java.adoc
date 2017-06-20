@@ -1,0 +1,606 @@
+[[java-coding-standard-beginnerintermediate-level]]
+= Java Coding Standard (Beginner/Intermediate Level)
+
+*Important*: Use the https://google.github.io/styleguide/javaguide.html[Google Java Style Guide] for any topics
+not covered in this document.
+
+Categories of style rules:
+
+* *Basic Rules*: Marked with ⭐
+* *Intermediate Rules*: Marked with ⭐⭐
+* *Advanced Rules*: Marked with ⭐⭐⭐
+* link:#naming-conventions[Naming]
+* link:#layout[Layout]
+* link:#statements[Statements]
+* link:#package-and-import-statements[Package and Import Statements]
+* link:#classes-and-interfaces[Classes and Interfaces]
+* link:#methods[Methods]
+* link:#types[Types]
+* link:#variables[Variables]
+* link:#loops[Loops]
+* link:#conditionals[Conditionals]
+* link:#comments[Comments]
+* link:#references[References]
+
+[[naming-conventions]]
+== *Naming Conventions*
+
+*1. ⭐ Names representing packages should be in all lower case.*
+
+[source,java]
+----
+com.company.application.ui
+----
+
+____________________________________________________________________________________________
+https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html[More on package naming]
+____________________________________________________________________________________________
+
+For school projects, the root name of the package should be your group name or project name followed by logical group names.`e.g. todobuddy.ui, todobuddy.file etc`.
+
+______________________________________________________________________________________________________________________
+Rationale: Your code is not officially ‘_produced by NUS_’, therefore do not use `edu.nus.comp.*` or anything similar.
+______________________________________________________________________________________________________________________
+
+*2. ⭐ Class/enum names must be nouns and written in PascalCase.*
+
+[source,java]
+----
+Line, AudioSystem
+----
+
+*3. ⭐ Variable names must be in camelCase.*
+
+[source,java]
+----
+line, audioSystem
+----
+
+*4. ⭐ Constant names must be all uppercase using underscore to separate words.*
+
+[source,java]
+----
+MAX_ITERATIONS, COLOR_RED
+----
+
+*5. ⭐ Names representing methods must be verbs and written in camelCase.*
+
+[source,java]
+----
+getName(), computeTotalWidth()
+----
+
+Underscores may be used in test method names using the following three part format *`featureUnderTest_testScenario_expectedBehavior()`*
+
+e.g. `sortList_emptyList_exceptionThrown()` `getMember_memberNotFount_nullReturned`
+
+Third part or both second and third parts can be omitted depending on what's covered in the test. +
+For example, the test method `sortList_emptyList()` will test `sortList()` method for all variations of the 'empty list'
+scenario and the test method `sortList()` will test the `sortList()` method for all scenarios.
+
+*6. ⭐⭐ Abbreviations and acronyms should not be uppercase when used as a part of a name.*
+
+*7. ⭐ All names should be written in English.*
+
+___________________________________________________________
+Rationale: The code is meant for an international audience.
+___________________________________________________________
+
+*8. ⭐⭐ Variables with a large scope should have long names, variables with a small scope can have short names.*
+
+Scratch variables used for temporary storage or indices can be kept short. A programmer reading such variables should be able to assume that its value is not used outside a few lines of code. Common scratch variables for integers are `i, j, k, m, n` and for characters `c` and `d`.
+
+_____________________________________________________________________________________
+Rationale: When the scope is small, the reader does not have to remember it for long.
+_____________________________________________________________________________________
+
+*9. ⭐ Boolean variables/methods should be named to sound like booleans ‘is’*
+
+[source,java]
+----
+//variables
+isSet, isVisible, isFinished, isFound, isOpen, hasData, wasOpen
+
+//methods
+boolean hasLicense();
+boolean canEvaluate();
+boolean shouldAbort = false;
+----
+
+Setter methods for boolean variables must be of the form:
+
+[source,java]
+----
+void setFound(boolean isFound);
+----
+
+____________________________________________________________________________________________________________________________________________________________________________
+Rationale: This is the naming convention for boolean methods and variables used by Java core packages. It also makes the code read like normal English e.g. `if(isOpen) ...`
+____________________________________________________________________________________________________________________________________________________________________________
+
+*10. ⭐⭐ Plural form should be used on names representing a collection of objects.*
+
+[source,java]
+----
+Collection<Point> points;
+int[] values;
+----
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Rationale: Enhances readability since the name gives the user an immediate clue of the type of the variable and the operations that can be performed on its elements. One space character after the variable type is enough to obtain clarity.
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+*11. ⭐ Iterator variables can be called _i_, _j_, _k_ etc.*
+
+Variables named _j_, _k_ etc. should be used for nested loops only.
+
+[source,java]
+----
+for (Iterator i = points.iterator(); i.hasNext(); ) {
+    ...
+}
+
+for (int i = 0; i < nTables; i++) {
+    ...
+}
+----
+
+_________________________________________________________________________________________________________________
+Rationale: The notation is taken from mathematics where it is an established convention for indicating iterators.
+_________________________________________________________________________________________________________________
+
+*12. ⭐⭐ Associated constants (final variables) should be prefixed by a common type name.*
+
+[source,java]
+----
+final int COLOR_RED   = 1;
+final int COLOR_GREEN = 2;
+final int COLOR_BLUE  = 3;
+----
+
+_______________________________________________________________________________________________________________________
+Rationale: This indicates that the constants belong together, and make them appear together when sorted alphabetically.
+_______________________________________________________________________________________________________________________
+
+[[layout]]
+== *Layout*
+
+*1. ⭐ Basic indentation should be 4 spaces (not tabs).*
+
+[source,java]
+----
+for (i = 0; i < nElements; i++) {
+    a[i] = 0;
+}
+----
+
+_____________________________________
+Rationale: Just follow it :trollface:
+_____________________________________
+
+*2. ⭐ Keep lines no longer than 120 chars.*
+
+Try to keep line length shorter than 110 characters (soft limit). But it is OK to exceed the limit slightly (hard limit: 120 chars). If the line exceeds the limit, use line wrapping at appropriate places of the line.
+
+*Indentation for wrapped lines should be 8 spaces* (i.e. twice the normal indentation of 4 spaces) more than the parent line.
+
+[source,java]
+----
+setText("Long line split"
+        + "into two parts.");
+if(isReady){
+    setText("Long line split"
+            + "into two parts.");
+}
+----
+
+*3. ⭐⭐ Place line break to improve readability*
+
+When wrapping lines, the main objective is to improve readability. Do not always accept the auto-formatting suggested by the IDE.
+
+In general:
+
+* Break after a comma.
+* Break before an operator. This also applies to the following "_operator-like_" symbols: the dot separator `.`, the ampersand in type bounds `<T extends Foo & Bar>`, and the pipe in catch blocks `catch (FooException | BarException e)`
+
+[source,java]
+----
+totalSum = a + b + c 
+          + d + e;
+setText("Long line split"
+         + "into two parts.");
+method(param1,
+       object.method()
+             .method2(),
+       param3);
+----
+
+* A method or constructor name stays attached to the open parenthesis `(` that follows it.
+
+* Prefer higher-level breaks to lower-level breaks. In the example below, the first is preferred, since the break occurs outside the parenthesized expression, which is at a higher level.
+
+* Here are two acceptable ways to format ternary expressions:
+
+[source,java]
+----
+alpha = (aLongBooleanExpression) ? beta : gamma;
+alpha = (aLongBooleanExpression)
+        ? beta
+        : gamma;
+----
+
+*4. ⭐ Use K&R style brackets (aka https://blog.codinghorror.com/new-programming-jargon/[Egyptian style]).*
+
+______________________________________
+Rationale: Just follow it. :trollface:
+______________________________________
+
+*5. ⭐ Method definitions should have the following form:*
+
+[source,java]
+----
+public void someMethod() throws SomeException {
+    ...
+}
+----
+
+*6. ⭐ The _if-else_ class of statements should have the following form:*
+
+[source,java]
+----
+if (condition) {
+    statements;
+}
+
+if (condition) {
+    statements;
+} else {
+    statements;
+}
+
+if (condition) {
+    statements;
+} else if (condition) {
+    statements;
+} else {
+    statements;
+}
+----
+
+*7. ⭐ The _for_ statement should have the following form:*
+
+[source,java]
+----
+for (initialization; condition; update) {
+    statements;
+}
+----
+
+*8. ⭐ The _while_ statement should have the following form:*
+
+[source,java]
+----
+while (condition) {
+    statements;
+}
+----
+
+*9. ⭐ The _do-while_ statement should have the following form:*
+
+[source,java]
+----
+do {
+    statements;
+} while (condition);
+----
+
+*10. ⭐ The _switch_ statement should have the following form:*
+
+[source,java]
+----
+switch (condition) {
+case ABC:
+    statements;
+    // Fallthrough
+case DEF:
+    statements;
+    break;
+case XYZ:
+    statements;
+    break;
+default:
+    statements;
+    break;
+}
+----
+
+The explicit `//Fallthrough` comment should be included whenever there is a `case` statement without a break statement.
+
+____________________________________________________________________________________________________________________________
+Rationale: Leaving out the `break` is a common error, and it must be made clear that it is intentional when it is not there.
+____________________________________________________________________________________________________________________________
+
+*11. ⭐ A _try-catch_ statement should have the following form:*
+
+[source,java]
+----
+try {
+    statements;
+} catch (Exception exception) {
+    statements;
+}
+
+try {
+    statements;
+} catch (Exception exception) {
+    statements;
+} finally {
+    statements;
+}
+----
+
+*12. ⭐⭐ White space within a statement*
+
+It is difficult to give a complete list of the suggested use of whitespace in Java code. The examples below however should give a general idea of the intentions.
+
+Makes the individual components of the statements stand out and enhances readability.
+
+*13. ⭐⭐ Logical units within a block should be separated by one blank line.*
+
+[source,java]
+----
+// Create a new identity matrix
+Matrix4x4 matrix = new Matrix4x4();
+
+// Precompute angles for efficiency
+double cosAngle = Math.cos(angle);
+double sinAngle = Math.sin(angle);
+
+// Specify matrix as a rotation transformation
+matrix.setElement(1, 1,  cosAngle);
+matrix.setElement(1, 2,  sinAngle);
+matrix.setElement(2, 1, -sinAngle);
+matrix.setElement(2, 2,  cosAngle);
+
+// Apply rotation
+transformation.multiply(matrix);
+----
+
+Enhances readability by introducing white space between logical units. Each block is often introduced by a comment as indicated in the example above.
+
+[[statements]]
+== *Statements*
+
+[[package-and-import-statements]]
+=== *Package and Import Statements*
+
+*1a. ⭐ Put every class in a package.*
+
+Every class should be part of some package.
+
+____________________________________________________________________________________________________________________________________
+Rationale: It will help you and other developers easily understand the code base when all the classes have been grouped in packages.
+____________________________________________________________________________________________________________________________________
+
+*1b. ⭐⭐⭐ Put related classes in a single package.*
+
+Package together the classes that are related. For example in Java, the classes related to file writing is grouped in the package `java.io` and the classes which handle lists, maps etc are grouped in `java.util` package.
+
+*2. ⭐⭐ The ordering of import statements must be consistent.*
+
+____________________________________________________________________________________________________________________________________________________
+Rationale: A consistent ordering of import statements makes it easier to browse the list and determine the dependencies when there are many imports.
+____________________________________________________________________________________________________________________________________________________
+
+Example:
+
+[source,java]
+----
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+
+import org.loadui.testfx.GuiTest;
+import org.testfx.api.FxToolkit;
+
+import com.google.common.io.Files;
+
+import javafx.geometry.Bounds;
+import javafx.geometry.Point2D;
+import junit.framework.AssertionFailedError;
+----
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+_Tip: IDEs have support for auto-ordering import statements._ However, note that the default orderings of different IDEs are not always the same. It is recommended that you and your team use the same IDE and stick to a consistent ordering.
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+*3. ⭐ Imported classes should always be listed explicitly.*
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Rationale: Importing classes explicitly gives an excellent documentation value for the class at hand and makes the class easier to comprehend and maintain. Appropriate tools should be used in order to always keep the import list minimal and up to date. IDE's can be configured to do this easily.
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+[[classes-and-interfaces]]
+=== *Classes and Interfaces*
+
+*4. ⭐⭐⭐ Class and Interface declarations should be organized in the following manner:*
+
+1.  Class/Interface documentation (Comments)
+2.  *class* or *interface* statement
+3.  Class (static) variables in the order *public*, *protected*, *package* (no access modifier), *private*
+4.  Instance variables in the order *public*, *protected*, *package* (no access modifier), *private*
+5.  Constructors
+6.  Methods (no specific order)
+
+_______________________________________________________________________________________________
+Rationale: Make code easy to navigate by making the location of each class element predictable.
+_______________________________________________________________________________________________
+
+[[methods]]
+=== *Methods*
+
+*5. ⭐⭐⭐ Method modifiers should be given in the following order:*
+
+`<access> static abstract synchronized <unusual> final native`
+
+The `<access>` modifier (if present) must be the first modifier.
+
+[source,java]
+----
+<access> = public | protected | private 
+<unusual> = volatile | transient 
+----
+
+___________________________________________________________________________________________________________________________________________________________________________________________________
+Rationale: The most important point here is to keep the _access_ modifier as the first modifier. The order is less important for the other modifiers, but it make sense to have a fixed convention.
+___________________________________________________________________________________________________________________________________________________________________________________________________
+
+[[types]]
+=== *Types*
+
+*6. ⭐ Array specifiers must be attached to the type not the variable.*
+
+___________________________________________________________________________________________________________
+Rationale: The _arrayness_ is a feature of the base type, not the variable. Java allows both forms however.
+___________________________________________________________________________________________________________
+
+[[variables]]
+=== *Variables*
+
+*7. ⭐⭐ Variables should be initialized where they are declared and they should be declared in the smallest scope possible.*
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Rationale: This ensures that variables are valid at any time. Sometimes it is impossible to initialize a variable to a valid value where it is declared. In these cases it should be left uninitialized rather than initialized to some phony value.
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+*8. ⭐⭐ Class variables should never be declared public.*
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Rationale: The concept of Java information hiding and encapsulation is violated by public variables. Use private variables and access functions instead. One exception to this rule is when the class is essentially a data structure, with no behavior. In this case it is appropriate to make the class' instance variables public.
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+*9. ⭐⭐⭐ Avoid unnecessary use of `this` with fields.*
+
+Use the `this` keyword only when a field is shadowed by a method or constructor parameter.
+
+_______________________________________
+Rationale: to reduce unnecessary noise.
+_______________________________________
+
+[[loops]]
+=== *Loops*
+
+*10. ⭐ The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body.*
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________
+Rationale: When there is only one statement in the loop body, Java allows it to be written without wrapping it between `{ }`. However that is error prone and _very_ strongly discouraged from using.
+_____________________________________________________________________________________________________________________________________________________________________________________________________
+
+[[conditionals]]
+=== *Conditionals*
+
+*11. ⭐ The conditional should be put on a separate line.*
+
+__________________________________________________________________________________________________________________________________________________________
+Rationale: This helps when debugging using an IDE debugger. When writing on a single line, it is not apparent whether the condition is really true or not.
+__________________________________________________________________________________________________________________________________________________________
+
+*12. ⭐ Single statement conditionals should still be wrapped by curly brackets.*
+
+The body of the conditional should be wrapped by curly brackets irrespective of how many statements.
+
+___________________________________________________
+Rationale: Omitting braces can lead to subtle bugs.
+___________________________________________________
+
+[[comments]]
+== *Comments*
+
+*2. ⭐ All comments should be written in English.*
+
+Furthermore, use American spelling and avoid local slang.
+
+___________________________________________________________
+Rationale: The code is meant for an international audience.
+___________________________________________________________
+
+*1. ⭐⭐ Write descriptive header comments for all public classes/methods.*
+
+You MUST write header comments for all classes, public methods.
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Rationale: `public` method are meant to be used by others and the users should not be forced to read the code of the method to understand its exact behavior. The code, even if it is self-explanatory, can only tell the reader HOW the code works, not WHAT the code is supposed to do.
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+*2. ⭐⭐⭐ All non-trivial private methods should carry header comments.*
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________
+Rationale: Writing header comments will hep novice programmers to self-detect abstraction problems. e.g. If it is hard to describe the method succinctly, there is something wrong with the method abstraction.
+_______________________________________________________________________________________________________________________________________________________________________________________________________________
+
+*3. ⭐⭐ Javadoc comments should have the following form:*
+
+[source,java]
+----
+/**
+ * Returns lateral location of the specified position.
+ * If the position is unset, NaN is returned.
+ *
+ * @param x  X coordinate of position.
+ * @param y Y coordinate of position.
+ * @param zone Zone of position.
+ * @return Lateral location.
+ * @throws IllegalArgumentException  If zone is <= 0.
+ */
+public double computeLocation(double x, double y, int zone)
+    throws IllegalArgumentException {
+  ...
+}
+----
+
+Note in particular:
+
+* The opening `/**` on a separate line
+* *Write the first sentence as a short summary of the method*, as Javadoc automatically places it in the method summary table (and index).
+* In method header comments, the first sentence should start in the form `Returns ...`, `Sends ...`, `Adds ...` (not `Return` or `Returnning` etc.)
+* Subsequent `*` is aligned with the first one
+* Space after each `*`
+* Empty line between description and parameter section
+* Punctuation behind each parameter description
+-No blank line between the documentation block and the method/class
+
+Javadoc of class members can be specified on a single line as follows:
+
+[source,java]
+----
+/** Number of connections to this database */
+private int connectionCount;
+----
+
+*4. ⭐ Comments should be indented relative to their position in the code.*
+
+____________________________________________________________________________________________
+Rationale: This is to avoid the comments from breaking the logical structure of the program.
+____________________________________________________________________________________________
+
+[[references]]
+== References
+
+1.  http://geosoft.no/development/javastyle.html
+2.  http://www.oracle.com/technetwork/java/codeconventions-150003.pdf
+3.  http://developers.sun.com/sunstudio/products/archive/whitepapers/java-style.pdf
+4.  Effective Java, 2nd Edition by Joshua Bloch
+5.  http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html
+
+[[contributors]]
+== Contributors
+
+* Nimantha Baranasuriya - Initial draft
+* Dai Thanh - Further tweaks
+* Tong Chun Kit - Further tweaks
+* Barnabas Tan - Converted from Google Docs to Markdown Document

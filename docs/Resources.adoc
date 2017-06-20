@@ -1,0 +1,11 @@
+[[resources]]
+= Resources
+
+* 
+https://sethrobertson.github.io/GitBestPractices/[Commit Often, Perfect Later, Publish Once: Git Best Practices] --
+An article by _Seth Robertson_.
+* 
+http://chris.beams.io/posts/git-commit/[How to Write a Git Commit Message] -- An article by _Chris Beams_
+* 
+http://sethrobertson.github.io/GitPostProduction/gpp.html[Post-Production Editing using Git]
+-- An article by _Seth Robertson_

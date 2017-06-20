@@ -1,0 +1,480 @@
+[[c-coding-standard]]
+= C# Coding Standard
+
+*Important:* Use https://github.com/dennisdoomen/CSharpGuidelines[CSharpGuidelines] for any topics not covered in this document.
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+The coding standard is primarily based on https://github.com/dennisdoomen/CSharpGuidelines[CSharpGuidelines] (by Aviva Solutions) but differs from it in these ways:
+
+* Structure of the document is adapted from http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf[C# Coding Standards for .NET] and http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf[C# Coding Style Guide].
+* Some examples were taken from other sources listed under link:#references[References].
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+* link:#file-organization[File Organization]
+* link:#formatting[Formatting]
+* link:#layout[Layout]
+* link:#indentation[Indentation]
+* link:#white-space[White Space]
+* link:#naming-conventions[Naming Conventions]
+* link:#commenting-conventions[Commenting Conventions]
+* link:#language-conventions[Language Conventions]
+* link:#references[References]
+
+[[file-organization]]
+== File Organization
+
+[[source-file-name-and-class-name-should-always-match.]]
+==== 1. Source file name and class name should always match.
+
+MyClass.cs → `public class MyClass { ... }`
+
+[[directory-names-should-follow-namespace-for-the-class.]]
+==== 2. Directory names should follow namespace for the class.
+
+`System.Windows.Forms.Control` should use the path System\Windows\Forms\Control.cs
+
+________________________________________________________________________________________________________
+Do not use namespace name with dots. This will make it easier to map namespaces to the directory layout.
+________________________________________________________________________________________________________
+
+[[formatting]]
+== Formatting
+
+[[layout]]
+=== Layout
+
+[[avoid-putting-multiple-namespaces-or-classes-per-file.]]
+==== 1. Avoid putting multiple namespaces or classes per file.
+
+This will make your code more readable and also make it easier to find the .cs file for a particular class.
+
+[[place-using-directives-at-the-top-of-the-file-grouped-and-ordered-alphabetically.]]
+==== 2. Place _using_ directives at the top of the file, grouped and ordered alphabetically.
+
+[source,cs]
+----
+// .NET namespaces first
+using System;
+using System.Collections;
+
+// Then any other namespaces in alphabetical order
+using Company.Business;
+using Company.Standard;
+
+using Telerik.Ajax;
+using Telerik.WebControls;
+----
+
+[[maintain-a-common-order-for-each-file.]]
+==== 3. Maintain a common order for each file.
+
+\i. Member variable
+
+\ii. Constructors and Finalizer
+
+\iii. Nested Enums, Structs and Classes
+
+\iv. Properties
+
+\v. Methods
+
+____________________________________________________________________________________________________________________________________________
+Sequence declaration within type groups are based on StyleCop's SA1202 ordering: `public, internal, protected internal, protected, private`.
+____________________________________________________________________________________________________________________________________________
+
+[[indentation]]
+=== Indentation
+
+[[basic-indentation-should-be-4-spacesnot-tabs.]]
+==== 1. Basic indentation should be 4 spaces(not tabs).
+
+[source,cs]
+----
+// A Hello World! program in C#.
+using System;
+
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+----
+
+[[maximum-line-length-is-130-characters.]]
+==== 2. Maximum line length is 130 characters.
+
+When an expression does not fit, follow the general guidelines:
+
+* Break after a comma
+* Break after an operator
+* Align the new line with the beginning of the expression at the same level on the previous line
+* Prefer higher-level breaks to lower-level breaks
+
+Example of breaking up method calls:
+
+image:Good.png[image]
+
+[source,cs]
+----
+longMethodCall(expr1, expr2,
+               expr3, expr4, expr5);
+----
+
+image:Bad.png[image]
+
+[source,cs]
+----
+longMethodCall(expr1, expr2
+        ,expr3, expr4, expr5);
+----
+
+Example of breaking an arithmetic expression:
+
+image:Good.png[image]
+
+[source,cs]
+----
+var result = a * b / (c - g + f) +
+             4 * z;
+----
+
+image:Bad.png[image]
+
+[source,cs]
+----
+var result = a * b / (c - g +
+             f) + 4 * z;
+----
+
+The top one is preferred, since the break occurs outside the parenthesized expression, which is higher-level.
+
+[[always-place-curly-braces-on-a-new-line.]]
+==== 3. Always place curly braces on a new line.
+
+This is known as the https://en.wikipedia.org/wiki/Indent_style#Allman_style[Allman style].
+
+[source,cs]
+----
+while (x == y)
+{
+    firstMethod();
+    secondMethod();
+}
+
+lastMethod();
+----
+
+[[always-put-curly-braces-even-if-it-might-not-be-required.]]
+==== 4. Always put curly braces even if it might not be required.
+
+Such as having only one statement in the `if` clause. This is to enforce consistency.
+
+[source,cs]
+----
+if (x > y) 
+{
+    doSomething();
+}
+----
+
+[[white-space]]
+=== White Space
+
+[[general-guidelines.]]
+==== 1. General guidelines.
+
+* Keywords like `if`, `while` should be followed by a white space.
+* Semicolons in `for` statements should be followed by a white space.
+* Commas should be followed by a white space.
+* Add a white space around operators like `+`, `-`, `==` etc.
+* Do not add white space after `(` and before `)`.
+
+Examples:
+
+image:Good.png[image]
+
+[source,cs]
+----
+a = (b + c) * d;
+----
+
+[source,cs]
+----
+while (true) {
+----
+
+[source,cs]
+----
+doSomething(a, b, c, d)
+----
+
+[source,cs]
+----
+for (i = 0; i < 10; i++) {
+----
+
+image:Bad.png[image]
+
+[source,cs]
+----
+a=(b+c)*d;
+----
+
+[source,cs]
+----
+while(true){
+----
+
+[source,cs]
+----
+doSomething(a,b,c,d)
+----
+
+[source,cs]
+----
+for(i=0;i<10;i++){
+----
+
+[[naming-conventions]]
+== Naming Conventions
+
+[[all-names-should-be-written-in-english.]]
+==== 1. All names should be written in English.
+
+English is the preferred language for international development.
+
+[[use-proper-casing-for-language-elements.]]
+==== 2. Use proper casing for language elements.
+
+________________________________________________________________________________________
+Pascal casing: the first letter of every word is capitalized.
+Camel casing: the first letter of every word, except for the first word, is capitalized.
+________________________________________________________________________________________
+
+[cols=",,",options="header",]
+|==============================================
+|Language element |Casing |Example
+|Class, Struct |Pascal |`AppDomain`
+|Interface |Pascal |`IBusinessService`
+|Enumeration type |Pascal |`ErrorLevel`
+|Enumeration values |Pascal |`FatalError`
+|Event |Pascal |`Click`
+|Private field |Camel |`listItem`
+|Protected field |Pascal |`MainPanel`
+|Constant field |Pascal |`MaximumItems`
+|Constant local variable |Camel |`maximumItems`
+|Read-only static field |Pascal |`RedValue`
+|Local variable |Camel |`listOfValues`
+|Method |Pascal |`ToString`
+|Namespace |Pascal |`System.Drawing`
+|Parameter |Camel |`typeName`
+|Type parameter |Pascal |`TView`
+|Property |Pascal |`BackColor`
+|==============================================
+
+[[avoid-using-abbreviations.]]
+==== 3. Avoid using abbreviations.
+
+Unless the full name is excessive:
+
+* Avoid abbreviations longer than 5 characters.
+* Abbreviations must be widely known and accepted.
+* Use upper case for 2-character abbreviations, and Pascal Case for longer abbreviations.
+
+image:Good.png[image]
+
+[source,cs]
+----
+UIControl
+HtmlSource
+----
+
+image:Bad.png[image]
+
+[source,cs]
+----
+UiControl
+HTMLSource
+----
+
+[[prefix-boolean-variables-with-can-is-or-has.]]
+==== 4. Prefix boolean variables with `Can`, `Is`, or `Has`.
+
+Examples: `CanEvaluate`, `IsVisible`, `HasLicense`.
+
+_______________________________________________________________________________________________________________________
+Avoid boolean variables that represent the negation of things. e.g., use `IsInitialized` instead of `IsNotInitialized`.
+_______________________________________________________________________________________________________________________
+
+[[do-not-include-the-parent-class-name-within-a-property-name.]]
+==== 5. Do not include the parent class name within a property name.
+
+image:Good.png[image]
+
+[source,cs]
+----
+Customer.Name
+----
+
+image:Bad.png[image]
+
+[source,cs]
+----
+Customer.CustomerName
+----
+
+[[do-not-use-hungarian-notation.]]
+==== 6. Do not use Hungarian Notation.
+
+Hungarian notation is a defined set of pre and postfixes which are applied to names to reflect the type of the variable. This style was used in early Windows programming, but is now obsolete.
+
+image:Good.png[image]
+
+[source,cs]
+----
+Name
+Colors
+----
+
+image:Bad.png[image]
+
+[source,cs]
+----
+strName
+ColorsEnum
+----
+
+_______________________________________________________________________________________________________________________________________________________________________________________
+**Exception**: All fields and variable names that contain GUI elements like button should be postfixed with their type name without abbreviations. e.g., `cancelButton`, `nameTextBox`.
+_______________________________________________________________________________________________________________________________________________________________________________________
+
+[[commenting-conventions]]
+== Commenting Conventions
+
+[[general-guidelines.-1]]
+==== 1. General guidelines.
+
+* Place the comment on a separate line, not at the end of a line of code.
+* Begin comment text with an upper case letter.
+* Insert one space between comment delimiter (`//`) and comment text.
+* Use `//` or `///` but never `/* ... */`.
+* The length of comment should not exceed the length of code.
+
+[[document-all-public-protected-and-internal-types-and-members.]]
+==== 2. Document all public, protected and internal types and members.
+
+Documenting your code allows Visual Studio to pop-up the documentation when your class is used somewhere else. You can form your documentation using https://msdn.microsoft.com/en-us/library/5ast78ax.aspx[XML tags].
+
+[source,cs]
+----
+/// <summary>
+/// Get a value indicating whether the user has a license.
+/// </summary>
+/// <returns>
+/// <c>true</c> if the user has a license; otherwise <c>false</c>.
+/// </returns>
+public bool HasLicense() { ... }
+----
+
+[[language-conventions]]
+== Language Conventions
+
+[[do-not-omit-access-modifiers.]]
+==== 1. Do not omit access modifiers.
+
+Explicitly declare all identifiers with the appropriate access modifiers instead of allowing the default.
+
+image:Good.png[image]
+
+[source,cs]
+----
+private void WriteEvent(string message)
+----
+
+image:Bad.png[image]
+
+[source,cs]
+----
+void WriteEvent(string message)
+----
+
+[[always-use-the-built-in-c-data-type-aliases-instead-of-the-.net-common-type-system.]]
+==== 2. Always use the built-in C# data type aliases, instead of the .NET common type system.
+
+image:Good.png[image]
+
+[source,cs]
+----
+short
+int
+long
+string
+----
+
+image:Bad.png[image]
+
+[source,cs]
+----
+Int16
+Int32
+Int64
+String
+----
+
+[[only-use-var-when-the-type-is-very-obvious.]]
+==== 3. Only use var when the type is very obvious.
+
+When the type of a variable is clear from the context, use var in the declaration.
+
+[source,cs]
+----
+var welcomeMessage = "This is a welcome message!";
+var account = new Account();
+----
+
+Do not use var when the type is not apparent from the right side of the assignment.
+
+[source,cs]
+----
+int result = ExampleClass.ResultSoFar();
+----
+
+_________________________________________________________________________________________________________________________________________________________________________________________________
+To know more about when to use/not to use implicit typing read https://blogs.msdn.microsoft.com/ericlippert/2011/04/20/uses-and-misuses-of-implicit-typing/[Uses and misuses of implicit typing].
+_________________________________________________________________________________________________________________________________________________________________________________________________
+
+[[favor-object-and-collection-initializers-over-separate-statements.]]
+==== 4. Favor Object and Collection initializers over separate statements.
+
+image:Good.png[image]
+
+[source,cs]
+----
+var startInfo = new ProcessStartInfo("myapp.exe");
+{
+    StandardOutput = Console.Output,
+    UseShellExecute = true
+};
+----
+
+image:Bad.png[image]
+
+[source,cs]
+----
+var startInfo = new ProcessStartInfo("myapp.exe");
+startInfo.StandardOutput = Console.Output;
+startInfo.UseShellExecute = true;
+----
+
+[[references]]
+== References
+
+1.  https://msdn.microsoft.com/en-us/library/ff926074.aspx[C# Coding Coventions (C# Programming Guide)] -- From Microsoft
+2.  http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf[C# Coding Standards for .NET] -- By Lance Hunt
+3.  http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf[C# Coding Style Guide] -- By Mike Krüger
+4.  https://github.com/dennisdoomen/CSharpGuidelines[CSharpGuidelines] -- From Aviva Solutions

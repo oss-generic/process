@@ -1,5 +1,6 @@
 [[reviewing-prs]]
 = Reviewing PRs
+:sectnums:
 
 A typical PR is reviewed by,
 
@@ -17,7 +18,9 @@ ________________________________________________________________________________
 [[review-procedure]]
 == Review procedure
 
-1.  Ensure the following at the start of the review. If any of them are missing, ask the dev to fix.
+=== Before you begin
+
+Ensure the following at the start of the review. If any of them are missing, ask the dev to fix.
 
 * [x] PR name follows the <<FormatsAndConventions.adoc#pr,PR title convention>>.
 * [x] PR description has the correct `Fixes #...` reference.
@@ -42,7 +45,7 @@ Additional guidelines for `d.FirstTimers` issues:
 * If the commit message is far from our quality expectations even after 1-2 attempts to improve it by the dev,
 you can propose a revised commit message for the dev to use.
 
-1.  Review the PR and add comments.
+=== Review the PR and add comments
 
 * Use GitHub's review feature to add comments.
 ** Use `start a review` option when adding comments on the latest version of a PR diff.
@@ -68,7 +71,7 @@ e.g. unnecessary formatting changes or commits from other branches.
 ** [x] All your previous review comments have been addressed.
 ** [x] Commit messages follow <<FormatsAndConventions.adoc#commit-messages,our requirements>>.
 
-1.  Approve or request changes at the end of the review.
+=== Approve or request changes at the end of the review
 
 * If changes are needed, choose `Request changes`.
 * Else, choose `Approve`.
@@ -78,7 +81,9 @@ Do not use `Approve` unless you are fully satisfied with the current state of th
 i.e. NOT allowed: `Let me approve this first while you fix the remaining minor problems`.
 _________________________________________________________________________________________
 
-1.  If you are the last reviewer to review the current iteration (i.e. no more pending reviews for the
+=== Update the PR status
+
+If you are the last reviewer to review the current iteration (i.e. no more pending reviews for the
 current iteration), change the status label as follows:
 
 * If any of the reviewers have requested changes, change the status label to `s.Ongoing`.

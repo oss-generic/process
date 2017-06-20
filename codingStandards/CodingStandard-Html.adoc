@@ -35,14 +35,28 @@ It is not intended to define the look and feel of the content on the page beyond
 The presentation attributes of HTML have all been deprecated and style should be contained in style sheets.
 Inline styling should not be used, and should be minimized if its usage is really necessary.
 * *General structure for HTML document*
-```html
 +
-+
-+
-+
-+
-+
-```
+[source,html]
+----
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CS2103/T (Module website)</title>
+
+  <!-- Sample stylesheet inclusion -->
+  <link type="text/css" href="styles/common.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Body content goes here -->
+
+  <!-- Sample javascript inclusion -->
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+</body>
+</html>
+----
 
 [[external-files]]
 == External Files
@@ -54,45 +68,101 @@ Inline styling should not be used, and should be minimized if its usage is reall
 == Tags
 
 * All HTML tags are to be closed properly.
++
+[cols="a,a"]
+|===
+|Good|Bad
 
-Good
-Bad
+|
+[source,html]
+----
 <div>Stuff</div>
+----
+
+|
+[source,html]
+----
 <p>Stuff
 <p>More Stuff
+----
+
+|===
 
 * Void elements do not have a closing tag. Do not use /> for void elements.
 Example of void elements are: `br`, `img`, `link`, `meta`.
 The full list of HTML void elements can be accessed http://www.w3.org/TR/html-markup/syntax.html#void-elements[here].
++
+[cols="a,a"]
+|===
+|Good|Bad
 
-Good
-Bad
+|
+[source,java]
+----
 <br>
 <img src="a" width="5px" height="10px">
+----
+
+|
+[source,java]
+----
 <br />
 <img src="a" width="5px" height="10px" />
+----
+
+|===
 
 * Use lowercase for all attributes and tag names.
++
+[cols="a,a"]
+|===
+|Good|Bad
 
-Good
-Bad
+|
+[source,java]
+----
 <div id="frame">Test</div>
+----
+
+|
+[source,java]
+----
 <DIV ID="frame">Test</div>
+----
+
+|===
 
 [[attributes]]
 == Attributes
 
 * Use [attr="value"] for attribute values.
++
+[cols="a"]
+|===
+|Good
 
-Good
+|
+[source,html]
+----
 <input value="computer" id="some-input" disabled="disabled" tabindex="2">
+----
 
-Bad
+|===
++
+[cols="a"]
+|===
+|Bad
+
+|
+[source,html]
+----
 <!-- single/no quotes -->
 <input value=computer id='some-input' disabled='disabled' tabindex=2>
-
 <!-- specify boolean variables in the attributes -->
 <input value="computer" id="some-input" disabled tabindex="2">
+----
+
+|===
 
 [[naming-convention]]
 == Naming convention
@@ -114,39 +184,86 @@ lower-case, join-by-hyphen.
 == Miscellaneous
 
 * Take note of script tags.
++
+[cols="a"]
+|===
+|Good
 
-Good
+|
+[source,html]
+----
 <script type="text/javascript" src="/js/jquery-minified.js"></script>
+----
 
-Bad
+|===
++
+[cols="a"]
+|===
+|Bad
+
+|
+[source,html]
+----
 <script language="JavaScript" src="/js/jquery-minified.js"></script>
+----
+
+|===
 
 * Do not have trailing whitespaces between opening and closing tags. However, line breaks and indentation are encouraged if it enhances readability.
++
+[cols="a,a"]
+|===
+|Good|Bad
 
-Good
-Bad
+|
+[source,html]
+----
 <p>Student Name</p>
-
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore
 et dolore magna aliqua. Ut enim ad minim veniam,
 </p>
+----
+
+|
+[source,html]
+----
 <p> Student Name </p>
+----
+
+|===
 
 * Always remember to include `rel="noopener noreferrer"` when using `target="_blank"` in links.
 +
 ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 Leaving this out would enable attackers to get hold of `window.opener` object, which can be used to redirect to a malicious link. [https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c[Source]]
 ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
++
+[cols="a"]
+|===
+|Good
 
-Good
+|
+[source,html]
+----
 <a target="_blank" rel="noopener noreferrer" href="https://example.com">
-Example.com
+  Example.com
 </a>
+----
 
-Bad
+|===
++
+[cols="a"]
+|===
+|Bad
+
+|
+[source,html]
+----
 <a target="_blank" href="https://example.com">
-Example.com
+  Example.com
 </a>
+----
 
+|===

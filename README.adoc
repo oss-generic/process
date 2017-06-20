@@ -1,0 +1,45 @@
+[[the-oss-generic-reference-process]]
+= The _OSS-Generic_ Reference Process
+
+The _OSS-Generic Reference Process_ described in this repo documents common practices among several OSS projects
+on GitHub, notably, https://github.com/teammates/teammates[TEAMMATES],
+https://github.com/se-edu/main[SE-EDU projects], https://github.com/powerpointlabs/powerpointlabs[PowerPointLabs].
+
+[[for-new-contributors]]
+=== For new contributors
+
+* link:docs/AdviceForOssBeginners.md[*Advice for OSS beginners*]
+* link:docs/QuestionsIssuesPrs.md#asking-a-question[*Asking a Question*]
+* link:docs/QuestionsIssuesPrs.md#posting-an-issue[*Posting an Issue*]
+* link:docs/QuestionsIssuesPrs.md#submitting-a-pr[*Submitting a PR*]
+* link:docs/AdvancedContributorGuidelines.md[*Advanced Contributor Guidelines*]: Additional guidelines more
+experienced contributors are expected to follow.
+
+[[general-references]]
+=== General references
+
+* link:docs/CodingStandards.md[*Coding Standards*]
+* link:docs/HowToGuides.md[*'How to' Guides*]: Detailed help on how to perform some common tasks such as
+editing a commit message.
+* link:docs/FormatsAndConventions.md[*Formats and Conventions*]: Formats and conventions for PRs, Issues, Files, etc.
+* link:docs/CommunityStructure.md[*Community Structure*]: Levels, roles, and responsibilities of dev community members.
+
+[[for-core-members]]
+=== For core members
+
+* link:docs/ReviewingPrs.md[*Reviewing PRs*]: Instructions for PR reviewers
+* link:docs/MergingPrs.md[*Merging PRs*]: Instructions for merging a PR
+
+[[for-lead-members]]
+=== For lead members
+
+* link:docs/OverseeingIssuePrLifeCycle.md[*Overseeing Issue/PR Life Cycle*]: Instructions for team/area leads
+on overseeing issue/PR life cycles.
+* link:docs/ManagingReleases.md[*Managing Releases*]: Instructions for managing releases, milestones,
+and project schedule.
+* link:docs/DefiningLabels.md[*Defining Labels*]: Instructions for creating labels for the issue tracker.
+
+[[contributing-to-this-repo]]
+=== Contributing to this repo
+
+We welcome contributions. Just follow the instructions in the above links to submit your contributions as a PR.

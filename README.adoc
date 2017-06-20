@@ -6,7 +6,7 @@ on GitHub, notably, https://github.com/teammates/teammates[TEAMMATES],
 https://github.com/se-edu/main[SE-EDU projects], https://github.com/powerpointlabs/powerpointlabs[PowerPointLabs].
 
 [[for-new-contributors]]
-=== For new contributors
+== For new contributors
 
 * *<<docs/AdviceForOssBeginners.adoc#,Advice for OSS beginners>>*
 * *<<docs/QuestionsIssuesPrs.adoc#asking-a-question,Asking a Question>>*
@@ -16,7 +16,7 @@ https://github.com/se-edu/main[SE-EDU projects], https://github.com/powerpointla
 experienced contributors are expected to follow.
 
 [[general-references]]
-=== General references
+== General references
 
 * *<<docs/CodingStandards.adoc#,Coding Standards>>*
 * *<<docs/HowToGuides.adoc#,'How to' Guides>>*: Detailed help on how to perform some common tasks such as
@@ -25,13 +25,13 @@ editing a commit message.
 * *<<docs/CommunityStructure.adoc#,Community Structure>>*: Levels, roles, and responsibilities of dev community members.
 
 [[for-core-members]]
-=== For core members
+== For core members
 
 * *<<docs/ReviewingPrs.adoc#,Reviewing PRs>>*: Instructions for PR reviewers
 * *<<docs/MergingPrs.adoc#,Merging PRs>>*: Instructions for merging a PR
 
 [[for-lead-members]]
-=== For lead members
+== For lead members
 
 * *<<docs/OverseeingIssuePrLifeCycle.adoc#,Overseeing Issue/PR Life Cycle>>*: Instructions for team/area leads
 on overseeing issue/PR life cycles.
@@ -40,6 +40,6 @@ and project schedule.
 * *<<docs/DefiningLabels.adoc#,Defining Labels>>*: Instructions for creating labels for the issue tracker.
 
 [[contributing-to-this-repo]]
-=== Contributing to this repo
+== Contributing to this repo
 
 We welcome contributions. Just follow the instructions in the above links to submit your contributions as a PR.

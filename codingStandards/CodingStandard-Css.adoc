@@ -4,7 +4,7 @@
 :toclevels: 2
 
 [[general]]
-= General
+== General
 
 * Use the https://google.github.io/styleguide/htmlcssguide.xml[Google CSS Style Guide]
 for any topics not covered in this document.
@@ -17,7 +17,7 @@ being added is not already present.
 ___________________________________________________________________________________________________________
 
 [[css-files]]
-= CSS Files
+== CSS Files
 
 * CSS file includes must be done using `<link>` tags in the HTML/JSP files and NOT using `@import` in other css files.
 
@@ -54,7 +54,7 @@ image:Bad.png[image]
 `html   <div id="mainDiv" style="border: thin solid black; margin: auto">`
 
 [[selectors]]
-= Selectors
+== Selectors
 
 * Do not use CSS3 selectors.
 
@@ -67,7 +67,7 @@ Also, we can stick to more functional names for the css and use classes to achie
 _______________________________________________________________________________________________________________
 
 [[selector-formatting]]
-== Selector Formatting
+=== Selector Formatting
 
 * The selector(s) must be specified in separate lines.
 
@@ -93,7 +93,7 @@ In addition this gives an immediate idea as to how certain classes are being use
 __________________________________________________________________________________________________________
 
 [[use-of-efficient-selectors]]
-== Use of Efficient Selectors
+=== Use of Efficient Selectors
 
 * Do not qualify class/ID selectors using tag names (do not use: `div.mainContent`, simply use `.mainContent`).
 Refer to https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS[Writing efficient CSS]
@@ -116,10 +116,10 @@ specified ancestor has a lot of descendants.
 __________________________________________________________________________________________________
 
 [[classes]]
-= Classes
+== Classes
 
 [[naming-classes]]
-== Naming Classes
+=== Naming Classes
 
 * Use all lowercase letters.
 Separate words with hyphens (`-`) and no other separator.
@@ -151,10 +151,10 @@ image:Bad.png[image]
 * *Exception:* If a particular element requires too many generic classes ( > 5) create a functional class name for it.
 
 [[attributes]]
-= Attributes
+== Attributes
 
 [[order-of-attributes]]
-== Order of Attributes
+=== Order of Attributes
 
 * Alphabetize the attributes, disregarding any browser prefix.
 All browser-prefixed versions of an attribute must be written together.
@@ -172,7 +172,7 @@ image:Bad.png[image]
 `css   .sort-icon {      width: 12px;      height: 17px;      display: block;      margin-top: 1px;      float: right;   }`
 
 [[attribute-formatting]]
-== Attribute Formatting
+=== Attribute Formatting
 
 * Semicolon after every attribute specification.
 * Space after colon.
@@ -200,7 +200,7 @@ image:Bad.png[image]
 `css    margin: 10px 0 !important;`
 
 [[resources]]
-= Resources
+== Resources
 
 [[highly-recommended]]
 === Highly Recommended

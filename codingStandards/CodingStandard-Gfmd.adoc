@@ -5,7 +5,7 @@
 * Follow the syntax as specifed https://guides.github.com/features/mastering-markdown/[here].
 
 [[follow-strict-gfmd-syntax-to-be-compatible-with-github-pages]]
-=== Follow strict GFMD syntax to be compatible with GitHub Pages
+== Follow strict GFMD syntax to be compatible with GitHub Pages
 
 Minor deviations from the markdown syntax are sometimes forgiven by GitHub markdown rendering but may not be forgiven
 by https://github.com/blog/2289-publishing-with-github-pages-now-as-easy-as-1-2-3[GitHub Pages html rendering].
@@ -44,7 +44,7 @@ image:Bad.png[image]
 `markdown   > first line     second line`
 
 [[use-blank-lines-to-separate-headings]]
-=== Use blank lines to separate headings
+== Use blank lines to separate headings
 
 image:Good.png[image]
 
@@ -64,7 +64,7 @@ Content of the paragraph.
 ----
 
 [[use-blockquotes-for-additional-info]]
-=== Use blockquotes for additional info
+== Use blockquotes for additional info
 
 Blockquotes are usually used for additional info the reader can skip over.
 
@@ -76,7 +76,7 @@ image:Good.png[image]
 ----
 
 [[use-generic-numbering-for-ordered-list]]
-=== Use generic numbering for ordered list
+== Use generic numbering for ordered list
 
 Using `1.` for every item in an ordered list can make it easy to insert more items later.
 

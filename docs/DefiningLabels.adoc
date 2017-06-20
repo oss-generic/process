@@ -20,7 +20,7 @@ There are two types of label groups:
 * non-exclusive: `a-` aspect, `f-` feature, `t-` tech,
 
 [[common-labels]]
-= Common Labels
+== Common Labels
 
 [[priority-p.]]
 === Priority (`p.`)

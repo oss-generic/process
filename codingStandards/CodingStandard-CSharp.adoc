@@ -19,12 +19,12 @@ toc::[]
 == File Organization
 
 [[source-file-name-and-class-name-should-always-match.]]
-==== 1. Source file name and class name should always match.
+=== 1. Source file name and class name should always match.
 
 MyClass.cs → `public class MyClass { ... }`
 
 [[directory-names-should-follow-namespace-for-the-class.]]
-==== 2. Directory names should follow namespace for the class.
+=== 2. Directory names should follow namespace for the class.
 
 `System.Windows.Forms.Control` should use the path System\Windows\Forms\Control.cs
 
@@ -239,12 +239,12 @@ for(i=0;i<10;i++){
 == Naming Conventions
 
 [[all-names-should-be-written-in-english.]]
-==== 1. All names should be written in English.
+=== 1. All names should be written in English.
 
 English is the preferred language for international development.
 
 [[use-proper-casing-for-language-elements.]]
-==== 2. Use proper casing for language elements.
+=== 2. Use proper casing for language elements.
 
 ________________________________________________________________________________________
 Pascal casing: the first letter of every word is capitalized.
@@ -273,7 +273,7 @@ ________________________________________________________________________________
 |==============================================
 
 [[avoid-using-abbreviations.]]
-==== 3. Avoid using abbreviations.
+=== 3. Avoid using abbreviations.
 
 Unless the full name is excessive:
 
@@ -298,7 +298,7 @@ HTMLSource
 ----
 
 [[prefix-boolean-variables-with-can-is-or-has.]]
-==== 4. Prefix boolean variables with `Can`, `Is`, or `Has`.
+=== 4. Prefix boolean variables with `Can`, `Is`, or `Has`.
 
 Examples: `CanEvaluate`, `IsVisible`, `HasLicense`.
 
@@ -307,7 +307,7 @@ Avoid boolean variables that represent the negation of things. e.g., use `IsInit
 _______________________________________________________________________________________________________________________
 
 [[do-not-include-the-parent-class-name-within-a-property-name.]]
-==== 5. Do not include the parent class name within a property name.
+=== 5. Do not include the parent class name within a property name.
 
 image:Good.png[image]
 
@@ -324,7 +324,7 @@ Customer.CustomerName
 ----
 
 [[do-not-use-hungarian-notation.]]
-==== 6. Do not use Hungarian Notation.
+=== 6. Do not use Hungarian Notation.
 
 Hungarian notation is a defined set of pre and postfixes which are applied to names to reflect the type of the variable. This style was used in early Windows programming, but is now obsolete.
 
@@ -352,7 +352,7 @@ ________________________________________________________________________________
 == Commenting Conventions
 
 [[general-guidelines.-1]]
-==== 1. General guidelines.
+=== 1. General guidelines.
 
 * Place the comment on a separate line, not at the end of a line of code.
 * Begin comment text with an upper case letter.
@@ -361,7 +361,7 @@ ________________________________________________________________________________
 * The length of comment should not exceed the length of code.
 
 [[document-all-public-protected-and-internal-types-and-members.]]
-==== 2. Document all public, protected and internal types and members.
+=== 2. Document all public, protected and internal types and members.
 
 Documenting your code allows Visual Studio to pop-up the documentation when your class is used somewhere else. You can form your documentation using https://msdn.microsoft.com/en-us/library/5ast78ax.aspx[XML tags].
 
@@ -380,7 +380,7 @@ public bool HasLicense() { ... }
 == Language Conventions
 
 [[do-not-omit-access-modifiers.]]
-==== 1. Do not omit access modifiers.
+=== 1. Do not omit access modifiers.
 
 Explicitly declare all identifiers with the appropriate access modifiers instead of allowing the default.
 
@@ -399,7 +399,7 @@ void WriteEvent(string message)
 ----
 
 [[always-use-the-built-in-c-data-type-aliases-instead-of-the-.net-common-type-system.]]
-==== 2. Always use the built-in C# data type aliases, instead of the .NET common type system.
+=== 2. Always use the built-in C# data type aliases, instead of the .NET common type system.
 
 image:Good.png[image]
 
@@ -422,7 +422,7 @@ String
 ----
 
 [[only-use-var-when-the-type-is-very-obvious.]]
-==== 3. Only use var when the type is very obvious.
+=== 3. Only use var when the type is very obvious.
 
 When the type of a variable is clear from the context, use var in the declaration.
 
@@ -444,7 +444,7 @@ To know more about when to use/not to use implicit typing read https://blogs.msd
 _________________________________________________________________________________________________________________________________________________________________________________________________
 
 [[favor-object-and-collection-initializers-over-separate-statements.]]
-==== 4. Favor Object and Collection initializers over separate statements.
+=== 4. Favor Object and Collection initializers over separate statements.
 
 image:Good.png[image]
 

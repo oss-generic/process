@@ -18,7 +18,7 @@ for change requests (__misc. posts__ do not need priority labels). This is to en
 prioritized using a uniform scale.
 
 [[requesting-reviews-for-prs]]
-= Requesting reviews for PRs
+== Requesting reviews for PRs
 
 * A PR should have **1 or more `reviewers`**. See <<ReviewingPrs.adoc#,Reviewing PRs>>.
 The `assignees` field can be left empty.

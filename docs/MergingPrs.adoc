@@ -2,7 +2,7 @@
 = Merging a PR
 
 [[who-can-merge]]
-=== Who can merge
+== Who can merge
 
 A PR is to be merged by the author of the PR if the author has commit privileges.
 Else it should be merged by the main reviewer.
@@ -13,12 +13,12 @@ __code quality reviewer__.
 _______________________________________________________________________________________________
 
 [[when-to-merge]]
-=== When to merge
+== When to merge
 
 Merging to `master` or `release` branches requires approval from both _main reviewer_ and the __code quality reviewer__.
 
 [[how-to-merge]]
-=== How to merge
+== How to merge
 
 1.  Make sure that GitHub gives the green light for merging. In the cases given below, the author should resolve
 the problem as described and submit a new iteration.

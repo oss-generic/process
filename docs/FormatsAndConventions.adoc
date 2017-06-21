@@ -22,24 +22,24 @@ ________________________________________________________________________________
 
 Every commit must have a well written commit message _*subject line*_.
 
-1.  Try to limit the subject line to 50 characters (hard limit: 72 chars)
+. Try to limit the subject line to 50 characters (hard limit: 72 chars)
 
 _______________________________________________________________________________________
 Rationale: Some tools show only a limited number of characters from the commit message.
 _______________________________________________________________________________________
 
-1.  Capitalize the subject line e.g. `Move index.html file to root`
-2.  Do not end the subject line with a period
-3.  Use the imperative mood in the subject line
+. Capitalize the subject line e.g. `Move index.html file to root`
+. Do not end the subject line with a period
+. Use the imperative mood in the subject line
 e.g. `Add README.md` rather than `Added README.md` or `Adding README.md`
-4.  Use `scope: change` format when applicable
+. Use `scope: change` format when applicable
 e.g. `Person class: remove static imports`, `Unit tests: remove blank lines`
 
 Commit messages for non-trivial commits should have a _*body*_ giving details of the commit.
 
-1.  Separate subject from body with a blank line
-2.  Wrap the body at 72 characters
-3.  Use the body to explain WHAT the commit is about and WHY it was done that way. The reader can refer to the diff to
+. Separate subject from body with a blank line
+. Wrap the body at 72 characters
+. Use the body to explain WHAT the commit is about and WHY it was done that way. The reader can refer to the diff to
 understand HOW the change was done.
 
 * Give an explanation for the change(s) that is detailed enough so that the reader can judge if it is a

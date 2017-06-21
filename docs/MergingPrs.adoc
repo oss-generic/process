@@ -20,26 +20,26 @@ Merging to `master` or `release` branches requires approval from both _main revi
 [[how-to-merge]]
 == How to merge
 
-1.  Make sure that GitHub gives the green light for merging. In the cases given below, the author should resolve
+. Make sure that GitHub gives the green light for merging. In the cases given below, the author should resolve
 the problem as described and submit a new iteration.
-2.  *Merge conflict*: The PR is conflicting with the current `master` branch. The author should rebase the branch
+. *Merge conflict*: The PR is conflicting with the current `master` branch. The author should rebase the branch
 and resolve conflicts.
-3.  *Check failure*: E.g. CI is failing. The author should fix the causes of the failures or give acceptable
+. *Check failure*: E.g. CI is failing. The author should fix the causes of the failures or give acceptable
 justifications for the failures.
-4.  *Outdated branch*: The PR is not in sync with the current `master` branch. The author should rebase the branch.
+. *Outdated branch*: The PR is not in sync with the current `master` branch. The author should rebase the branch.
 Do not use GitHub's 'Update branch' button because it will create a merge commit instead of rebasing.
 Alternatively, the person merging can trigger the CI checks to run again if he has access to the CI server.
 If CI checks pass, the branch can be merged without rebasing (because CI tools typically merge the master branch
 to the PR before running checks).
-5.  If the project does not have CI set up to run all tests,
-6.  Checkout the branch PR to your Computer
-7.  Run the tests and any other checks applicable (e.g. linters).
+. If the project does not have CI set up to run all tests,
+. Checkout the branch PR to your Computer
+. Run the tests and any other checks applicable (e.g. linters).
 If any failed, use GitHub's Review feature to request changes.
-8.  Merge using GitHub.
-9.  If the commit history is clean (this should be the case for PRs done by experienced contributors who follow
+. Merge using GitHub.
+. If the commit history is clean (this should be the case for PRs done by experienced contributors who follow
 the <<AdvancedContributorGuidelines.adoc#,advanced contributor guidelines>>),
 Merge using the `Create a merge commit` option.
-10. Else, merge using the `Squash and merge` option.
-11. Optionally, apply an `e.*` label to the issue (not the PR) to indicate
+. Else, merge using the `Squash and merge` option.
+. Optionally, apply an `e.*` label to the issue (not the PR) to indicate
 the estimated effort required to fix the issue, and another `e.*` label to the PR
 to indicate the estimated effort required to review the PR.

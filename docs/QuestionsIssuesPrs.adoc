@@ -16,10 +16,10 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 [[posting-an-issue]]
 == Posting an Issue
 
-1.  Do a search in the issue tracker to ensure the same issue has not been posted before.
+. Do a search in the issue tracker to ensure the same issue has not been posted before.
 *IMPORTANT*: If reporting a security vulnerability, send your bug report directly to the contact email of
 the project instead of posting it in the issue tracker.
-2.  Follow the <<FormatsAndConventions.adoc#issue,naming convention>> for the issue title.
+. Follow the <<FormatsAndConventions.adoc#issue,naming convention>> for the issue title.
 
 [[submitting-a-pr]]
 == Submitting a PR
@@ -34,11 +34,11 @@ Follow the instructions in this document in conjunction with those variations.
 license as that used by the project.
 * Set up the project. These are the typical steps:
 
-1.  Fork the repo to your GitHub account.
-2.  Clone the code to your computer.
-3.  Follow the relevant sections of the _Developer Guide_ provided by the project to set up the project
+. Fork the repo to your GitHub account.
+. Clone the code to your computer.
+. Follow the relevant sections of the _Developer Guide_ provided by the project to set up the project
 in your computer.
-4.  Ensure the setup is correct by getting all the tests to pass.
+. Ensure the setup is correct by getting all the tests to pass.
 
 [[pr-workflow]]
 === PR workflow
@@ -131,8 +131,8 @@ ________________________________________________________________________________
 
 [[create-a-pr]]
 ==== Create a PR
-2.  Push the branch to your fork.
-3.  Create a PR.
+. Push the branch to your fork.
+. Create a PR.
 * [x] Follow the <<FormatsAndConventions.adoc#pr,naming conventions for PRs>>.
 * [x] Include `Fixes #IssueNumber` (e.g. `Fixes #1234`) in the PR description so that GitHub can auto-link the
 relevant issue and
@@ -146,16 +146,16 @@ ________________________________________________________________________________
 
 [[request-a-review]]
 ==== Request a review
-2.  Wait for CI (i.e. Travis, AppVeyor) to run tests/checks against your PR and report status.
+. Wait for CI (i.e. Travis, AppVeyor) to run tests/checks against your PR and report status.
 If any errors are reported, fix those problems and push the fixes to the same branch.
-3.  Post a summary of commits using the
+. Post a summary of commits using the
 https://github.com/pyokagan/canihasreview/[CanIHasReview tool].
 +
 How to use CanIHasReview
-1.  Navigate to your PR. e.g. `https://github.com/se-edu/addressbook-level4/pull/237`.
-2.  Replace `github.com` in the PR URL with `canihasreview.pyokagan.com`. The resulting URL should be
+. Navigate to your PR. e.g. `https://github.com/se-edu/addressbook-level4/pull/237`.
+. Replace `github.com` in the PR URL with `canihasreview.pyokagan.com`. The resulting URL should be
 something like `https://canihasreview.pyokagan.com/se-edu/addressbook-level4/pull/237`.
-3.  Click `Submit new iteration` button. It will post a summary of the PR similar to
+. Click `Submit new iteration` button. It will post a summary of the PR similar to
 https://github.com/se-edu/addressbook-level4/pull/209#issuecomment-270905049[this example].
 +
 
@@ -163,13 +163,13 @@ https://github.com/se-edu/addressbook-level4/pull/209#issuecomment-270905049[thi
 
 [[revise-the-pr-as-per-reviewer-comments]]
 ==== Revise the PR as per reviewer comments
-1.  Wait until all assigned reviewers have signified that they have finished reviewing the PR (e.g. by applying the
+. Wait until all assigned reviewers have signified that they have finished reviewing the PR (e.g. by applying the
 `s.Ongoing` label). If you are not sure, post a comment requesting a confirmation.
 +
 _______________________________________________________________________________
 Rationale: Updating the PR while a review is in progress can confuse reviewers.
 _______________________________________________________________________________
-1.  Update the commits as suggested by the reviewers.
+. Update the commits as suggested by the reviewers.
 * Updates to existing logical changes should be done by modifying their corresponding commits.
 +
 __________________________________________________________________________________
@@ -182,10 +182,10 @@ in order to make them more cohesive.
 * Commit messages should be updated with new findings from review discussions.
 For example, if the reviewer mentioned a possible new approach that was subsequently rejected
 due to a non-obvious reason, then the commit should be updated with this information.
-1.  Sync your fork with upstream repo.
+. Sync your fork with upstream repo.
 * Rebase your branch instead of merging `master` branch to your branch.
-1.  Update the branch in your fork.
-2.  Use the same CanIHasReview tool used earlier to post a new commit summary and alert the reviewers.
+. Update the branch in your fork.
+. Use the same CanIHasReview tool used earlier to post a new commit summary and alert the reviewers.
 
 [[refine-the-fix-iteratively]]
 ==== Refine the fix iteratively

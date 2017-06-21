@@ -469,7 +469,7 @@ startInfo.UseShellExecute = true;
 [[references]]
 == References
 
-1.  https://msdn.microsoft.com/en-us/library/ff926074.aspx[C# Coding Coventions (C# Programming Guide)] -- From Microsoft
-2.  http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf[C# Coding Standards for .NET] -- By Lance Hunt
-3.  http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf[C# Coding Style Guide] -- By Mike Krüger
-4.  https://github.com/dennisdoomen/CSharpGuidelines[CSharpGuidelines] -- From Aviva Solutions
+. https://msdn.microsoft.com/en-us/library/ff926074.aspx[C# Coding Coventions (C# Programming Guide)] -- From Microsoft
+. http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf[C# Coding Standards for .NET] -- By Lance Hunt
+. http://www.icsharpcode.net/TechNotes/SharpDevelopCodingStyle03.pdf[C# Coding Style Guide] -- By Mike Krüger
+. https://github.com/dennisdoomen/CSharpGuidelines[CSharpGuidelines] -- From Aviva Solutions

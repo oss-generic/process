@@ -606,12 +606,12 @@ ________________________________________________________________________________
 
 *4. ⭐⭐⭐ Class and Interface declarations should be organized in the following manner:*
 
-1.  Class/Interface documentation (Comments)
-2.  *class* or *interface* statement
-3.  Class (static) variables in the order *public*, *protected*, *package* (no access modifier), *private*
-4.  Instance variables in the order *public*, *protected*, *package* (no access modifier), *private*
-5.  Constructors
-6.  Methods (no specific order)
+. Class/Interface documentation (Comments)
+. *class* or *interface* statement
+. Class (static) variables in the order *public*, *protected*, *package* (no access modifier), *private*
+. Instance variables in the order *public*, *protected*, *package* (no access modifier), *private*
+. Constructors
+. Methods (no specific order)
 
 _______________________________________________________________________________________________
 Rationale: Make code easy to navigate by making the location of each class element predictable.
@@ -971,11 +971,11 @@ ________________________________________________________________________________
 [[references]]
 == References
 
-1.  http://geosoft.no/development/javastyle.html
-2.  http://www.oracle.com/technetwork/java/codeconventions-150003.pdf
-3.  http://developers.sun.com/sunstudio/products/archive/whitepapers/java-style.pdf
-4.  Effective Java, 2nd Edition by Joshua Bloch
-5.  http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html
+. http://geosoft.no/development/javastyle.html
+. http://www.oracle.com/technetwork/java/codeconventions-150003.pdf
+. http://developers.sun.com/sunstudio/products/archive/whitepapers/java-style.pdf
+. Effective Java, 2nd Edition by Joshua Bloch
+. http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html
 
 [[contributors]]
 == Contributors

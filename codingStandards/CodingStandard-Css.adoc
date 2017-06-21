@@ -6,9 +6,11 @@
 
 * Use the https://google.github.io/styleguide/htmlcssguide.xml[Google CSS Style Guide]
 for any topics not covered in this document.
-* If the project is using a framework (e.g. Bootstrap/jQuery UI), use classes from the framework as much as possible.
-* Divide long CSS files into sections.
 
+* If the project is using a framework (e.g. Bootstrap/jQuery UI), use classes from the framework as much as possible.
+
+* Divide long CSS files into sections.
++
 [NOTE]
 ====
 By segmenting the file(s) in this logical way, it is easy to locate css rules and to ensure that a new rule
@@ -18,40 +20,65 @@ being added is not already present.
 == CSS Files
 
 * CSS file includes must be done using `<link>` tags in the HTML/JSP files and NOT using `@import` in other css files.
-
++
 [NOTE,caption=Rationale]
 ====
 *`@import`* can be slow and may result in the page being rendered without css for a while before the page
 magically comes to life. As of now we are using css files as styles of HTML pages and thus the dependency
 must be clearly visible in the HTML page.
 ====
-
++
 image:Good.png[image]
-
-`html      <link rel="stylesheets" href="../common.css" type="text/css">`
++
+[source,html]
+----
+    <link rel="stylesheets" href="../common.css" type="text/css">
+----
++
 image:Bad.png[image]
-
-`css      @import "common.css";`
++
+[source,html]
+----
+   @import "common.css";
+----
 
 * NO inline style sheets or inline styles in the HTML/JSP files.
-
++
 [NOTE,caption=Rationale]
 ====
 The whole idea is to have Separation of Concerns (SoC). If css rules are specified everywhere, editing them
 in the future will be a hassle and redundant overriding of css rules may occur. If all are in one place
 management is also easier.
 ====
-
++
 image:Good.png[image]
-
-`css   #mainDiv {      border: thin solid black;      color: white;      margin: auto;   }`
++
+[source,css]
+----
+#mainDiv {
+   border: thin solid black;
+   color: white;
+   margin: auto;
+}
+----
++
 image:Bad.png[image]
-
-`html   <style>   #mainDiv {      color: white;   }   </style>`
-
++
+[source,html]
+----
+<style>
+#mainDiv {
+   color: white;
+}
+</style>
+----
++
 image:Bad.png[image]
-
-`html   <div id="mainDiv" style="border: thin solid black; margin: auto">`
++
+[source,html]
+----
+<div id="mainDiv" style="border: thin solid black; margin: auto">
+----
 
 == Selectors
 
@@ -69,23 +96,35 @@ Also, we can stick to more functional names for the css and use classes to achie
 === Selector Formatting
 
 * The selector(s) must be specified in separate lines.
-
++
 [NOTE,caption=Rationale]
 ====
 This eases reading as well as helps in revision control as conflicts reduce.
 ====
-
++
 image:Good.png[image]
-
-`css   .button-sort-ascending:hover,   .button-sort-none:hover {      cursor: pointer;   }`
++
+[source,css]
+----
+.button-sort-ascending:hover,
+.button-sort-none:hover {
+   cursor: pointer;
+}
+----
++
 image:Bad.png[image]
-
-`css   .button-sort-ascending:hover, .button-sort-none:hover {      cursor: pointer;   }`
++
+[source,css]
+----
+.button-sort-ascending:hover, .button-sort-none:hover {
+   cursor: pointer;
+}
+----
 
 * Group related/hierarchical style specifications (eg :hover, child specifier, etc) and provide an additional indent
 to the more specific selector. Refer to http://isobar-idev.github.io/code-standards/#_css_formatting[here]
 for examples.
-
++
 [NOTE,caption=Rationale]
 ====
 This gives a nice hierarchical structure to the file and helps to visually group css rules by indentation.
@@ -98,7 +137,7 @@ In addition this gives an immediate idea as to how certain classes are being use
 * Do not qualify class/ID selectors using tag names (do not use: `div.mainContent`, simply use `.mainContent`).
 Refer to https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS[Writing efficient CSS]
 for examples.
-
++
 [NOTE,caption=Rationale]
 ====
 This speeds up the css match lookup. If such a qualification is actually required, either use another
@@ -110,7 +149,7 @@ if this kind of qualification is needed, then probably the class has not been na
 * Use child selector rather than descendant selector (use `#container > span` rather than `#container span`).
 Refer to https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS[Writing efficient CSS]
 for examples.
-
++
 [NOTE,caption=Rationale]
 ====
 This is a strong recommendation as descendant selector is extremely expensive, especially when the
@@ -121,8 +160,8 @@ specified ancestor has a lot of descendants.
 
 === Naming Classes
 
-* Use all lowercase letters.
-Separate words with hyphens (`-`) and no other separator.
+* Use all lowercase letters. +
+Separate words with hyphens (`-`) and no other separator. +
 We use 2 kinds of classes: Atomic and Component.
 +
 Atomic Classes describe atomic attributes like border-gray, align-center that can be used on any element.
@@ -132,19 +171,33 @@ They have at most 2 rules in them. Start their names with the attribute, followe
 Component Classes are used for components that have a particular role that (preferably) recurs in multiple
 pages. To name these classes, describe the function of the element rather than its location.
 (eg: .panel-details rather than .top-details-box)
-
++
 image:Good.png[image]
-
-`css   /* Component Class */   .comment-list   .sort-icon   /* Atomic Class */   .align-center   .border-gray`
++
+[source,css]
+----
+/* Component Class */
+.comment-list
+.sort-icon
+/* Atomic Class */
+.align-center
+.border-gray
+----
++
 image:Bad.png[image]
-
-`css   .commentList   .sort_icon   .centeralign`
++
+[source,css]
+----
+.commentList
+.sort_icon
+.centeralign
+----
 
 * When adding classes to style elements in the page, follow the following steps:
-* Try and style the entire component using Bootstrap.
-* For any additional css, if the component is used in many places create a functional name for the class.
-* If the component does not have any recurring function, utilise the generic classes to achieve the styling.
-* *Exception:* If a particular element requires too many generic classes ( > 5) create a functional class name for it.
+** Try and style the entire component using Bootstrap.
+** For any additional css, if the component is used in many places create a functional name for the class.
+** If the component does not have any recurring function, utilise the generic classes to achieve the styling.
+** *Exception:* If a particular element requires too many generic classes ( > 5) create a functional class name for it.
 
 == Attributes
 
@@ -152,19 +205,36 @@ image:Bad.png[image]
 
 * Alphabetize the attributes, disregarding any browser prefix.
 All browser-prefixed versions of an attribute must be written together.
-
++
 [NOTE,caption=Rationale]
 ====
 It makes it easier to locate attributes in a css file.
 ====
-
++
 image:Good.png[image]
-
-`css   .sort-icon {      display: block;      float: right;      height: 17px;      margin-top: 1px;      width: 12px;   }`
-
++
+[source,css]
+----
+.sort-icon {
+   display: block;
+   float: right;
+   height: 17px;
+   margin-top: 1px;
+   width: 12px;
+}
+----
++
 image:Bad.png[image]
-
-`css   .sort-icon {      width: 12px;      height: 17px;      display: block;      margin-top: 1px;      float: right;   }`
++
+----
+.sort-icon {
+   width: 12px;
+   height: 17px;
+   display: block;
+   margin-top: 1px;
+   float: right;
+}
+----
 
 === Attribute Formatting
 
@@ -180,18 +250,22 @@ for examples.
 == General Details
 
 * Use shorthands as much as possible (eg `border: 2px 0 1px 4px`).
-* DO NOT use `!important` specifier.
 
+* DO NOT use `!important` specifier.
++
 [NOTE,caption=Rationale]
 ====
 Using the *!important* specifier overrides the natural flow of specificity and cascading hierarchy of css styles.
 Unless absolutely necessary do not use it. If there is such a situation clearly state the reason
 with comments (/* */).
 ====
-
++
 image:Bad.png[image]
-
-`css    margin: 10px 0 !important;`
++
+[source,css]
+----
+margin: 10px 0 !important;
+----
 
 == Resources
 

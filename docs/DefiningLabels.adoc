@@ -45,14 +45,14 @@ NOTE: An issue is considered as _accepted_ when a priority label has been assign
 === Category (`c.`)
 
 * Changes to __functionality__, categorized based on size
-* `c.Enhancement`: An enhancement to an existing functionality (not big enough
+** `c.Enhancement`: An enhancement to an existing functionality (not big enough
 to be considered as a user story).
-* `c.Story`: A user story.
-* `c.Epic`: A feature that is worth many user stories.
+** `c.Story`: A user story.
+** `c.Epic`: A feature that is worth many user stories.
 * Other work
-* `c.Bug`
-* `c.Task`: Other work items such as updating documentation.
-* `c.Message`: Issue used as a means of discussing something with the dev team.
+** `c.Bug`
+** `c.Task`: Other work items such as updating documentation.
+** `c.Message`: Issue used as a means of discussing something with the dev team.
 e.g. a request for help on setting up dev environment.
 
 === Difficulty (`d.`)
@@ -113,6 +113,7 @@ Classifies the issue based on the tool/technology it involves. Some examples giv
 |`t-JSTL` |JSTL, JSP, Servlets
 |=============================
 
+== Guidelines for defining labels
 
 * Choose bright colors for labels that should get more attention. https://github.com/oss-generic/process/labels?sort=name-asc[Here] are some sample
 labels with suitable colors.

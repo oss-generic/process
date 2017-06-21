@@ -152,13 +152,14 @@ If any errors are reported, fix those problems and push the fixes to the same br
 . Post a summary of commits using the
 https://github.com/pyokagan/canihasreview/[CanIHasReview tool].
 +
-How to use CanIHasReview
+.How to use CanIHasReview
+****
 . Navigate to your PR. e.g. `https://github.com/se-edu/addressbook-level4/pull/237`.
 . Replace `github.com` in the PR URL with `canihasreview.pyokagan.com`. The resulting URL should be
 something like `https://canihasreview.pyokagan.com/se-edu/addressbook-level4/pull/237`.
 . Click `Submit new iteration` button. It will post a summary of the PR similar to
 https://github.com/se-edu/addressbook-level4/pull/209#issuecomment-270905049[this example].
-+
+****
 
 * If you do not get any response from the dev team within 1-2 days, keep posting reminders in the PR thread.
 

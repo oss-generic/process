@@ -1,7 +1,5 @@
-[[additional-guidelines---java]]
 = Additional Guidelines - Java
 
-[[using-assertions]]
 == Using assertions
 
 Refer to the article

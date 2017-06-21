@@ -1,11 +1,9 @@
-[[workflow-for-submitting-questions-issues-and-prs]]
 = Workflow for submitting Questions, Issues and PRs
 :toc:
 :toclevels: 1
 :toc-title:
 :sectnums:
 
-[[asking-a-question]]
 == Asking a Question
 
 Post your question in the issue tracker.
@@ -13,7 +11,6 @@ See <<Posting an Issue>> for guidelines to follow when posting an issue.
 
 If you don't get an answer within 1-2 days, feel free to post another comment in the issue thread as a reminder.
 
-[[posting-an-issue]]
 == Posting an Issue
 
 . Do a search in the issue tracker to ensure the same issue has not been posted before.
@@ -23,10 +20,8 @@ the project instead of posting it in the issue tracker.
 
 . Follow the <<FormatsAndConventions.adoc#issue,naming convention>> for the issue title.
 
-[[submitting-a-pr]]
 == Submitting a PR
 
-[[before-you-start]]
 === Before you start
 
 * Note that a project might specify variations to the instructions given in this document.
@@ -42,10 +37,8 @@ license as that used by the project.
 in your computer.
 . Ensure the setup is correct by getting all the tests to pass.
 
-[[pr-workflow]]
 === PR workflow
 
-[[select-an-issue-to-fix]]
 ==== Select an issue to fix
 
 * Select an open issue from the issue tracker that you are interested to work on.
@@ -70,7 +63,6 @@ However, it is acceptable to submit PRs containing alternative solutions even if
 * If it seems the existing PRs for that issue are no longer active (e.g. no activity in the past seven days),
 you can always post a message to check if anybody is still working on that issue.
 
-[[create-a-new-branch]]
 ==== Create a new branch
 
 Create a branch off the `master` branch.
@@ -79,7 +71,6 @@ Follow <<FormatsAndConventions.adoc#branch,our naming conventions for branch nam
 WARNING: Make sure you branch off `master` rather than the currently active branch.
 Otherwise, you may get commits from other branches inside your PR.
 
-[[fix-the-issue-in-the-new-branch]]
 ==== Fix the issue in the new branch
 
 * [x] Adhere to coding style and testing requirements of the project.
@@ -130,7 +121,6 @@ It is not recommended to edit commits that may have already propagated to repos 
 * If the project uses any other static analysis tools (e.g. checkstyle), use them to detect any potential problems
 in the new code.
 
-[[prepare-the-commits-for-publishing]]
 ==== Prepare the commits for publishing
 
 * Go through the commit diffs and revert any changes unrelated to the PR. e.g. auto-updates done by the IDE.
@@ -141,7 +131,6 @@ in the new code.
 <<HowToGuides.adoc#refactor-commits,How to Guides +++::+++ Refactor Commits>>
 ====
 
-[[create-a-pr]]
 ==== Create a PR
 . Push the branch to your fork.
 . Create a PR.
@@ -157,7 +146,6 @@ You may create a PR even before you are done with the fix, if you want to seek s
 the dev team.
 ====
 
-[[request-a-review]]
 ==== Request a review
 . Wait for CI (i.e. Travis, AppVeyor) to run tests/checks against your PR and report status.
 If any errors are reported, fix those problems and push the fixes to the same branch.
@@ -174,7 +162,6 @@ https://github.com/se-edu/addressbook-level4/pull/209#issuecomment-270905049[thi
 
 * If you do not get any response from the dev team within 1-2 days, keep posting reminders in the PR thread.
 
-[[revise-the-pr-as-per-reviewer-comments]]
 ==== Revise the PR as per reviewer comments
 . Wait until all assigned reviewers have signified that they have finished reviewing the PR (e.g. by applying the
 `s.Ongoing` label). If you are not sure, post a comment requesting a confirmation.
@@ -204,13 +191,11 @@ due to a non-obvious reason, then the commit should be updated with this informa
 . Update the branch in your fork.
 . Use the same CanIHasReview tool used earlier to post a new commit summary and alert the reviewers.
 
-[[refine-the-fix-iteratively]]
 ==== Refine the fix iteratively
 
 Repeat the review-refine cycle (explained above) until the PR is merged (usually done by a senior member of
 the project team).
 
-[[after-the-first-pr-is-merged]]
 === After the first PR is merged
 
 * After you have managed to get one PR merged, you can gradually move to harder issues,

@@ -1,7 +1,5 @@
-[[formats-and-conventions]]
 = Formats and Conventions
 
-[[branch]]
 == Branch
 
 Format: *`issueNumber-some-keywords-from-issue-title`*
@@ -18,7 +16,6 @@ This format allows easy traceability between a branch and the issue it fixes.
 It is particularly suitable for projects following a branch-per-issue workflow.
 ====
 
-[[commit-message]]
 == Commit message
 
 Every commit must have a well written commit message _*subject line*_.
@@ -131,7 +128,6 @@ make the subsequent unification easier.
 Refer to the article _http://chris.beams.io/posts/git-commit/[How to Write a Git Commit Message]_ for more
 advice on writing good commit messages.
 
-[[commit-organization]]
 == Commit organization
 
 "Ask a programmer to review 10 lines of code, he'll find 10 issues. Ask him to do 500 lines and he'll say it
@@ -197,14 +193,12 @@ as described above.
 * PRs for `d.FirstTimers` issues are usually simple enough to be contained in one commit.
 ====
 
-[[directory]]
 == Directory
 
 * If the project uses a framework that has a specific folder naming convention, follow that instead.
 * Use lowerCamelCase (similar to java methods) whenever possible. e.g. `testData`
 * Prefer plurals if the folder contains multiple items of same type e.g. `docs` instead of `doc`
 
-[[english]]
 == English
 
 * Follow https://docs.docker.com/opensource/doc-style/[Docker's documentation style and grammar conventions]
@@ -217,7 +211,6 @@ that should take precedence over that of Docker's).
 Consistent spelling improves discoverability of API methods.
 ====
 
-[[file]]
 == File
 
 * If the project uses a framework that has a specific file naming convention, follow that instead.
@@ -228,7 +221,6 @@ e.g. prefer `CodingStyle-JavaBasics.html` and `CodingStyle-HtmlBasics.html` to
 `JavaCodingStyleBasics.html` and `HtmlCodingStyleBasics.html`
 * For documents, try to make the file name match the document title as much as possible.
 
-[[issue]]
 == Issue
 
 * Issue title should be concise yet descriptive.
@@ -238,7 +230,6 @@ For example, if it is a bug report, the issue title should sound like a bug repo
 (e.g `Option 'other' is missing from the dropdown`) instead of a feature request
 (e.g. `Add 'other' option to the dropdown`).
 
-[[merge-commit]]
 == Merge commit
 
 This format is only for commits merging a PR branch to `master` branch.
@@ -252,7 +243,6 @@ This format allows easy traceability among a merge commit, the issue it fixes, a
 Having the issue name tells us what the commit is about without having to look it up in GitHub issue tracker.
 ====
 
-[[pr]]
 == PR
 
 Format: *`IssueTitle #IssueNumber`*
@@ -265,7 +255,6 @@ to compensate for GitHub's lack of strong linking between the two.
 Assume there is an invisible prefix in front of the PR title `Fixes issue : ...`
 ====
 
-[[references-to-code-elements]]
 == References to code elements
 
 Follow these conventions when referring to code elements *from a non-code context* e.g. when referring to a function
@@ -280,7 +269,6 @@ Refer to the <<CodingStandards.adoc#,respective coding standards>> for conventio
 *from code contexts* e.g. when referring to a function from a code comment.
 ====
 
-[[java]]
 === Java
 
 * Variables: `package.class#variable` (optional: `package`)

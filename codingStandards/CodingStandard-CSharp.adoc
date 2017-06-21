@@ -1,4 +1,3 @@
-[[c-coding-standard]]
 = C# Coding Standard
 :toc: macro
 :toc-title:
@@ -15,15 +14,12 @@ The coding standard is primarily based on https://github.com/dennisdoomen/CSharp
 
 toc::[]
 
-[[file-organization]]
 == File Organization
 
-[[source-file-name-and-class-name-should-always-match.]]
 === 1. Source file name and class name should always match.
 
 MyClass.cs → `public class MyClass { ... }`
 
-[[directory-names-should-follow-namespace-for-the-class.]]
 === 2. Directory names should follow namespace for the class.
 
 `System.Windows.Forms.Control` should use the path System\Windows\Forms\Control.cs
@@ -33,18 +29,14 @@ MyClass.cs → `public class MyClass { ... }`
 Do not use namespace name with dots. This will make it easier to map namespaces to the directory layout.
 ====
 
-[[formatting]]
 == Formatting
 
-[[layout]]
 === Layout
 
-[[avoid-putting-multiple-namespaces-or-classes-per-file.]]
 ==== 1. Avoid putting multiple namespaces or classes per file.
 
 This will make your code more readable and also make it easier to find the .cs file for a particular class.
 
-[[place-using-directives-at-the-top-of-the-file-grouped-and-ordered-alphabetically.]]
 ==== 2. Place _using_ directives at the top of the file, grouped and ordered alphabetically.
 
 [source,cs]
@@ -61,7 +53,6 @@ using Telerik.Ajax;
 using Telerik.WebControls;
 ----
 
-[[maintain-a-common-order-for-each-file.]]
 ==== 3. Maintain a common order for each file.
 
 \i. Member variable
@@ -79,10 +70,8 @@ using Telerik.WebControls;
 Sequence declaration within type groups are based on StyleCop's SA1202 ordering: `public, internal, protected internal, protected, private`.
 ====
 
-[[indentation]]
 === Indentation
 
-[[basic-indentation-should-be-4-spacesnot-tabs.]]
 ==== 1. Basic indentation should be 4 spaces(not tabs).
 
 [source,cs]
@@ -102,7 +91,6 @@ namespace HelloWorld
 }
 ----
 
-[[maximum-line-length-is-130-characters.]]
 ==== 2. Maximum line length is 130 characters.
 
 When an expression does not fit, follow the general guidelines:
@@ -150,7 +138,6 @@ var result = a * b / (c - g +
 
 The top one is preferred, since the break occurs outside the parenthesized expression, which is higher-level.
 
-[[always-place-curly-braces-on-a-new-line.]]
 ==== 3. Always place curly braces on a new line.
 
 This is known as the https://en.wikipedia.org/wiki/Indent_style#Allman_style[Allman style].
@@ -166,7 +153,6 @@ while (x == y)
 lastMethod();
 ----
 
-[[always-put-curly-braces-even-if-it-might-not-be-required.]]
 ==== 4. Always put curly braces even if it might not be required.
 
 Such as having only one statement in the `if` clause. This is to enforce consistency.
@@ -179,10 +165,8 @@ if (x > y)
 }
 ----
 
-[[white-space]]
 === White Space
 
-[[general-guidelines.]]
 ==== 1. General guidelines.
 
 * Keywords like `if`, `while` should be followed by a white space.
@@ -237,15 +221,12 @@ doSomething(a,b,c,d)
 for(i=0;i<10;i++){
 ----
 
-[[naming-conventions]]
 == Naming Conventions
 
-[[all-names-should-be-written-in-english.]]
 === 1. All names should be written in English.
 
 English is the preferred language for international development.
 
-[[use-proper-casing-for-language-elements.]]
 === 2. Use proper casing for language elements.
 
 [NOTE]
@@ -275,7 +256,6 @@ Camel casing: the first letter of every word, except for the first word, is capi
 |Property |Pascal |`BackColor`
 |==============================================
 
-[[avoid-using-abbreviations.]]
 === 3. Avoid using abbreviations.
 
 Unless the full name is excessive:
@@ -300,7 +280,6 @@ UiControl
 HTMLSource
 ----
 
-[[prefix-boolean-variables-with-can-is-or-has.]]
 === 4. Prefix boolean variables with `Can`, `Is`, or `Has`.
 
 Examples: `CanEvaluate`, `IsVisible`, `HasLicense`.
@@ -310,7 +289,6 @@ Examples: `CanEvaluate`, `IsVisible`, `HasLicense`.
 Avoid boolean variables that represent the negation of things. e.g., use `IsInitialized` instead of `IsNotInitialized`.
 ====
 
-[[do-not-include-the-parent-class-name-within-a-property-name.]]
 === 5. Do not include the parent class name within a property name.
 
 image:Good.png[image]
@@ -327,7 +305,6 @@ image:Bad.png[image]
 Customer.CustomerName
 ----
 
-[[do-not-use-hungarian-notation.]]
 === 6. Do not use Hungarian Notation.
 
 Hungarian notation is a defined set of pre and postfixes which are applied to names to reflect the type of the variable. This style was used in early Windows programming, but is now obsolete.
@@ -353,10 +330,8 @@ ColorsEnum
 **Exception**: All fields and variable names that contain GUI elements like button should be postfixed with their type name without abbreviations. e.g., `cancelButton`, `nameTextBox`.
 ====
 
-[[commenting-conventions]]
 == Commenting Conventions
 
-[[general-guidelines.-1]]
 === 1. General guidelines.
 
 * Place the comment on a separate line, not at the end of a line of code.
@@ -365,7 +340,6 @@ ColorsEnum
 * Use `//` or `///` but never `/* ... */`.
 * The length of comment should not exceed the length of code.
 
-[[document-all-public-protected-and-internal-types-and-members.]]
 === 2. Document all public, protected and internal types and members.
 
 Documenting your code allows Visual Studio to pop-up the documentation when your class is used somewhere else. You can form your documentation using https://msdn.microsoft.com/en-us/library/5ast78ax.aspx[XML tags].
@@ -381,10 +355,8 @@ Documenting your code allows Visual Studio to pop-up the documentation when your
 public bool HasLicense() { ... }
 ----
 
-[[language-conventions]]
 == Language Conventions
 
-[[do-not-omit-access-modifiers.]]
 === 1. Do not omit access modifiers.
 
 Explicitly declare all identifiers with the appropriate access modifiers instead of allowing the default.
@@ -403,7 +375,6 @@ image:Bad.png[image]
 void WriteEvent(string message)
 ----
 
-[[always-use-the-built-in-c-data-type-aliases-instead-of-the-.net-common-type-system.]]
 === 2. Always use the built-in C# data type aliases, instead of the .NET common type system.
 
 image:Good.png[image]
@@ -426,7 +397,6 @@ Int64
 String
 ----
 
-[[only-use-var-when-the-type-is-very-obvious.]]
 === 3. Only use var when the type is very obvious.
 
 When the type of a variable is clear from the context, use var in the declaration.
@@ -449,7 +419,6 @@ int result = ExampleClass.ResultSoFar();
 To know more about when to use/not to use implicit typing read https://blogs.msdn.microsoft.com/ericlippert/2011/04/20/uses-and-misuses-of-implicit-typing/[Uses and misuses of implicit typing].
 ====
 
-[[favor-object-and-collection-initializers-over-separate-statements.]]
 === 4. Favor Object and Collection initializers over separate statements.
 
 image:Good.png[image]
@@ -472,7 +441,6 @@ startInfo.StandardOutput = Console.Output;
 startInfo.UseShellExecute = true;
 ----
 
-[[references]]
 == References
 
 . https://msdn.microsoft.com/en-us/library/ff926074.aspx[C# Coding Coventions (C# Programming Guide)] -- From Microsoft

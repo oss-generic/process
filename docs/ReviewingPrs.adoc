@@ -1,4 +1,3 @@
-[[reviewing-prs]]
 = Reviewing PRs
 :sectnums:
 
@@ -16,7 +15,6 @@ Junior members can get other junior members to act as _*peer reviewers*_ for the
 to the project's formal review process.
 ====
 
-[[review-procedure]]
 == Review procedure
 
 === Before you begin
@@ -94,10 +92,8 @@ current iteration), change the status label as follows:
 * If any of the reviewers have requested changes, change the status label to `s.Ongoing`.
 * Else, change status to `s.ToMerge`.
 
-[[tips-for-reviewers]]
 == Tips for reviewers
 
-[[canned-comments]]
 == Canned comments
 
 // TODO: add common comments that can be used when reviewing

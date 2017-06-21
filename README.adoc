@@ -1,11 +1,9 @@
-[[the-oss-generic-reference-process]]
 = The _OSS-Generic_ Reference Process
 
 The _OSS-Generic Reference Process_ described in this repo documents common practices among several OSS projects
 on GitHub, notably, https://github.com/teammates/teammates[TEAMMATES],
 https://github.com/se-edu/main[SE-EDU projects], https://github.com/powerpointlabs/powerpointlabs[PowerPointLabs].
 
-[[for-new-contributors]]
 == For new contributors
 
 * *<<docs/AdviceForOssBeginners.adoc#,Advice for OSS beginners>>*
@@ -15,7 +13,6 @@ https://github.com/se-edu/main[SE-EDU projects], https://github.com/powerpointla
 * *<<docs/AdvancedContributorGuidelines.adoc#,Advanced Contributor Guidelines>>*: Additional guidelines more
 experienced contributors are expected to follow.
 
-[[general-references]]
 == General references
 
 * *<<docs/CodingStandards.adoc#,Coding Standards>>*
@@ -24,13 +21,11 @@ editing a commit message.
 * *<<docs/FormatsAndConventions.adoc#,Formats and Conventions>>*: Formats and conventions for PRs, Issues, Files, etc.
 * *<<docs/CommunityStructure.adoc#,Community Structure>>*: Levels, roles, and responsibilities of dev community members.
 
-[[for-core-members]]
 == For core members
 
 * *<<docs/ReviewingPrs.adoc#,Reviewing PRs>>*: Instructions for PR reviewers
 * *<<docs/MergingPrs.adoc#,Merging PRs>>*: Instructions for merging a PR
 
-[[for-lead-members]]
 == For lead members
 
 * *<<docs/OverseeingIssuePrLifeCycle.adoc#,Overseeing Issue/PR Life Cycle>>*: Instructions for team/area leads
@@ -39,7 +34,6 @@ on overseeing issue/PR life cycles.
 and project schedule.
 * *<<docs/DefiningLabels.adoc#,Defining Labels>>*: Instructions for creating labels for the issue tracker.
 
-[[contributing-to-this-repo]]
 == Contributing to this repo
 
 We welcome contributions. Just follow the instructions in the above links to submit your contributions as a PR.

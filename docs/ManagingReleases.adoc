@@ -1,4 +1,3 @@
-[[managing-releases]]
 = Managing Releases
 
 * *Who does it?* Releases can be managed by the _Release Lead_ of the project (if there is one) or the project lead.
@@ -19,7 +18,6 @@ persons to resume work.
 * Make issues smaller so that each can be resolved in a shorter time.
 * Actively seek volunteers to do higher priority issues.
 
-[[configuration-management-for-releases]]
 == Configuration management for releases
 
 * Usually, a milestone is tied to a release. Use GitHub 'Milestones' and 'Releases' features to manage a release.
@@ -36,7 +34,6 @@ Format `v{major}.{minor}.{patch}` e.g. `v5.1.2`.
 release branch first (i.e. the PR should be against the `release` branch). After the patch is released,
 the `release` branch is merged back to `master`.
 
-[[making-a-release]]
 == Making a release
 
 . Ensure the target commit on `master` is not broken.

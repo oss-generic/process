@@ -1,7 +1,5 @@
-[[overseeing-issuepr-life-cycle]]
 = Overseeing Issue/PR Life Cycle
 
-[[triaging-issues]]
 == Triaging Issues
 
 Issue tracker doubles as the message board. Therefore, it can have two types of issues:
@@ -17,7 +15,6 @@ When an issue comes in,
 for change requests (__misc. posts__ do not need priority labels). This is to ensure that all issues get
 prioritized using a uniform scale.
 
-[[requesting-reviews-for-prs]]
 == Requesting reviews for PRs
 
 * A PR should have **1 or more `reviewers`**. See <<ReviewingPrs.adoc#,Reviewing PRs>>.

@@ -1,13 +1,10 @@
-[[advanced-contributor-guidelines]]
 = Advanced Contributor Guidelines
 
-[[choosing-issues]]
 == Choosing issues
 
 * Follow issue priorities. Prefer to take higher priority issues over lower priority issues.
 * Favor issues related to certain features/aspects/techs to deepen expertise in those areas.
 
-[[updating-a-pr-in-response-to-a-review]]
 == Updating a PR in response to a review
 
 * Favor the <<HowToGuides.adoc#create-a-multi-step-pr,multi-step PR approach>> even for smaller PRs which has only one

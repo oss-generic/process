@@ -7,7 +7,7 @@ Format: *`issueNumber-some-keywords-from-issue-title`*
 e.g. if the issue title is `Error alert email has very long subject #5958`,
 the branch name can be `5958-error-alert-long-subject`
 
-Note: Use only _some_ (not __all__) keywords from the issue title (e.g. 3-5 keywords). Very long branch names
+Note: Use only _some_ (not _all_) keywords from the issue title (e.g. 3-5 keywords). Very long branch names
 are not desirable.
 
 [NOTE,caption=Rationale]
@@ -18,7 +18,7 @@ It is particularly suitable for projects following a branch-per-issue workflow.
 
 == Commit message
 
-Every commit must have a well written commit message __*subject line*__.
+Every commit must have a well written commit message _*subject line*_.
 
 . Try to limit the subject line to 50 characters (hard limit: 72 chars)
 +
@@ -184,11 +184,10 @@ Build-breaking commits in the version history hinder the ability to use `git bis
 ====
 https://github.com/se-edu/addressbook-level4/pull/237[Here] is an example of a PR that is organized
 as described above.
-====
 +
 [NOTE]
 ====
-**Note for first time contributors**:
+*Note for first time contributors*:
 
 * PRs for `d.FirstTimers` issues are usually simple enough to be contained in one commit.
 ====

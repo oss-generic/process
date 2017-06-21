@@ -1,6 +1,6 @@
 = CSS Coding Standard
 :toc:
-:toc-title:
+:toclevels: 2
 
 == General
 

@@ -1,6 +1,6 @@
 = GitHub Flavored Markdown Coding Standard
 
-* The term 'markdown' in this document refers to __GitHub Flavored Markdown__.
+* The term 'markdown' in this document refers to _GitHub Flavored Markdown_.
 * Follow the syntax as specifed https://guides.github.com/features/mastering-markdown/[here].
 
 == Follow strict GFMD syntax to be compatible with GitHub Pages

@@ -2,7 +2,7 @@
 
 * [[git-best-practices]]
 https://sethrobertson.github.io/GitBestPractices/[Commit Often, Perfect Later, Publish Once: Git Best Practices] --
-An article by __Seth Robertson__.
+An article by _Seth Robertson_.
 
 * [[how-to-write-commit-message]]
 http://chris.beams.io/posts/git-commit/[How to Write a Git Commit Message] -- An article by _Chris Beams_

@@ -55,15 +55,15 @@ using Telerik.WebControls;
 
 ==== 3. Maintain a common order for each file.
 
-+i.+ Member variable
+{blank}i. Member variable
 
-+ii.+ Constructors and Finalizer
+{blank}ii. Constructors and Finalizer
 
-+iii.+ Nested Enums, Structs and Classes
+{blank}iii. Nested Enums, Structs and Classes
 
-+iv.+ Properties
+{blank}iv. Properties
 
-+v.+ Methods
+{blank}v. Methods
 
 [NOTE]
 ====
@@ -327,7 +327,7 @@ ColorsEnum
 
 [NOTE]
 ====
-**Exception**: All fields and variable names that contain GUI elements like button should be postfixed with their type name without abbreviations. e.g., `cancelButton`, `nameTextBox`.
+*Exception*: All fields and variable names that contain GUI elements like button should be postfixed with their type name without abbreviations. e.g., `cancelButton`, `nameTextBox`.
 ====
 
 == Commenting Conventions

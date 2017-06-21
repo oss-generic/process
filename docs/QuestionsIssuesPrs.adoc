@@ -45,7 +45,7 @@ in your computer.
 +
 [NOTE]
 ====
-**Notes for first time contributors**:
+*Notes for first time contributors*:
 
 ** First time contributors should start with an issue labelled `d.FirstTimers`, if any.
 ** You should not do more than one `d.FirstTimers` issues.

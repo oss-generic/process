@@ -7,7 +7,7 @@ product may not have releases.
 are intermittent and the available manpower for a given release cycle is not always predictable.
 In those cases the release can contains whatever new code that has been added since the previous release.
 However, major releases which are not backward compatible may need planning in advance.
-* **Maintaining project velocity**:
+* *Maintaining project velocity*:
 It is important to keep resolving issues at regular intervals if the project were to keep moving
 forward at a reasonable pace. Recommendations:
 ** Shorten the lifecycle of ongoing PRs by aggressively reminding dev/reviewers to resume work when the PR progress

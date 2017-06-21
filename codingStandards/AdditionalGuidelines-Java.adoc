@@ -9,7 +9,7 @@ _http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html[Prog
 . **Do not use assertions to do any work that your application requires for correct operation.** +
 If you do, the code will not work as expected when assertions are turned off.
 
-. **Do not use assertions for checking __preconditions__/parameters in public methods.** +
+.  **Do not use assertions for checking _preconditions_/parameters in public methods.** +
 Those should be enforced by explicit checks that throw particular,
 specified exceptions. e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, or `NullPointerException`.
 
@@ -18,7 +18,7 @@ and nonpublic methods.*
 
 In addition,
 
-* **Do not handle 'impossible' exceptions using assertions**. +
+* *Do not handle 'impossible' exceptions using assertions*. +
 Instead of handling 'impossible' exceptions using an `assert false` as given below,
 throw a runtime error such as an `AssertionError`.
 

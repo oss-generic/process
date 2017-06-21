@@ -3,10 +3,10 @@
 
 A typical PR is reviewed by,
 
-* [x] one __**main reviewer**__: Usually, a lead member. Reviews _all_ aspects of the PR, including code quality.
-* [x] one __**code quality reviewer**__: Usually, the Project Manager. Can be delegated to a Project Mentor.
+* [x] one _**main reviewer**_: Usually, a lead member. Reviews _all_ aspects of the PR, including code quality.
+* [x] one _**code quality reviewer**_: Usually, the Project Manager. Can be delegated to a Project Mentor.
 Performs a final check on the quality of the PR.
-* [ ] [Optional] __**supplementary reviewers**__: Core members can be used as additional reviewers if the PR involves
+* [ ] [Optional] _**supplementary reviewers**_: Core members can be used as additional reviewers if the PR involves
 multiple areas.
 
 [TIP]
@@ -64,7 +64,7 @@ early commits are updated as per review.
 ** [x] *All five aspects* of a code change are done:
 *** [x] *Code*
 *** [x] *Comments* e.g. header comments
-*** [x] **Tests**: Almost all code changes to functional code should have changes to test code
+*** [x] *Tests*: Almost all code changes to functional code should have changes to test code
 *** [x] *User docs* e.g. help pages
 *** [x] *Dev docs* e.g. design diagrams
 ** [x] Coding style and best practices are followed (some of these are not detected by static analysis tools).
@@ -96,4 +96,4 @@ current iteration), change the status label as follows:
 
 == Canned comments
 
-// TODO: add common comments that can be used when reviewing
+{blank}// TODO: add common comments that can be used when reviewing

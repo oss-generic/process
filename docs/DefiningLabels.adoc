@@ -32,9 +32,7 @@ There are two types of label groups:
 * `p.Low`: Very little impact, unlikely to do in the near future.
 * `p.Zero`: Unlikely to do, ever.
 
-_____________________________________________________________________________
-An issue is considered as _accepted_ when a priority label has been assigned.
-_____________________________________________________________________________
+NOTE: An issue is considered as _accepted_ when a priority label has been assigned.
 
 [[status-s.]]
 === Status (`s.`)

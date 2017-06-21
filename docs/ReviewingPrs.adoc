@@ -10,10 +10,11 @@ Performs a final check on the quality of the PR.
 * [ ] [Optional] __*supplementary reviewers*__: Core members can be used as additional reviewers if the PR involves
 multiple areas.
 
-________________________________________________________________________________________________________
+[TIP]
+====
 Junior members can get other junior members to act as _*peer reviewers*_ for their PRs before submitting
 to the project's formal review process.
-________________________________________________________________________________________________________
+====
 
 [[review-procedure]]
 == Review procedure
@@ -30,12 +31,13 @@ Ensure the following at the start of the review. If any of them are missing, ask
 * [x] Meets our <<FormatsAndConventions.adoc#commit-organization,requirements for commit organization>>.
 * [x] Commit summary has been generated using CanIHasReview.
 
-__________________________________________________________________________________________
+[TIP]
+====
 These two requirements are automatically guaranteed by CanIHasReview:
 
 * [x] The branch is up to date with the `master` branch at the time of the review request.
 * [x] The branch does not contain merge commits.
-__________________________________________________________________________________________
+====
 
 Additional guidelines for `d.FirstTimers` issues:
 
@@ -53,10 +55,12 @@ you can propose a revised commit message for the dev to use.
 * Review big PRs incrementally (i.e. one commit at a time), starting with the earliest commit.
 https://github.com/se-edu/addressbook-level4/pull/209#pullrequestreview-15603608[Here] is an example.
 +
-_________________________________________________________________________________________________________
-Rationale: If the early commits require lot of changes, there's no need to review later commits until the
+[NOTE,caption=Rationale]
+====
+If the early commits require lot of changes, there's no need to review later commits until the
 early commits are updated as per review.
-_________________________________________________________________________________________________________
+====
+
 * As you review the code, ensure the following:
 ** [x] The solution is the best possible solution to the problem under the circumstances.
 ** [x] *All five aspects* of a code change are done:
@@ -76,10 +80,11 @@ e.g. unnecessary formatting changes or commits from other branches.
 * If changes are needed, choose `Request changes`.
 * Else, choose `Approve`.
 
-_________________________________________________________________________________________
+[NOTE]
+====
 Do not use `Approve` unless you are fully satisfied with the current state of the PR.
 i.e. NOT allowed: `Let me approve this first while you fix the remaining minor problems`.
-_________________________________________________________________________________________
+====
 
 === Update the PR status
 

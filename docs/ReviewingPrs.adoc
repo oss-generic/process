@@ -3,15 +3,15 @@
 
 A typical PR is reviewed by,
 
-* [x] one _*main reviewer*_: Usually, a lead member. Reviews _all_ aspects of the PR, including code quality.
-* [x] one _*code quality reviewer*_: Usually, the Project Manager. Can be delegated to a Project Mentor.
+* [x] one _**main reviewer**_: Usually, a lead member. Reviews _all_ aspects of the PR, including code quality.
+* [x] one _**code quality reviewer**_: Usually, the Project Manager. Can be delegated to a Project Mentor.
 Performs a final check on the quality of the PR.
-* [ ] [Optional] _*supplementary reviewers*_: Core members can be used as additional reviewers if the PR involves
+* [ ] [Optional] _**supplementary reviewers**_: Core members can be used as additional reviewers if the PR involves
 multiple areas.
 
 [TIP]
 ====
-Junior members can get other junior members to act as _*peer reviewers*_ for their PRs before submitting
+Junior members can get other junior members to act as _**peer reviewers**_ for their PRs before submitting
 to the project's formal review process.
 ====
 
@@ -25,7 +25,7 @@ Ensure the following at the start of the review. If any of them are missing, ask
 * [x] PR description has the correct `Fixes #...` reference.
 * [x] The CI build is successful or any failures are justifiable (e.g. false positives from static analysis tools).
 * [x] PR branch name follows the <<FormatsAndConventions.adoc#branch,branch naming convention>>.
-* This is a soft requirement. Encourage the dev to follow the convention in future PRs.
+** This is a soft requirement. Encourage the dev to follow the convention in future PRs.
 * [x] Meets our <<FormatsAndConventions.adoc#commit-organization,requirements for commit organization>>.
 * [x] Commit summary has been generated using CanIHasReview.
 
@@ -62,11 +62,11 @@ early commits are updated as per review.
 * As you review the code, ensure the following:
 ** [x] The solution is the best possible solution to the problem under the circumstances.
 ** [x] *All five aspects* of a code change are done:
-** [x] *Code*
-** [x] *Comments* e.g. header comments
-** [x] *Tests*: Almost all code changes to functional code should have changes to test code
-** [x] *User docs* e.g. help pages
-** [x] *Dev docs* e.g. design diagrams
+*** [x] *Code*
+*** [x] *Comments* e.g. header comments
+*** [x] *Tests*: Almost all code changes to functional code should have changes to test code
+*** [x] *User docs* e.g. help pages
+*** [x] *Dev docs* e.g. design diagrams
 ** [x] Coding style and best practices are followed (some of these are not detected by static analysis tools).
 ** [x] The PR does not contain unrelated changes.
 e.g. unnecessary formatting changes or commits from other branches.

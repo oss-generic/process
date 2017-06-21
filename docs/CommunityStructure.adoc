@@ -10,23 +10,23 @@
 
 * Criteria: At least a month of contributions.
 * Privileges:
-* Write access to upstream repo (push, edit label)
+** Write access to upstream repo (push, edit label)
 * Activity level: Should contribute to most release cycles
 
 === [Level 3] `Snr Developer`
 
 * Criteria: More than three months of active contributions.
 * Responsibilities:
-* Peer review other PRs
+** Peer review other PRs
 * Activity level: Should contribute to almost all release cycles
 
 === [Level 4] `Area Lead`
 
 * Criteria: Has a deep knowledge of the respective feature/aspect/tech/tool.
 * Responsibilities:
-* Be main reviewer for PRs
-* Follow up on incoming issues related to the area
-* Fix critical/urgent issues in the area
+** Be main reviewer for PRs
+** Follow up on incoming issues related to the area
+** Fix critical/urgent issues in the area
 
 ==== Release Lead
 
@@ -36,24 +36,24 @@
 ==== Community Lead
 
 * Responsibilities:
-* Respond to first contacts from potential contributors
+** Respond to first contacts from potential contributors
 * Activity level: Daily
 
 === [Level 5] `Project Lead`
 
 * Privileges: admin access to repo
 * Responsibilities:
-* Manage PRs through their life cycle
-** Assign reviewers
-** Deal with slow/inactive PRs
-* Can take part in issue triaging
+** Manage PRs through their life cycle
+*** Assign reviewers
+*** Deal with slow/inactive PRs
+** Can take part in issue triaging
 * Activity level: Daily
 
 === [Level 6] `Project Adviser`
 
 * Criteria: Can advice devs based on,
-* extensive past experience with the project (e.g. someone who was an active developer for several years in the past)
-* deep expertise in some area relevant to the project (e.g. a domain expert)
+** extensive past experience with the project (e.g. someone who was an active developer for several years in the past)
+** deep expertise in some area relevant to the project (e.g. a domain expert)
 * Responsibilities:
 ** Contributes to the project as a reviewer and an area expert
 
@@ -62,7 +62,7 @@
 In charge of the entire project.
 
 * Responsibilities
-* Triaging issues
+** Triaging issues
 * Activity level: Daily
 
 == Other Classifications

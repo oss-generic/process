@@ -55,15 +55,15 @@ using Telerik.WebControls;
 
 ==== 3. Maintain a common order for each file.
 
-\i. Member variable
+{blank}i. Member variable
 
-\ii. Constructors and Finalizer
+{blank}ii. Constructors and Finalizer
 
-\iii. Nested Enums, Structs and Classes
+{blank}iii. Nested Enums, Structs and Classes
 
-\iv. Properties
+{blank}iv. Properties
 
-\v. Methods
+{blank}v. Methods
 
 [NOTE]
 ====

@@ -10,13 +10,13 @@ However, major releases which are not backward compatible may need planning in a
 * *Maintaining project velocity*:
 It is important to keep resolving issues at regular intervals if the project were to keep moving
 forward at a reasonable pace. Recommendations:
-* Shorten the lifecycle of ongoing PRs by aggressively reminding dev/reviewers to resume work when the PR progress
+** Shorten the lifecycle of ongoing PRs by aggressively reminding dev/reviewers to resume work when the PR progress
 becomes stagnant.
-** Project lead needs to periodically check the issue tracker for inactive PRs and remind the relevant
+*** Project lead needs to periodically check the issue tracker for inactive PRs and remind the relevant
 persons to resume work.
-** If a PR is inactive even after a reminder, it can be closed (and the issue unassigned).
-* Make issues smaller so that each can be resolved in a shorter time.
-* Actively seek volunteers to do higher priority issues.
+*** If a PR is inactive even after a reminder, it can be closed (and the issue unassigned).
+** Make issues smaller so that each can be resolved in a shorter time.
+** Actively seek volunteers to do higher priority issues.
 
 == Configuration management for releases
 

@@ -2,6 +2,8 @@
 :toc: macro
 :toc-title:
 :toclevels: 2
+:imagesdir: ../assets
+:trollface: image:trollface.png[trollface,20,20]
 
 *Important*: Use the https://google.github.io/styleguide/javaguide.html[Google Java Style Guide] for any topics
 not covered in this document.
@@ -191,7 +193,7 @@ for (i = 0; i < nElements; i++) {
 
 [NOTE,caption=Rationale]
 ====
-Just follow it :trollface:
+Just follow it {trollface}
 ====
 
 *2. ⭐ Keep lines no longer than 120 chars.*
@@ -330,7 +332,7 @@ while (!done)
 
 [NOTE,caption=Rationale]
 ====
-Just follow it. :trollface:
+Just follow it. {trollface}
 ====
 
 *5. ⭐ Method definitions should have the following form:*

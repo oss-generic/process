@@ -28,7 +28,8 @@ image:Bad.png[image]
 image:Good.png[image]
 `java    ...    } catch (Exception e) {        throw new AssertionError("This exception should not happen");    }`
 
-________________________________________________________________________________________________________________
-Rationale: As the program flow has already triggered an exception, switching to assertions is not necessary when
+[NOTE,caption=Rationale]
+====
+As the program flow has already triggered an exception, switching to assertions is not necessary when
 another exception can handle it just as well.
-________________________________________________________________________________________________________________
+====

@@ -12,10 +12,11 @@ the branch name can be `5958-error-alert-long-subject`
 Note: Use only _some_ (not _all_) keywords from the issue title (e.g. 3-5 keywords). Very long branch names
 are not desirable.
 
-________________________________________________________________________________________
-Rationale: This format allows easy traceability between a branch and the issue it fixes.
+[NOTE,caption=Rationale]
+====
+This format allows easy traceability between a branch and the issue it fixes.
 It is particularly suitable for projects following a branch-per-issue workflow.
-________________________________________________________________________________________
+====
 
 [[commit-message]]
 == Commit message
@@ -23,10 +24,11 @@ ________________________________________________________________________________
 Every commit must have a well written commit message _*subject line*_.
 
 . Try to limit the subject line to 50 characters (hard limit: 72 chars)
-
-_______________________________________________________________________________________
-Rationale: Some tools show only a limited number of characters from the commit message.
-_______________________________________________________________________________________
++
+[NOTE,caption=Rationale]
+====
+Some tools show only a limited number of characters from the commit message.
+====
 
 . Capitalize the subject line e.g. `Move index.html file to root`
 . Do not end the subject line with a period
@@ -132,10 +134,9 @@ advice on writing good commit messages.
 [[commit-organization]]
 == Commit organization
 
-____________________________________________________________________________________________________________
-_Ask a programmer to review 10 lines of code, he'll find 10 issues. Ask him to do 500 lines and he'll say it
-looks good. [https://twitter.com/girayozil/status/306836785739210752[source]]_
-____________________________________________________________________________________________________________
+"Ask a programmer to review 10 lines of code, he'll find 10 issues. Ask him to do 500 lines and he'll say it
+looks good."
+-- https://twitter.com/girayozil/status/306836785739210752
 
 Commits of a PR should be organized to match the following requirements:
 
@@ -146,16 +147,18 @@ contain the addition of `delete()` to `Address` class only; it should also conta
 the `Person` class for it to be a _complete_ implementation what is stated in the commit message.
 Furthermore, the series of commits in the PR are ordered in a bottom-up fashion, each commit building
 on top of each other towards the end goal of the PR.
-
-___________________________________________________________________
-Rationale: Reviewers should be able to review one commit at a time.
-___________________________________________________________________
++
+[NOTE,caption=Rationale]
+====
+Reviewers should be able to review one commit at a time.
+====
 
 * [x] A commit should not modify more than 100 lines of code.
-
-________________________________________________
-Rationale: Bigger commits make reviewing harder.
-________________________________________________
++
+[NOTE,caption=Rationale]
+====
+Bigger commits make reviewing harder.
+====
 
 Commits containing _*mechanical changes*_ (e.g. automated refactorings, cut-paste type code movements,
 file renames, etc.),
@@ -168,30 +171,31 @@ file renames, etc.),
 ....
 
 * [x] The build passes at each commit of the PR.
-
-__________________________________________________________________________________________________________________
-Rationale: Build-breaking commits in the version history hinder the ability to use `git bisect` for locating bugs.
-__________________________________________________________________________________________________________________
++
+[NOTE,caption=Rationale]
+====
+Build-breaking commits in the version history hinder the ability to use `git bisect` for locating bugs.
+====
 
 * [x] Each commit has a detailed commit message which explains the context and rationale behind the commit.
-
-____________________________________________________________________________________________
-More info:
-
++
+[NOTE,caption=More info]
+====
 * <<commit-message,Our conventions for commit messages>>
 * [Web article] _http://chris.beams.io/posts/git-commit/[How to Write a Git Commit Message]_
-____________________________________________________________________________________________
-
-___________________________________________________________________________________________________
+====
++
+[NOTE]
+====
 https://github.com/se-edu/addressbook-level4/pull/237[Here] is an example of a PR that is organized
 as described above.
-___________________________________________________________________________________________________
-
-_________________________________________________________________________________________
++
+[NOTE]
+====
 *Note for first time contributors*:
 
 * PRs for `d.FirstTimers` issues are usually simple enough to be contained in one commit.
-_________________________________________________________________________________________
+====
 
 [[directory]]
 == Directory
@@ -207,10 +211,11 @@ ________________________________________________________________________________
 if the same is not covered by our own conventions (for example, we have our own PR title convention
 that should take precedence over that of Docker's).
 * Use American English spelling.
-
-_______________________________________________________________________
-Rationale: Consistent spelling improves discoverability of API methods.
-_______________________________________________________________________
++
+[NOTE,caption=Rationale]
+====
+Consistent spelling improves discoverability of API methods.
+====
 
 [[file]]
 == File
@@ -241,10 +246,11 @@ This format is only for commits merging a PR branch to `master` branch.
 Format: *`[#IssueNumber] Issue Title (#PrNumber)`*
 e.g. `[#5958] Error alert email has very long subject (#6580)`
 
-___________________________________________________________________________________________________________________
-Rationale: This format allows easy traceability among a merge commit, the issue it fixes, and the PR that fixed it.
+[NOTE,caption=Rationale]
+====
+This format allows easy traceability among a merge commit, the issue it fixes, and the PR that fixed it.
 Having the issue name tells us what the commit is about without having to look it up in GitHub issue tracker.
-___________________________________________________________________________________________________________________
+====
 
 [[pr]]
 == PR
@@ -252,11 +258,12 @@ ________________________________________________________________________________
 Format: *`IssueTitle #IssueNumber`*
 e.g. `Error alert email has very long subject #5958`
 
-__________________________________________________________________________________________
-Rationale: Duplicating issue title in PR title is for easy tracing between PRs and issues,
+[NOTE,caption=Rationale]
+====
+Duplicating issue title in PR title is for easy tracing between PRs and issues,
 to compensate for GitHub's lack of strong linking between the two.
 Assume there is an invisible prefix in front of the PR title `Fixes issue : ...`
-__________________________________________________________________________________________
+====
 
 [[references-to-code-elements]]
 == References to code elements
@@ -264,50 +271,49 @@ ________________________________________________________________________________
 Follow these conventions when referring to code elements *from a non-code context* e.g. when referring to a function
 name from a commit message.
 
-____________________________________________________________________________________________________________
+[NOTE]
+====
 The objective is to be as concise as possible without being ambiguous. Therefore, omit optional details when
 those details are not pertinent to the context.
-____________________________________________________________________________________________________________
 
-__________________________________________________________________________________________________________________
 Refer to the <<CodingStandards.adoc#,respective coding standards>> for conventions on how to refer to code elements
 *from code contexts* e.g. when referring to a function from a code comment.
-__________________________________________________________________________________________________________________
+====
 
 [[java]]
 === Java
 
 * Variables: `package.class#variable` (optional: `package`)
-
-_________________________________________
++
+====
 Examples:
 
 * `seedu.address.data.Person#name`
 * `Person#name` -- optional parts omitted
-_________________________________________
+====
 
 * Methods: `package.class#method(paramTypes):returnType` (optional: `package`, `returnType`)
-
-_____________________________________________________
++
+====
 Examples:
 
 * `seedu.address.data.Person#getName(boolean):String`
 * `Person#getName(boolean)` -- optional parts omitted
-_____________________________________________________
+====
 
 * If including `paramTypes` pushes against a severe length constraint (e.g. in the commit message title),
 it can be replaced with `...` as long as it is not ambiguous.
-
-____________________________________________________________________________________________________
++
+====
 For example,
 `Person#add(...)` is acceptable in a commit message title (which is limited to 50 chars) in place of
 `Person#add(String, boolean)`.
-____________________________________________________________________________________________________
+====
 
 * The `class` part can be omitted if it is clear from the context.
-
-__________________________________________________________________
++
+====
 For example, the commit message title
 `AbstractPerson: remove add(int) method` is acceptable in place of
 `AbstractPerson: remove AbstractPerson#add(int) method`.
-__________________________________________________________________
+====

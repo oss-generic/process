@@ -7,10 +7,11 @@
 A PR is to be merged by the author of the PR if the author has commit privileges.
 Else it should be merged by the main reviewer.
 
-_______________________________________________________________________________________________
+[NOTE]
+====
 PRs that can be merged without any further testing and post-merge clean up can be merged by the
 _code quality reviewer_.
-_______________________________________________________________________________________________
+====
 
 [[when-to-merge]]
 == When to merge

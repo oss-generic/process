@@ -80,9 +80,10 @@ image:Good.png[image]
 
 Using `1.` for every item in an ordered list can make it easy to insert more items later.
 
-_________________________________________________________________________________
+[TIP]
+====
 Generic numbers are converted to the correct numbers by GitHub markdown renderer.
-_________________________________________________________________________________
+====
 
 image:Good.png[image]
 

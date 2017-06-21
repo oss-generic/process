@@ -17,8 +17,10 @@ If you don't get an answer within 1-2 days, feel free to post another comment in
 == Posting an Issue
 
 . Do a search in the issue tracker to ensure the same issue has not been posted before.
-*IMPORTANT*: If reporting a security vulnerability, send your bug report directly to the contact email of
++
+IMPORTANT: If reporting a security vulnerability, send your bug report directly to the contact email of
 the project instead of posting it in the issue tracker.
+
 . Follow the <<FormatsAndConventions.adoc#issue,naming convention>> for the issue title.
 
 [[submitting-a-pr]]
@@ -48,7 +50,8 @@ in your computer.
 
 * Select an open issue from the issue tracker that you are interested to work on.
 +
-_______________________________________________________________________________________
+[NOTE]
+====
 *Notes for first time contributors*:
 
 ** First time contributors should start with an issue labelled `d.FirstTimers`, if any.
@@ -56,7 +59,8 @@ ________________________________________________________________________________
 ** You should wait till the first PR is merged before starting on more PRs.
 After you have one merged PR, you can work on multiple PRs in parallel.
 This restriction aims to save you from making the same mistake in multiple PRs.
-_______________________________________________________________________________________
+====
+
 * If the issue list does not contain what you want to work on, post an issue first (as described <<Posting an Issue,above>>)
 and wait for it to be acknowledged. Otherwise you could end up fixing something that does not need fixing.
 * It is not required to (but OK to) ask for permission to work on an issue.
@@ -72,10 +76,8 @@ you can always post a message to check if anybody is still working on that issue
 Create a branch off the `master` branch.
 Follow <<FormatsAndConventions.adoc#branch,our naming conventions for branch names>>.
 
-___________________________________________________________________________________
 WARNING: Make sure you branch off `master` rather than the currently active branch.
 Otherwise, you may get commits from other branches inside your PR.
-___________________________________________________________________________________
 
 [[fix-the-issue-in-the-new-branch]]
 ==== Fix the issue in the new branch
@@ -85,37 +87,46 @@ ________________________________________________________________________________
 Resist the urge to do unrelated 'minor cleanups' in the same PR. If you notice such potential clean ups,
 create an issue for it (those can be a good source of `d.FirstTimers` issues).
 +
-_____________________________________________________________________________________________________________
-Rationale: We should be able to undo any fix by reverting a single commit. Fixing multiple issues in the same
+[NOTE,caption=Rationale]
+====
+We should be able to undo any fix by reverting a single commit. Fixing multiple issues in the same
 PR gets in the way of that ability.
-_____________________________________________________________________________________________________________
+====
+
 * [x] In addition to updating functional code, update relevant code comments, tests, user docs, and developer docs.
 * [x] Ensure that the tests are passing in your local environment.
 * [x] Sync your fork with upstream changes
 +
-_____________________________________________________________________________________________________________________
-More info: <<HowToGuides.adoc#sync-a-fork-with-upstream-changes,How to Guides +++::+++ Sync a fork with upstream changes>>.
-_____________________________________________________________________________________________________________________
+[NOTE,caption=More info]
+====
+<<HowToGuides.adoc#sync-a-fork-with-upstream-changes,How to Guides +++::+++ Sync a fork with upstream changes>>.
+====
 
 Following these tips will help you in subsequent steps of the workflow:
 
 * Commit often.
 +
-___________________________________________________________________________________________________
-Rationale: The smaller the size of each commit, the easier it is to reorganize them later to form a
+[NOTE,caption=Rationale]
+====
+The smaller the size of each commit, the easier it is to reorganize them later to form a
 more meaningful commit sequence.
-___________________________________________________________________________________________________
+====
+
 * Keep the PR branch free of merge commits (i.e. `rebase` instead of `merge` when syncing with upstream repo).
 +
-______________________________________________________________________________________________
-Rationale: Merge commits in a branch make it harder to reorganize commits in the branch later.
-______________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+Merge commits in a branch make it harder to reorganize commits in the branch later.
+====
+
 * Avoid pushing to a shared repo during this stage (but you can push to your own fork).
 +
-______________________________________________________________________________________________
-Rationale: We expect the commits to be edited at a later stage.
+[NOTE,caption=Rationale]
+====
+We expect the commits to be edited at a later stage.
 It is not recommended to edit commits that may have already propagated to repos of other devs.
-______________________________________________________________________________________________
+====
+
 * If the project uses any other static analysis tools (e.g. checkstyle), use them to detect any potential problems
 in the new code.
 
@@ -125,9 +136,10 @@ in the new code.
 * Go through the commit diffs and revert any changes unrelated to the PR. e.g. auto-updates done by the IDE.
 * Refactor the commits to meet <<FormatsAndConventions.adoc#commit-organization,our requirements for commit organization>>.
 +
-__________________________________________________________________________________
-More info: <<HowToGuides.adoc#refactor-commits,How to Guides +++::+++ Refactor Commits>>
-__________________________________________________________________________________
+[NOTE,caption=More info]
+====
+<<HowToGuides.adoc#refactor-commits,How to Guides +++::+++ Refactor Commits>>
+====
 
 [[create-a-pr]]
 ==== Create a PR
@@ -139,10 +151,11 @@ relevant issue and
 https://help.github.com/articles/closing-issues-via-commit-messages/[auto-close the issue when the PR is merged].
 You can look at https://github.com/se-edu/addressbook-level4/pull/237[this PR] for an example.
 
-_______________________________________________________________________________________________________
+[TIP]
+====
 You may create a PR even before you are done with the fix, if you want to seek some early feedback from
 the dev team.
-_______________________________________________________________________________________________________
+====
 
 [[request-a-review]]
 ==== Request a review
@@ -166,15 +179,19 @@ https://github.com/se-edu/addressbook-level4/pull/209#issuecomment-270905049[thi
 . Wait until all assigned reviewers have signified that they have finished reviewing the PR (e.g. by applying the
 `s.Ongoing` label). If you are not sure, post a comment requesting a confirmation.
 +
-_______________________________________________________________________________
-Rationale: Updating the PR while a review is in progress can confuse reviewers.
-_______________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+Updating the PR while a review is in progress can confuse reviewers.
+====
+
 . Update the commits as suggested by the reviewers.
 * Updates to existing logical changes should be done by modifying their corresponding commits.
 +
-__________________________________________________________________________________
-More info: <<HowToGuides.adoc#refactor-commits,How to Guides +++::+++ Refactor Commits>>
-__________________________________________________________________________________
+[NOTE,caption=More info]
+====
+<<HowToGuides.adoc#refactor-commits,How to Guides +++::+++ Refactor Commits>>
+====
+
 * New logical changes should be introduced as new commits.
 * Sometimes, reviewers may recommend
 http://sethrobertson.github.io/GitPostProduction/gpp.html#post-production[splitting existing commits]

@@ -25,15 +25,14 @@ toc::[]
 com.company.application.ui
 ----
 
-____________________________________________________________________________________________
-https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html[More on package naming]
-____________________________________________________________________________________________
+TIP: https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html[More on package naming]
 
 For school projects, the root name of the package should be your group name or project name followed by logical group names.`e.g. todobuddy.ui, todobuddy.file etc`.
 
-______________________________________________________________________________________________________________________
-Rationale: Your code is not officially ‘_produced by NUS_’, therefore do not use `edu.nus.comp.*` or anything similar.
-______________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+Your code is not officially ‘_produced by NUS_’, therefore do not use `edu.nus.comp.*` or anything similar.
+====
 
 *2. ⭐ Class/enum names must be nouns and written in PascalCase.*
 
@@ -95,17 +94,19 @@ openDVDPlayer();
 
 *7. ⭐ All names should be written in English.*
 
-___________________________________________________________
-Rationale: The code is meant for an international audience.
-___________________________________________________________
+[NOTE,caption=Rationale]
+====
+The code is meant for an international audience.
+====
 
 *8. ⭐⭐ Variables with a large scope should have long names, variables with a small scope can have short names.*
 
 Scratch variables used for temporary storage or indices can be kept short. A programmer reading such variables should be able to assume that its value is not used outside a few lines of code. Common scratch variables for integers are `i, j, k, m, n` and for characters `c` and `d`.
 
-_____________________________________________________________________________________
-Rationale: When the scope is small, the reader does not have to remember it for long.
-_____________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+When the scope is small, the reader does not have to remember it for long.
+====
 
 *9. ⭐ Boolean variables/methods should be named to sound like booleans ‘is’*
 
@@ -127,9 +128,10 @@ Setter methods for boolean variables must be of the form:
 void setFound(boolean isFound);
 ----
 
-____________________________________________________________________________________________________________________________________________________________________________
-Rationale: This is the naming convention for boolean methods and variables used by Java core packages. It also makes the code read like normal English e.g. `if(isOpen) ...`
-____________________________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+This is the naming convention for boolean methods and variables used by Java core packages. It also makes the code read like normal English e.g. `if(isOpen) ...`
+====
 
 *10. ⭐⭐ Plural form should be used on names representing a collection of objects.*
 
@@ -139,9 +141,10 @@ Collection<Point> points;
 int[] values;
 ----
 
-______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-Rationale: Enhances readability since the name gives the user an immediate clue of the type of the variable and the operations that can be performed on its elements. One space character after the variable type is enough to obtain clarity.
-______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+Enhances readability since the name gives the user an immediate clue of the type of the variable and the operations that can be performed on its elements. One space character after the variable type is enough to obtain clarity.
+====
 
 *11. ⭐ Iterator variables can be called _i_, _j_, _k_ etc.*
 
@@ -158,9 +161,10 @@ for (int i = 0; i < nTables; i++) {
 }
 ----
 
-_________________________________________________________________________________________________________________
-Rationale: The notation is taken from mathematics where it is an established convention for indicating iterators.
-_________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+The notation is taken from mathematics where it is an established convention for indicating iterators.
+====
 
 *12. ⭐⭐ Associated constants (final variables) should be prefixed by a common type name.*
 
@@ -171,9 +175,10 @@ final int COLOR_GREEN = 2;
 final int COLOR_BLUE  = 3;
 ----
 
-_______________________________________________________________________________________________________________________
-Rationale: This indicates that the constants belong together, and make them appear together when sorted alphabetically.
-_______________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+This indicates that the constants belong together, and make them appear together when sorted alphabetically.
+====
 
 [[layout]]
 == *Layout*
@@ -187,9 +192,10 @@ for (i = 0; i < nElements; i++) {
 }
 ----
 
-_____________________________________
-Rationale: Just follow it :trollface:
-_____________________________________
+[NOTE,caption=Rationale]
+====
+Just follow it :trollface:
+====
 
 *2. ⭐ Keep lines no longer than 120 chars.*
 
@@ -323,9 +329,10 @@ while (!done)
 
 |===
 
-______________________________________
-Rationale: Just follow it. :trollface:
-______________________________________
+[NOTE,caption=Rationale]
+====
+Just follow it. :trollface:
+====
 
 *5. ⭐ Method definitions should have the following form:*
 
@@ -408,9 +415,10 @@ default:
 
 The explicit `//Fallthrough` comment should be included whenever there is a `case` statement without a break statement.
 
-____________________________________________________________________________________________________________________________
-Rationale: Leaving out the `break` is a common error, and it must be made clear that it is intentional when it is not there.
-____________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+Leaving out the `break` is a common error, and it must be made clear that it is intentional when it is not there.
+====
 
 *11. ⭐ A _try-catch_ statement should have the following form:*
 
@@ -534,9 +542,10 @@ Enhances readability by introducing white space between logical units. Each bloc
 
 Every class should be part of some package.
 
-____________________________________________________________________________________________________________________________________
-Rationale: It will help you and other developers easily understand the code base when all the classes have been grouped in packages.
-____________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+It will help you and other developers easily understand the code base when all the classes have been grouped in packages.
+====
 
 *1b. ⭐⭐⭐ Put related classes in a single package.*
 
@@ -544,9 +553,10 @@ Package together the classes that are related. For example in Java, the classes 
 
 *2. ⭐⭐ The ordering of import statements must be consistent.*
 
-____________________________________________________________________________________________________________________________________________________
-Rationale: A consistent ordering of import statements makes it easier to browse the list and determine the dependencies when there are many imports.
-____________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+A consistent ordering of import statements makes it easier to browse the list and determine the dependencies when there are many imports.
+====
 
 Example:
 
@@ -571,9 +581,7 @@ import javafx.geometry.Point2D;
 import junit.framework.AssertionFailedError;
 ----
 
-_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-_Tip: IDEs have support for auto-ordering import statements._ However, note that the default orderings of different IDEs are not always the same. It is recommended that you and your team use the same IDE and stick to a consistent ordering.
-_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+TIP: IDEs have support for auto-ordering import statements. However, note that the default orderings of different IDEs are not always the same. It is recommended that you and your team use the same IDE and stick to a consistent ordering.
 
 *3. ⭐ Imported classes should always be listed explicitly.*
 
@@ -597,9 +605,10 @@ import java.util.*;
 
 |===
 
-_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-Rationale: Importing classes explicitly gives an excellent documentation value for the class at hand and makes the class easier to comprehend and maintain. Appropriate tools should be used in order to always keep the import list minimal and up to date. IDE's can be configured to do this easily.
-_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+Importing classes explicitly gives an excellent documentation value for the class at hand and makes the class easier to comprehend and maintain. Appropriate tools should be used in order to always keep the import list minimal and up to date. IDE's can be configured to do this easily.
+====
 
 [[classes-and-interfaces]]
 === *Classes and Interfaces*
@@ -613,9 +622,10 @@ ________________________________________________________________________________
 . Constructors
 . Methods (no specific order)
 
-_______________________________________________________________________________________________
-Rationale: Make code easy to navigate by making the location of each class element predictable.
-_______________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+Make code easy to navigate by making the location of each class element predictable.
+====
 
 [[methods]]
 === *Methods*
@@ -650,9 +660,10 @@ static public double square(double a);
 <unusual> = volatile | transient 
 ----
 
-___________________________________________________________________________________________________________________________________________________________________________________________________
-Rationale: The most important point here is to keep the _access_ modifier as the first modifier. The order is less important for the other modifiers, but it make sense to have a fixed convention.
-___________________________________________________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+The most important point here is to keep the _access_ modifier as the first modifier. The order is less important for the other modifiers, but it make sense to have a fixed convention.
+====
 
 [[types]]
 === *Types*
@@ -677,9 +688,10 @@ int a[] = new int[20];
 
 |===
 
-___________________________________________________________________________________________________________
-Rationale: The _arrayness_ is a feature of the base type, not the variable. Java allows both forms however.
-___________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+The _arrayness_ is a feature of the base type, not the variable. Java allows both forms however.
+====
 
 [[variables]]
 === *Variables*
@@ -715,9 +727,10 @@ for (i = 0; i < 10; i++) {
 
 |===
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-Rationale: This ensures that variables are valid at any time. Sometimes it is impossible to initialize a variable to a valid value where it is declared. In these cases it should be left uninitialized rather than initialized to some phony value.
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+This ensures that variables are valid at any time. Sometimes it is impossible to initialize a variable to a valid value where it is declared. In these cases it should be left uninitialized rather than initialized to some phony value.
+====
 
 *8. ⭐⭐ Class variables should never be declared public.*
 
@@ -737,9 +750,10 @@ public class Foo{
 
 |===
 
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-Rationale: The concept of Java information hiding and encapsulation is violated by public variables. Use private variables and access functions instead. One exception to this rule is when the class is essentially a data structure, with no behavior. In this case it is appropriate to make the class' instance variables public.
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+The concept of Java information hiding and encapsulation is violated by public variables. Use private variables and access functions instead. One exception to this rule is when the class is essentially a data structure, with no behavior. In this case it is appropriate to make the class' instance variables public.
+====
 
 *9. ⭐⭐⭐ Avoid unnecessary use of `this` with fields.*
 
@@ -770,9 +784,10 @@ public User(String name) {
 
 |===
 
-_______________________________________
-Rationale: to reduce unnecessary noise.
-_______________________________________
+[NOTE,caption=Rationale]
+====
+To reduce unnecessary noise.
+====
 
 [[loops]]
 === *Loops*
@@ -801,9 +816,10 @@ for (i = 0, sum = 0; i < 100; i++)
 
 |===
 
-_____________________________________________________________________________________________________________________________________________________________________________________________________
-Rationale: When there is only one statement in the loop body, Java allows it to be written without wrapping it between `{ }`. However that is error prone and _very_ strongly discouraged from using.
-_____________________________________________________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+When there is only one statement in the loop body, Java allows it to be written without wrapping it between `{ }`. However that is error prone and _very_ strongly discouraged from using.
+====
 
 [[conditionals]]
 === *Conditionals*
@@ -830,9 +846,10 @@ if (isDone) doCleanup();
 
 |===
 
-__________________________________________________________________________________________________________________________________________________________
-Rationale: This helps when debugging using an IDE debugger. When writing on a single line, it is not apparent whether the condition is really true or not.
-__________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+This helps when debugging using an IDE debugger. When writing on a single line, it is not apparent whether the condition is really true or not.
+====
 
 *12. ⭐ Single statement conditionals should still be wrapped by curly brackets.*
 
@@ -861,9 +878,10 @@ if (stream != null))
 
 The body of the conditional should be wrapped by curly brackets irrespective of how many statements.
 
-___________________________________________________
-Rationale: Omitting braces can lead to subtle bugs.
-___________________________________________________
+[NOTE,caption=Rationale]
+====
+Omitting braces can lead to subtle bugs.
+====
 
 [[comments]]
 == *Comments*
@@ -872,23 +890,26 @@ ___________________________________________________
 
 Furthermore, use American spelling and avoid local slang.
 
-___________________________________________________________
-Rationale: The code is meant for an international audience.
-___________________________________________________________
+[NOTE,caption=Rationale]
+====
+The code is meant for an international audience.
+====
 
 *1. ⭐⭐ Write descriptive header comments for all public classes/methods.*
 
 You MUST write header comments for all classes, public methods.
 
-_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-Rationale: `public` method are meant to be used by others and the users should not be forced to read the code of the method to understand its exact behavior. The code, even if it is self-explanatory, can only tell the reader HOW the code works, not WHAT the code is supposed to do.
-_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+`public` method are meant to be used by others and the users should not be forced to read the code of the method to understand its exact behavior. The code, even if it is self-explanatory, can only tell the reader HOW the code works, not WHAT the code is supposed to do.
+====
 
 *2. ⭐⭐⭐ All non-trivial private methods should carry header comments.*
 
-_______________________________________________________________________________________________________________________________________________________________________________________________________________
-Rationale: Writing header comments will hep novice programmers to self-detect abstraction problems. e.g. If it is hard to describe the method succinctly, there is something wrong with the method abstraction.
-_______________________________________________________________________________________________________________________________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+Writing header comments will hep novice programmers to self-detect abstraction problems. e.g. If it is hard to describe the method succinctly, there is something wrong with the method abstraction.
+====
 
 *3. ⭐⭐ Javadoc comments should have the following form:*
 
@@ -964,9 +985,10 @@ while (true) {
 
 |===
 
-____________________________________________________________________________________________
-Rationale: This is to avoid the comments from breaking the logical structure of the program.
-____________________________________________________________________________________________
+[NOTE,caption=Rationale]
+====
+This is to avoid the comments from breaking the logical structure of the program.
+====
 
 [[references]]
 == References

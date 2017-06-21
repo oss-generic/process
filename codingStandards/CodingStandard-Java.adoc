@@ -25,9 +25,7 @@ The usual convention in package names is that the prefix should be the internet 
 
 However, for your projects, the root name of the package should be your group name or project name followed by logical group names.`e.g. todobuddy.ui, todobuddy.file etc`.
 
-___________________________________________________________________________________________________________________
-Note: Your code is not officially ‘__produced by NUS__’, therefore do not use `edu.nus.comp.*` or anything similar.
-___________________________________________________________________________________________________________________
+NOTE: Your code is not officially ‘__produced by NUS__’, therefore do not use `edu.nus.comp.*` or anything similar.
 
 *2. Names representing classes or enum types must be nouns and written in mixed case starting with upper case.*
 
@@ -94,9 +92,7 @@ Another problem is illustrated in the examples above. When abbreviations/acronym
 
 As a result, minimize usage of abbreviations/acronyms, unless the concepts they are referring to are better known otherwise
 
-____________________________________________________________________________________
-Note: A key point here is to use whatever that is easily understood by other people.
-____________________________________________________________________________________
+NOTE: A key point here is to use whatever that is easily understood by other people.
 
 *7. Private class variables can have underscore suffix or prefix (not common, but a beneficial practice)*
 
@@ -157,9 +153,7 @@ boolean canEvaluate();
 boolean shouldAbort = false;
 ----
 
-_____________________________________________________________________________________________________________________________
-Note: Avoid boolean variables that represent the negation of a thing. e.g., use `isInitialized` instead of `isNotInitialized`
-_____________________________________________________________________________________________________________________________
+NOTE: Avoid boolean variables that represent the negation of a thing. e.g., use `isInitialized` instead of `isNotInitialized`
 
 *11. Plural form should be used on names representing a collection of objects.*
 
@@ -458,9 +452,7 @@ import javafx.geometry.Point2D;
 import junit.framework.AssertionFailedError;
 ----
 
-______________________________________________________________________________________________
-_Hint: You can organise the imports automatically by simply pressing CTRL+SHIFT+O in Eclipse._
-______________________________________________________________________________________________
+TIP: You can organise the imports automatically by simply pressing CTRL+SHIFT+O in Eclipse.
 
 However, note that the default orderings of different IDEs are not always the same. It is recommended that you and your team use the same IDE and stick to a consistent ordering.
 
@@ -493,14 +485,12 @@ Importing classes explicitly gives an excellent documentation value for the clas
 
 *4. Class and Interface declarations should be organized in the following manner:*
 
-______________________________________________________________________________________________________________
 . Class/Interface documentation (Comments)
 . *class* or *interface* statement
 . Class (static) variables in the order **public**, **protected**, *package* (no access modifier), *private*
 . Instance variables in the order **public**, **protected**, *package* (no access modifier), *private*
 . Constructors
 . Methods (no specific order)
-______________________________________________________________________________________________________________
 
 Make code easy to navigate by making the location of each class element predictable.
 Methods
@@ -719,13 +709,9 @@ The body of the conditional should be wrapped by curly brackets irrespective of 
 [[layout-and-comments]]
 == *Layout and Comments*
 
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-Note: Many of the layout rules mentioned below can be applied in Eclipse by simply pressing _CTRL+SHIFT+F_ (F for Format). If you want to format only a specific part of the code instead of the whole class, highlight the lines you want to format and then press __CTRL+SHIFT+F__. The Eclipse formatter will *not* work properly if you have intentionally pressed _enter/tab/space_ keys in unwanted places. Therefore, even if you do use the Eclipse formatter, we highly recommend that you *double check* whether your code is in accordance with the rules mentioned below.
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+NOTE: Many of the layout rules mentioned below can be applied in Eclipse by simply pressing _CTRL+SHIFT+F_ (F for Format). If you want to format only a specific part of the code instead of the whole class, highlight the lines you want to format and then press __CTRL+SHIFT+F__. The Eclipse formatter will *not* work properly if you have intentionally pressed _enter/tab/space_ keys in unwanted places. Therefore, even if you do use the Eclipse formatter, we highly recommend that you *double check* whether your code is in accordance with the rules mentioned below.
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-Note: Another option is to use the Correct Indentation function found in Eclipse. This can be accessed by clicking `Source -> Correct Indentation (Ctrl-I)` . This function will merely indent the code instead of formatting it as compared with the Format function above.
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+NOTE: Another option is to use the Correct Indentation function found in Eclipse. This can be accessed by clicking `Source -> Correct Indentation (Ctrl-I)` . This function will merely indent the code instead of formatting it as compared with the Format function above.
 
 [[layout]]
 === *Layout*
@@ -885,13 +871,11 @@ This follows partly from the general block rule above. This form differs from th
 
 *10. Take note of the following:*
 
-___________________________________________________________________________________________________________________
 * Operators should be surrounded by a space character.
 * Java reserved words should be followed by a white space.
 * Commas should be followed by a white space.
 * Colons should be surrounded by white space when used as a binary/ternary operator. Does not apply to `switch x:`.
 * Semicolons in for statements should be followed by a space character.
-___________________________________________________________________________________________________________________
 
 [cols="a,a"]
 |===
@@ -1009,7 +993,6 @@ A readable form is important because this type of documentation is typically rea
 
 Note in particular:
 
-___________________________________________________________________________________________________________________________________________________________________________
 * The opening `/**` on a separate line
 * Write the first sentence as a short summary of the method, as Javadoc automatically places it in the method summary table (and index). See here (from [5]) for more info.
 * Subsequent `*` is aligned with the first one
@@ -1018,7 +1001,6 @@ ________________________________________________________________________________
 * Alignment of parameter descriptions
 * Punctuation behind each parameter description
 -No blank line between the documentation block and the method/class
-___________________________________________________________________________________________________________________________________________________________________________
 
 Javadoc of class members can be specified on a single line as follows:
 

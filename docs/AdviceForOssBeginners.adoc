@@ -29,10 +29,8 @@ right resource (Google, StackOverflow, troubleshooting guides, issue tracker, et
 While the dev team members will be glad to answer your questions, you will not make a good impression if you
 ask questions which are already answered in the mentioned resources.
 
-__________________________________________________________________________________________________
-Tip: When searching the GitHub issue tracker, note that the default result shows open issues only.
+TIP: When searching the GitHub issue tracker, note that the default result shows open issues only.
 Remember to click on the 'closed' tab to view closed issues that are related to your search.
-__________________________________________________________________________________________________
 
 [[quality-speed]]
 == Quality > Speed

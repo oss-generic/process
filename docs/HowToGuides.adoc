@@ -19,12 +19,12 @@ Refer to http://stackoverflow.com/a/1186549[this S/O post] for more help on edit
 [[sync-a-fork-with-upstream-changes]]
 == Sync a fork with upstream changes
 
-1.  Update the `master` branch of your local clone.
+. Update the `master` branch of your local clone.
 https://help.github.com/articles/syncing-a-fork/[Here] are the instructions.
-2.  Push your `master` branch to your fork (if you are creating PRs using a fork).
-3.  Sync your branch with the `master` branch. This can be done in two ways:
-4.  Merge `master` to your branch (recommended option for new contributors).
-5.  Rebase the PR branch on the `master` branch (recommended option for experienced contributors).
+. Push your `master` branch to your fork (if you are creating PRs using a fork).
+. Sync your branch with the `master` branch. This can be done in two ways:
+. Merge `master` to your branch (recommended option for new contributors).
+. Rebase the PR branch on the `master` branch (recommended option for experienced contributors).
 
 [[implement-big-features-using-long-lived-feature-branches]]
 == Implement big features using long-lived feature branches

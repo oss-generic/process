@@ -39,22 +39,22 @@ the `release` branch is merged back to `master`.
 [[making-a-release]]
 == Making a release
 
-1.  Ensure the target commit on `master` is not broken.
-2.  Merge to `release` branch.
-3.  Create a release.
-4.  If PM (Project Manager) needs to do extra steps to 'deploy' the new version,
+. Ensure the target commit on `master` is not broken.
+. Merge to `release` branch.
+. Create a release.
+. If PM (Project Manager) needs to do extra steps to 'deploy' the new version,
 create an issue on issue tracker and assign to PM.
-5.  Ensure all issues and PRs included in the release are tagged with the
+. Ensure all issues and PRs included in the release are tagged with the
 correct milestone and the correct assignees.
-6.  Extend the milestone of issues that slipped the current milestone and post
+. Extend the milestone of issues that slipped the current milestone and post
 a comment asking to finish by next milestone. If an issue is not making
 progress, close the PR and un-assign the issue.
-7.  If applicable, add/revise `e.` labels for the issues/PRs in the release.
+. If applicable, add/revise `e.` labels for the issues/PRs in the release.
 This may be required for contributors who need to track their effort (e.g. for payments or school credits).
 If the you are not sure of the effort, post a comment for the reviewer to add the labels.
-8.  Ensure all branches merged in the milestone have been deleted on GitHub.
-9.  Update (or create an issue for updating) contributor list in the project website.
-10. Announce the release on relevant channels (e.g. slack, issue tracker).
-11. Close the current milestone and create a new milestone for the next release.
-12. Ensure all pending `p.Urgent` issues are assigned and scheduled for next milestone.
+. Ensure all branches merged in the milestone have been deleted on GitHub.
+. Update (or create an issue for updating) contributor list in the project website.
+. Announce the release on relevant channels (e.g. slack, issue tracker).
+. Close the current milestone and create a new milestone for the next release.
+. Ensure all pending `p.Urgent` issues are assigned and scheduled for next milestone.
 Try to find volunteers for any `p.High` issues. You can require project lead's assistance for this task.

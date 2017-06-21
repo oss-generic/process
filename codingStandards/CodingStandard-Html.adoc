@@ -1,9 +1,7 @@
-[[html-style-guide]]
 = HTML Style Guide
 :toc:
 :toc-title:
 
-[[document-properties]]
 == Document Properties
 
 * *We will use the HTML5 Doctype and HTML5 features*
@@ -58,13 +56,11 @@ Inline styling should not be used, and should be minimized if its usage is reall
 </html>
 ----
 
-[[external-files]]
 == External Files
 
 * Each webpage should include it's own css file if there is any, as well as the general css file.
 * Each webpage should include it's own javascript file(if necessary), as well as the respective common.js and all the 3rd party js files.
 
-[[tags]]
 == Tags
 
 * All HTML tags are to be closed properly.
@@ -132,7 +128,6 @@ The full list of HTML void elements can be accessed http://www.w3.org/TR/html-ma
 
 |===
 
-[[attributes]]
 == Attributes
 
 * Use [attr="value"] for attribute values.
@@ -164,7 +159,6 @@ The full list of HTML void elements can be accessed http://www.w3.org/TR/html-ma
 
 |===
 
-[[naming-convention]]
 == Naming convention
 
 * Class
@@ -174,13 +168,11 @@ lower-case, join-by-hyphen.
 
 `html   header-content-week3`
 
-[[indentation]]
 == Indentation
 
 * Indentation should be 2 spaces for html files.
 * Spaces should be used instead of `tab`.
 
-[[miscellaneous]]
 == Miscellaneous
 
 * Take note of script tags.

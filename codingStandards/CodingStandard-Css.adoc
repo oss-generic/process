@@ -1,9 +1,7 @@
-[[css-coding-standard]]
 = CSS Coding Standard
 :toc:
 :toc-title:
 
-[[general]]
 == General
 
 * Use the https://google.github.io/styleguide/htmlcssguide.xml[Google CSS Style Guide]
@@ -17,7 +15,6 @@ By segmenting the file(s) in this logical way, it is easy to locate css rules an
 being added is not already present.
 ====
 
-[[css-files]]
 == CSS Files
 
 * CSS file includes must be done using `<link>` tags in the HTML/JSP files and NOT using `@import` in other css files.
@@ -56,7 +53,6 @@ image:Bad.png[image]
 
 `html   <div id="mainDiv" style="border: thin solid black; margin: auto">`
 
-[[selectors]]
 == Selectors
 
 * Do not use CSS3 selectors.
@@ -70,7 +66,6 @@ Also, we can stick to more functional names for the css and use classes to achie
 → more readable and easier to manage.
 ====
 
-[[selector-formatting]]
 === Selector Formatting
 
 * The selector(s) must be specified in separate lines.
@@ -98,7 +93,6 @@ In addition this gives an immediate idea as to how certain classes are being use
 (from the hierarchy) without actually reading HTML files.
 ====
 
-[[use-of-efficient-selectors]]
 === Use of Efficient Selectors
 
 * Do not qualify class/ID selectors using tag names (do not use: `div.mainContent`, simply use `.mainContent`).
@@ -123,10 +117,8 @@ This is a strong recommendation as descendant selector is extremely expensive, e
 specified ancestor has a lot of descendants.
 ====
 
-[[classes]]
 == Classes
 
-[[naming-classes]]
 === Naming Classes
 
 * Use all lowercase letters.
@@ -154,10 +146,8 @@ image:Bad.png[image]
 * If the component does not have any recurring function, utilise the generic classes to achieve the styling.
 * *Exception:* If a particular element requires too many generic classes ( > 5) create a functional class name for it.
 
-[[attributes]]
 == Attributes
 
-[[order-of-attributes]]
 === Order of Attributes
 
 * Alphabetize the attributes, disregarding any browser prefix.
@@ -176,7 +166,6 @@ image:Bad.png[image]
 
 `css   .sort-icon {      width: 12px;      height: 17px;      display: block;      margin-top: 1px;      float: right;   }`
 
-[[attribute-formatting]]
 === Attribute Formatting
 
 * Semicolon after every attribute specification.
@@ -188,7 +177,6 @@ image:Bad.png[image]
 Refer to http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices[Writing Your Best Code]
 for examples.
 
-[[general-details]]
 == General Details
 
 * Use shorthands as much as possible (eg `border: 2px 0 1px 4px`).
@@ -205,16 +193,13 @@ image:Bad.png[image]
 
 `css    margin: 10px 0 !important;`
 
-[[resources]]
 == Resources
 
-[[highly-recommended]]
 === Highly Recommended
 
 * https://google.github.io/styleguide/htmlcssguide.xml[Google CSS Style Guide]
 * http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices[Writing Your Best Code - CSS Coding Practices]
 
-[[other-readings]]
 === Other Readings
 
 * https://code.tutsplus.com/tutorials/30-css-best-practices-for-beginners--net-6741[30 CSS Best Practices For Beginners]

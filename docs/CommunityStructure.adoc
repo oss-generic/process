@@ -1,15 +1,11 @@
-[[community-structure]]
 = Community Structure
 
-[[membership-levels]]
 == Membership Levels
 
-[[level-1-contributor]]
 === [Level 1] `Contributor`
 
 * Criteria: 1 merged PR.
 
-[[level-2-committer]]
 === [Level 2] `Committer`
 
 * Criteria: At least a month of contributions.
@@ -17,7 +13,6 @@
 * Write access to upstream repo (push, edit label)
 * Activity level: Should contribute to most release cycles
 
-[[level-3-snr-developer]]
 === [Level 3] `Snr Developer`
 
 * Criteria: More than three months of active contributions.
@@ -25,7 +20,6 @@
 * Peer review other PRs
 * Activity level: Should contribute to almost all release cycles
 
-[[level-4-area-lead]]
 === [Level 4] `Area Lead`
 
 * Criteria: Has a deep knowledge of the respective feature/aspect/tech/tool.
@@ -34,20 +28,17 @@
 * Follow up on incoming issues related to the area
 * Fix critical/urgent issues in the area
 
-[[release-lead]]
 ==== Release Lead
 
 * Make releases as described in <<ManagingReleases.adoc#,here>>
 * Activity level: Once per release cycle
 
-[[community-lead]]
 ==== Community Lead
 
 * Responsibilities:
 * Respond to first contacts from potential contributors
 * Activity level: Daily
 
-[[level-5-project-lead]]
 === [Level 5] `Project Lead`
 
 * Privileges: admin access to repo
@@ -58,7 +49,6 @@
 * Can take part in issue triaging
 * Activity level: Daily
 
-[[level-6-project-adviser]]
 === [Level 6] `Project Adviser`
 
 * Criteria: Can advice devs based on,
@@ -67,7 +57,6 @@
 * Responsibilities:
 ** Contributes to the project as a reviewer and an area expert
 
-[[level-7-project-manager]]
 === [Level 7] `Project Manager`
 
 In charge of the entire project.
@@ -76,7 +65,6 @@ In charge of the entire project.
 * Triaging issues
 * Activity level: Daily
 
-[[other-classifications]]
 == Other Classifications
 
 * **`Active members`**: Someone who contributes code/reviews to almost every release cycle,
@@ -85,7 +73,6 @@ thereby helping to maintain the project velocity. +
 * **`Lead members`**: Core members who are at level 4 or above.
 * **`Past members`**: Past core members who are no longer active.
 
-[[github-permissions]]
 == GitHub Permissions
 
 [cols=",,",options="header",]

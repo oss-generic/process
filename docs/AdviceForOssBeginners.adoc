@@ -1,7 +1,5 @@
-[[advice-for-oss-beginners]]
 = Advice for OSS Beginners
 
-[[pay-attention-to-instructions]]
 == Pay attention to instructions
 
 Take your time to learn and follow the workflow to the letter.
@@ -11,7 +9,6 @@ instead of the latest version.
 * Do not skip any steps because you think that step is "not important".
 * Do not assume the current project does things the same way things were done in other projects you are familiar with.
 
-[[follow-others]]
 == Follow others
 
 OSS projects involve many persons contributing in small measures. If each person did things their own way, the project
@@ -21,7 +18,6 @@ In the absence of specific instructions, follow what others are doing so that yo
 of the project. For example, if you are not sure how detailed you should make commit messages, you can look at commit
 messages done by a senior member of the team and follow the same.
 
-[[do-your-homework]]
 == Do your homework
 
 Contributing to an OSS project requires you to figure out things on your own when you can, and seek help from the
@@ -32,7 +28,6 @@ ask questions which are already answered in the mentioned resources.
 TIP: When searching the GitHub issue tracker, note that the default result shows open issues only.
 Remember to click on the 'closed' tab to view closed issues that are related to your search.
 
-[[quality-speed]]
 == Quality > Speed
 
 Fixing an issue quickly is not the most important thing. In fact, issues given to new contributors are the ones

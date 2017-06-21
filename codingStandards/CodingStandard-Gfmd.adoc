@@ -1,10 +1,8 @@
-[[github-flavored-markdown-coding-standard]]
 = GitHub Flavored Markdown Coding Standard
 
 * The term 'markdown' in this document refers to __GitHub Flavored Markdown__.
 * Follow the syntax as specifed https://guides.github.com/features/mastering-markdown/[here].
 
-[[follow-strict-gfmd-syntax-to-be-compatible-with-github-pages]]
 == Follow strict GFMD syntax to be compatible with GitHub Pages
 
 Minor deviations from the markdown syntax are sometimes forgiven by GitHub markdown rendering but may not be forgiven
@@ -43,7 +41,6 @@ image:Bad.png[image]
 
 `markdown   > first line     second line`
 
-[[use-blank-lines-to-separate-headings]]
 == Use blank lines to separate headings
 
 image:Good.png[image]
@@ -63,7 +60,6 @@ image:Bad.png[image]
 Content of the paragraph.
 ----
 
-[[use-blockquotes-for-additional-info]]
 == Use blockquotes for additional info
 
 Blockquotes are usually used for additional info the reader can skip over.
@@ -75,7 +71,6 @@ image:Good.png[image]
 > Some additional info.
 ----
 
-[[use-generic-numbering-for-ordered-list]]
 == Use generic numbering for ordered list
 
 Using `1.` for every item in an ordered list can make it easy to insert more items later.

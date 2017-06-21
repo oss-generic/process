@@ -1,4 +1,3 @@
-[[coding-standards]]
 = Coding Standards
 
 Note that some projects might have additional guidelines for the languages they use.

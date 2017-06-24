@@ -75,7 +75,29 @@ async function asciidocToHtml(adocFile) {
     });
     const outputFile = path.join(destDir, path.dirname(adocFile), path.basename(adocFile, '.adoc')) + '.html';
     await mkdirp(path.dirname(outputFile));
+    if (path.basename(adocFile) === 'README.adoc') {
+        const indexOutputFile = path.join(destDir, path.dirname(adocFile), 'index.html');
+        await fs.writeFile(indexOutputFile, htmlOutput, 'utf-8');
+        await writeRedirectPage(outputFile);
+        return;
+    }
     await fs.writeFile(outputFile, htmlOutput, 'utf-8');
+}
+
+async function writeRedirectPage(file) {
+    const content = `
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="refresh" content="0; url=index.html">
+            </head>
+            <body>
+                Redirecting to <a href="index.html">index.html</a>
+            </body>
+        </html>
+    `.trim();
+    await fs.writeFile(file, content, 'utf-8');
 }
 
 async function copyMediaFiles() {

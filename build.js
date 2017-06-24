@@ -75,7 +75,35 @@ async function asciidocToHtml(adocFilename) {
     });
     const outputFilename = path.join(destDir, path.dirname(adocFilename), path.basename(adocFilename, '.adoc')) + '.html';
     await fs.mkdirs(path.dirname(outputFilename));
-    await fs.writeFile(outputFilename, htmlOutput);
+
+    if (path.basename(adocFilename) === 'README.adoc') {
+        const indexOutputFilename = path.join(destDir, path.dirname(adocFilename), 'index.html');
+        await fs.writeFile(indexOutputFilename, htmlOutput);
+        await writeRedirectPage(outputFilename);
+    } else {
+        await fs.writeFile(outputFilename, htmlOutput);
+    }
+}
+
+/**
+ * Writes a redirect page to `filename` that redirects to `index.html`.
+ *
+ * @param {string} filename - File to write the redirect page to.
+ */
+async function writeRedirectPage(filename) {
+    const content = `
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="refresh" content="0; url=index.html">
+            </head>
+            <body>
+                Redirecting to <a href="index.html">index.html</a>
+            </body>
+        </html>
+    `.trim();
+    await fs.writeFile(filename, content);
 }
 
 /**

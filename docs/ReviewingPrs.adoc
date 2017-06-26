@@ -96,4 +96,4 @@ current iteration), change the status label as follows:
 
 == Canned comments
 
-// TODO: add common comments that can be used when reviewing
+{blank}// TODO: add common comments that can be used when reviewing

@@ -267,8 +267,9 @@ someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName
 
 |
 [source,java]
+[subs="verbatim,attributes"]
 ----
-// PREFER THIS
+{blank}// PREFER THIS
 longName1 = longName2 * (longName3 + longName4 - longName5)
             + 4 * longname6;
 ----
@@ -281,8 +282,9 @@ longName1 = longName2 * (longName3 + longName4 - longName5)
 
 |
 [source,java]
+[subs="verbatim,attributes"]
 ----
-// OVER THIS
+{blank}// OVER THIS
 longName1 = longName2 * (longName3 + longName4
             - longName5) + 4 * longname6;
 ----
@@ -964,9 +966,10 @@ while (true) {
 
 |
 [source,java]
+[subs="verbatim,attributes"]
 ----
 while (true) {
-// Do something
+{blank}// Do something
     something();
 }
 ----

@@ -100,7 +100,7 @@
 
 - Void elements do not have a closing tag. Do not use <code>/></code> for void elements.
   Example of void elements are: `br`, `img`, `link`, `meta`.
-  The full list of HTML void elements can be accessed [here](http://www.w3.org/TR/html-markup/syntax.html#void-element).
+  The full list of HTML void elements can be accessed [here](http://www.w3.org/TR/html-markup/syntax.html#void-elements).
 
   <table>
     <tr>

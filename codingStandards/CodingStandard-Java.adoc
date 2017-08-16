@@ -879,7 +879,7 @@ Omitting braces can lead to subtle bugs.
 
 == *Comments*
 
-*2. {star} All comments should be written in English.*
+*1. {star} All comments should be written in English.*
 
 Furthermore, use American spelling and avoid local slang.
 
@@ -888,7 +888,7 @@ Furthermore, use American spelling and avoid local slang.
 The code is meant for an international audience.
 ====
 
-*1. {star}{star} Write descriptive header comments for all public classes/methods.*
+*2. {star}{star} Write descriptive header comments for all public classes/methods.*
 
 You MUST write header comments for all classes, public methods.
 
@@ -897,14 +897,14 @@ You MUST write header comments for all classes, public methods.
 `public` method are meant to be used by others and the users should not be forced to read the code of the method to understand its exact behavior. The code, even if it is self-explanatory, can only tell the reader HOW the code works, not WHAT the code is supposed to do.
 ====
 
-*2. {star}{star}{star} All non-trivial private methods should carry header comments.*
+*3. {star}{star}{star} All non-trivial private methods should carry header comments.*
 
 [NOTE,caption=Rationale]
 ====
 Writing header comments will hep novice programmers to self-detect abstraction problems. e.g. If it is hard to describe the method succinctly, there is something wrong with the method abstraction.
 ====
 
-*3. {star}{star} Javadoc comments should have the following form:*
+*4. {star}{star} Javadoc comments should have the following form:*
 
 [source,java]
 ----
@@ -943,7 +943,7 @@ Javadoc of class members can be specified on a single line as follows:
 private int connectionCount;
 ----
 
-*4. {star} Comments should be indented relative to their position in the code.*
+*5. {star} Comments should be indented relative to their position in the code.*
 
 [cols="a,a,a"]
 |===

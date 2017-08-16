@@ -1,0 +1,205 @@
+= Workflow for submitting Questions, Issues and PRs
+:toc:
+:toclevels: 1
+:toc-title:
+:sectnums:
+
+== Asking a Question
+
+Post your question in the issue tracker.
+See <<Posting an Issue>> for guidelines to follow when posting an issue.
+
+If you don't get an answer within 1-2 days, feel free to post another comment in the issue thread as a reminder.
+
+== Posting an Issue
+
+. Do a search in the issue tracker to ensure the same issue has not been posted before.
++
+IMPORTANT: If reporting a security vulnerability, send your bug report directly to the contact email of
+the project instead of posting it in the issue tracker.
+
+. Follow the <<FormatsAndConventions.adoc#issue,naming convention>> for the issue title.
+
+== Submitting a PR
+
+=== Before you start
+
+* Note that a project might specify variations to the instructions given in this document.
+For example, a project might specify additional _orientation activities_ to do before submitting a PR.
+Follow the instructions in this document in conjunction with those variations.
+* Note that by submitting a PR, you agree to allow the project owner to license your work under the same
+license as that used by the project.
+* Set up the project. These are the typical steps:
+
+. Fork the repo to your GitHub account.
+. Clone the code to your computer.
+. Follow the relevant sections of the _Developer Guide_ provided by the project to set up the project
+in your computer.
+. Ensure the setup is correct by getting all the tests to pass.
+
+=== PR workflow
+
+==== Select an issue to fix
+
+* Select an open issue from the issue tracker that you are interested to work on.
++
+[NOTE]
+====
+*Notes for first time contributors*:
+
+** First time contributors should start with an issue labelled `d.FirstTimers`, if any.
+** You should not do more than one `d.FirstTimers` issues.
+** You should wait till the first PR is merged before starting on more PRs.
+After you have one merged PR, you can work on multiple PRs in parallel.
+This restriction aims to save you from making the same mistake in multiple PRs.
+====
+
+* If the issue list does not contain what you want to work on, post an issue first (as described <<Posting an Issue,above>>)
+and wait for it to be acknowledged. Otherwise you could end up fixing something that does not need fixing.
+* It is not required to (but OK to) ask for permission to work on an issue.
+But do check the issue discussion thread to see if there are _active_ PRs for that issue.
+If someone is already working on that issue, perhaps your efforts are better spent on a different issue.
+However, it is acceptable to submit PRs containing alternative solutions even if there are active PRs for an issue.
+* If it seems the existing PRs for that issue are no longer active (e.g. no activity in the past seven days),
+you can always post a message to check if anybody is still working on that issue.
+
+==== Create a new branch
+
+Create a branch off the `master` branch.
+Follow <<FormatsAndConventions.adoc#branch,our naming conventions for branch names>>.
+
+WARNING: Make sure you branch off `master` rather than the currently active branch.
+Otherwise, you may get commits from other branches inside your PR.
+
+==== Fix the issue in the new branch
+
+* [x] Adhere to coding style and testing requirements of the project.
+* [x] Limit the changes to the scope of the issue you are fixing. Do not fix multiple issues in the same PR.
+Resist the urge to do unrelated 'minor cleanups' in the same PR. If you notice such potential clean ups,
+create an issue for it (those can be a good source of `d.FirstTimers` issues).
++
+[NOTE,caption=Rationale]
+====
+We should be able to undo any fix by reverting a single commit. Fixing multiple issues in the same
+PR gets in the way of that ability.
+====
+
+* [x] In addition to updating functional code, update relevant code comments, tests, user docs, and developer docs.
+* [x] Ensure that the tests are passing in your local environment.
+* [x] Sync your fork with upstream changes
++
+[NOTE,caption=More info]
+====
+<<HowToGuides.adoc#sync-a-fork-with-upstream-changes,How to Guides +++::+++ Sync a fork with upstream changes>>.
+====
+
+Following these tips will help you in subsequent steps of the workflow:
+
+* Commit often.
++
+[NOTE,caption=Rationale]
+====
+The smaller the size of each commit, the easier it is to reorganize them later to form a
+more meaningful commit sequence.
+====
+
+* Keep the PR branch free of merge commits (i.e. `rebase` instead of `merge` when syncing with upstream repo).
++
+[NOTE,caption=Rationale]
+====
+Merge commits in a branch make it harder to reorganize commits in the branch later.
+====
+
+* Avoid pushing to a shared repo during this stage (but you can push to your own fork).
++
+[NOTE,caption=Rationale]
+====
+We expect the commits to be edited at a later stage.
+It is not recommended to edit commits that may have already propagated to repos of other devs.
+====
+
+* If the project uses any other static analysis tools (e.g. checkstyle), use them to detect any potential problems
+in the new code.
+
+==== Prepare the commits for publishing
+
+* Go through the commit diffs and revert any changes unrelated to the PR. e.g. auto-updates done by the IDE.
+* Refactor the commits to meet <<FormatsAndConventions.adoc#commit-organization,our requirements for commit organization>>.
++
+[NOTE,caption=More info]
+====
+<<HowToGuides.adoc#refactor-commits,How to Guides +++::+++ Refactor Commits>>
+====
+
+==== Create a PR
+. Push the branch to your fork.
+. Create a PR.
+* [x] Follow the <<FormatsAndConventions.adoc#pr,naming conventions for PRs>>.
+* [x] Include `Fixes #IssueNumber` (e.g. `Fixes #1234`) in the PR description so that GitHub can auto-link the
+relevant issue and
+https://help.github.com/articles/closing-issues-via-commit-messages/[auto-close the issue when the PR is merged].
+You can look at https://github.com/se-edu/addressbook-level4/pull/237[this PR] for an example.
+
+[TIP]
+====
+You may create a PR even before you are done with the fix, if you want to seek some early feedback from
+the dev team.
+====
+
+==== Request a review
+. Wait for CI (i.e. Travis, AppVeyor) to run tests/checks against your PR and report status.
+If any errors are reported, fix those problems and push the fixes to the same branch.
+. Post a summary of commits using the
+https://github.com/pyokagan/canihasreview/[CanIHasReview tool].
++
+.How to use CanIHasReview
+****
+. Navigate to your PR. e.g. `https://github.com/se-edu/addressbook-level4/pull/237`.
+. Replace `github.com` in the PR URL with `canihasreview.pyokagan.com`. The resulting URL should be
+something like `https://canihasreview.pyokagan.com/se-edu/addressbook-level4/pull/237`.
+. Click `Submit new iteration` button. It will post a summary of the PR similar to
+https://github.com/se-edu/addressbook-level4/pull/209#issuecomment-270905049[this example].
+****
+
+* If you do not get any response from the dev team within 1-2 days, keep posting reminders in the PR thread.
+
+==== Revise the PR as per reviewer comments
+. Wait until all assigned reviewers have signified that they have finished reviewing the PR (e.g. by applying the
+`s.Ongoing` label). If you are not sure, post a comment requesting a confirmation.
++
+[NOTE,caption=Rationale]
+====
+Updating the PR while a review is in progress can confuse reviewers.
+====
+
+. Update the commits as suggested by the reviewers.
+* Updates to existing logical changes should be done by modifying their corresponding commits.
++
+[NOTE,caption=More info]
+====
+<<HowToGuides.adoc#refactor-commits,How to Guides +++::+++ Refactor Commits>>
+====
+
+* New logical changes should be introduced as new commits.
+* Sometimes, reviewers may recommend
+http://sethrobertson.github.io/GitPostProduction/gpp.html#post-production[splitting existing commits]
+in order to make them more cohesive.
+* Commit messages should be updated with new findings from review discussions.
+For example, if the reviewer mentioned a possible new approach that was subsequently rejected
+due to a non-obvious reason, then the commit should be updated with this information.
+. Sync your fork with upstream repo.
+* Rebase your branch instead of merging `master` branch to your branch.
+. Update the branch in your fork.
+. Use the same CanIHasReview tool used earlier to post a new commit summary and alert the reviewers.
+
+==== Refine the fix iteratively
+
+Repeat the review-refine cycle (explained above) until the PR is merged (usually done by a senior member of
+the project team).
+
+=== After the first PR is merged
+
+* After you have managed to get one PR merged, you can gradually move to harder issues,
+starting with issues labelled `d.Contributors`.
+* As harder issues take longer to finish, it is prudent to post a message in the issue to let others know that
+you are working on an issue.

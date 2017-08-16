@@ -1,0 +1,6 @@
+= Advanced Contributor Guidelines
+
+== Choosing issues
+
+* Follow issue priorities. Prefer to take higher priority issues over lower priority issues.
+* Favor issues related to certain features/aspects/techs to deepen expertise in those areas.

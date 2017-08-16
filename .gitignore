@@ -1,2 +1,5 @@
 *.xml
 *.iml
+/node_modules/
+/dist/
+/oss-generic-process-*.tgz

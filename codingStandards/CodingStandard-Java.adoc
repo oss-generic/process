@@ -17,7 +17,7 @@ Categories of style rules:
 
 toc::[]
 
-== *Naming Conventions*
+== Naming Conventions
 
 *1. {star} Names representing packages should be in all lower case.*
 
@@ -181,7 +181,7 @@ final int COLOR_BLUE  = 3;
 This indicates that the constants belong together, and make them appear together when sorted alphabetically.
 ====
 
-== *Layout*
+== Layout
 
 *1. {star} Basic indentation should be 4 spaces (not tabs).*
 
@@ -534,9 +534,9 @@ transformation.multiply(matrix);
 
 Enhances readability by introducing white space between logical units. Each block is often introduced by a comment as indicated in the example above.
 
-== *Statements*
+== Statements
 
-=== *Package and Import Statements*
+=== Package and Import Statements
 
 *1a. {star} Put every class in a package.*
 
@@ -610,7 +610,7 @@ import java.util.*;
 Importing classes explicitly gives an excellent documentation value for the class at hand and makes the class easier to comprehend and maintain. Appropriate tools should be used in order to always keep the import list minimal and up to date. IDE's can be configured to do this easily.
 ====
 
-=== *Classes and Interfaces*
+=== Classes and Interfaces
 
 *4. {star}{star}{star} Class and Interface declarations should be organized in the following manner:*
 
@@ -626,7 +626,7 @@ Importing classes explicitly gives an excellent documentation value for the clas
 Make code easy to navigate by making the location of each class element predictable.
 ====
 
-=== *Methods*
+=== Methods
 
 *5. {star}{star}{star} Method modifiers should be given in the following order:*
 
@@ -663,7 +663,7 @@ static public double square(double a);
 The most important point here is to keep the _access_ modifier as the first modifier. The order is less important for the other modifiers, but it make sense to have a fixed convention.
 ====
 
-=== *Types*
+=== Types
 
 *6. {star} Array specifiers must be attached to the type not the variable.*
 
@@ -690,7 +690,7 @@ int a[] = new int[20];
 The _arrayness_ is a feature of the base type, not the variable. Java allows both forms however.
 ====
 
-=== *Variables*
+=== Variables
 
 *7. {star}{star} Variables should be initialized where they are declared and they should be declared in the smallest scope possible.*
 
@@ -785,7 +785,7 @@ public User(String name) {
 To reduce unnecessary noise.
 ====
 
-=== *Loops*
+=== Loops
 
 *10. {star} The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body.*
 
@@ -816,7 +816,7 @@ for (i = 0, sum = 0; i < 100; i++)
 When there is only one statement in the loop body, Java allows it to be written without wrapping it between `{ }`. However that is error prone and _very_ strongly discouraged from using.
 ====
 
-=== *Conditionals*
+=== Conditionals
 
 *11. {star} The conditional should be put on a separate line.*
 
@@ -877,7 +877,7 @@ The body of the conditional should be wrapped by curly brackets irrespective of 
 Omitting braces can lead to subtle bugs.
 ====
 
-== *Comments*
+== Comments
 
 *1. {star} All comments should be written in English.*
 

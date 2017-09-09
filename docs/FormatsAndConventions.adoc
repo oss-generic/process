@@ -184,6 +184,7 @@ Build-breaking commits in the version history hinder the ability to use `git bis
 ====
 https://github.com/se-edu/addressbook-level4/pull/237[Here] is an example of a PR that is organized
 as described above.
+====
 +
 [NOTE]
 ====

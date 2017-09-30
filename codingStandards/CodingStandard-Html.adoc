@@ -19,7 +19,7 @@ Do *NOT* include xml namespace in the document.
 ----
 
 * *Character Encoding*
-All markup should be delivered via the following HTML element, and also as UTF-8, as its the most friendly for internationalization.
+All markup should be delivered via the following HTML element as UTF-8, as it is the most friendly for internationalization.
 +
 [source,html]
 ----

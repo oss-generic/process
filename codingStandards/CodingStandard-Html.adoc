@@ -19,11 +19,10 @@ Do *NOT* include xml namespace in the document.
 ----
 
 * *Character Encoding*
-All markup should be delivered as UTF-8, as its the most friendly for internationalization.
+All markup should be delivered via the following HTML element as UTF-8, as it is the most friendly for internationalization.
 +
 [source,html]
 ----
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 ----
 

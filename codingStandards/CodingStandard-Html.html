@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>HTML Style Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>HTML Style Guide</h1>
+<div id="toc" class="toc">
+<div id="toctitle"></div>
+<ul class="sectlevel1">
+<li><a href="#document-properties">Document Properties</a></li>
+<li><a href="#external-files">External Files</a></li>
+<li><a href="#tags">Tags</a></li>
+<li><a href="#attributes">Attributes</a></li>
+<li><a href="#naming-convention">Naming convention</a></li>
+<li><a href="#indentation">Indentation</a></li>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="document-properties"><a class="link" href="#document-properties">Document Properties</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>We will use the HTML5 Doctype and HTML5 features</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!DOCTYPE html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Do <strong>NOT</strong> include xml namespace in the document.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Character Encoding</strong>
+All markup should be delivered via the following HTML element as UTF-8, as it is the most friendly for internationalization.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;meta charset="utf-8"&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Responsiveness</strong>
+The following tag should be added in order to support mobile browsing.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>General Rules</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Indentation</p>
+<div class="paragraph">
+<p>Indentation should be 2 spaces for html files.
+Spaces should be used instead of <code>tab</code>.</p>
+</div>
+</li>
+<li>
+<p>Readability vs Compression</p>
+<div class="paragraph">
+<p>We prefer readability over file-size savings when it comes to maintaining existing files.
+Plenty of whitespace is encouraged, along with ASCII art, where appropriate.
+There is no need for any developer to purposefully compress HTML or CSS, nor obfuscate JavaScript.</p>
+</div>
+</li>
+<li>
+<p>Markup and inline styling</p>
+<div class="paragraph">
+<p>Markup defines the structure and outline of a document and offers a structured content.
+It is not intended to define the look and feel of the content on the page beyond rudimentary concepts such as headers, paragraphs, and lists.
+The presentation attributes of HTML have all been deprecated and style should be contained in style sheets.
+Inline styling should not be used, and should be minimized if its usage is really necessary.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>General structure for HTML document</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+  &lt;title&gt;CS2103/T (Module website)&lt;/title&gt;
+
+  &lt;!-- Sample stylesheet inclusion --&gt;
+  &lt;link type="text/css" href="styles/common.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Body content goes here --&gt;
+
+  &lt;!-- Sample javascript inclusion --&gt;
+  &lt;script type="text/javascript" src="/js/jquery-minified.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="external-files"><a class="link" href="#external-files">External Files</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Each webpage should include it&#8217;s own css file if there is any, as well as the general css file.</p>
+</li>
+<li>
+<p>Each webpage should include it&#8217;s own javascript file(if necessary), as well as the respective common.js and all the 3rd party js files.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tags"><a class="link" href="#tags">Tags</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>All HTML tags are to be closed properly.</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div&gt;Stuff&lt;/div&gt;</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;p&gt;Stuff
+&lt;p&gt;More Stuff</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Void elements do not have a closing tag. Do not use /&gt; for void elements.
+Example of void elements are: <code>br</code>, <code>img</code>, <code>link</code>, <code>meta</code>.
+The full list of HTML void elements can be accessed <a href="http://www.w3.org/TR/html-markup/syntax.html#void-elements">here</a>.</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">&lt;br&gt;
+&lt;img src="a" width="5px" height="10px"&gt;</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">&lt;br /&gt;
+&lt;img src="a" width="5px" height="10px" /&gt;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Use lowercase for all attributes and tag names.</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">&lt;div id="frame"&gt;Test&lt;/div&gt;</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">&lt;DIV ID="frame"&gt;Test&lt;/div&gt;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="attributes"><a class="link" href="#attributes">Attributes</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use [attr="value"] for attribute values.</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;input value="computer" id="some-input" disabled="disabled" tabindex="2"&gt;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!-- single/no quotes --&gt;
+&lt;input value=computer id='some-input' disabled='disabled' tabindex=2&gt;
+&lt;!-- specify boolean variables in the attributes --&gt;
+&lt;input value="computer" id="some-input" disabled tabindex="2"&gt;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="naming-convention"><a class="link" href="#naming-convention">Naming convention</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Class<br>
+See Css style guide for this section.</p>
+</li>
+<li>
+<p>Id<br>
+lower-case, join-by-hyphen.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">header-content-week3</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="indentation"><a class="link" href="#indentation">Indentation</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Indentation should be 2 spaces for html files.</p>
+</li>
+<li>
+<p>Spaces should be used instead of <code>tab</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="miscellaneous"><a class="link" href="#miscellaneous">Miscellaneous</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Take note of script tags.</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;script type="text/javascript" src="/js/jquery-minified.js"&gt;&lt;/script&gt;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;script language="JavaScript" src="/js/jquery-minified.js"&gt;&lt;/script&gt;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Do not have trailing whitespaces between opening and closing tags. However, line breaks and indentation are encouraged if it enhances readability.</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;p&gt;Student Name&lt;/p&gt;
+&lt;p&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore
+et dolore magna aliqua. Ut enim ad minim veniam,
+&lt;/p&gt;</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;p&gt; Student Name &lt;/p&gt;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Always remember to include <code>rel="noopener noreferrer"</code> when using <code>target="_blank"</code> in links.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Leaving this out would enable attackers to get hold of <code>window.opener</code> object, which can be used to redirect to a malicious link. [<a href="https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c">Source</a>]</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;a target="_blank" rel="noopener noreferrer" href="https://example.com"&gt;
+  Example.com
+&lt;/a&gt;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;a target="_blank" href="https://example.com"&gt;
+  Example.com
+&lt;/a&gt;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:42 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

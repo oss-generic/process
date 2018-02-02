@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Formats and Conventions</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Formats and Conventions</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="branch"><a class="link" href="#branch">Branch</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Format: <strong><code>issueNumber-some-keywords-from-issue-title</code></strong></p>
+</div>
+<div class="paragraph">
+<p>e.g. if the issue title is <code>Error alert email has very long subject #5958</code>,
+the branch name can be <code>5958-error-alert-long-subject</code></p>
+</div>
+<div class="paragraph">
+<p>Note: Use only <em>some</em> (not <em>all</em>) keywords from the issue title (e.g. 3-5 keywords). Very long branch names
+are not desirable.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This format allows easy traceability between a branch and the issue it fixes.
+It is particularly suitable for projects following a branch-per-issue workflow.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="commit-message"><a class="link" href="#commit-message">Commit message</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Every commit must have a well written commit message <em>*subject line*</em>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Try to limit the subject line to 50 characters (hard limit: 72 chars)</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Some tools show only a limited number of characters from the commit message.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Capitalize the subject line e.g. <code>Move index.html file to root</code></p>
+</li>
+<li>
+<p>Do not end the subject line with a period</p>
+</li>
+<li>
+<p>Use the imperative mood in the subject line
+e.g. <code>Add README.md</code> rather than <code>Added README.md</code> or <code>Adding README.md</code></p>
+</li>
+<li>
+<p>Use <code>scope: change</code> format when applicable
+e.g. <code>Person class: remove static imports</code>, <code>Unit tests: remove blank lines</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Commit messages for non-trivial commits should have a <em>*body*</em> giving details of the commit.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Separate subject from body with a blank line</p>
+</li>
+<li>
+<p>Wrap the body at 72 characters</p>
+</li>
+<li>
+<p>Use the body to explain WHAT the commit is about and WHY it was done that way. The reader can refer to the diff to
+understand HOW the change was done.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Give an explanation for the change(s) that is detailed enough so that the reader can judge if it is a
+good thing to do, without reading the actual diff to determine how well the code does what the explanation
+promises to do.
+If your description starts to get too long, that&#8217;s a sign that you probably need to split up
+your commit to finer grained pieces. [adapted from: <a href="https://github.com/git/git/blob/e05806da9ec4aff8adfed142ab2a2b3b02e33c8c/Documentation/SubmittingPatches#L37-L132">git project</a>]</p>
+</li>
+<li>
+<p>Avoid including information that can be included in the code as comments.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Stylistic recommendations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Follow this flow:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>{current situation} -- use present tense
+
+{why it needs to change}
+
+{what is being done about it} -- use imperative mood
+
+{why it is done that way}
+
+{any other relevant info}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use blank lines to separate paragraphs.</p>
+</li>
+<li>
+<p>Avoid terms such as 'currently', 'originally' when describing the current situation. They are implied.</p>
+</li>
+<li>
+<p>The word <code>Let&#8217;s</code> can be used to indicate the beginning of the section that describes the change done in
+the commit.</p>
+</li>
+<li>
+<p>Instead of relying entirely on paragraphs of text, use other constructs such as bullet lists (as done in
+Example 2 below) when it helps.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example 1 - A commit message for a code quality refactoring:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Person attributes classes: extract a parent class PersonAttribute
+
+Person attribute classes (e.g. Name, Address, Age etc.) have some common
+behaviors (e.g. isValid()).
+
+The common behaviors across person attribute classes cause code duplication.
+
+Extracting the common behavior into a super class allows us to use
+polymorphism when dealing with person attributes. For example, validity
+checking can be done for all attributes of a person in one loop.
+
+Let's pull up behaviors common to all person attribute classes into a new
+parent class named PersonAttribute.
+
+Using inheritance is preferable over composition in this situation
+because the common behaviors are not composable.
+
+Refer to this S/O discussion on dealing with attributes
+http://stackoverflow.com/some/question</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example 2 - A commit message for a bug fix:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Find command: make matching case insensitive
+
+Find command is case sensitive.
+
+A case insensitive find is more user-friendly because users cannot be
+expected to remember the exact case of the keywords.
+
+Let's,
+* update the search algorithm to use case-insensitive matching
+* add a script to migrate stress tests to the new format</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example 3 - A commit message for a commit that is part of a multi-commit PR:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Unify variations of toSet() methods
+
+There are several methods that convert a collection to a set. In some
+cases the conversion is inlined as a code block in another method.
+
+Unifying all those duplicated code improves the code quality.
+
+As a step towards such unification, let's extract those duplicated code
+blocks into separate methods in their respective classes. Doing so will
+make the subsequent unification easier.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Refer to the article <em><a href="http://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></em> for more
+advice on writing good commit messages.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="commit-organization"><a class="link" href="#commit-organization">Commit organization</a></h2>
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+Ask a programmer to review 10 lines of code, he&#8217;ll find 10 issues. Ask him to do 500 lines and he&#8217;ll say it
+looks good.
+</blockquote>
+<div class="attribution">
+&#8212; https://twitter.com/girayozil/status/306836785739210752
+</div>
+</div>
+<div class="paragraph">
+<p>Commits of a PR should be organized to match the following requirements:</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10003; Each commit contains a single logical change, and this change must stand on its own.
+i.e. each commit has a single responsibility, and that responsibility must be fully carried out.
+For example, if the commit message says <code>Move delete() from Person class to Address class</code>, the commit cannot
+contain the addition of <code>delete()</code> to <code>Address</code> class only; it should also contain the deletion of <code>delete()</code> from
+the <code>Person</code> class for it to be a <em>complete</em> implementation what is stated in the commit message.</p>
+<div class="paragraph">
+<p>Furthermore, the series of commits in the PR are ordered in a bottom-up fashion, each commit building
+on top of each other towards the end goal of the PR.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Reviewers should be able to review one commit at a time.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>&#10003; A commit should not modify more than 100 lines of code.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Bigger commits make reviewing harder.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Commits containing <em>*mechanical changes*</em> (e.g. automated refactorings, cut-paste type code movements,
+file renames, etc.),</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>should include only one <em>mechanical change</em>  per commit.</p>
+</li>
+<li>
+<p>should not contain other non-mechanical changes, unless unavoidable.</p>
+</li>
+<li>
+<p>can exceed 100 LoC.</p>
+</li>
+<li>
+<p>should have the description of the change in the commit message (so that the results can be reproduced).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>&#10003; The build passes at each commit of the PR.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Build-breaking commits in the version history hinder the ability to use <code>git bisect</code> for locating bugs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>&#10003; Each commit has a detailed commit message which explains the context and rationale behind the commit.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">More info</div>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#commit-message">Our conventions for commit messages</a></p>
+</li>
+<li>
+<p>[Web article] <em><a href="http://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></em></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><a href="https://github.com/se-edu/addressbook-level4/pull/237">Here</a> is an example of a PR that is organized
+as described above.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Note for first time contributors</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>PRs for <code>d.FirstTimers</code> issues are usually simple enough to be contained in one commit.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="directory"><a class="link" href="#directory">Directory</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>If the project uses a framework that has a specific folder naming convention, follow that instead.</p>
+</li>
+<li>
+<p>Use lowerCamelCase (similar to java methods) whenever possible. e.g. <code>testData</code></p>
+</li>
+<li>
+<p>Prefer plurals if the folder contains multiple items of same type e.g. <code>docs</code> instead of <code>doc</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="english"><a class="link" href="#english">English</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Follow <a href="https://docs.docker.com/opensource/doc-style/">Docker&#8217;s documentation style and grammar conventions</a>
+if the same is not covered by our own conventions (for example, we have our own PR title convention
+that should take precedence over that of Docker&#8217;s).</p>
+</li>
+<li>
+<p>Use American English spelling.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Consistent spelling improves discoverability of API methods.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="file"><a class="link" href="#file">File</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>If the project uses a framework that has a specific file naming convention, follow that instead.</p>
+</li>
+<li>
+<p>Use UpperCamelCase (similar to java class names) whenever possible. e.g. <code>FormatsAndConventions.md</code></p>
+</li>
+<li>
+<p>If the file name has multiple phrases, use <code>-</code> to separate phrases. e.g. <code>CodingStyle-JavaBasic.html</code></p>
+</li>
+<li>
+<p>Try to user common prefixes so that similar files appear together when sorted by name.
+e.g. prefer <code>CodingStyle-JavaBasics.html</code> and <code>CodingStyle-HtmlBasics.html</code> to
+<code>JavaCodingStyleBasics.html</code> and <code>HtmlCodingStyleBasics.html</code></p>
+</li>
+<li>
+<p>For documents, try to make the file name match the document title as much as possible.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="issue"><a class="link" href="#issue">Issue</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Issue title should be concise yet descriptive.
+For example, instead of <code>Newbie question, please help</code>, use <code>How do I set up git to ignore test files?</code></p>
+</li>
+<li>
+<p>The phrasing should match the main purpose of the issue.
+For example, if it is a bug report, the issue title should sound like a bug report
+(e.g <code>Option 'other' is missing from the dropdown</code>) instead of a feature request
+(e.g. <code>Add 'other' option to the dropdown</code>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="merge-commit"><a class="link" href="#merge-commit">Merge commit</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This format is only for commits merging a PR branch to <code>master</code> branch.</p>
+</div>
+<div class="paragraph">
+<p>Format: <strong><code>[#IssueNumber] Issue Title (#PrNumber)</code></strong><br>
+e.g. <code>[#5958] Error alert email has very long subject (#6580)</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This format allows easy traceability among a merge commit, the issue it fixes, and the PR that fixed it.
+Having the issue name tells us what the commit is about without having to look it up in GitHub issue tracker.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pr"><a class="link" href="#pr">PR</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Format: <strong><code>IssueTitle #IssueNumber</code></strong><br>
+e.g. <code>Error alert email has very long subject #5958</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Duplicating issue title in PR title is for easy tracing between PRs and issues,
+to compensate for GitHub&#8217;s lack of strong linking between the two.
+Assume there is an invisible prefix in front of the PR title <code>Fixes issue : &#8230;&#8203;</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="references-to-code-elements"><a class="link" href="#references-to-code-elements">References to code elements</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Follow these conventions when referring to code elements <strong>from a non-code context</strong> e.g. when referring to a function
+name from a commit message.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The objective is to be as concise as possible without being ambiguous. Therefore, omit optional details when
+those details are not pertinent to the context.</p>
+</div>
+<div class="paragraph">
+<p>Refer to the <a href="CodingStandards.html">respective coding standards</a> for conventions on how to refer to code elements
+<strong>from code contexts</strong> e.g. when referring to a function from a code comment.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="java"><a class="link" href="#java">Java</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Variables: <code>package.class#variable</code> (optional: <code>package</code>)</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>seedu.address.data.Person#name</code></p>
+</li>
+<li>
+<p><code>Person#name</code>&#8201;&#8212;&#8201;optional parts omitted</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Methods: <code>package.class#method(paramTypes):returnType</code> (optional: <code>package</code>, <code>returnType</code>)</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>seedu.address.data.Person#getName(boolean):String</code></p>
+</li>
+<li>
+<p><code>Person#getName(boolean)</code>&#8201;&#8212;&#8201;optional parts omitted</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>If including <code>paramTypes</code> pushes against a severe length constraint (e.g. in the commit message title),
+it can be replaced with <code>&#8230;&#8203;</code> as long as it is not ambiguous.</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>For example,
+<code>Person#add(&#8230;&#8203;)</code> is acceptable in a commit message title (which is limited to 50 chars) in place of
+<code>Person#add(String, boolean)</code>.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>The <code>class</code> part can be omitted if it is clear from the context.</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>For example, the commit message title
+<code>AbstractPerson: remove add(int) method</code> is acceptable in place of
+<code>AbstractPerson: remove AbstractPerson#add(int) method</code>.</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:43 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

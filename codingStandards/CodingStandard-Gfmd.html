@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>GitHub Flavored Markdown Coding Standard</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>GitHub Flavored Markdown Coding Standard</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The term 'markdown' in this document refers to <em>GitHub Flavored Markdown</em>.</p>
+</li>
+<li>
+<p>Follow the syntax as specifed <a href="https://guides.github.com/features/mastering-markdown/">here</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="follow-strict-gfmd-syntax-to-be-compatible-with-github-pages"><a class="link" href="#follow-strict-gfmd-syntax-to-be-compatible-with-github-pages">Follow strict GFMD syntax to be compatible with GitHub Pages</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Minor deviations from the markdown syntax are sometimes forgiven by GitHub markdown rendering but may not be forgiven
+by <a href="https://github.com/blog/2289-publishing-with-github-pages-now-as-easy-as-1-2-3">GitHub Pages html rendering</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a blank line at the beginning of a list.</p>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">Here is a list:
+
+* item 1
+* item 2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">Here is a list:
+* item 1
+* item 2</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Similar to above point, add a blank line at the beginning of a code block.</p>
+</li>
+<li>
+<p>Add space at the start of a heading.</p>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown"># Heading</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">#Heading</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use blockquote symbol in every line of the blockquote.</p>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">&gt; first line
+&gt; second line</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">&gt; first line
+  second line</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-blank-lines-to-separate-headings"><a class="link" href="#use-blank-lines-to-separate-headings">Use blank lines to separate headings</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">## Heading
+
+Content of the paragraph.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">## Heading
+Content of the paragraph.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-blockquotes-for-additional-info"><a class="link" href="#use-blockquotes-for-additional-info">Use blockquotes for additional info</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Blockquotes are usually used for additional info the reader can skip over.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">&gt; Some additional info.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-generic-numbering-for-ordered-list"><a class="link" href="#use-generic-numbering-for-ordered-list">Use generic numbering for ordered list</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using <code>1.</code> for every item in an ordered list can make it easy to insert more items later.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Generic numbers are converted to the correct numbers by GitHub markdown renderer.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">1. item 1
+1. item 2
+1. item 3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">1. item 1
+2. item 2
+3. item 3</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:42 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

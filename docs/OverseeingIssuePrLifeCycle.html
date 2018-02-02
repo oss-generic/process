@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Overseeing Issue/PR Life Cycle</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Overseeing Issue/PR Life Cycle</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="triaging-issues"><a class="link" href="#triaging-issues">Triaging Issues</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Issue tracker doubles as the message board. Therefore, it can have two types of issues:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Change Requests</em>: Regular issues requiring changes to the software. e.g. bug reports, feature requests</p>
+</li>
+<li>
+<p><em>Misc. Posts</em>: i.e. all other issues announcements, questions, support requests from contributors, self-intros etc.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When an issue comes in,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>any one can respond to it. Faster responses are an indicator of project health.</p>
+</li>
+<li>
+<p>any one with sufficient privileges can add labels based on the <a href="DefiningLabels.html">project&#8217;s definition of each label</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>However, Project Manager (PM) should be the one applying the priority (i.e. <code>p.</code>) label
+for change requests (<em>misc. posts</em> do not need priority labels). This is to ensure that all issues get
+prioritized using a uniform scale.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="requesting-reviews-for-prs"><a class="link" href="#requesting-reviews-for-prs">Requesting reviews for PRs</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>A PR should have <strong>1 or more <code>reviewers</code></strong>. See <a href="ReviewingPrs.html">Reviewing PRs</a>.
+The <code>assignees</code> field can be left empty.</p>
+</li>
+<li>
+<p>PRs created by core members:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Author may request a review from a core member. Else, team lead will assign reviewers for the PR.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>GitHub&#8217;s <em>blame</em> feature (or a third-party service such as <em>mentionbot</em>) can help to find suitable reviewers.</p>
+</div>
+<div class="paragraph">
+<p><strong>Currently active</strong> developers who have touched the same code before and leads of the areas touched by the PR
+are potential reviewers.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>PRs created by non-core members:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Team lead should request reviews based on the members' areas of expertise.</p>
+</li>
+<li>
+<p>Core members can volunteer as reviewers by requesting a review from self.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>After a PR has been approved by all reviewers, the last reviewer to approve should request a
+review from the PM.</p>
+</li>
+<li>
+<p>After the PM has approved the PR, it can be merged. See <a href="MergingPrs.html">Merging PRs</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:43 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

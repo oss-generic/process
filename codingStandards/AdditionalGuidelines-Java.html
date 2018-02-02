@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Additional Guidelines - Java</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Additional Guidelines - Java</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="using-assertions"><a class="link" href="#using-assertions">Using assertions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Refer to the article
+<em><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html">Programming With Assertions</a></em>
+(from Oracle) for more details on the three general guidelines below.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Do not use assertions to do any work that your application requires for correct operation.</strong><br>
+If you do, the code will not work as expected when assertions are turned off.</p>
+</li>
+<li>
+<p><strong>Do not use assertions for checking <em>preconditions</em>/parameters in public methods.</strong><br>
+Those should be enforced by explicit checks that throw particular,
+specified exceptions. e.g. <code>IllegalArgumentException</code>, <code>IndexOutOfBoundsException</code>, or <code>NullPointerException</code>.</p>
+</li>
+<li>
+<p><strong>Assertions may be used to check <em>postconditions</em> and class/method <em>invariants</em> in both public
+and nonpublic methods.</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In addition,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Do not handle 'impossible' exceptions using assertions</strong>.<br>
+Instead of handling 'impossible' exceptions using an <code>assert false</code> as given below,
+throw a runtime error such as an <code>AssertionError</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">...
+} catch (Exception e) {
+    assert false : "This exception should not happen";
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">...
+} catch (Exception e) {
+    throw new AssertionError("This exception should not happen");
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As the program flow has already triggered an exception, switching to assertions is not necessary when
+another exception can handle it just as well.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:42 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

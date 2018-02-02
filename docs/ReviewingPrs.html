@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Reviewing PRs</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Reviewing PRs</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A typical PR is reviewed by,</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10003; one <em><strong>main reviewer</strong></em>: Usually, a lead member. Reviews <em>all</em> aspects of the PR, including code quality.</p>
+</li>
+<li>
+<p>&#10003; one <em><strong>code quality reviewer</strong></em>: Usually, the Project Manager. Can be delegated to a Project Mentor.
+Performs a final check on the quality of the PR.</p>
+</li>
+<li>
+<p>&#10063; [Optional] <em><strong>supplementary reviewers</strong></em>: Core members can be used as additional reviewers if the PR involves
+multiple areas.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Junior members can get other junior members to act as <em><strong>peer reviewers</strong></em> for their PRs before submitting
+to the project&#8217;s formal review process.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="review-procedure"><a class="link" href="#review-procedure">1. Review procedure</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="before-you-begin"><a class="link" href="#before-you-begin">1.1. Before you begin</a></h3>
+<div class="paragraph">
+<p>Ensure the following at the start of the review. If any of them are missing, ask the dev to fix.</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10003; PR name follows the <a href="FormatsAndConventions.html#pr">PR title convention</a>.</p>
+</li>
+<li>
+<p>&#10003; PR description has the correct <code>Fixes #&#8230;&#8203;</code> reference.</p>
+</li>
+<li>
+<p>&#10003; The CI build is successful or any failures are justifiable (e.g. false positives from static analysis tools).</p>
+</li>
+<li>
+<p>&#10003; PR branch name follows the <a href="FormatsAndConventions.html#branch">branch naming convention</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This is a soft requirement. Encourage the dev to follow the convention in future PRs.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>&#10003; Meets our <a href="FormatsAndConventions.html#commit-organization">requirements for commit organization</a>.</p>
+</li>
+<li>
+<p>&#10003; Commit summary has been generated using CanIHasReview.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>These two requirements are automatically guaranteed by CanIHasReview:</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10003; The branch is up to date with the <code>master</code> branch at the time of the review request.</p>
+</li>
+<li>
+<p>&#10003; The branch does not contain merge commits.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Additional guidelines for <code>d.FirstTimers</code> issues:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure the dev has not done any other <code>d.FirstTimers</code> issues. If he has, inform the dev and close the PR.</p>
+</li>
+<li>
+<p>If the branch contains multiple commits, ask the dev to squash into one commit (unless the commits are
+'well-organized' already).</p>
+</li>
+<li>
+<p>If the commit message is far from our quality expectations even after 1-2 attempts to improve it by the dev,
+you can propose a revised commit message for the dev to use.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="review-the-pr-and-add-comments"><a class="link" href="#review-the-pr-and-add-comments">1.2. Review the PR and add comments</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Use GitHub&#8217;s review feature to add comments.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use <code>start a review</code> option when adding comments on the latest version of a PR diff.</p>
+</li>
+<li>
+<p>Use the <code>add single comment</code> when responding to an existing thread of discussion in a PR diff.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Review big PRs incrementally (i.e. one commit at a time), starting with the earliest commit.
+<a href="https://github.com/se-edu/addressbook-level4/pull/209#pullrequestreview-15603608">Here</a> is an example.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the early commits require lot of changes, there&#8217;s no need to review later commits until the
+early commits are updated as per review.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>As you review the code, ensure the following:</p>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10003; The solution is the best possible solution to the problem under the circumstances.</p>
+</li>
+<li>
+<p>&#10003; <strong>All five aspects</strong> of a code change are done:</p>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10003; <strong>Code</strong></p>
+</li>
+<li>
+<p>&#10003; <strong>Comments</strong> e.g. header comments</p>
+</li>
+<li>
+<p>&#10003; <strong>Tests</strong>: Almost all code changes to functional code should have changes to test code</p>
+</li>
+<li>
+<p>&#10003; <strong>User docs</strong> e.g. help pages</p>
+</li>
+<li>
+<p>&#10003; <strong>Dev docs</strong> e.g. design diagrams</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>&#10003; Coding style and best practices are followed (some of these are not detected by static analysis tools).</p>
+</li>
+<li>
+<p>&#10003; The PR does not contain unrelated changes.
+e.g. unnecessary formatting changes or commits from other branches.</p>
+</li>
+<li>
+<p>&#10003; All your previous review comments have been addressed.</p>
+</li>
+<li>
+<p>&#10003; Commit messages follow <a href="FormatsAndConventions.html#commit-messages">our requirements</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="approve-or-request-changes-at-the-end-of-the-review"><a class="link" href="#approve-or-request-changes-at-the-end-of-the-review">1.3. Approve or request changes at the end of the review</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>If changes are needed, choose <code>Request changes</code>.</p>
+</li>
+<li>
+<p>Else, choose <code>Approve</code>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do not use <code>Approve</code> unless you are fully satisfied with the current state of the PR.
+i.e. NOT allowed: <code>Let me approve this first while you fix the remaining minor problems</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="update-the-pr-status"><a class="link" href="#update-the-pr-status">1.4. Update the PR status</a></h3>
+<div class="paragraph">
+<p>If you are the last reviewer to review the current iteration (i.e. no more pending reviews for the
+current iteration), change the status label as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If any of the reviewers have requested changes, change the status label to <code>s.Ongoing</code>.</p>
+</li>
+<li>
+<p>Else, change status to <code>s.ToMerge</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tips-for-reviewers"><a class="link" href="#tips-for-reviewers">2. Tips for reviewers</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="canned-comments"><a class="link" href="#canned-comments">3. Canned comments</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>// TODO: add common comments that can be used when reviewing</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:43 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

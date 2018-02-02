@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Merging a PR</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Merging a PR</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="who-can-merge"><a class="link" href="#who-can-merge">Who can merge</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A PR is to be merged by the author of the PR if the author has commit privileges.
+Else it should be merged by the main reviewer.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>PRs that can be merged without any further testing and post-merge clean up can be merged by the
+<em>code quality reviewer</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="when-to-merge"><a class="link" href="#when-to-merge">When to merge</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Merging to <code>master</code> or <code>release</code> branches requires approval from both <em>main reviewer</em> and the <em>code quality reviewer</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-to-merge"><a class="link" href="#how-to-merge">How to merge</a></h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make sure that GitHub gives the green light for merging. In the cases given below, the author should resolve
+the problem as described and submit a new iteration.</p>
+</li>
+<li>
+<p><strong>Merge conflict</strong>: The PR is conflicting with the current <code>master</code> branch. The author should rebase the branch
+and resolve conflicts.</p>
+</li>
+<li>
+<p><strong>Check failure</strong>: E.g. CI is failing. The author should fix the causes of the failures or give acceptable
+justifications for the failures.</p>
+</li>
+<li>
+<p><strong>Outdated branch</strong>: The PR is not in sync with the current <code>master</code> branch. The author should rebase the branch.
+Do not use GitHub&#8217;s 'Update branch' button because it will create a merge commit instead of rebasing.
+Alternatively, the person merging can trigger the CI checks to run again if he has access to the CI server.
+If CI checks pass, the branch can be merged without rebasing (because CI tools typically merge the master branch
+to the PR before running checks).</p>
+</li>
+<li>
+<p>If the project does not have CI set up to run all tests,</p>
+</li>
+<li>
+<p>Checkout the branch PR to your Computer</p>
+</li>
+<li>
+<p>Run the tests and any other checks applicable (e.g. linters).
+If any failed, use GitHub&#8217;s Review feature to request changes.</p>
+</li>
+<li>
+<p>Merge using GitHub.</p>
+</li>
+<li>
+<p>If the commit history is clean (this should be the case for PRs done by experienced contributors who follow
+the <a href="AdvancedContributorGuidelines.html">advanced contributor guidelines</a>),
+Merge using the <code>Create a merge commit</code> option.</p>
+</li>
+<li>
+<p>Else, merge using the <code>Squash and merge</code> option.</p>
+</li>
+<li>
+<p>Optionally, apply an <code>e.<strong></code> label to the issue (not the PR) to indicate
+the estimated effort required to fix the issue, and another <code>e.</strong></code> label to the PR
+to indicate the estimated effort required to review the PR.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:43 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Java Coding Standard (Beginner/Intermediate Level)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Java Coding Standard (Beginner/Intermediate Level)</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Important</strong>: Use the <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a> for any topics
+not covered in this document.</p>
+</div>
+<div class="paragraph">
+<p>Categories of style rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Basic Rules</strong>: Marked with ⭐️</p>
+</li>
+<li>
+<p><strong>Intermediate Rules</strong>: Marked with ⭐️⭐️</p>
+</li>
+<li>
+<p><strong>Advanced Rules</strong>: Marked with ⭐️⭐️⭐️</p>
+</li>
+</ul>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title"></div>
+<ul class="sectlevel1">
+<li><a href="#naming-conventions">Naming Conventions</a></li>
+<li><a href="#layout">Layout</a></li>
+<li><a href="#statements">Statements</a>
+<ul class="sectlevel2">
+<li><a href="#package-and-import-statements">Package and Import Statements</a></li>
+<li><a href="#classes-and-interfaces">Classes and Interfaces</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#types">Types</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#loops">Loops</a></li>
+<li><a href="#conditionals">Conditionals</a></li>
+</ul>
+</li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#contributors">Contributors</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="naming-conventions"><a class="link" href="#naming-conventions">Naming Conventions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1. ⭐️ Names representing packages should be in all lower case.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">com.company.application.ui</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<a href="https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">More on package naming</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For school projects, the root name of the package should be your group name or project name followed by logical group names.<code>e.g. todobuddy.ui, todobuddy.file etc</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Your code is not officially ‘<em>produced by NUS</em>’, therefore do not use <code>edu.nus.comp.*</code> or anything similar.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>2. ⭐️ Class/enum names must be nouns and written in PascalCase.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Line, AudioSystem</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3. ⭐️ Variable names must be in camelCase.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">line, audioSystem</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>4. ⭐️ Constant names must be all uppercase using underscore to separate words.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MAX_ITERATIONS, COLOR_RED</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>5. ⭐️ Names representing methods must be verbs and written in camelCase.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">getName(), computeTotalWidth()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Underscores may be used in test method names using the following three part format <strong><code>featureUnderTest_testScenario_expectedBehavior()</code></strong></p>
+</div>
+<div class="paragraph">
+<p>e.g. <code>sortList_emptyList_exceptionThrown()</code> <code>getMember_memberNotFount_nullReturned</code></p>
+</div>
+<div class="paragraph">
+<p>Third part or both second and third parts can be omitted depending on what&#8217;s covered in the test.<br>
+For example, the test method <code>sortList_emptyList()</code> will test <code>sortList()</code> method for all variations of the 'empty list'
+scenario and the test method <code>sortList()</code> will test the <code>sortList()</code> method for all scenarios.</p>
+</div>
+<div class="paragraph">
+<p><strong>6. ⭐️⭐️ Abbreviations and acronyms should not be uppercase when used as a part of a name.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">exportHtmlSource();
+openDvdPlayer();</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">exportHTMLSource();
+openDVDPlayer();</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>7. ⭐️ All names should be written in English.</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The code is meant for an international audience.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>8. ⭐️⭐️ Variables with a large scope should have long names, variables with a small scope can have short names.</strong></p>
+</div>
+<div class="paragraph">
+<p>Scratch variables used for temporary storage or indices can be kept short. A programmer reading such variables should be able to assume that its value is not used outside a few lines of code. Common scratch variables for integers are <code>i, j, k, m, n</code> and for characters <code>c</code> and <code>d</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When the scope is small, the reader does not have to remember it for long.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>9. ⭐️ Boolean variables/methods should be named to sound like booleans ‘is’</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//variables
+isSet, isVisible, isFinished, isFound, isOpen, hasData, wasOpen
+
+//methods
+boolean hasLicense();
+boolean canEvaluate();
+boolean shouldAbort = false;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Setter methods for boolean variables must be of the form:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void setFound(boolean isFound);</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This is the naming convention for boolean methods and variables used by Java core packages. It also makes the code read like normal English e.g. <code>if(isOpen) &#8230;&#8203;</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>10. ⭐️⭐️ Plural form should be used on names representing a collection of objects.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Collection&lt;Point&gt; points;
+int[] values;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Enhances readability since the name gives the user an immediate clue of the type of the variable and the operations that can be performed on its elements. One space character after the variable type is enough to obtain clarity.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>11. ⭐️ Iterator variables can be called <em>i</em>, <em>j</em>, <em>k</em> etc.</strong></p>
+</div>
+<div class="paragraph">
+<p>Variables named <em>j</em>, <em>k</em> etc. should be used for nested loops only.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">for (Iterator i = points.iterator(); i.hasNext(); ) {
+    ...
+}
+
+for (int i = 0; i &lt; nTables; i++) {
+    ...
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The notation is taken from mathematics where it is an established convention for indicating iterators.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>12. ⭐️⭐️ Associated constants (final variables) should be prefixed by a common type name.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final int COLOR_RED   = 1;
+final int COLOR_GREEN = 2;
+final int COLOR_BLUE  = 3;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This indicates that the constants belong together, and make them appear together when sorted alphabetically.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="layout"><a class="link" href="#layout">Layout</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1. ⭐️ Basic indentation should be 4 spaces (not tabs).</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">for (i = 0; i &lt; nElements; i++) {
+    a[i] = 0;
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Just follow it <span class="image"><img src="../assets/trollface.png" alt="trollface" width="20" height="20"></span></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>2. ⭐️ Keep lines no longer than 120 chars.</strong></p>
+</div>
+<div class="paragraph">
+<p>Try to keep line length shorter than 110 characters (soft limit). But it is OK to exceed the limit slightly (hard limit: 120 chars). If the line exceeds the limit, use line wrapping at appropriate places of the line.</p>
+</div>
+<div class="paragraph">
+<p><strong>Indentation for wrapped lines should be 8 spaces</strong> (i.e. twice the normal indentation of 4 spaces) more than the parent line.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">setText("Long line split"
+        + "into two parts.");
+if(isReady){
+    setText("Long line split"
+            + "into two parts.");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3. ⭐️⭐️ Place line break to improve readability</strong></p>
+</div>
+<div class="paragraph">
+<p>When wrapping lines, the main objective is to improve readability. Do not always accept the auto-formatting suggested by the IDE.</p>
+</div>
+<div class="paragraph">
+<p>In general:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Break after a comma.</p>
+</li>
+<li>
+<p>Break before an operator. This also applies to the following "<em>operator-like</em>" symbols: the dot separator <code>.</code>, the ampersand in type bounds <code>&lt;T extends Foo &amp; Bar&gt;</code>, and the pipe in catch blocks <code>catch (FooException | BarException e)</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">totalSum = a + b + c
+          + d + e;
+setText("Long line split"
+         + "into two parts.");
+method(param1,
+       object.method()
+             .method2(),
+       param3);</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A method or constructor name stays attached to the open parenthesis <code>(</code> that follows it.</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName(
+        int anArg, Object anotherArg);</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName
+        (int anArg, Object anotherArg);</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Prefer higher-level breaks to lower-level breaks. In the example below, the first is preferred, since the break occurs outside the parenthesized expression, which is at a higher level.</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// PREFER THIS
+longName1 = longName2 * (longName3 + longName4 - longName5)
+            + 4 * longname6;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// OVER THIS
+longName1 = longName2 * (longName3 + longName4
+            - longName5) + 4 * longname6;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Here are two acceptable ways to format ternary expressions:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">alpha = (aLongBooleanExpression) ? beta : gamma;
+alpha = (aLongBooleanExpression)
+        ? beta
+        : gamma;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>4. ⭐️ Use K&amp;R style brackets (aka <a href="https://blog.codinghorror.com/new-programming-jargon/">Egyptian style</a>).</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">while (!done) {
+    doSomething();
+    done = moreToDo();
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">while (!done)
+{
+    doSomething();
+    done = moreToDo();
+}</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Just follow it. <span class="image"><img src="../assets/trollface.png" alt="trollface" width="20" height="20"></span></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>5. ⭐️ Method definitions should have the following form:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void someMethod() throws SomeException {
+    ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>6. ⭐️ The <em>if-else</em> class of statements should have the following form:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">if (condition) {
+    statements;
+}
+
+if (condition) {
+    statements;
+} else {
+    statements;
+}
+
+if (condition) {
+    statements;
+} else if (condition) {
+    statements;
+} else {
+    statements;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>7. ⭐️ The <em>for</em> statement should have the following form:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">for (initialization; condition; update) {
+    statements;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>8. ⭐️ The <em>while</em> statement should have the following form:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">while (condition) {
+    statements;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>9. ⭐️ The <em>do-while</em> statement should have the following form:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">do {
+    statements;
+} while (condition);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>10. ⭐️ The <em>switch</em> statement should have the following form:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">switch (condition) {
+case ABC:
+    statements;
+    // Fallthrough
+case DEF:
+    statements;
+    break;
+case XYZ:
+    statements;
+    break;
+default:
+    statements;
+    break;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The explicit <code>//Fallthrough</code> comment should be included whenever there is a <code>case</code> statement without a break statement.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Leaving out the <code>break</code> is a common error, and it must be made clear that it is intentional when it is not there.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>11. ⭐️ A <em>try-catch</em> statement should have the following form:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">try {
+    statements;
+} catch (Exception exception) {
+    statements;
+}
+
+try {
+    statements;
+} catch (Exception exception) {
+    statements;
+} finally {
+    statements;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>12. ⭐️⭐️ White space within a statement</strong></p>
+</div>
+<div class="paragraph">
+<p>It is difficult to give a complete list of the suggested use of whitespace in Java code. The examples below however should give a general idea of the intentions.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Rule</th>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Operators should be surrounded by a space character.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">a = (b + c) * d;</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">a=(b+c)*d;</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Java reserved words should be followed by a white space.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">while (true) {</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">while(true){</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Commas should be followed by a white space.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">doSomething(a, b, c, d);</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">doSomething(a,b,c,d);</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Colons should be surrounded by white space when used as a binary/ternary operator. Does not apply to <code>switch x:</code>.<br>
+Semicolons in for statements should be followed by a space character.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">for (i = 0; i &lt; 10; i++) {</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">for(i=0;i&lt;10;i++){</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Makes the individual components of the statements stand out and enhances readability.</p>
+</div>
+<div class="paragraph">
+<p><strong>13. ⭐️⭐️ Logical units within a block should be separated by one blank line.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Create a new identity matrix
+Matrix4x4 matrix = new Matrix4x4();
+
+// Precompute angles for efficiency
+double cosAngle = Math.cos(angle);
+double sinAngle = Math.sin(angle);
+
+// Specify matrix as a rotation transformation
+matrix.setElement(1, 1,  cosAngle);
+matrix.setElement(1, 2,  sinAngle);
+matrix.setElement(2, 1, -sinAngle);
+matrix.setElement(2, 2,  cosAngle);
+
+// Apply rotation
+transformation.multiply(matrix);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Enhances readability by introducing white space between logical units. Each block is often introduced by a comment as indicated in the example above.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="statements"><a class="link" href="#statements">Statements</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="package-and-import-statements"><a class="link" href="#package-and-import-statements">Package and Import Statements</a></h3>
+<div class="paragraph">
+<p><strong>1a. ⭐️ Put every class in a package.</strong></p>
+</div>
+<div class="paragraph">
+<p>Every class should be part of some package.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It will help you and other developers easily understand the code base when all the classes have been grouped in packages.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>1b. ⭐️⭐️⭐️ Put related classes in a single package.</strong></p>
+</div>
+<div class="paragraph">
+<p>Package together the classes that are related. For example in Java, the classes related to file writing is grouped in the package <code>java.io</code> and the classes which handle lists, maps etc are grouped in <code>java.util</code> package.</p>
+</div>
+<div class="paragraph">
+<p><strong>2. ⭐️⭐️ The ordering of import statements must be consistent.</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A consistent ordering of import statements makes it easier to browse the list and determine the dependencies when there are many imports.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+
+import org.loadui.testfx.GuiTest;
+import org.testfx.api.FxToolkit;
+
+import com.google.common.io.Files;
+
+import javafx.geometry.Bounds;
+import javafx.geometry.Point2D;
+import junit.framework.AssertionFailedError;</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+IDEs have support for auto-ordering import statements. However, note that the default orderings of different IDEs are not always the same. It is recommended that you and your team use the same IDE and stick to a consistent ordering.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>3. ⭐️ Imported classes should always be listed explicitly.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.util.List;
+import java.util.ArrayList;
+import java.util.HashSet;</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.util.*;</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Importing classes explicitly gives an excellent documentation value for the class at hand and makes the class easier to comprehend and maintain. Appropriate tools should be used in order to always keep the import list minimal and up to date. IDE&#8217;s can be configured to do this easily.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="classes-and-interfaces"><a class="link" href="#classes-and-interfaces">Classes and Interfaces</a></h3>
+<div class="paragraph">
+<p><strong>4. ⭐️⭐️⭐️ Class and Interface declarations should be organized in the following manner:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Class/Interface documentation (Comments)</p>
+</li>
+<li>
+<p><strong>class</strong> or <strong>interface</strong> statement</p>
+</li>
+<li>
+<p>Class (static) variables in the order <strong>public</strong>, <strong>protected</strong>, <strong>package</strong> (no access modifier), <strong>private</strong></p>
+</li>
+<li>
+<p>Instance variables in the order <strong>public</strong>, <strong>protected</strong>, <strong>package</strong> (no access modifier), <strong>private</strong></p>
+</li>
+<li>
+<p>Constructors</p>
+</li>
+<li>
+<p>Methods (no specific order)</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Make code easy to navigate by making the location of each class element predictable.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="methods"><a class="link" href="#methods">Methods</a></h3>
+<div class="paragraph">
+<p><strong>5. ⭐️⭐️⭐️ Method modifiers should be given in the following order:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;access&gt; static abstract synchronized &lt;unusual&gt; final native</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>&lt;access&gt;</code> modifier (if present) must be the first modifier.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static double square(double a);</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">static public double square(double a);</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">&lt;access&gt; = public | protected | private
+&lt;unusual&gt; = volatile | transient</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The most important point here is to keep the <em>access</em> modifier as the first modifier. The order is less important for the other modifiers, but it make sense to have a fixed convention.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="types"><a class="link" href="#types">Types</a></h3>
+<div class="paragraph">
+<p><strong>6. ⭐️ Array specifiers must be attached to the type not the variable.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int[] a = new int[20];</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int a[] = new int[20];</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <em>arrayness</em> is a feature of the base type, not the variable. Java allows both forms however.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="variables"><a class="link" href="#variables">Variables</a></h3>
+<div class="paragraph">
+<p><strong>7. ⭐️⭐️ Variables should be initialized where they are declared and they should be declared in the smallest scope possible.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int sum = 0;
+for (int i = 0; i &lt; 10; i++) {
+    for (int j = 0; j &lt; 10; j++) {
+        sum += i * j;
+    }
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int i, j, sum;
+sum = 0;
+for (i = 0; i &lt; 10; i++) {
+    for (j = 0; j &lt; 10; j++) {
+        sum += i * j;
+    }
+}</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This ensures that variables are valid at any time. Sometimes it is impossible to initialize a variable to a valid value where it is declared. In these cases it should be left uninitialized rather than initialized to some phony value.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>8. ⭐️⭐️ Class variables should never be declared public.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Foo{
+
+   public int bar;
+
+}</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The concept of Java information hiding and encapsulation is violated by public variables. Use private variables and access functions instead. One exception to this rule is when the class is essentially a data structure, with no behavior. In this case it is appropriate to make the class' instance variables public.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>9. ⭐️⭐️⭐️ Avoid unnecessary use of <code>this</code> with fields.</strong></p>
+</div>
+<div class="paragraph">
+<p>Use the <code>this</code> keyword only when a field is shadowed by a method or constructor parameter.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public User(String name) {
+    this.name = name;
+    ...
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public User(String name) {
+    // 'id' is not shadowed by any method parameters
+    this.id = User.getNewId();
+    ...
+}</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To reduce unnecessary noise.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="loops"><a class="link" href="#loops">Loops</a></h3>
+<div class="paragraph">
+<p><strong>10. ⭐️ The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">sum = 0;
+for (i = 0; i &lt; 100; i++) {
+    sum += value[i];
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">for (i = 0, sum = 0; i &lt; 100; i++)
+    sum += value[i];</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When there is only one statement in the loop body, Java allows it to be written without wrapping it between <code>{ }</code>. However that is error prone and <em>very</em> strongly discouraged from using.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="conditionals"><a class="link" href="#conditionals">Conditionals</a></h3>
+<div class="paragraph">
+<p><strong>11. ⭐️ The conditional should be put on a separate line.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">if (isDone) {
+    doCleanup();
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">if (isDone) doCleanup();</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This helps when debugging using an IDE debugger. When writing on a single line, it is not apparent whether the condition is really true or not.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>12. ⭐️ Single statement conditionals should still be wrapped by curly brackets.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">InputStream stream = File.open(fileName, "w");
+if (stream != null) {
+    readFile(stream);
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">InputStream stream = File.open(fileName, "w");
+if (stream != null))
+    readFile(stream);</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The body of the conditional should be wrapped by curly brackets irrespective of how many statements.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Omitting braces can lead to subtle bugs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="comments"><a class="link" href="#comments">Comments</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1. ⭐️ All comments should be written in English.</strong></p>
+</div>
+<div class="paragraph">
+<p>Furthermore, use American spelling and avoid local slang.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The code is meant for an international audience.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>2. ⭐️⭐️ Write descriptive header comments for all public classes/methods.</strong></p>
+</div>
+<div class="paragraph">
+<p>You MUST write header comments for all classes, public methods.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>public</code> method are meant to be used by others and the users should not be forced to read the code of the method to understand its exact behavior. The code, even if it is self-explanatory, can only tell the reader HOW the code works, not WHAT the code is supposed to do.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>3. ⭐️⭐️⭐️ All non-trivial private methods should carry header comments.</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Writing header comments will hep novice programmers to self-detect abstraction problems. e.g. If it is hard to describe the method succinctly, there is something wrong with the method abstraction.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>4. ⭐️⭐️ Javadoc comments should have the following form:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/**
+ * Returns lateral location of the specified position.
+ * If the position is unset, NaN is returned.
+ *
+ * @param x  X coordinate of position.
+ * @param y Y coordinate of position.
+ * @param zone Zone of position.
+ * @return Lateral location.
+ * @throws IllegalArgumentException  If zone is &lt;= 0.
+ */
+public double computeLocation(double x, double y, int zone)
+    throws IllegalArgumentException {
+  ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note in particular:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The opening <code>/**</code> on a separate line</p>
+</li>
+<li>
+<p><strong>Write the first sentence as a short summary of the method</strong>, as Javadoc automatically places it in the method summary table (and index).</p>
+</li>
+<li>
+<p>In method header comments, the first sentence should start in the form <code>Returns &#8230;&#8203;</code>, <code>Sends &#8230;&#8203;</code>, <code>Adds &#8230;&#8203;</code> (not <code>Return</code> or <code>Returning</code> etc.)</p>
+</li>
+<li>
+<p>Subsequent <code>*</code> is aligned with the first one</p>
+</li>
+<li>
+<p>Space after each <code>*</code></p>
+</li>
+<li>
+<p>Empty line between description and parameter section</p>
+</li>
+<li>
+<p>Punctuation behind each parameter description
+-No blank line between the documentation block and the method/class</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Javadoc of class members can be specified on a single line as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/** Number of connections to this database */
+private int connectionCount;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>5. ⭐️ Comments should be indented relative to their position in the code.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Good</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+<th class="tableblock halign-left valign-top">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">while (true) {
+    // Do something
+    something();
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">while (true) {
+        // Do something
+    something();
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">while (true) {
+// Do something
+    something();
+}</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This is to avoid the comments from breaking the logical structure of the program.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="references"><a class="link" href="#references">References</a></h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://geosoft.no/development/javastyle.html" class="bare">http://geosoft.no/development/javastyle.html</a></p>
+</li>
+<li>
+<p><a href="http://www.oracle.com/technetwork/java/codeconventions-150003.pdf" class="bare">http://www.oracle.com/technetwork/java/codeconventions-150003.pdf</a></p>
+</li>
+<li>
+<p><a href="http://developers.sun.com/sunstudio/products/archive/whitepapers/java-style.pdf" class="bare">http://developers.sun.com/sunstudio/products/archive/whitepapers/java-style.pdf</a></p>
+</li>
+<li>
+<p>Effective Java, 2nd Edition by Joshua Bloch</p>
+</li>
+<li>
+<p><a href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html" class="bare">http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributors"><a class="link" href="#contributors">Contributors</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Nimantha Baranasuriya - Initial draft</p>
+</li>
+<li>
+<p>Dai Thanh - Further tweaks</p>
+</li>
+<li>
+<p>Tong Chun Kit - Further tweaks</p>
+</li>
+<li>
+<p>Barnabas Tan - Converted from Google Docs to Markdown Document</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:42 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

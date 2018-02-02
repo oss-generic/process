@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>CSS Coding Standard</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>CSS Coding Standard</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#general">General</a></li>
+<li><a href="#css-files">CSS Files</a></li>
+<li><a href="#selectors">Selectors</a>
+<ul class="sectlevel2">
+<li><a href="#selector-formatting">Selector Formatting</a></li>
+<li><a href="#use-of-efficient-selectors">Use of Efficient Selectors</a></li>
+</ul>
+</li>
+<li><a href="#classes">Classes</a>
+<ul class="sectlevel2">
+<li><a href="#naming-classes">Naming Classes</a></li>
+</ul>
+</li>
+<li><a href="#attributes">Attributes</a>
+<ul class="sectlevel2">
+<li><a href="#order-of-attributes">Order of Attributes</a></li>
+<li><a href="#attribute-formatting">Attribute Formatting</a></li>
+</ul>
+</li>
+<li><a href="#general-details">General Details</a></li>
+<li><a href="#resources">Resources</a>
+<ul class="sectlevel2">
+<li><a href="#highly-recommended">Highly Recommended</a></li>
+<li><a href="#other-readings">Other Readings</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="general"><a class="link" href="#general">General</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <a href="https://google.github.io/styleguide/htmlcssguide.xml">Google CSS Style Guide</a>
+for any topics not covered in this document.</p>
+</li>
+<li>
+<p>If the project is using a framework (e.g. Bootstrap/jQuery UI), use classes from the framework as much as possible.</p>
+</li>
+<li>
+<p>Divide long CSS files into sections.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>By segmenting the file(s) in this logical way, it is easy to locate css rules and to ensure that a new rule
+being added is not already present.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="css-files"><a class="link" href="#css-files">CSS Files</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>CSS file includes must be done using <code>&lt;link&gt;</code> tags in the HTML/JSP files and NOT using <code>@import</code> in other css files.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong><code>@import</code></strong> can be slow and may result in the page being rendered without css for a while before the page
+magically comes to life. As of now we are using css files as styles of HTML pages and thus the dependency
+must be clearly visible in the HTML page.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">    &lt;link rel="stylesheets" href="../common.css" type="text/css"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">   @import "common.css";</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>NO inline style sheets or inline styles in the HTML/JSP files.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The whole idea is to have Separation of Concerns (SoC). If css rules are specified everywhere, editing them
+in the future will be a hassle and redundant overriding of css rules may occur. If all are in one place
+management is also easier.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">#mainDiv {
+   border: thin solid black;
+   color: white;
+   margin: auto;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;style&gt;
+#mainDiv {
+   color: white;
+}
+&lt;/style&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div id="mainDiv" style="border: thin solid black; margin: auto"&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="selectors"><a class="link" href="#selectors">Selectors</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Do not use CSS3 selectors.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Although they are powerful, cross-browser compatibility is difficult to achieve and many rules are supported by
+different browsers starting from different versions
+(refer: <a href="http://www.w3schools.com/cssref/css3_browsersupport.asp">W3CSchools List</a>).
+Also, we can stick to more functional names for the css and use classes to achieve our needs
+→ more readable and easier to manage.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="selector-formatting"><a class="link" href="#selector-formatting">Selector Formatting</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The selector(s) must be specified in separate lines.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This eases reading as well as helps in revision control as conflicts reduce.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">.button-sort-ascending:hover,
+.button-sort-none:hover {
+   cursor: pointer;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">.button-sort-ascending:hover, .button-sort-none:hover {
+   cursor: pointer;
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Group related/hierarchical style specifications (eg :hover, child specifier, etc) and provide an additional indent
+to the more specific selector. Refer to <a href="http://isobar-idev.github.io/code-standards/#_css_formatting">here</a>
+for examples.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This gives a nice hierarchical structure to the file and helps to visually group css rules by indentation.
+In addition this gives an immediate idea as to how certain classes are being used in the HTML files
+(from the hierarchy) without actually reading HTML files.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="use-of-efficient-selectors"><a class="link" href="#use-of-efficient-selectors">Use of Efficient Selectors</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Do not qualify class/ID selectors using tag names (do not use: <code>div.mainContent</code>, simply use <code>.mainContent</code>).
+Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS">Writing efficient CSS</a>
+for examples.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This speeds up the css match lookup. If such a qualification is actually required, either use another
+class on top of this to change the style or use a completely different class to start with. In any case,
+if this kind of qualification is needed, then probably the class has not been named well enough
+(see <a href="#naming-classes">naming standards for classes</a>).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Use child selector rather than descendant selector (use <code>#container &gt; span</code> rather than <code>#container span</code>).
+Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS">Writing efficient CSS</a>
+for examples.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This is a strong recommendation as descendant selector is extremely expensive, especially when the
+specified ancestor has a lot of descendants.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="classes"><a class="link" href="#classes">Classes</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="naming-classes"><a class="link" href="#naming-classes">Naming Classes</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Use all lowercase letters.<br>
+Separate words with hyphens (<code>-</code>) and no other separator.<br>
+We use 2 kinds of classes: Atomic and Component.</p>
+<div class="paragraph">
+<p>Atomic Classes describe atomic attributes like border-gray, align-center that can be used on any element.
+They have at most 2 rules in them. Start their names with the attribute, followed by the value.
+(eg: .align-center and not .center-align)</p>
+</div>
+<div class="paragraph">
+<p>Component Classes are used for components that have a particular role that (preferably) recurs in multiple
+pages. To name these classes, describe the function of the element rather than its location.
+(eg: .panel-details rather than .top-details-box)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">/* Component Class */
+.comment-list
+.sort-icon
+/* Atomic Class */
+.align-center
+.border-gray</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">.commentList
+.sort_icon
+.centeralign</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>When adding classes to style elements in the page, follow the following steps:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Try and style the entire component using Bootstrap.</p>
+</li>
+<li>
+<p>For any additional css, if the component is used in many places create a functional name for the class.</p>
+</li>
+<li>
+<p>If the component does not have any recurring function, utilise the generic classes to achieve the styling.</p>
+</li>
+<li>
+<p><strong>Exception:</strong> If a particular element requires too many generic classes ( &gt; 5) create a functional class name for it.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="attributes"><a class="link" href="#attributes">Attributes</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="order-of-attributes"><a class="link" href="#order-of-attributes">Order of Attributes</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Alphabetize the attributes, disregarding any browser prefix.
+All browser-prefixed versions of an attribute must be written together.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It makes it easier to locate attributes in a css file.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Good.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">.sort-icon {
+   display: block;
+   float: right;
+   height: 17px;
+   margin-top: 1px;
+   width: 12px;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>.sort-icon {
+   width: 12px;
+   height: 17px;
+   display: block;
+   margin-top: 1px;
+   float: right;
+}</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="attribute-formatting"><a class="link" href="#attribute-formatting">Attribute Formatting</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Semicolon after every attribute specification.</p>
+</li>
+<li>
+<p>Space after colon.</p>
+</li>
+<li>
+<p>Drop the units for 0 values (eg: margin: 0).</p>
+</li>
+<li>
+<p>All attribute(s) are to be specified in individual lines.</p>
+</li>
+<li>
+<p>Attributes must have one more indentation than the selector.</p>
+</li>
+<li>
+<p>Indent attributes that require browser specifications so that the actual attribute being declared is in one column.
+Refer to <a href="http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices">Writing Your Best Code</a>
+for examples.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="general-details"><a class="link" href="#general-details">General Details</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use shorthands as much as possible (eg <code>border: 2px 0 1px 4px</code>).</p>
+</li>
+<li>
+<p>DO NOT use <code>!important</code> specifier.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Using the <strong>!important</strong> specifier overrides the natural flow of specificity and cascading hierarchy of css styles.
+Unless absolutely necessary do not use it. If there is such a situation clearly state the reason
+with comments (/* */).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="Bad.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">margin: 10px 0 !important;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="resources"><a class="link" href="#resources">Resources</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="highly-recommended"><a class="link" href="#highly-recommended">Highly Recommended</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.xml">Google CSS Style Guide</a></p>
+</li>
+<li>
+<p><a href="http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices">Writing Your Best Code - CSS Coding Practices</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-readings"><a class="link" href="#other-readings">Other Readings</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://code.tutsplus.com/tutorials/30-css-best-practices-for-beginners&#8212;&#8203;net-6741">30 CSS Best Practices For Beginners</a></p>
+</li>
+<li>
+<p><a href="https://css-tricks.com/css-style-guides">A list of CSS style guides</a></p>
+</li>
+<li>
+<p><a href="http://isobar-idev.github.io/code-standards/">Isobar Coding Standards</a></p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS">Writing efficient CSS (MDN article)</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:42 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

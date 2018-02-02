@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Workflow for submitting Questions, Issues and PRs</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="../styles/asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Workflow for submitting Questions, Issues and PRs</h1>
+<div id="toc" class="toc">
+<div id="toctitle"></div>
+<ul class="sectlevel1">
+<li><a href="#asking-a-question">1. Asking a Question</a></li>
+<li><a href="#posting-an-issue">2. Posting an Issue</a></li>
+<li><a href="#submitting-a-pr">3. Submitting a PR</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="asking-a-question"><a class="link" href="#asking-a-question">1. Asking a Question</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Post your question in the issue tracker.
+See <a href="#posting-an-issue">Posting an Issue</a> for guidelines to follow when posting an issue.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t get an answer within 1-2 days, feel free to post another comment in the issue thread as a reminder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="posting-an-issue"><a class="link" href="#posting-an-issue">2. Posting an Issue</a></h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Do a search in the issue tracker to ensure the same issue has not been posted before.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+If reporting a security vulnerability, send your bug report directly to the contact email of
+the project instead of posting it in the issue tracker.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Follow the <a href="FormatsAndConventions.html#issue">naming convention</a> for the issue title.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="submitting-a-pr"><a class="link" href="#submitting-a-pr">3. Submitting a PR</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="before-you-start"><a class="link" href="#before-you-start">3.1. Before you start</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Note that a project might specify variations to the instructions given in this document.
+For example, a project might specify additional <em>orientation activities</em> to do before submitting a PR.
+Follow the instructions in this document in conjunction with those variations.</p>
+</li>
+<li>
+<p>Note that by submitting a PR, you agree to allow the project owner to license your work under the same
+license as that used by the project.</p>
+</li>
+<li>
+<p>Set up the project. These are the typical steps:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Fork the repo to your GitHub account.</p>
+</li>
+<li>
+<p>Clone the code to your computer.</p>
+</li>
+<li>
+<p>Follow the relevant sections of the <em>Developer Guide</em> provided by the project to set up the project
+in your computer.</p>
+</li>
+<li>
+<p>Ensure the setup is correct by getting all the tests to pass.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="pr-workflow"><a class="link" href="#pr-workflow">3.2. PR workflow</a></h3>
+<div class="sect3">
+<h4 id="select-an-issue-to-fix"><a class="link" href="#select-an-issue-to-fix">3.2.1. Select an issue to fix</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Select an open issue from the issue tracker that you are interested to work on.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Notes for first time contributors</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First time contributors should start with an issue labelled <code>d.FirstTimers</code>, if any.</p>
+</li>
+<li>
+<p>You should not do more than one <code>d.FirstTimers</code> issues.</p>
+</li>
+<li>
+<p>You should wait till the first PR is merged before starting on more PRs.
+After you have one merged PR, you can work on multiple PRs in parallel.
+This restriction aims to save you from making the same mistake in multiple PRs.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>If the issue list does not contain what you want to work on, post an issue first (as described <a href="#posting-an-issue">above</a>)
+and wait for it to be acknowledged. Otherwise you could end up fixing something that does not need fixing.</p>
+</li>
+<li>
+<p>It is not required to (but OK to) ask for permission to work on an issue.
+But do check the issue discussion thread to see if there are <em>active</em> PRs for that issue.
+If someone is already working on that issue, perhaps your efforts are better spent on a different issue.
+However, it is acceptable to submit PRs containing alternative solutions even if there are active PRs for an issue.</p>
+</li>
+<li>
+<p>If it seems the existing PRs for that issue are no longer active (e.g. no activity in the past seven days),
+you can always post a message to check if anybody is still working on that issue.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="create-a-new-branch"><a class="link" href="#create-a-new-branch">3.2.2. Create a new branch</a></h4>
+<div class="paragraph">
+<p>Create a branch off the <code>master</code> branch.
+Follow <a href="FormatsAndConventions.html#branch">our naming conventions for branch names</a>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Make sure you branch off <code>master</code> rather than the currently active branch.
+Otherwise, you may get commits from other branches inside your PR.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="fix-the-issue-in-the-new-branch"><a class="link" href="#fix-the-issue-in-the-new-branch">3.2.3. Fix the issue in the new branch</a></h4>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10003; Adhere to coding style and testing requirements of the project.</p>
+</li>
+<li>
+<p>&#10003; Limit the changes to the scope of the issue you are fixing. Do not fix multiple issues in the same PR.
+Resist the urge to do unrelated 'minor cleanups' in the same PR. If you notice such potential clean ups,
+create an issue for it (those can be a good source of <code>d.FirstTimers</code> issues).</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>We should be able to undo any fix by reverting a single commit. Fixing multiple issues in the same
+PR gets in the way of that ability.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>&#10003; In addition to updating functional code, update relevant code comments, tests, user docs, and developer docs.</p>
+</li>
+<li>
+<p>&#10003; Ensure that the tests are passing in your local environment.</p>
+</li>
+<li>
+<p>&#10003; Sync your fork with upstream changes</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">More info</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><a href="HowToGuides.html#sync-a-fork-with-upstream-changes">How to Guides :: Sync a fork with upstream changes</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Following these tips will help you in subsequent steps of the workflow:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Commit often.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The smaller the size of each commit, the easier it is to reorganize them later to form a
+more meaningful commit sequence.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Keep the PR branch free of merge commits (i.e. <code>rebase</code> instead of <code>merge</code> when syncing with upstream repo).</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Merge commits in a branch make it harder to reorganize commits in the branch later.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Avoid pushing to a shared repo during this stage (but you can push to your own fork).</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>We expect the commits to be edited at a later stage.
+It is not recommended to edit commits that may have already propagated to repos of other devs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>If the project uses any other static analysis tools (e.g. checkstyle), use them to detect any potential problems
+in the new code.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="prepare-the-commits-for-publishing"><a class="link" href="#prepare-the-commits-for-publishing">3.2.4. Prepare the commits for publishing</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Go through the commit diffs and revert any changes unrelated to the PR. e.g. auto-updates done by the IDE.</p>
+</li>
+<li>
+<p>Refactor the commits to meet <a href="FormatsAndConventions.html#commit-organization">our requirements for commit organization</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">More info</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><a href="HowToGuides.html#refactor-commits">How to Guides :: Refactor Commits</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="create-a-pr"><a class="link" href="#create-a-pr">3.2.5. Create a PR</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Push the branch to your fork.</p>
+</li>
+<li>
+<p>Create a PR.</p>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10003; Follow the <a href="FormatsAndConventions.html#pr">naming conventions for PRs</a>.</p>
+</li>
+<li>
+<p>&#10003; Include <code>Fixes #IssueNumber</code> (e.g. <code>Fixes #1234</code>) in the PR description so that GitHub can auto-link the
+relevant issue and
+<a href="https://help.github.com/articles/closing-issues-via-commit-messages/">auto-close the issue when the PR is merged</a>.
+You can look at <a href="https://github.com/se-edu/addressbook-level4/pull/237">this PR</a> for an example.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You may create a PR even before you are done with the fix, if you want to seek some early feedback from
+the dev team.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="request-a-review"><a class="link" href="#request-a-review">3.2.6. Request a review</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Wait for CI (i.e. Travis, AppVeyor) to run tests/checks against your PR and report status.
+If any errors are reported, fix those problems and push the fixes to the same branch.</p>
+</li>
+<li>
+<p>Post a summary of commits using the
+<a href="https://github.com/pyokagan/canihasreview/">CanIHasReview tool</a>.</p>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">How to use CanIHasReview</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to your PR. e.g. <code><a href="https://github.com/se-edu/addressbook-level4/pull/237" class="bare">https://github.com/se-edu/addressbook-level4/pull/237</a></code>.</p>
+</li>
+<li>
+<p>Replace <code>github.com</code> in the PR URL with <code>canihasreview.pyokagan.com</code>. The resulting URL should be
+something like <code><a href="https://canihasreview.pyokagan.com/se-edu/addressbook-level4/pull/237" class="bare">https://canihasreview.pyokagan.com/se-edu/addressbook-level4/pull/237</a></code>.</p>
+</li>
+<li>
+<p>Click <code>Submit new iteration</code> button. It will post a summary of the PR similar to
+<a href="https://github.com/se-edu/addressbook-level4/pull/209#issuecomment-270905049">this example</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you do not get any response from the dev team within 1-2 days, keep posting reminders in the PR thread.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="revise-the-pr-as-per-reviewer-comments"><a class="link" href="#revise-the-pr-as-per-reviewer-comments">3.2.7. Revise the PR as per reviewer comments</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Wait until all assigned reviewers have signified that they have finished reviewing the PR (e.g. by applying the
+<code>s.Ongoing</code> label). If you are not sure, post a comment requesting a confirmation.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Rationale</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Updating the PR while a review is in progress can confuse reviewers.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Update the commits as suggested by the reviewers.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updates to existing logical changes should be done by modifying their corresponding commits.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">More info</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><a href="HowToGuides.html#refactor-commits">How to Guides :: Refactor Commits</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>New logical changes should be introduced as new commits.</p>
+</li>
+<li>
+<p>Sometimes, reviewers may recommend
+<a href="http://sethrobertson.github.io/GitPostProduction/gpp.html#post-production">splitting existing commits</a>
+in order to make them more cohesive.</p>
+</li>
+<li>
+<p>Commit messages should be updated with new findings from review discussions.
+For example, if the reviewer mentioned a possible new approach that was subsequently rejected
+due to a non-obvious reason, then the commit should be updated with this information.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sync your fork with upstream repo.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Rebase your branch instead of merging <code>master</code> branch to your branch.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Update the branch in your fork.</p>
+</li>
+<li>
+<p>Use the same CanIHasReview tool used earlier to post a new commit summary and alert the reviewers.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="refine-the-fix-iteratively"><a class="link" href="#refine-the-fix-iteratively">3.2.8. Refine the fix iteratively</a></h4>
+<div class="paragraph">
+<p>Repeat the review-refine cycle (explained above) until the PR is merged (usually done by a senior member of
+the project team).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="after-the-first-pr-is-merged"><a class="link" href="#after-the-first-pr-is-merged">3.3. After the first PR is merged</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>After you have managed to get one PR merged, you can gradually move to harder issues,
+starting with issues labelled <code>d.Contributors</code>.</p>
+</li>
+<li>
+<p>As harder issues take longer to finish, it is prudent to post a message in the issue to let others know that
+you are working on an issue.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-02-02 14:30:43 UTC
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

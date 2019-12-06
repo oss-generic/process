@@ -12,6 +12,7 @@ https://github.com/se-edu/main[SE-EDU projects], https://github.com/powerpointla
 * *<<docs/QuestionsIssuesPrs.adoc#submitting-a-pr,Submitting a PR>>*
 * *<<docs/AdvancedContributorGuidelines.adoc#,Advanced Contributor Guidelines>>*: Additional guidelines more
 experienced contributors are expected to follow.
+* https://www.contributor-covenant.org/version/2/0/code_of_conduct[*Code of Conduct*]: To report violations, please post an issue in the respective repository issue tracker.
 
 == General references
 

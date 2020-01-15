@@ -1,0 +1,586 @@
+= Typescript Coding Standard
+:toc:
+:toc-title:
+:toclevels: 1
+:sectnums:
+:good: image:Good.png[Good]
+:bad: image:Bad.png[Bad]
+:tslintURL: https://palantir.github.io/tslint/rules
+
+== Types
+
+=== Enable all strict type checking options (`--strict`)
+tsc: `--strict`
+
+[NOTE,caption=Rationale]
+====
+Strict type checking will help lead to bug-free code.
+====
+
+== Variables
+
+=== Use `const` instead of `let` if possible
+tslint: link:{tslintURL}/prefer-const[`prefer-const`]
+
+If a variable is only assigned to once when it is declared,
+it should be declared using `const`.
+
+[NOTE,caption=Rationale]
+====
+`const` tells the reader that references can't be reassigned,
+which leads to more readable code.
+====
+
+=== Do not use `var`
+tslint: link:{tslintURL}/no-var-keyword[`no-var-keyword`]
+
+Use `let` or `const` instead.
+
+[NOTE,caption=Rationale]
+====
+`var` has function scope rather than block scope like `let` and `const`.
+This sometimes confuses programmers which leads to subtle bugs.
+====
+
+=== No unused locals
+tsc: `--noUnusedLocals`
+
+[NOTE,caption=Rationale]
+====
+Unused locals usually indicate unused code,
+and also adds unneeded noise.
+====
+
+=== Do not declare types which are inferrable
+tslint: link:{tslintURL}/no-inferrable-types[`no-inferrable-types`]
+
+[source,typescript]
+.✘ Bad
+----
+const someConfig: string = 'Some config';
+const someOtherConfig: boolean = true;
+const someMoreConfig: number = 42;
+----
+
+[source,typescript]
+.✔ Good
+----
+const someConfig = 'Some config';
+const someOtherConfig = true;
+const someMoreConfig = 42;
+----
+
+== Objects
+
+=== Use trailing commas in multiline array and object literals
+tslint: link:{tslintURL}/trailing-comma[`trailing-comma`]
+
+=== Keys of object literals must be sorted alphabetically
+tslint: link:{tslintURL}/object-literal-sort-keys[`object-literal-sort-keys`]
+
+== Strings
+
+=== Use single quotes `''` for strings
+tslint: link:{tslintURL}/quotemark[`quotemark`]
+
+=== Use template strings instead of concatenation
+tslint: link:{tslintURL}/prefer-template[`prefer-template`]
+
+[NOTE,caption=Rationale]
+====
+Template strings lead to more succinct code.
+====
+
+== Functions
+
+=== Function overloads must be consecutive
+tslint: link:{tslintURL}/adjacent-overload-signatures[`adjacent-overload-signatures`]
+
+[NOTE,caption=Rationale]
+====
+Makes code easier to navigate.
+====
+
+=== Use arrow functions for function expressions
+tslint: link:{tslintURL}/only-arrow-functions[`only-arrow-functions`]
+
+[NOTE,caption=Rationale]
+====
+Besides having shorter syntax,
+arrow functions also do not bind their own `this`, `arguments`, `super` or `new.target`,
+which is usually what we want for function expressions.
+====
+
+=== Return type of non-arrow functions must be specified
+tslint: link:{tslintURL}/typedef[`typedef`]
+
+[source,typescript]
+.✘ Bad
+----
+function foo(bar: string);
+----
+
+[source,typescript]
+.✔ Good
+----
+function foo(bar: string): string;
+----
+
+=== Types of parameters of non-arrow functions must be specified
+tslint: link:{tslintURL}/typedef[`typedef`]
+
+[source,typescript]
+.✘ Bad
+----
+function foo(bar): string;
+----
+
+[source,typescript]
+.✔ Good
+----
+function foo(bar: string): string;
+----
+
+=== No implicit returns
+tsc: `--noImplicitReturns`
+
+All code paths in a function must return a value.
+
+[NOTE,caption=Rationale]
+====
+A code path not having a `return` statement usually indicates the presence of a bug.
+====
+
+[source,typescript]
+.✘ Bad
+----
+function foo(): boolean {
+    if (isFoo) {
+        return true;
+    }
+
+    bar();
+}
+----
+
+[source,typescript]
+.✔ Good
+----
+function foo(): boolean {
+    if (isFoo) {
+        return true;
+    }
+
+    bar();
+    return false;
+}
+----
+
+== Classes
+
+=== `public` accessibility should not be specified
+tslint: link:{tslintURL}/member-access[`member-access`]
+
+[NOTE,caption=Rationale]
+====
+`public` is the default, and thus specifying `public` is unnecessary.
+====
+
+=== Class members must follow a specific order
+tslint: link:{tslintURL}/member-ordering[`member-ordering`]
+
+Class members must follow the following order:
+
+* `public`, `static` fields
+* `protected`, `static` fields
+* `private`, `static` fields
+* `public` instance fields
+* `protected` instance fields
+* `private` instance fields
+* constructors
+* `public`, `static` methods
+* `protected`, `static` methods
+* `private`, `static` methods
+* `public` instance methods
+* `protected` instance methods
+* `private` instance methods
+
+[NOTE,caption=Rationale]
+====
+A consistent ordering for class members can make classes easier to read, navigate and edit.
+====
+
+== Promises
+
+=== Functions returning a promise must be marked async
+tslint: link:{tslintURL}/promise-function-async[`promise-function-async`]
+
+[NOTE,caption=Rationale]
+====
+Async functions are easier to read and write.
+====
+
+=== Promises returned by functions must be handled
+tslint: link:{tslintURL}/no-floating-promises[`no-floating-promises`]
+
+[NOTE,caption=Rationale]
+====
+Unhandled promises are usually undesired, e.g. errors not reported.
+====
+
+=== Only use `await` on promises.
+tslint: link:{tslintURL}/await-promise[`await-promise`]
+
+[NOTE,caption=Rationale]
+====
+It is unnecessary to `await` on a non-promise.
+Not using `await` on non-promises will lead to more succinct code.
+====
+
+== Whitespace
+
+=== Use 4 spaces for indentation
+tslint: link:{tslintURL}/indent[`indent`]
+
+[NOTE,caption=Rationale]
+====
+This is consistent with other coding standards (e.g. Java),
+and also discourages callback-heavy code (use promises and async-await instead).
+====
+
+=== No trailing whitespace
+tslint: link:{tslintURL}/no-trailing-whitespace[`no-trailing-whitespace`]
+
+[NOTE,caption=Rationale]
+====
+Ensures that a line can only be represented in one way,
+rather than an infinite number of ways (with any number of trailing whitespaces).
+====
+
+=== LF linebreaks only
+tslint: link:{tslintURL}/linebreak-style[`linebreak-style`], tsc: `--newLine=LF`
+
+=== 1 space after colons
+tslint: link:{tslintURL}/typedef-whitespace[`typedef-whitespace`]
+
+[source,typescript]
+.✘ Bad
+----
+foo(bar: string):string;
+foo(bar:string): string;
+----
+
+[source,typescript]
+.✔ Good
+----
+foo(bar: string): string;
+----
+
+=== Do not exceed 120 characters per line (including whitespace)
+tslint: link:{tslintURL}/max-line-length[`max-line-length`]
+
+=== End files with a single newline character
+tslint: link:{tslintURL}/eofline[`eofline`]
+
+[NOTE,caption=Rationale]
+====
+All lines must end with a newline character.
+====
+
+=== No consecutive blank lines
+tslint: link:{tslintURL}/no-consecutive-blank-lines[`no-consecutive-blank-lines`]
+
+== Encoding
+
+=== Use UTF-8 file encoding
+tslint: link:{tslintURL}/encoding[`encoding`]
+
+== Semicolons
+
+=== Use semicolons at the end of every statement
+tslint: link:{tslintURL}/semicolon[`semicolon`]
+
+== Imports and exports
+
+=== Import statements must be sorted alphabetically
+tslint: link:{tslintURL}/ordered-imports[`ordered-imports`]
+
+=== Use trailing commas in multiline named imports and exports literals
+tslint: link:{tslintURL}/trailing-comma[`trailing-comma`]
+
+[NOTE,caption=Rationale]
+====
+Allows for more succinct diffs since adjacent lines will not need to be touched when the last line is modified.
+====
+
+[source,typescript]
+.✘ Bad
+----
+import {
+    Foo,
+    Bar
+} from './submodule';
+import {Foo, Bar,} from './submodule';
+----
+
+[source,typescript]
+.✔ Good
+----
+import {
+    Foo,
+    Bar,
+} from './submodule';
+import {Foo, Bar} from './submodule';
+----
+
+== Naming Conventions
+
+=== Avoid single letter names
+
+Be descriptive with your naming.
+
+=== Use camelCase for variables and functions
+
+=== Use PascalCase for class and interface names
+tslint: link:{tslintURL}/class-name[`class-name`]
+
+[source,typescript]
+.✘ Bad
+----
+class fooBar {}
+
+interface fooBar {}
+----
+
+[source,typescript]
+.✔ Good
+----
+class FooBar {}
+
+interface FooBar {}
+----
+
+== Comparison Operators & Equality
+
+=== Use `===` and `!==` over `==` and `!=`
+tslint: link:{tslintURL}/triple-equals[`triple-equals`]
+
+== Blocks
+
+=== Always use braces
+tslint: link:{tslintURL}/curly[`curly`]
+
+[source,typescript]
+.✘ Bad
+----
+if (condition) return true;
+
+if (condition)
+    return true;
+----
+
+[source,typescript]
+.✔ Good
+----
+if (condition) {
+    return true;
+}
+----
+
+== Comments
+
+=== Use `//` for non-jsdoc comments
+
+[source,typescript]
+.✘ Bad
+----
+function foo(): boolean {
+    /*
+     * Explain some snazzy complicated stuff which
+     * requires multiple lines.
+     */
+    return true;
+}
+----
+
+[source,typescript]
+.✔ Good
+----
+function foo(): boolean {
+    // Explain some snazzy complicated stuff which
+    // requires multiple lines.
+    return true;
+}
+----
+
+=== Use `/** ... */` for jsdoc comments
+
+[source,typescript]
+.✘ Bad
+----
+/// Returns true if bar.
+function foo(): boolean {
+    ....
+}
+----
+
+[source,typescript]
+.✔ Good
+----
+/**
+ * Returns true if bar
+ */
+function foo(): boolean {
+    ....
+}
+----
+
+=== Every line of a comment must begin with a space
+tslint: link:{tslintURL}/comment-format[`comment-format`]
+
+[source,typescript]
+.✘ Bad
+----
+//Bad single-line comment
+
+/*
+ *Bad multi-line comment
+ */
+----
+
+[source,typescript]
+.✔ Good
+----
+// Good single-line comment
+
+/*
+ * Good multi-line comment
+ */
+----
+
+== Recommended configuration settings
+
+These configuration settings help implement the coding standard specified in this document.
+
+=== `tsconfig.json`
+
+// NOTE: ensure object keys are sorted alphabetically.
+
+[source,json]
+----
+{
+    "compilerOptions": {
+        "newLine": "LF",
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "strict": true
+    }
+}
+----
+
+=== `tslint.json`
+
+// NOTE: ensure object keys are sorted alphabetically.
+
+[source,json]
+----
+{
+    "defaultSeverity": "error",
+    "lintOptions": {
+        "typeCheck": true
+    },
+    "rules": {
+        "adjacent-overload-signatures": true,
+        "await-promise": true,
+        "class-name": true,
+        "comment-format": [true, "check-space"],
+        "curly": true,
+        "eofline": true,
+        "indent": [true, "spaces", 4],
+        "linebreak-style": [true, "LF"],
+        "max-line-length": [true, 120],
+        "member-access": [true, "no-public"],
+        "member-ordering": [true, {
+            "order": [
+                "public-static-field",
+                "protected-static-field",
+                "private-static-field",
+                "public-instance-field",
+                "protected-instance-field",
+                "private-instance-field",
+                "constructor",
+                "public-static-method",
+                "protected-static-method",
+                "private-static-method",
+                "public-instance-method",
+                "protected-instance-method",
+                "private-instance-method"
+            ]
+        }],
+        "no-consecutive-blank-lines": true,
+        "no-floating-promises": true,
+        "no-inferrable-types": [true, "ignore-params", "ignore-properties"],
+        "no-trailing-whitespace": true,
+        "no-var-keyword": true,
+        "object-literal-sort-keys": true,
+        "only-arrow-functions": [true, "allow-declarations"],
+        "ordered-imports": true,
+        "prefer-const": true,
+        "prefer-template": [true, "allow-single-concat"],
+        "promise-function-async": true,
+        "quotemark": [true, "single"],
+        "semicolon": [true, "always"],
+        "space-before-function-paren": [ true, {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
+        "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+        "triple-equals": true,
+        "typedef": [true, "call-signature", "parameter", "property-declaration"],
+        "typedef-whitespace": [true, {
+            "call-signature": "nospace",
+            "index-signature": "nospace",
+            "parameter": "nospace",
+            "property-declaration": "nospace",
+            "variable-declaration": "nospace"
+        }, {
+            "call-signature": "onespace",
+            "index-signature": "onespace",
+            "parameter": "onespace",
+            "property-declaration": "onespace",
+            "variable-declaration": "onespace"
+        }],
+        "whitespace": [
+            true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-module",
+            "check-separator",
+            "check-type",
+            "check-typecast",
+            "check-preblock"
+        ]
+    },
+    "rulesDirectory": []
+}
+----
+
+=== `.editorconfig`
+
+// NOTE: ensure object keys are sorted alphabetically.
+
+[source,ini]
+----
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+max_line_length = 120
+trim_trailing_whitespace = true
+----

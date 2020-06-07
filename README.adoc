@@ -1,3 +1,8 @@
+[WARNING]
+====
+*This projecct is no longer used. Please refer to https://se-education.org/guides/ instead.*
+====
+
 = The _OSS-Generic_ Reference Process
 
 The _OSS-Generic Reference Process_ described in this repo documents common practices among several OSS projects
